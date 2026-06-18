@@ -47958,5 +47958,3879 @@
     "origin": "sec_official",
     "status": "review",
     "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-geography/lc-geography-2026-p2q24.png"
+  },
+  {
+    "id": "lc-history-2006-europe-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Nationalism and State Formation",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on nationalism and state formation in Europe, 1815-1871",
+    "year": "2006",
+    "level": "Higher",
+    "qlabel": "Europe T1",
+    "paper": "lc-history-2006",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2006-europe-t1.png"
+  },
+  {
+    "id": "lc-history-2006-europe-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Nation states and international tensions",
+      "Nationalism and State Formation",
+      "European retreat from Empire and the aftermath"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European powers, colonialism, German foreign policy, Russian crisis, and World War I literature (1871-1920)",
+    "year": "2006",
+    "level": "Higher",
+    "qlabel": "Europe T2",
+    "paper": "lc-history-2006",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2006-europe-t2.png"
+  },
+  {
+    "id": "lc-history-2006-europe-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Dictatorship and democracy",
+      "Nation states and international tensions",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on dictatorship and democracy in Europe, 1920-1945: fascist regimes, Stalin's transformation of Soviet society, Britain's inter-war problems, and warfare technology",
+    "year": "2006",
+    "level": "Higher",
+    "qlabel": "Europe T3",
+    "paper": "lc-history-2006",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2006-europe-t3.png"
+  },
+  {
+    "id": "lc-history-2006-europe-t4",
+    "subject": "lc-history",
+    "topics": [
+      "Division and realignment in Europe",
+      "Nation states and international tensions",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on division and realignment in Europe, 1945-1992, covering Sovietisation of Eastern Europe, EEC establishment and evolution, the Oil Crisis impact, and contributions of Solzhenitsyn and de Beauvoir",
+    "year": "2006",
+    "level": "Higher",
+    "qlabel": "Europe T4",
+    "paper": "lc-history-2006",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2006-europe-t4.png"
+  },
+  {
+    "id": "lc-history-2006-europe-t5",
+    "subject": "lc-history",
+    "topics": [
+      "European retreat from Empire and the aftermath",
+      "Nationalism and State Formation",
+      "Nation states and international tensions"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European decolonization and post-colonial issues, 1945-1990",
+    "year": "2006",
+    "level": "Higher",
+    "qlabel": "Europe T5",
+    "paper": "lc-history-2006",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2006-europe-t5.png"
+  },
+  {
+    "id": "lc-history-2006-europe-t6",
+    "subject": "lc-history",
+    "topics": [
+      "The US and the World",
+      "Nation states and international tensions",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on the United States and the world, 1945-1989: domestic impact of conflicts, Korea vs Vietnam, Ronald Reagan, and Cold War developments",
+    "year": "2006",
+    "level": "Higher",
+    "qlabel": "Europe T6",
+    "paper": "lc-history-2006",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2006-europe-t6.png"
+  },
+  {
+    "id": "lc-history-2006-ireland-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Ireland & the Union",
+      "Movements for political and social reform",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Ireland and the Union, 1815-1870: Catholic Emancipation, Repeal, the Famine, Young Ireland, Fenians, and industrial development",
+    "year": "2006",
+    "level": "Higher",
+    "qlabel": "Ireland T1",
+    "paper": "lc-history-2006",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2006-ireland-t1.png"
+  },
+  {
+    "id": "lc-history-2006-ireland-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Sovereignty & the impact of partition",
+      "Nationalism and State Formation",
+      "Republic - government, society, economy"
+    ],
+    "conf": 0.98,
+    "strand": "",
+    "stem": "Essay questions on Irish sovereignty, partition, and the establishment and development of the Irish Free State and Republic, 1912-1949",
+    "year": "2006",
+    "level": "Higher",
+    "qlabel": "Ireland T3",
+    "paper": "lc-history-2006",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2006-ireland-t3.png"
+  },
+  {
+    "id": "lc-history-2006-ireland-t4",
+    "subject": "lc-history",
+    "topics": [
+      "The Irish diaspora",
+      "Movements for political and social reform",
+      "Contextualisation essay"
+    ],
+    "conf": 0.98,
+    "strand": "",
+    "stem": "Essay questions on Irish emigration and the diaspora, 1840-1966",
+    "year": "2006",
+    "level": "Higher",
+    "qlabel": "Ireland T4",
+    "paper": "lc-history-2006",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2006-ireland-t4.png"
+  },
+  {
+    "id": "lc-history-2006-ireland-t5",
+    "subject": "lc-history",
+    "topics": [
+      "Politics and society in Northern Ireland",
+      "Movements for political and social reform",
+      "Sovereignty & the impact of partition"
+    ],
+    "conf": 0.98,
+    "strand": "",
+    "stem": "Essay questions on Northern Ireland politics and society, 1949-1993, covering welfare state impact, Terence O'Neill's contribution, Apprentice Boys of Derry, and Direct Rule",
+    "year": "2006",
+    "level": "Higher",
+    "qlabel": "Ireland T5",
+    "paper": "lc-history-2006",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2006-ireland-t5.png"
+  },
+  {
+    "id": "lc-history-2006-ireland-t6",
+    "subject": "lc-history",
+    "topics": [
+      "Republic - government, society, economy",
+      "Dictatorship and democracy",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on government, economy and society in the Republic of Ireland, 1949-1989",
+    "year": "2006",
+    "level": "Higher",
+    "qlabel": "Ireland T6",
+    "paper": "lc-history-2006",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2006-ireland-t6.png"
+  },
+  {
+    "id": "lc-history-2006-s1",
+    "subject": "lc-history",
+    "topics": [
+      "Working with Evidence / Documents-Based Question",
+      "Movements for political and social reform",
+      "Ireland & the Union"
+    ],
+    "conf": 0.98,
+    "strand": "",
+    "stem": "Documents-based question on Home Rule and the 1885-1886 elections: analysis of Gladstone's speech and anti-Home Rule political cartoon",
+    "year": "2006",
+    "level": "Higher",
+    "qlabel": "S1",
+    "paper": "lc-history-2006",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2006-s1.png"
+  },
+  {
+    "id": "lc-history-2007-europe-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Nationalism and State Formation",
+      "Nation states and international tensions"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on nationalism and state formation in Europe, 1815-1871, covering the Balkans, Italian unification, industrialisation and socialism",
+    "year": "2007",
+    "level": "Higher",
+    "qlabel": "Europe T1",
+    "paper": "lc-history-2007",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2007-europe-t1.png"
+  },
+  {
+    "id": "lc-history-2007-europe-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Nation states and international tensions",
+      "Nationalism and State Formation",
+      "The US and the World"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on nation states and international tensions, 1871-1920: Wilhelm II's naval policy and Franco-German tensions, Woodrow Wilson's role in Europe, Tsarist Russia's crisis, and Wilfred Owen's war poetry",
+    "year": "2007",
+    "level": "Higher",
+    "qlabel": "Europe T2",
+    "paper": "lc-history-2007",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2007-europe-t2.png"
+  },
+  {
+    "id": "lc-history-2007-europe-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Dictatorship and democracy",
+      "Division and realignment in Europe",
+      "Nation states and international tensions"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on dictatorship and democracy in Europe, 1920-1945, covering the Third Republic of France, Nazi Germany, the Spanish Civil War, and the Soviet Union's role in World War II",
+    "year": "2007",
+    "level": "Higher",
+    "qlabel": "Europe T3",
+    "paper": "lc-history-2007",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2007-europe-t3.png"
+  },
+  {
+    "id": "lc-history-2007-europe-t4",
+    "subject": "lc-history",
+    "topics": [
+      "Division and realignment in Europe",
+      "Nation states and international tensions",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European division and realignment, 1945-1992: Sovietisation and the Berlin Crisis, the EEC's origins and evolution, social changes in marriage and family, and Vatican II's influence on religious practice",
+    "year": "2007",
+    "level": "Higher",
+    "qlabel": "Europe T4",
+    "paper": "lc-history-2007",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2007-europe-t4.png"
+  },
+  {
+    "id": "lc-history-2007-europe-t5",
+    "subject": "lc-history",
+    "topics": [
+      "European retreat from Empire and the aftermath",
+      "Nation states and international tensions"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European decolonization and post-imperial affairs, 1945-1990: Suez Crisis, Katanga secession, ujamaa policy, and cultural diversity in Britain",
+    "year": "2007",
+    "level": "Higher",
+    "qlabel": "Europe T5",
+    "paper": "lc-history-2007",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2007-europe-t5.png"
+  },
+  {
+    "id": "lc-history-2007-europe-t6",
+    "subject": "lc-history",
+    "topics": [
+      "The US and the World",
+      "Nation states and international tensions",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on US foreign policy and domestic movements, 1945-1989",
+    "year": "2007",
+    "level": "Higher",
+    "qlabel": "Europe T6",
+    "paper": "lc-history-2007",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2007-europe-t6.png"
+  },
+  {
+    "id": "lc-history-2007-ireland-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Ireland & the Union",
+      "Movements for political and social reform",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Ireland and the Union, 1815-1870: Young Ireland Movement, the Great Famine, railways, and Cardinal Cullen's influence",
+    "year": "2007",
+    "level": "Higher",
+    "qlabel": "Ireland T1",
+    "paper": "lc-history-2007",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2007-ireland-t1.png"
+  },
+  {
+    "id": "lc-history-2007-ireland-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Sovereignty & the impact of partition",
+      "Nationalism and State Formation",
+      "Politics and society in Northern Ireland"
+    ],
+    "conf": 0.98,
+    "strand": "",
+    "stem": "Essay questions on Irish sovereignty, partition, and cultural identity, 1912-1949",
+    "year": "2007",
+    "level": "Higher",
+    "qlabel": "Ireland T3",
+    "paper": "lc-history-2007",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2007-ireland-t3.png"
+  },
+  {
+    "id": "lc-history-2007-ireland-t4",
+    "subject": "lc-history",
+    "topics": [
+      "The Irish diaspora",
+      "Movements for political and social reform",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Irish emigration and diaspora, 1840-1966, covering emigration trends, de Valera's American mission, Irish political participation abroad, and religious/cultural institutions",
+    "year": "2007",
+    "level": "Higher",
+    "qlabel": "Ireland T4",
+    "paper": "lc-history-2007",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2007-ireland-t4.png"
+  },
+  {
+    "id": "lc-history-2007-ireland-t5",
+    "subject": "lc-history",
+    "topics": [
+      "Politics and society in Northern Ireland",
+      "Sovereignty & the impact of partition",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on politics and society in Northern Ireland, 1949-1993",
+    "year": "2007",
+    "level": "Higher",
+    "qlabel": "Ireland T5",
+    "paper": "lc-history-2007",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2007-ireland-t5.png"
+  },
+  {
+    "id": "lc-history-2007-ireland-t6",
+    "subject": "lc-history",
+    "topics": [
+      "Republic - government, society, economy",
+      "Movements for political and social reform"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on government, economy and society in the Republic of Ireland, 1949-1989",
+    "year": "2007",
+    "level": "Higher",
+    "qlabel": "Ireland T6",
+    "paper": "lc-history-2007",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2007-ireland-t6.png"
+  },
+  {
+    "id": "lc-history-2007-s1",
+    "subject": "lc-history",
+    "topics": [
+      "Working with Evidence / Documents-Based Question",
+      "Movements for political and social reform",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.98,
+    "strand": "",
+    "stem": "Documents-based question on the GAA to 1891 - analysis of letters from Michael Davitt, C.S. Parnell, and William O'Brien regarding the establishment and objectives of the Gaelic Athletic Association",
+    "year": "2007",
+    "level": "Higher",
+    "qlabel": "S1",
+    "paper": "lc-history-2007",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2007-s1.png"
+  },
+  {
+    "id": "lc-history-2008-europe-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Nationalism and State Formation",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on nationalism and state formation in Europe, 1815-1871",
+    "year": "2008",
+    "level": "Higher",
+    "qlabel": "Europe T1",
+    "paper": "lc-history-2008",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2008-europe-t1.png"
+  },
+  {
+    "id": "lc-history-2008-europe-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Nation states and international tensions",
+      "Nationalism and State Formation",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European nation states and international tensions, 1871-1920, covering Bismarck's management of Germany, religious minorities, causes of WWI, and scientific/technological developments",
+    "year": "2008",
+    "level": "Higher",
+    "qlabel": "Europe T2",
+    "paper": "lc-history-2008",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2008-europe-t2.png"
+  },
+  {
+    "id": "lc-history-2008-europe-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Dictatorship and democracy",
+      "Division and realignment in Europe",
+      "Nation states and international tensions"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on dictatorship and democracy in Europe, 1920-1945, covering Lenin and Stalin in Russia, inter-war Britain and Germany, Nazi propaganda, and WWII's impact on civilian populations",
+    "year": "2008",
+    "level": "Higher",
+    "qlabel": "Europe T3",
+    "paper": "lc-history-2008",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2008-europe-t3.png"
+  },
+  {
+    "id": "lc-history-2008-europe-t4",
+    "subject": "lc-history",
+    "topics": [
+      "Division and realignment in Europe",
+      "Nation states and international tensions",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Division and realignment in Europe, 1945-1992, including the Hungarian uprising, economic growth, Gorbachev, and cultural developments",
+    "year": "2008",
+    "level": "Higher",
+    "qlabel": "Europe T4",
+    "paper": "lc-history-2008",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2008-europe-t4.png"
+  },
+  {
+    "id": "lc-history-2008-europe-t5",
+    "subject": "lc-history",
+    "topics": [
+      "European retreat from Empire and the aftermath",
+      "Nationalism and State Formation",
+      "Working with Evidence / Documents-Based Question"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European decolonization and the aftermath, 1945-1990, covering British withdrawal from India, Asian nationalism in Vietnam and Indonesia, African independence, and the legacy of colonialism",
+    "year": "2008",
+    "level": "Higher",
+    "qlabel": "Europe T5",
+    "paper": "lc-history-2008",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2008-europe-t5.png"
+  },
+  {
+    "id": "lc-history-2008-ireland-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Ireland & the Union",
+      "Nationalism and State Formation",
+      "Movements for political and social reform"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Ireland and the Union, 1815-1870: O'Connell, Trevelyan, Nicholson, Young Ireland, Fenianism, and developments in creative arts and science",
+    "year": "2008",
+    "level": "Higher",
+    "qlabel": "Ireland T1",
+    "paper": "lc-history-2008",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2008-ireland-t1.png"
+  },
+  {
+    "id": "lc-history-2008-ireland-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Movements for political and social reform",
+      "Working with Evidence / Documents-Based Question",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Irish political and social reform movements, 1870-1914: land agitation, urban poverty, cultural revival, and leadership",
+    "year": "2008",
+    "level": "Higher",
+    "qlabel": "Ireland T2",
+    "paper": "lc-history-2008",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2008-ireland-t2.png"
+  },
+  {
+    "id": "lc-history-2008-ireland-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Sovereignty & the impact of partition",
+      "Nationalism and State Formation",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Irish sovereignty, partition, and state consolidation, 1912-1949",
+    "year": "2008",
+    "level": "Higher",
+    "qlabel": "Ireland T3",
+    "paper": "lc-history-2008",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2008-ireland-t3.png"
+  },
+  {
+    "id": "lc-history-2008-ireland-t4",
+    "subject": "lc-history",
+    "topics": [
+      "The Irish diaspora",
+      "Movements for political and social reform",
+      "European retreat from Empire and the aftermath"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on the Irish diaspora, 1840-1966: quarantine stations, nationalist/unionist support abroad, Irish missionaries in Africa/Asia, and emigrant experience in writings",
+    "year": "2008",
+    "level": "Higher",
+    "qlabel": "Ireland T4",
+    "paper": "lc-history-2008",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2008-ireland-t4.png"
+  },
+  {
+    "id": "lc-history-2008-ireland-t5",
+    "subject": "lc-history",
+    "topics": [
+      "Politics and society in Northern Ireland",
+      "Movements for political and social reform",
+      "Sovereignty & the impact of partition"
+    ],
+    "conf": 0.98,
+    "strand": "",
+    "stem": "Essay questions on politics and society in Northern Ireland, 1949-1993",
+    "year": "2008",
+    "level": "Higher",
+    "qlabel": "Ireland T5",
+    "paper": "lc-history-2008",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2008-ireland-t5.png"
+  },
+  {
+    "id": "lc-history-2008-ireland-t6",
+    "subject": "lc-history",
+    "topics": [
+      "Republic - government, society, economy",
+      "Movements for political and social reform",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on government, economy and society in the Republic of Ireland, 1949-1989",
+    "year": "2008",
+    "level": "Higher",
+    "qlabel": "Ireland T6",
+    "paper": "lc-history-2008",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2008-ireland-t6.png"
+  },
+  {
+    "id": "lc-history-2008-s1",
+    "subject": "lc-history",
+    "topics": [
+      "Working with Evidence / Documents-Based Question",
+      "The US and the World",
+      "Documents question"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Documents-based question on Lyndon Johnson and the Vietnam War, 1963-1968",
+    "year": "2008",
+    "level": "Higher",
+    "qlabel": "S1",
+    "paper": "lc-history-2008",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2008-s1.png"
+  },
+  {
+    "id": "lc-history-2009-europe-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Nationalism and State Formation",
+      "Nation states and international tensions"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on nationalism and state formation in Europe, 1815-1871, including Metternich's conservative policies, social reformers, Italian and German unification, and key political figures",
+    "year": "2009",
+    "level": "Higher",
+    "qlabel": "Europe T1",
+    "paper": "lc-history-2009",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2009-europe-t1.png"
+  },
+  {
+    "id": "lc-history-2009-europe-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Nation states and international tensions",
+      "Nationalism and State Formation",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European nation states and international tensions, 1871-1920, covering Bismarck vs Wilhelm II, New Imperialism, anti-Semitism, and World War I",
+    "year": "2009",
+    "level": "Higher",
+    "qlabel": "Europe T2",
+    "paper": "lc-history-2009",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2009-europe-t2.png"
+  },
+  {
+    "id": "lc-history-2009-europe-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Dictatorship and democracy",
+      "Nation states and international tensions",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on dictatorship and democracy in Europe, 1920-1945, covering France's instability, dictatorial propaganda and terror, Britain's challenges, and World War II aspects",
+    "year": "2009",
+    "level": "Higher",
+    "qlabel": "Europe T3",
+    "paper": "lc-history-2009",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2009-europe-t3.png"
+  },
+  {
+    "id": "lc-history-2009-europe-t4",
+    "subject": "lc-history",
+    "topics": [
+      "Division and realignment in Europe",
+      "Nation states and international tensions",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on division and realignment in Europe, 1945-1992: Cold War crises, Khrushchev's policies, European unity, and social changes",
+    "year": "2009",
+    "level": "Higher",
+    "qlabel": "Europe T4",
+    "paper": "lc-history-2009",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2009-europe-t4.png"
+  },
+  {
+    "id": "lc-history-2009-europe-t5",
+    "subject": "lc-history",
+    "topics": [
+      "European retreat from Empire and the aftermath",
+      "Nationalism and State Formation",
+      "Working with Evidence / Documents-Based Question"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European decolonization and empire's aftermath, 1945-1990, including Britain's Middle East role, Africa's post-colonial experience, race in Britain/France, and anti-colonial leaders",
+    "year": "2009",
+    "level": "Higher",
+    "qlabel": "Europe T5",
+    "paper": "lc-history-2009",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2009-europe-t5.png"
+  },
+  {
+    "id": "lc-history-2009-ireland-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Ireland & the Union",
+      "Movements for political and social reform",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Ireland and the Union 1815-1870, covering Daniel O'Connell's Emancipation and Repeal campaigns, social and economic changes, Thomas Davis and Charles Kickham's contributions to Irish nationalism, and Cardinal Paul Cullen's importance in Irish Catholicism",
+    "year": "2009",
+    "level": "Higher",
+    "qlabel": "Ireland T1",
+    "paper": "lc-history-2009",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2009-ireland-t1.png"
+  },
+  {
+    "id": "lc-history-2009-ireland-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Movements for political and social reform",
+      "Nationalism and State Formation",
+      "Working with Evidence / Documents-Based Question"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on movements for political and social reform in Ireland, 1870-1914, covering Home Rule leadership, the Dublin strike and lockout, Michael Davitt's contributions, and Ulster Unionism",
+    "year": "2009",
+    "level": "Higher",
+    "qlabel": "Ireland T2",
+    "paper": "lc-history-2009",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2009-ireland-t2.png"
+  },
+  {
+    "id": "lc-history-2009-ireland-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Sovereignty & the impact of partition",
+      "Republic - government, society, economy",
+      "Politics and society in Northern Ireland"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Irish sovereignty, partition, and Anglo-Irish relations 1912-1949",
+    "year": "2009",
+    "level": "Higher",
+    "qlabel": "Ireland T3",
+    "paper": "lc-history-2009",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2009-ireland-t3.png"
+  },
+  {
+    "id": "lc-history-2009-ireland-t4",
+    "subject": "lc-history",
+    "topics": [
+      "The Irish diaspora",
+      "European retreat from Empire and the aftermath"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Irish emigration and the diaspora, 1840-1966",
+    "year": "2009",
+    "level": "Higher",
+    "qlabel": "Ireland T4",
+    "paper": "lc-history-2009",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2009-ireland-t4.png"
+  },
+  {
+    "id": "lc-history-2009-ireland-t5",
+    "subject": "lc-history",
+    "topics": [
+      "Politics and society in Northern Ireland",
+      "Sovereignty & the impact of partition",
+      "Movements for political and social reform"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on politics and society in Northern Ireland, 1949-1993",
+    "year": "2009",
+    "level": "Higher",
+    "qlabel": "Ireland T5",
+    "paper": "lc-history-2009",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2009-ireland-t5.png"
+  },
+  {
+    "id": "lc-history-2009-ireland-t6",
+    "subject": "lc-history",
+    "topics": [
+      "Republic - government, society, economy",
+      "Dictatorship and democracy",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on government, economy and society in the Republic of Ireland, 1949-1989, covering economic policy, international membership, education and cultural attitudes, and key social figures",
+    "year": "2009",
+    "level": "Higher",
+    "qlabel": "Ireland T6",
+    "paper": "lc-history-2009",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2009-ireland-t6.png"
+  },
+  {
+    "id": "lc-history-2009-s1",
+    "subject": "lc-history",
+    "topics": [
+      "Working with Evidence / Documents-Based Question",
+      "The US and the World",
+      "Movements for political and social reform"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Documents-based question on the Montgomery Bus Boycott, 1956",
+    "year": "2009",
+    "level": "Higher",
+    "qlabel": "S1",
+    "paper": "lc-history-2009",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2009-s1.png"
+  },
+  {
+    "id": "lc-history-2010-europe-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Nationalism and State Formation",
+      "Nation states and international tensions",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on nationalism and state formation in Europe, 1815-1871, covering Metternich's system, French instability, cultural nationalism, and Haussmann's Paris",
+    "year": "2010",
+    "level": "Higher",
+    "qlabel": "Europe T1",
+    "paper": "lc-history-2010",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2010-europe-t1.png"
+  },
+  {
+    "id": "lc-history-2010-europe-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Nation states and international tensions",
+      "Nationalism and State Formation",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European nation states and international tensions, 1871-1920",
+    "year": "2010",
+    "level": "Higher",
+    "qlabel": "Europe T2",
+    "paper": "lc-history-2010",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2010-europe-t2.png"
+  },
+  {
+    "id": "lc-history-2010-europe-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Dictatorship and democracy",
+      "Nation states and international tensions",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on dictatorship and democracy in Europe, 1920-1945: German governments' social and economic policies, Stalin's internal and external policies, church-state relations under Hitler and Mussolini, and Anglo-American cultural impact on Europe",
+    "year": "2010",
+    "level": "Higher",
+    "qlabel": "Europe T3",
+    "paper": "lc-history-2010",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2010-europe-t3.png"
+  },
+  {
+    "id": "lc-history-2010-europe-t4",
+    "subject": "lc-history",
+    "topics": [
+      "Division and realignment in Europe",
+      "Dictatorship and democracy",
+      "Nation states and international tensions"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on division and realignment in Europe, 1945-1992",
+    "year": "2010",
+    "level": "Higher",
+    "qlabel": "Europe T4",
+    "paper": "lc-history-2010",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2010-europe-t4.png"
+  },
+  {
+    "id": "lc-history-2010-europe-t5",
+    "subject": "lc-history",
+    "topics": [
+      "European retreat from Empire and the aftermath",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European decolonization and post-colonial Africa, 1945-1990",
+    "year": "2010",
+    "level": "Higher",
+    "qlabel": "Europe T5",
+    "paper": "lc-history-2010",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2010-europe-t5.png"
+  },
+  {
+    "id": "lc-history-2010-europe-t6",
+    "subject": "lc-history",
+    "topics": [
+      "The US and the World",
+      "Nation states and international tensions",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on US foreign policy and domestic affairs, 1945-1989: Berlin, Korea, Cuba, economic boom, Lyndon Johnson presidency, and Moon Landing",
+    "year": "2010",
+    "level": "Higher",
+    "qlabel": "Europe T6",
+    "paper": "lc-history-2010",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2010-europe-t6.png"
+  },
+  {
+    "id": "lc-history-2010-ireland-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Ireland & the Union",
+      "Nationalism and State Formation",
+      "Movements for political and social reform"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Ireland and the Union, 1815-1870: O'Connell's Emancipation and Repeal, emigration and railways, Young Ireland and Fenianism, and Nicholson and Aikenhead",
+    "year": "2010",
+    "level": "Higher",
+    "qlabel": "Ireland T1",
+    "paper": "lc-history-2010",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2010-ireland-t1.png"
+  },
+  {
+    "id": "lc-history-2010-ireland-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Movements for political and social reform",
+      "Ireland & the Union",
+      "Personalities / Case study"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on movements for political and social reform in Ireland 1870-1914, including Parnell and land reform, urban development, the GAA and Gaelic League, and Carson's Unionism",
+    "year": "2010",
+    "level": "Higher",
+    "qlabel": "Ireland T2",
+    "paper": "lc-history-2010",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2010-ireland-t2.png"
+  },
+  {
+    "id": "lc-history-2010-ireland-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Sovereignty & the impact of partition",
+      "Nationalism and State Formation",
+      "Politics and society in Northern Ireland"
+    ],
+    "conf": 0.95,
+    "strand": "",
+    "stem": "Essay questions on Irish sovereignty, partition, and Anglo-Irish relations, 1912-1949",
+    "year": "2010",
+    "level": "Higher",
+    "qlabel": "Ireland T3",
+    "paper": "lc-history-2010",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2010-ireland-t3.png"
+  },
+  {
+    "id": "lc-history-2010-ireland-t4",
+    "subject": "lc-history",
+    "topics": [
+      "The Irish diaspora",
+      "Movements for political and social reform",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on the Irish diaspora, 1840-1966, including Grosse Isle, US emigration, emigration trends 1920-1966, and the Catholic Church's role",
+    "year": "2010",
+    "level": "Higher",
+    "qlabel": "Ireland T4",
+    "paper": "lc-history-2010",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2010-ireland-t4.png"
+  },
+  {
+    "id": "lc-history-2010-ireland-t6",
+    "subject": "lc-history",
+    "topics": [
+      "Republic - government, society, economy",
+      "Dictatorship and democracy",
+      "Contextualisation essay"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on government, economy and society in the Republic of Ireland, 1949-1989",
+    "year": "2010",
+    "level": "Higher",
+    "qlabel": "Ireland T6",
+    "paper": "lc-history-2010",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2010-ireland-t6.png"
+  },
+  {
+    "id": "lc-history-2010-s1",
+    "subject": "lc-history",
+    "topics": [
+      "Politics and society in Northern Ireland",
+      "Working with Evidence / Documents-Based Question",
+      "Sovereignty & the impact of partition"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Documents-based question on the Sunningdale Agreement and power-sharing executive, 1973-1974",
+    "year": "2010",
+    "level": "Higher",
+    "qlabel": "S1",
+    "paper": "lc-history-2010",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2010-s1.png"
+  },
+  {
+    "id": "lc-history-2011-europe-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Nationalism and State Formation",
+      "Movements for political and social reform"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on nationalism and state formation in Europe, 1815-1871, covering Robert Owen's New Lanark, Marx/Bakunin/O'Connor, Italian unity, and Napoleon III",
+    "year": "2011",
+    "level": "Higher",
+    "qlabel": "Europe T1",
+    "paper": "lc-history-2011",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2011-europe-t1.png"
+  },
+  {
+    "id": "lc-history-2011-europe-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Nation states and international tensions",
+      "Nationalism and State Formation",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European international tensions 1871-1920, Church-State relations and Anti-Semitism, WWI literature, and scientific/technological developments",
+    "year": "2011",
+    "level": "Higher",
+    "qlabel": "Europe T2",
+    "paper": "lc-history-2011",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2011-europe-t2.png"
+  },
+  {
+    "id": "lc-history-2011-europe-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Dictatorship and democracy",
+      "Nation states and international tensions",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on dictatorship and democracy in Europe, 1920-1945: Lenin/Stalin, Mussolini, Nazi Germany, and British political figures",
+    "year": "2011",
+    "level": "Higher",
+    "qlabel": "Europe T3",
+    "paper": "lc-history-2011",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2011-europe-t3.png"
+  },
+  {
+    "id": "lc-history-2011-europe-t4",
+    "subject": "lc-history",
+    "topics": [
+      "Division and realignment in Europe",
+      "Nation states and international tensions",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on division and realignment in Europe, 1945-1992, covering Soviet control of Eastern Europe, European unity, Margaret Thatcher's impact on Britain, and the Second Vatican Council and Pope John Paul II",
+    "year": "2011",
+    "level": "Higher",
+    "qlabel": "Europe T4",
+    "paper": "lc-history-2011",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2011-europe-t4.png"
+  },
+  {
+    "id": "lc-history-2011-europe-t5",
+    "subject": "lc-history",
+    "topics": [
+      "European retreat from Empire and the aftermath",
+      "Nation states and international tensions",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European decolonization and post-imperial tensions, 1945-1990",
+    "year": "2011",
+    "level": "Higher",
+    "qlabel": "Europe T5",
+    "paper": "lc-history-2011",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2011-europe-t5.png"
+  },
+  {
+    "id": "lc-history-2011-europe-t6",
+    "subject": "lc-history",
+    "topics": [
+      "The US and the World",
+      "Nation states and international tensions",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on the United States and world affairs, 1945-1989",
+    "year": "2011",
+    "level": "Higher",
+    "qlabel": "Europe T6",
+    "paper": "lc-history-2011",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2011-europe-t6.png"
+  },
+  {
+    "id": "lc-history-2011-ireland-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Ireland & the Union",
+      "Movements for political and social reform",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Ireland and the Union, 1815-1870: political structures, the Famine, Fenian contributions, and cultural/religious identity figures",
+    "year": "2011",
+    "level": "Higher",
+    "qlabel": "Ireland T1",
+    "paper": "lc-history-2011",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2011-ireland-t1.png"
+  },
+  {
+    "id": "lc-history-2011-ireland-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Movements for political and social reform",
+      "Ireland & the Union",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.98,
+    "strand": "",
+    "stem": "Essay questions on movements for political and social reform in Ireland, 1870-1914, covering Home Rule, Unionism, cultural nationalism, and workers' rights",
+    "year": "2011",
+    "level": "Higher",
+    "qlabel": "Ireland T2",
+    "paper": "lc-history-2011",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2011-ireland-t2.png"
+  },
+  {
+    "id": "lc-history-2011-ireland-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Sovereignty & the impact of partition",
+      "Nationalism and State Formation",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Irish sovereignty and partition (1912-1949): Patrick Pearse, Arthur Griffith and Countess Markievicz; democratic consolidation 1922-1932; \u00c9amon de Valera's leadership; Northern Ireland's international context 1932-1945",
+    "year": "2011",
+    "level": "Higher",
+    "qlabel": "Ireland T3",
+    "paper": "lc-history-2011",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2011-ireland-t3.png"
+  },
+  {
+    "id": "lc-history-2011-ireland-t4",
+    "subject": "lc-history",
+    "topics": [
+      "The Irish diaspora",
+      "European retreat from Empire and the aftermath",
+      "Movements for political and social reform"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on the Irish diaspora, 1840-1966: emigration to the US, de Valera's 1919-1920 mission, Irish in Britain, and missionaries in Africa and Asia",
+    "year": "2011",
+    "level": "Higher",
+    "qlabel": "Ireland T4",
+    "paper": "lc-history-2011",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2011-ireland-t4.png"
+  },
+  {
+    "id": "lc-history-2011-ireland-t6",
+    "subject": "lc-history",
+    "topics": [
+      "Republic - government, society, economy",
+      "Movements for political and social reform",
+      "Working with Evidence / Documents-Based Question"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on government, economy and society in the Republic of Ireland, 1949-1989",
+    "year": "2011",
+    "level": "Higher",
+    "qlabel": "Ireland T6",
+    "paper": "lc-history-2011",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2011-ireland-t6.png"
+  },
+  {
+    "id": "lc-history-2011-s1",
+    "subject": "lc-history",
+    "topics": [
+      "Politics and society in Northern Ireland",
+      "Working with Evidence / Documents-Based Question",
+      "Documents question"
+    ],
+    "conf": 0.98,
+    "strand": "",
+    "stem": "Documents-based question on the Apprentice Boys of Derry marches (1967-1969) and their significance for Unionists and Nationalists in Northern Ireland",
+    "year": "2011",
+    "level": "Higher",
+    "qlabel": "S1",
+    "paper": "lc-history-2011",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2011-s1.png"
+  },
+  {
+    "id": "lc-history-2012-europe-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Nationalism and State Formation",
+      "Nation states and international tensions"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on nationalism and state formation in Europe, 1815-1871, including Metternich's role, German Revolution of 1848, cultural nationalism, and social reform movements in Britain",
+    "year": "2012",
+    "level": "Higher",
+    "qlabel": "Europe T1",
+    "paper": "lc-history-2012",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2012-europe-t1.png"
+  },
+  {
+    "id": "lc-history-2012-europe-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Nation states and international tensions",
+      "Nationalism and State Formation",
+      "Contextualisation essay"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on nation states and international tensions, 1871-1920, covering Weltpolitik, Russia's experience of war and revolution, World War I, and key European figures",
+    "year": "2012",
+    "level": "Higher",
+    "qlabel": "Europe T2",
+    "paper": "lc-history-2012",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2012-europe-t2.png"
+  },
+  {
+    "id": "lc-history-2012-europe-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Dictatorship and democracy",
+      "Nation states and international tensions",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on dictatorship and democracy in Europe, 1920-1945: France, Stalin's Russia, Hitler's foreign policy, and anti-Semitism/Holocaust",
+    "year": "2012",
+    "level": "Higher",
+    "qlabel": "Europe T3",
+    "paper": "lc-history-2012",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2012-europe-t3.png"
+  },
+  {
+    "id": "lc-history-2012-europe-t4",
+    "subject": "lc-history",
+    "topics": [
+      "Division and realignment in Europe",
+      "Nation states and international tensions",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European division and realignment, 1945-1992, covering unity movements, the Oil Crisis, Soviet leaders, and social developments",
+    "year": "2012",
+    "level": "Higher",
+    "qlabel": "Europe T4",
+    "paper": "lc-history-2012",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2012-europe-t4.png"
+  },
+  {
+    "id": "lc-history-2012-europe-t6",
+    "subject": "lc-history",
+    "topics": [
+      "The US and the World",
+      "Nation states and international tensions",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on US foreign policy and domestic history, 1945-1989",
+    "year": "2012",
+    "level": "Higher",
+    "qlabel": "Europe T6",
+    "paper": "lc-history-2012",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2012-europe-t6.png"
+  },
+  {
+    "id": "lc-history-2012-ireland-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Ireland & the Union",
+      "Movements for political and social reform",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Ireland and the Union, 1815-1870: O'Connell's aims, the Famine response, economic and social development, and scientific/technological/artistic advances",
+    "year": "2012",
+    "level": "Higher",
+    "qlabel": "Ireland T1",
+    "paper": "lc-history-2012",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2012-ireland-t1.png"
+  },
+  {
+    "id": "lc-history-2012-ireland-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Movements for political and social reform",
+      "Nationalism and State Formation",
+      "Working with Evidence / Documents-Based Question"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on movements for political and social reform in Ireland, 1870-1914, including women's suffrage, Parnell's leadership, the Ulster Question and Unionism, and cultural revival movements",
+    "year": "2012",
+    "level": "Higher",
+    "qlabel": "Ireland T2",
+    "paper": "lc-history-2012",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2012-ireland-t2.png"
+  },
+  {
+    "id": "lc-history-2012-ireland-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Sovereignty & the impact of partition",
+      "Nationalism and State Formation",
+      "Politics and society in Northern Ireland"
+    ],
+    "conf": 0.98,
+    "strand": "",
+    "stem": "Essay questions on Irish sovereignty, partition, and Anglo-Irish relations, 1912-1949",
+    "year": "2012",
+    "level": "Higher",
+    "qlabel": "Ireland T3",
+    "paper": "lc-history-2012",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2012-ireland-t3.png"
+  },
+  {
+    "id": "lc-history-2012-ireland-t4",
+    "subject": "lc-history",
+    "topics": [
+      "The Irish diaspora",
+      "Working with Evidence / Documents-Based Question"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on the Irish diaspora, 1840-1966",
+    "year": "2012",
+    "level": "Higher",
+    "qlabel": "Ireland T4",
+    "paper": "lc-history-2012",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2012-ireland-t4.png"
+  },
+  {
+    "id": "lc-history-2012-ireland-t5",
+    "subject": "lc-history",
+    "topics": [
+      "Politics and society in Northern Ireland",
+      "Sovereignty & the impact of partition",
+      "Movements for political and social reform"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on politics and society in Northern Ireland, 1949-1993",
+    "year": "2012",
+    "level": "Higher",
+    "qlabel": "Ireland T5",
+    "paper": "lc-history-2012",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2012-ireland-t5.png"
+  },
+  {
+    "id": "lc-history-2012-ireland-t6",
+    "subject": "lc-history",
+    "topics": [
+      "Republic - government, society, economy",
+      "Dictatorship and democracy",
+      "European retreat from Empire and the aftermath"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on government, economy and society in the Republic of Ireland, 1949-1989",
+    "year": "2012",
+    "level": "Higher",
+    "qlabel": "Ireland T6",
+    "paper": "lc-history-2012",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2012-ireland-t6.png"
+  },
+  {
+    "id": "lc-history-2012-s1",
+    "subject": "lc-history",
+    "topics": [
+      "European retreat from Empire and the aftermath",
+      "Working with Evidence / Documents-Based Question",
+      "Documents question"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Documents-based question on British withdrawal from India, 1945-1947",
+    "year": "2012",
+    "level": "Higher",
+    "qlabel": "S1",
+    "paper": "lc-history-2012",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2012-s1.png"
+  },
+  {
+    "id": "lc-history-2013-europe-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Nationalism and State Formation",
+      "Nation states and international tensions",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on nationalism and state formation in Europe, 1815-1871, covering Metternich, German and Italian unification, and social reformers",
+    "year": "2013",
+    "level": "Higher",
+    "qlabel": "Europe T1",
+    "paper": "lc-history-2013",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2013-europe-t1.png"
+  },
+  {
+    "id": "lc-history-2013-europe-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Nation states and international tensions",
+      "Nationalism and State Formation",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European nation states and international tensions, 1871-1920, covering Bismarck's diplomacy, colonial rivalries, domestic tensions, and technological change",
+    "year": "2013",
+    "level": "Higher",
+    "qlabel": "Europe T2",
+    "paper": "lc-history-2013",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2013-europe-t2.png"
+  },
+  {
+    "id": "lc-history-2013-europe-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Dictatorship and democracy",
+      "Nation states and international tensions",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on dictatorship and democracy in Europe, 1920-1945, including fascism, Stalin, Britain, and cultural figures",
+    "year": "2013",
+    "level": "Higher",
+    "qlabel": "Europe T3",
+    "paper": "lc-history-2013",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2013-europe-t3.png"
+  },
+  {
+    "id": "lc-history-2013-europe-t4",
+    "subject": "lc-history",
+    "topics": [
+      "Division and realignment in Europe",
+      "Nation states and international tensions",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on division and realignment in Europe, 1945-1992, covering Cold War development, communist economic challenges, Thatcher's leadership, and contributions of Monnet, Delors, and Pope John Paul II",
+    "year": "2013",
+    "level": "Higher",
+    "qlabel": "Europe T4",
+    "paper": "lc-history-2013",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2013-europe-t4.png"
+  },
+  {
+    "id": "lc-history-2013-europe-t6",
+    "subject": "lc-history",
+    "topics": [
+      "The US and the World",
+      "Dictatorship and democracy",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on US foreign policy, race relations, and economic/cultural developments, 1945-1989",
+    "year": "2013",
+    "level": "Higher",
+    "qlabel": "Europe T6",
+    "paper": "lc-history-2013",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2013-europe-t6.png"
+  },
+  {
+    "id": "lc-history-2013-ireland-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Ireland & the Union",
+      "Movements for political and social reform",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Ireland and the Union, 1815-1870: social and economic developments, Daniel O'Connell's leadership, Fenianism versus Liberal reforms, and Cardinal Cullen and Mother Mary Aikenhead's contributions",
+    "year": "2013",
+    "level": "Higher",
+    "qlabel": "Ireland T1",
+    "paper": "lc-history-2013",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2013-ireland-t1.png"
+  },
+  {
+    "id": "lc-history-2013-ireland-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Movements for political and social reform",
+      "Nationalism and State Formation",
+      "Working with Evidence / Documents-Based Question"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on movements for political and social reform in Ireland, 1870-1914, including Home Rule, industrial development, land agitation, labour movements, the GAA, suffrage, and the Anglo-Irish Literary Revival",
+    "year": "2013",
+    "level": "Higher",
+    "qlabel": "Ireland T2",
+    "paper": "lc-history-2013",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2013-ireland-t2.png"
+  },
+  {
+    "id": "lc-history-2013-ireland-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Sovereignty & the impact of partition",
+      "Nationalism and State Formation",
+      "Republic - government, society, economy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Irish sovereignty, partition, and development, 1912-1949",
+    "year": "2013",
+    "level": "Higher",
+    "qlabel": "Ireland T3",
+    "paper": "lc-history-2013",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2013-ireland-t3.png"
+  },
+  {
+    "id": "lc-history-2013-ireland-t4",
+    "subject": "lc-history",
+    "topics": [
+      "The Irish diaspora",
+      "Movements for political and social reform",
+      "European retreat from Empire and the aftermath"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on the Irish diaspora, 1840-1966: Irish emigrants in North America, emigration trends 1920-1966, Mother Mary Martin and the Holy Ghost mission to Nigeria, and John F. Kennedy's impact on Ireland and the US",
+    "year": "2013",
+    "level": "Higher",
+    "qlabel": "Ireland T4",
+    "paper": "lc-history-2013",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2013-ireland-t4.png"
+  },
+  {
+    "id": "lc-history-2013-ireland-t5",
+    "subject": "lc-history",
+    "topics": [
+      "Politics and society in Northern Ireland",
+      "Movements for political and social reform",
+      "Sovereignty & the impact of partition"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on politics and society in Northern Ireland, 1949-1993",
+    "year": "2013",
+    "level": "Higher",
+    "qlabel": "Ireland T5",
+    "paper": "lc-history-2013",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2013-ireland-t5.png"
+  },
+  {
+    "id": "lc-history-2013-ireland-t6",
+    "subject": "lc-history",
+    "topics": [
+      "Republic - government, society, economy",
+      "Dictatorship and democracy",
+      "Movements for political and social reform"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on government, economy and society in the Republic of Ireland, 1949-1989",
+    "year": "2013",
+    "level": "Higher",
+    "qlabel": "Ireland T6",
+    "paper": "lc-history-2013",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2013-ireland-t6.png"
+  },
+  {
+    "id": "lc-history-2013-s1",
+    "subject": "lc-history",
+    "topics": [
+      "European retreat from Empire and the aftermath",
+      "Working with Evidence / Documents-Based Question",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Documents-based question on the secession of Katanga from the Congo, 1960-1965",
+    "year": "2013",
+    "level": "Higher",
+    "qlabel": "S1",
+    "paper": "lc-history-2013",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2013-s1.png"
+  },
+  {
+    "id": "lc-history-2014-europe-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Nationalism and State Formation",
+      "Nation states and international tensions",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on nationalism and state formation in Europe, 1815-1871",
+    "year": "2014",
+    "level": "Higher",
+    "qlabel": "Europe T1",
+    "paper": "lc-history-2014",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2014-europe-t1.png"
+  },
+  {
+    "id": "lc-history-2014-europe-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Nation states and international tensions",
+      "Nationalism and State Formation",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European nation states and international tensions, 1871-1920",
+    "year": "2014",
+    "level": "Higher",
+    "qlabel": "Europe T2",
+    "paper": "lc-history-2014",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2014-europe-t2.png"
+  },
+  {
+    "id": "lc-history-2014-europe-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Dictatorship and democracy",
+      "Nation states and international tensions",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on dictatorship and democracy in Europe, 1920-1945, covering the Jarrow March, church-state relations under fascism, France's fortunes, and Soviet challenges",
+    "year": "2014",
+    "level": "Higher",
+    "qlabel": "Europe T3",
+    "paper": "lc-history-2014",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2014-europe-t3.png"
+  },
+  {
+    "id": "lc-history-2014-europe-t4",
+    "subject": "lc-history",
+    "topics": [
+      "Division and realignment in Europe",
+      "Nation states and international tensions",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on division and realignment in Europe, 1945-1992",
+    "year": "2014",
+    "level": "Higher",
+    "qlabel": "Europe T4",
+    "paper": "lc-history-2014",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2014-europe-t4.png"
+  },
+  {
+    "id": "lc-history-2014-europe-t5",
+    "subject": "lc-history",
+    "topics": [
+      "European retreat from Empire and the aftermath",
+      "Nation states and international tensions",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European decolonization and its consequences, 1945-1990",
+    "year": "2014",
+    "level": "Higher",
+    "qlabel": "Europe T5",
+    "paper": "lc-history-2014",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2014-europe-t5.png"
+  },
+  {
+    "id": "lc-history-2014-europe-t6",
+    "subject": "lc-history",
+    "topics": [
+      "The US and the World",
+      "Nation states and international tensions",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on the United States and the world, 1945-1989",
+    "year": "2014",
+    "level": "Higher",
+    "qlabel": "Europe T6",
+    "paper": "lc-history-2014",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2014-europe-t6.png"
+  },
+  {
+    "id": "lc-history-2014-ireland-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Ireland & the Union",
+      "Movements for political and social reform",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Ireland and the Union 1815-1870, covering Catholic Emancipation, economic crisis, Irish nationalism, and religious reform",
+    "year": "2014",
+    "level": "Higher",
+    "qlabel": "Ireland T1",
+    "paper": "lc-history-2014",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2014-ireland-t1.png"
+  },
+  {
+    "id": "lc-history-2014-ireland-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Movements for political and social reform",
+      "Nationalism and State Formation",
+      "Working with Evidence / Documents-Based Question"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on movements for political and social reform in Ireland, 1870-1914, covering Home Rule, land reform, Unionism, the Dublin strike and lockout, and cultural nationalism",
+    "year": "2014",
+    "level": "Higher",
+    "qlabel": "Ireland T2",
+    "paper": "lc-history-2014",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2014-ireland-t2.png"
+  },
+  {
+    "id": "lc-history-2014-ireland-t4",
+    "subject": "lc-history",
+    "topics": [
+      "The Irish diaspora",
+      "Movements for political and social reform",
+      "Working with Evidence / Documents-Based Question"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Irish emigration and the diaspora, 1840-1966",
+    "year": "2014",
+    "level": "Higher",
+    "qlabel": "Ireland T4",
+    "paper": "lc-history-2014",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2014-ireland-t4.png"
+  },
+  {
+    "id": "lc-history-2014-ireland-t5",
+    "subject": "lc-history",
+    "topics": [
+      "Politics and society in Northern Ireland",
+      "Sovereignty & the impact of partition",
+      "Movements for political and social reform"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on politics and society in Northern Ireland, 1949-1993, covering social and economic changes, international agreements, religious identity, and political figures",
+    "year": "2014",
+    "level": "Higher",
+    "qlabel": "Ireland T5",
+    "paper": "lc-history-2014",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2014-ireland-t5.png"
+  },
+  {
+    "id": "lc-history-2014-ireland-t6",
+    "subject": "lc-history",
+    "topics": [
+      "Republic - government, society, economy",
+      "Dictatorship and democracy",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on government, economy and society in the Republic of Ireland, 1949-1989",
+    "year": "2014",
+    "level": "Higher",
+    "qlabel": "Ireland T6",
+    "paper": "lc-history-2014",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2014-ireland-t6.png"
+  },
+  {
+    "id": "lc-history-2014-s1",
+    "subject": "lc-history",
+    "topics": [
+      "Working with Evidence / Documents-Based Question",
+      "Sovereignty & the impact of partition",
+      "Nation states and international tensions"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Documents-based question on Belfast during World War II, examining evacuation accommodation issues and the impact of the Blitz on the city",
+    "year": "2014",
+    "level": "Higher",
+    "qlabel": "S1",
+    "paper": "lc-history-2014",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2014-s1.png"
+  },
+  {
+    "id": "lc-history-2015-europe-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Nationalism and State Formation",
+      "Nation states and international tensions"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on nationalism and state formation in Europe, 1815-1871, covering the Metternich system, agricultural and industrial changes, city planning, and Italian unification",
+    "year": "2015",
+    "level": "Higher",
+    "qlabel": "Europe T1",
+    "paper": "lc-history-2015",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2015-europe-t1.png"
+  },
+  {
+    "id": "lc-history-2015-europe-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Nation states and international tensions",
+      "Nationalism and State Formation",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European nation states and international tensions, 1871-1920",
+    "year": "2015",
+    "level": "Higher",
+    "qlabel": "Europe T2",
+    "paper": "lc-history-2015",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2015-europe-t2.png"
+  },
+  {
+    "id": "lc-history-2015-europe-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Dictatorship and democracy",
+      "Nation states and international tensions",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on dictatorship and democracy in Europe, 1920-1945, covering Germany, Italy, Stalin's USSR, Hitler's foreign policy, and Britain",
+    "year": "2015",
+    "level": "Higher",
+    "qlabel": "Europe T3",
+    "paper": "lc-history-2015",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2015-europe-t3.png"
+  },
+  {
+    "id": "lc-history-2015-europe-t4",
+    "subject": "lc-history",
+    "topics": [
+      "Division and realignment in Europe",
+      "Nation states and international tensions",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European division and realignment 1945-1992, covering unity movements, Cold War Soviet reform, political figures, and cultural changes",
+    "year": "2015",
+    "level": "Higher",
+    "qlabel": "Europe T4",
+    "paper": "lc-history-2015",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2015-europe-t4.png"
+  },
+  {
+    "id": "lc-history-2015-europe-t5",
+    "subject": "lc-history",
+    "topics": [
+      "European retreat from Empire and the aftermath",
+      "Nationalism and State Formation",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European decolonization and post-imperial society, 1945-1990",
+    "year": "2015",
+    "level": "Higher",
+    "qlabel": "Europe T5",
+    "paper": "lc-history-2015",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2015-europe-t5.png"
+  },
+  {
+    "id": "lc-history-2015-europe-t6",
+    "subject": "lc-history",
+    "topics": [
+      "The US and the World",
+      "Nation states and international tensions",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on US foreign policy 1945-1989, covering Berlin, Korea, Cuba, Montgomery bus boycott, American Dream, and technological advances",
+    "year": "2015",
+    "level": "Higher",
+    "qlabel": "Europe T6",
+    "paper": "lc-history-2015",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2015-europe-t6.png"
+  },
+  {
+    "id": "lc-history-2015-ireland-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Ireland & the Union",
+      "Movements for political and social reform",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Ireland and the Union, 1815-1870: social and economic developments, Daniel O'Connell's Repeal campaign, Great Famine responses, and contributions of William Carleton and Cardinal Paul Cullen",
+    "year": "2015",
+    "level": "Higher",
+    "qlabel": "Ireland T1",
+    "paper": "lc-history-2015",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2015-ireland-t1.png"
+  },
+  {
+    "id": "lc-history-2015-ireland-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Movements for political and social reform",
+      "Ireland & the Union",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on movements for political and social reform in Ireland, 1870-1914, including Butt and Parnell's political careers, land agitation and reform, Unionist opposition to self-government, and contributions of the GAA, suffrage movement, and early Sinn F\u00e9in",
+    "year": "2015",
+    "level": "Higher",
+    "qlabel": "Ireland T2",
+    "paper": "lc-history-2015",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2015-ireland-t2.png"
+  },
+  {
+    "id": "lc-history-2015-ireland-t4",
+    "subject": "lc-history",
+    "topics": [
+      "The Irish diaspora",
+      "Movements for political and social reform",
+      "Working with Evidence / Documents-Based Question"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on the Irish diaspora, 1840-1966: Grosse Isle, Irish-American political figures, Ulster-Scottish identity, and Irish religious leaders abroad",
+    "year": "2015",
+    "level": "Higher",
+    "qlabel": "Ireland T4",
+    "paper": "lc-history-2015",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2015-ireland-t4.png"
+  },
+  {
+    "id": "lc-history-2015-ireland-t5",
+    "subject": "lc-history",
+    "topics": [
+      "Politics and society in Northern Ireland",
+      "Sovereignty & the impact of partition",
+      "Movements for political and social reform"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on politics and society in Northern Ireland, 1949-1993",
+    "year": "2015",
+    "level": "Higher",
+    "qlabel": "Ireland T5",
+    "paper": "lc-history-2015",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2015-ireland-t5.png"
+  },
+  {
+    "id": "lc-history-2015-ireland-t6",
+    "subject": "lc-history",
+    "topics": [
+      "Republic - government, society, economy",
+      "Movements for political and social reform",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Government, economy and society in the Republic of Ireland, 1949-1989",
+    "year": "2015",
+    "level": "Higher",
+    "qlabel": "Ireland T6",
+    "paper": "lc-history-2015",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2015-ireland-t6.png"
+  },
+  {
+    "id": "lc-history-2015-s1",
+    "subject": "lc-history",
+    "topics": [
+      "Working with Evidence / Documents-Based Question",
+      "Sovereignty & the impact of partition",
+      "Movements for political and social reform"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Documents-based question on the Eucharistic Congress, 1932 and religious/social conditions in Ireland",
+    "year": "2015",
+    "level": "Higher",
+    "qlabel": "S1",
+    "paper": "lc-history-2015",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2015-s1.png"
+  },
+  {
+    "id": "lc-history-2016-europe-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Nationalism and State Formation",
+      "Nation states and international tensions"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on nationalism and state formation in Europe, 1815-1871, including the 1848 Revolutions, Balkan nationalism, and historical figures like Darwin and Hugo",
+    "year": "2016",
+    "level": "Higher",
+    "qlabel": "Europe T1",
+    "paper": "lc-history-2016",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2016-europe-t1.png"
+  },
+  {
+    "id": "lc-history-2016-europe-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Nation states and international tensions",
+      "Nationalism and State Formation",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European nation states and international tensions, 1871-1920, covering Wilhelm II vs Bismarck foreign policy, industrial development, World War I, and contributions of Pope Leo XIII, Marie Curie, and Rosa Luxemburg",
+    "year": "2016",
+    "level": "Higher",
+    "qlabel": "Europe T2",
+    "paper": "lc-history-2016",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2016-europe-t2.png"
+  },
+  {
+    "id": "lc-history-2016-europe-t4",
+    "subject": "lc-history",
+    "topics": [
+      "Division and realignment in Europe",
+      "Nationalism and State Formation",
+      "Nation states and international tensions"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on division and realignment in Europe, 1945-1992: Soviet control of Eastern Europe, Western economic development and European integration, technological and social developments, and achievements of key figures",
+    "year": "2016",
+    "level": "Higher",
+    "qlabel": "Europe T4",
+    "paper": "lc-history-2016",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2016-europe-t4.png"
+  },
+  {
+    "id": "lc-history-2016-europe-t5",
+    "subject": "lc-history",
+    "topics": [
+      "European retreat from Empire and the aftermath",
+      "Nation states and international tensions"
+    ],
+    "conf": 0.98,
+    "strand": "",
+    "stem": "Essay questions on European decolonisation and post-colonial affairs, 1945-1990",
+    "year": "2016",
+    "level": "Higher",
+    "qlabel": "Europe T5",
+    "paper": "lc-history-2016",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2016-europe-t5.png"
+  },
+  {
+    "id": "lc-history-2016-europe-t6",
+    "subject": "lc-history",
+    "topics": [
+      "The US and the World",
+      "Nation states and international tensions",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on United States foreign policy and domestic society, 1945-1989",
+    "year": "2016",
+    "level": "Higher",
+    "qlabel": "Europe T6",
+    "paper": "lc-history-2016",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2016-europe-t6.png"
+  },
+  {
+    "id": "lc-history-2016-ireland-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Ireland & the Union",
+      "Movements for political and social reform",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Ireland and the Union 1815-1870: Belfast's development, Daniel O'Connell's aims, relief of distress, and contributions to Irish nationalism",
+    "year": "2016",
+    "level": "Higher",
+    "qlabel": "Ireland T1",
+    "paper": "lc-history-2016",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2016-ireland-t1.png"
+  },
+  {
+    "id": "lc-history-2016-ireland-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Movements for political and social reform",
+      "Ireland & the Union",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on movements for political and social reform in Ireland, 1870-1914, including land agitation, Home Rule elections, trade unionism, and cultural nationalism",
+    "year": "2016",
+    "level": "Higher",
+    "qlabel": "Ireland T2",
+    "paper": "lc-history-2016",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2016-ireland-t2.png"
+  },
+  {
+    "id": "lc-history-2016-ireland-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Sovereignty & the impact of partition",
+      "Nationalism and State Formation",
+      "Republic - government, society, economy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Irish sovereignty, partition, and the pursuit of independence, 1912-1949",
+    "year": "2016",
+    "level": "Higher",
+    "qlabel": "Ireland T3",
+    "paper": "lc-history-2016",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2016-ireland-t3.png"
+  },
+  {
+    "id": "lc-history-2016-ireland-t4",
+    "subject": "lc-history",
+    "topics": [
+      "The Irish diaspora",
+      "Nationalism and State Formation",
+      "European retreat from Empire and the aftermath"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on the Irish diaspora, 1840-1966: Irish nationalism as international force, Ulster Unionist emigrant lobbying, Irish emigration to Britain, and the Holy Ghost mission to Nigeria",
+    "year": "2016",
+    "level": "Higher",
+    "qlabel": "Ireland T4",
+    "paper": "lc-history-2016",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2016-ireland-t4.png"
+  },
+  {
+    "id": "lc-history-2016-ireland-t5",
+    "subject": "lc-history",
+    "topics": [
+      "Politics and society in Northern Ireland",
+      "Movements for political and social reform",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on politics and society in Northern Ireland, 1949-1993",
+    "year": "2016",
+    "level": "Higher",
+    "qlabel": "Ireland T5",
+    "paper": "lc-history-2016",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2016-ireland-t5.png"
+  },
+  {
+    "id": "lc-history-2016-ireland-t6",
+    "subject": "lc-history",
+    "topics": [
+      "Republic - government, society, economy",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on government, economy and society in the Republic of Ireland, 1949-1989",
+    "year": "2016",
+    "level": "Higher",
+    "qlabel": "Ireland T6",
+    "paper": "lc-history-2016",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2016-ireland-t6.png"
+  },
+  {
+    "id": "lc-history-2016-s1",
+    "subject": "lc-history",
+    "topics": [
+      "Working with Evidence / Documents-Based Question",
+      "Dictatorship and democracy",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Documents-based question on the Nuremberg Rallies and Nazi propaganda, 1928-1945",
+    "year": "2016",
+    "level": "Higher",
+    "qlabel": "S1",
+    "paper": "lc-history-2016",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2016-s1.png"
+  },
+  {
+    "id": "lc-history-2017-europe-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Nationalism and State Formation",
+      "Nation states and international tensions",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on nationalism and state formation in Europe, 1815-1871, covering Metternich's diplomacy, Italian and German unification, responses to social change, and cultural nationalism",
+    "year": "2017",
+    "level": "Higher",
+    "qlabel": "Europe T1",
+    "paper": "lc-history-2017",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2017-europe-t1.png"
+  },
+  {
+    "id": "lc-history-2017-europe-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Nation states and international tensions",
+      "Nationalism and State Formation",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on nation states and international tensions, 1871-1920: Germany's industrialisation and motor car development; New Imperialism causes and effects on Europe; Russia's experience of war and revolution, 1900-1920; World War I and post-war peace settlement",
+    "year": "2017",
+    "level": "Higher",
+    "qlabel": "Europe T2",
+    "paper": "lc-history-2017",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2017-europe-t2.png"
+  },
+  {
+    "id": "lc-history-2017-europe-t4",
+    "subject": "lc-history",
+    "topics": [
+      "Division and realignment in Europe",
+      "Dictatorship and democracy",
+      "Nation states and international tensions"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on division and realignment in Europe 1945-1992, covering Soviet leadership under Khrushchev, Thatcher's effectiveness, Western economies, and John Paul III's influence",
+    "year": "2017",
+    "level": "Higher",
+    "qlabel": "Europe T4",
+    "paper": "lc-history-2017",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2017-europe-t4.png"
+  },
+  {
+    "id": "lc-history-2017-europe-t5",
+    "subject": "lc-history",
+    "topics": [
+      "European retreat from Empire and the aftermath",
+      "Nationalism and State Formation",
+      "Working with Evidence / Documents-Based Question"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European decolonization and post-colonial challenges, 1945-1990",
+    "year": "2017",
+    "level": "Higher",
+    "qlabel": "Europe T5",
+    "paper": "lc-history-2017",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2017-europe-t5.png"
+  },
+  {
+    "id": "lc-history-2017-europe-t6",
+    "subject": "lc-history",
+    "topics": [
+      "The US and the World",
+      "Dictatorship and democracy",
+      "Movements for political and social reform"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on the United States and the world, 1945-1989, covering presidential foreign policy, the Civil Rights Movement, economic development, and cultural challenges",
+    "year": "2017",
+    "level": "Higher",
+    "qlabel": "Europe T6",
+    "paper": "lc-history-2017",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2017-europe-t6.png"
+  },
+  {
+    "id": "lc-history-2017-ireland-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Ireland & the Union",
+      "Movements for political and social reform",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Ireland and the Union, 1815-1870: emigration, education, industrial development, Famine responses, Fenianism, and developments in creative arts and science",
+    "year": "2017",
+    "level": "Higher",
+    "qlabel": "Ireland T1",
+    "paper": "lc-history-2017",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2017-ireland-t1.png"
+  },
+  {
+    "id": "lc-history-2017-ireland-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Movements for political and social reform",
+      "Working with Evidence / Documents-Based Question"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on movements for political and social reform in Ireland, 1870-1914: Home Rule, Edward Carson, land reform, co-operatives, GAA, and the Suffrage movement",
+    "year": "2017",
+    "level": "Higher",
+    "qlabel": "Ireland T2",
+    "paper": "lc-history-2017",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2017-ireland-t2.png"
+  },
+  {
+    "id": "lc-history-2017-ireland-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Sovereignty & the impact of partition",
+      "Nationalism and State Formation",
+      "Working with Evidence / Documents-Based Question"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Irish partition, sovereignty, Anglo-Irish relations, and national identity, 1912-1949",
+    "year": "2017",
+    "level": "Higher",
+    "qlabel": "Ireland T3",
+    "paper": "lc-history-2017",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2017-ireland-t3.png"
+  },
+  {
+    "id": "lc-history-2017-ireland-t4",
+    "subject": "lc-history",
+    "topics": [
+      "The Irish diaspora",
+      "European retreat from Empire and the aftermath",
+      "Movements for political and social reform"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on the Irish diaspora, 1840-1966: emigrant challenges in the US, significant diaspora figures, Irish missionaries in Africa and Asia, and Irish cultural influence through film, music, tourism and heritage",
+    "year": "2017",
+    "level": "Higher",
+    "qlabel": "Ireland T4",
+    "paper": "lc-history-2017",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2017-ireland-t4.png"
+  },
+  {
+    "id": "lc-history-2017-ireland-t5",
+    "subject": "lc-history",
+    "topics": [
+      "Politics and society in Northern Ireland",
+      "Movements for political and social reform",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on politics and society in Northern Ireland, 1949-1993, covering social and economic problems, the Civil Rights Movement, political leaders, and culture and religion",
+    "year": "2017",
+    "level": "Higher",
+    "qlabel": "Ireland T5",
+    "paper": "lc-history-2017",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2017-ireland-t5.png"
+  },
+  {
+    "id": "lc-history-2017-ireland-t6",
+    "subject": "lc-history",
+    "topics": [
+      "Republic - government, society, economy",
+      "Dictatorship and democracy",
+      "Movements for political and social reform"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on government, economy and society in the Republic of Ireland, 1949-1989",
+    "year": "2017",
+    "level": "Higher",
+    "qlabel": "Ireland T6",
+    "paper": "lc-history-2017",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2017-ireland-t6.png"
+  },
+  {
+    "id": "lc-history-2017-s1",
+    "subject": "lc-history",
+    "topics": [
+      "Working with Evidence / Documents-Based Question",
+      "Dictatorship and democracy",
+      "Documents question"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Documents-based question on the Jarrow March, October 1936 - analyzing contemporary accounts of social and economic problems, proposed solutions, and the aims and achievement of the march",
+    "year": "2017",
+    "level": "Higher",
+    "qlabel": "S1",
+    "paper": "lc-history-2017",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2017-s1.png"
+  },
+  {
+    "id": "lc-history-2018-europe-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Nationalism and State Formation",
+      "Nation states and international tensions",
+      "Working with Evidence / Documents-Based Question"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on nationalism and state formation in Europe, 1815-1871, covering Metternich's system, Italian and German unification, socioeconomic developments, and French political figures",
+    "year": "2018",
+    "level": "Higher",
+    "qlabel": "Europe T1",
+    "paper": "lc-history-2018",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2018-europe-t1.png"
+  },
+  {
+    "id": "lc-history-2018-europe-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Nation states and international tensions",
+      "Nationalism and State Formation",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on nation states and international tensions, 1871-1920, covering Bismarck, Tsarist Russia, World War I, and industrial development",
+    "year": "2018",
+    "level": "Higher",
+    "qlabel": "Europe T2",
+    "paper": "lc-history-2018",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2018-europe-t2.png"
+  },
+  {
+    "id": "lc-history-2018-europe-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Dictatorship and democracy",
+      "Nation states and international tensions",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on dictatorship and democracy in Europe 1920-1945, covering Nazi Germany, France, World War II leadership, and cinema",
+    "year": "2018",
+    "level": "Higher",
+    "qlabel": "Europe T3",
+    "paper": "lc-history-2018",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2018-europe-t3.png"
+  },
+  {
+    "id": "lc-history-2018-europe-t4",
+    "subject": "lc-history",
+    "topics": [
+      "Division and realignment in Europe",
+      "Nation states and international tensions",
+      "Contextualisation essay"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on division and realignment in Europe, 1945-1992, covering European unity, German division and Berlin, Hungarian uprising, and Cold War intellectuals",
+    "year": "2018",
+    "level": "Higher",
+    "qlabel": "Europe T4",
+    "paper": "lc-history-2018",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2018-europe-t4.png"
+  },
+  {
+    "id": "lc-history-2018-europe-t5",
+    "subject": "lc-history",
+    "topics": [
+      "European retreat from Empire and the aftermath",
+      "Nationalism and State Formation",
+      "Nation states and international tensions"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European decolonization and its consequences, 1945-1990",
+    "year": "2018",
+    "level": "Higher",
+    "qlabel": "Europe T5",
+    "paper": "lc-history-2018",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2018-europe-t5.png"
+  },
+  {
+    "id": "lc-history-2018-europe-t6",
+    "subject": "lc-history",
+    "topics": [
+      "The US and the World",
+      "Contextualisation essay"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on US foreign and domestic policy, 1945-1989, including Truman, Vietnam War, cultural figures, and technological advancement",
+    "year": "2018",
+    "level": "Higher",
+    "qlabel": "Europe T6",
+    "paper": "lc-history-2018",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2018-europe-t6.png"
+  },
+  {
+    "id": "lc-history-2018-ireland-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Ireland & the Union",
+      "Movements for political and social reform",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Ireland and the Union, 1815-1870: government responses to the Famine, O'Connell's leadership, contributions of Aikenhead/Carleton/Dargan, and Young Ireland/Fenianism",
+    "year": "2018",
+    "level": "Higher",
+    "qlabel": "Ireland T1",
+    "paper": "lc-history-2018",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2018-ireland-t1.png"
+  },
+  {
+    "id": "lc-history-2018-ireland-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Movements for political and social reform",
+      "Nationalism and State Formation",
+      "Working with Evidence / Documents-Based Question"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on movements for political and social reform in Ireland, 1870-1914",
+    "year": "2018",
+    "level": "Higher",
+    "qlabel": "Ireland T2",
+    "paper": "lc-history-2018",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2018-ireland-t2.png"
+  },
+  {
+    "id": "lc-history-2018-ireland-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Sovereignty & the impact of partition",
+      "Nationalism and State Formation",
+      "Movements for political and social reform"
+    ],
+    "conf": 0.98,
+    "strand": "",
+    "stem": "Essay questions on Irish sovereignty, partition, and nation-building 1912-1949",
+    "year": "2018",
+    "level": "Higher",
+    "qlabel": "Ireland T3",
+    "paper": "lc-history-2018",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2018-ireland-t3.png"
+  },
+  {
+    "id": "lc-history-2018-ireland-t4",
+    "subject": "lc-history",
+    "topics": [
+      "The Irish diaspora",
+      "Nationalism and State Formation",
+      "Movements for political and social reform"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on the Irish diaspora, 1840-1966: anti-Irish sentiment, Irish nationalism and unionism as international forces, the Catholic Church's role, and Irish cultural representations in film and music",
+    "year": "2018",
+    "level": "Higher",
+    "qlabel": "Ireland T4",
+    "paper": "lc-history-2018",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2018-ireland-t4.png"
+  },
+  {
+    "id": "lc-history-2018-ireland-t5",
+    "subject": "lc-history",
+    "topics": [
+      "Politics and society in Northern Ireland",
+      "Movements for political and social reform",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on politics and society in Northern Ireland, 1949-1993, covering education/health/housing developments, political leadership, the Troubles, and controversial figures",
+    "year": "2018",
+    "level": "Higher",
+    "qlabel": "Ireland T5",
+    "paper": "lc-history-2018",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2018-ireland-t5.png"
+  },
+  {
+    "id": "lc-history-2018-s1",
+    "subject": "lc-history",
+    "topics": [
+      "Working with Evidence / Documents-Based Question",
+      "Republic - government, society, economy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Documents-based question on Lemass and RT\u00c9's role in supporting government policy, 1962-1972",
+    "year": "2018",
+    "level": "Higher",
+    "qlabel": "S1",
+    "paper": "lc-history-2018",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2018-s1.png"
+  },
+  {
+    "id": "lc-history-2019-europe-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Nationalism and State Formation",
+      "Nation states and international tensions",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on nationalism and state formation in Europe, 1815-1871, including German unification, Balkan nationalism, social reformers, and scientific developments",
+    "year": "2019",
+    "level": "Higher",
+    "qlabel": "Europe T1",
+    "paper": "lc-history-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2019-europe-t1.png"
+  },
+  {
+    "id": "lc-history-2019-europe-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Nation states and international tensions",
+      "Nationalism and State Formation",
+      "Contextualisation essay"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on nation states and international tensions, 1871-1920, covering causes of international tension, industrialisation in Tsarist Russia, Church-State tensions and anti-Semitism, and World War I",
+    "year": "2019",
+    "level": "Higher",
+    "qlabel": "Europe T2",
+    "paper": "lc-history-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2019-europe-t2.png"
+  },
+  {
+    "id": "lc-history-2019-europe-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Dictatorship and democracy",
+      "Nationalism and State Formation",
+      "Nation states and international tensions"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on dictatorship and democracy in Europe, 1920-1945, covering fascist regimes, Britain's social and economic problems, Stalin's leadership, and WWII technology",
+    "year": "2019",
+    "level": "Higher",
+    "qlabel": "Europe T3",
+    "paper": "lc-history-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2019-europe-t3.png"
+  },
+  {
+    "id": "lc-history-2019-europe-t4",
+    "subject": "lc-history",
+    "topics": [
+      "Division and realignment in Europe",
+      "Nation states and international tensions",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Cold War development in Europe, European integration, Soviet leadership, and youth/popular culture, 1945-1992",
+    "year": "2019",
+    "level": "Higher",
+    "qlabel": "Europe T4",
+    "paper": "lc-history-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2019-europe-t4.png"
+  },
+  {
+    "id": "lc-history-2019-europe-t5",
+    "subject": "lc-history",
+    "topics": [
+      "European retreat from Empire and the aftermath",
+      "Nationalism and State Formation",
+      "Nation states and international tensions"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European decolonisation and its consequences, 1945-1990",
+    "year": "2019",
+    "level": "Higher",
+    "qlabel": "Europe T5",
+    "paper": "lc-history-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2019-europe-t5.png"
+  },
+  {
+    "id": "lc-history-2019-europe-t6",
+    "subject": "lc-history",
+    "topics": [
+      "The US and the World",
+      "Dictatorship and democracy",
+      "Nation states and international tensions"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on US involvement in Korea and Vietnam, racial equality movement, moon landing, and cultural figures (McCarthy, Graham, Mailer), 1945-1989",
+    "year": "2019",
+    "level": "Higher",
+    "qlabel": "Europe T6",
+    "paper": "lc-history-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2019-europe-t6.png"
+  },
+  {
+    "id": "lc-history-2019-ireland-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Ireland & the Union",
+      "Movements for political and social reform",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Ireland and the Union, 1815-1870: O'Connell's leadership, Famine responses, Fenian contributions, and cultural/religious identity development",
+    "year": "2019",
+    "level": "Higher",
+    "qlabel": "Ireland T1",
+    "paper": "lc-history-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2019-ireland-t1.png"
+  },
+  {
+    "id": "lc-history-2019-ireland-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Movements for political and social reform",
+      "Nationalism and State Formation",
+      "Working with Evidence / Documents-Based Question"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Irish political and social reform movements, 1870-1914, including land agitation, labour disputes, political leadership, suffrage, Sinn F\u00e9in, Irish Volunteers, and cultural/religious identity development",
+    "year": "2019",
+    "level": "Higher",
+    "qlabel": "Ireland T2",
+    "paper": "lc-history-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2019-ireland-t2.png"
+  },
+  {
+    "id": "lc-history-2019-ireland-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Sovereignty & the impact of partition",
+      "Nationalism and State Formation",
+      "Republic - government, society, economy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Irish sovereignty, partition, and Anglo-Irish relations, 1912-1949",
+    "year": "2019",
+    "level": "Higher",
+    "qlabel": "Ireland T3",
+    "paper": "lc-history-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2019-ireland-t3.png"
+  },
+  {
+    "id": "lc-history-2019-ireland-t4",
+    "subject": "lc-history",
+    "topics": [
+      "The Irish diaspora",
+      "Nationalism and State Formation",
+      "Movements for political and social reform"
+    ],
+    "conf": 0.93,
+    "strand": "",
+    "stem": "Essay questions on Irish emigration and diaspora, 1840-1966, covering emigration patterns, nationalism, emigration to Britain, and the Irish spiritual empire",
+    "year": "2019",
+    "level": "Higher",
+    "qlabel": "Ireland T4",
+    "paper": "lc-history-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2019-ireland-t4.png"
+  },
+  {
+    "id": "lc-history-2019-ireland-t5",
+    "subject": "lc-history",
+    "topics": [
+      "Politics and society in Northern Ireland",
+      "Movements for political and social reform",
+      "Sovereignty & the impact of partition"
+    ],
+    "conf": 0.98,
+    "strand": "",
+    "stem": "Essay questions on politics and society in Northern Ireland, 1949-1993, covering O'Neill vs Brookeborough, Coleraine University controversy, peace agreements, and related social issues",
+    "year": "2019",
+    "level": "Higher",
+    "qlabel": "Ireland T5",
+    "paper": "lc-history-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2019-ireland-t5.png"
+  },
+  {
+    "id": "lc-history-2019-ireland-t6",
+    "subject": "lc-history",
+    "topics": [
+      "Republic - government, society, economy",
+      "Dictatorship and democracy",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on government, economy and society in the Republic of Ireland, 1949-1989",
+    "year": "2019",
+    "level": "Higher",
+    "qlabel": "Ireland T6",
+    "paper": "lc-history-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2019-ireland-t6.png"
+  },
+  {
+    "id": "lc-history-2019-s1",
+    "subject": "lc-history",
+    "topics": [
+      "Working with Evidence / Documents-Based Question",
+      "Republic - government, society, economy",
+      "Documents question"
+    ],
+    "conf": 0.93,
+    "strand": "",
+    "stem": "Documents-based question on the First Programme for Economic Expansion, 1958-1963, with source documents from T.K. Whitaker and J.M. Stevens",
+    "year": "2019",
+    "level": "Higher",
+    "qlabel": "S1",
+    "paper": "lc-history-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2019-s1.png"
+  },
+  {
+    "id": "lc-history-2020-europe-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Nationalism and State Formation",
+      "Nation states and international tensions"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on nationalism and state formation in Europe, 1815-1871, covering Metternich's diplomacy, social visions of O'Connor/Marx/Bakunin, French affairs under Haussmann and Hugo, and cultural/scientific nationalism",
+    "year": "2020",
+    "level": "Higher",
+    "qlabel": "Europe T1",
+    "paper": "lc-history-2020",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2020-europe-t1.png"
+  },
+  {
+    "id": "lc-history-2020-europe-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Nation states and international tensions",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on nation states and international tensions, 1871-1920: Wilhelm II's naval policy, industrial development, WWI literature and national identity, and key figures (Luxemburg, Curie, Wilson)",
+    "year": "2020",
+    "level": "Higher",
+    "qlabel": "Europe T2",
+    "paper": "lc-history-2020",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2020-europe-t2.png"
+  },
+  {
+    "id": "lc-history-2020-europe-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Dictatorship and democracy",
+      "Division and realignment in Europe",
+      "Nation states and international tensions"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on dictatorship and democracy in Europe, 1920-1945, covering inter-war social/economic problems, Stalin's rule, anti-Semitism and the Holocaust, and World War II",
+    "year": "2020",
+    "level": "Higher",
+    "qlabel": "Europe T3",
+    "paper": "lc-history-2020",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2020-europe-t3.png"
+  },
+  {
+    "id": "lc-history-2020-europe-t4",
+    "subject": "lc-history",
+    "topics": [
+      "Division and realignment in Europe",
+      "Nation states and international tensions",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Division and realignment in Europe, 1945-1992: Soviet control of Eastern Europe, Margaret Thatcher's leadership, social changes in Western Europe, and economic developments",
+    "year": "2020",
+    "level": "Higher",
+    "qlabel": "Europe T4",
+    "paper": "lc-history-2020",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2020-europe-t4.png"
+  },
+  {
+    "id": "lc-history-2020-europe-t5",
+    "subject": "lc-history",
+    "topics": [
+      "European retreat from Empire and the aftermath",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European decolonization and its consequences, 1945-1990",
+    "year": "2020",
+    "level": "Higher",
+    "qlabel": "Europe T5",
+    "paper": "lc-history-2020",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2020-europe-t5.png"
+  },
+  {
+    "id": "lc-history-2020-ireland-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Ireland & the Union",
+      "Movements for political and social reform",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Ireland and the Union, 1815-1870: Tithe War, Liberal reforms, Catholic Emancipation, and cultural/religious identity",
+    "year": "2020",
+    "level": "Higher",
+    "qlabel": "Ireland T1",
+    "paper": "lc-history-2020",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2020-ireland-t1.png"
+  },
+  {
+    "id": "lc-history-2020-ireland-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Movements for political and social reform",
+      "Ireland & the Union",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.98,
+    "strand": "",
+    "stem": "Essay questions on movements for political and social reform in Ireland, 1870-1914, including Parnell's land reform and Home Rule efforts, Unionist movement achievements, and cultural/political contributions of the GAA, Gaelic League, and W.B. Yeats",
+    "year": "2020",
+    "level": "Higher",
+    "qlabel": "Ireland T2",
+    "paper": "lc-history-2020",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2020-ireland-t2.png"
+  },
+  {
+    "id": "lc-history-2020-ireland-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Sovereignty & the impact of partition",
+      "Movements for political and social reform",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Irish sovereignty, self-government, and partition (1912-1949): attempts at self-government, social and economic problems, \u00c9amon de Valera's leadership, and cultural identity promotion",
+    "year": "2020",
+    "level": "Higher",
+    "qlabel": "Ireland T3",
+    "paper": "lc-history-2020",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2020-ireland-t3.png"
+  },
+  {
+    "id": "lc-history-2020-ireland-t4",
+    "subject": "lc-history",
+    "topics": [
+      "The Irish diaspora",
+      "European retreat from Empire and the aftermath",
+      "Personalities / Case study"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on the Irish diaspora, 1840-1966: Irish emigration conditions, de Valera's mission to America, Holy Ghost mission to Nigeria, and Irish-American careers",
+    "year": "2020",
+    "level": "Higher",
+    "qlabel": "Ireland T4",
+    "paper": "lc-history-2020",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2020-ireland-t4.png"
+  },
+  {
+    "id": "lc-history-2020-ireland-t5",
+    "subject": "lc-history",
+    "topics": [
+      "Politics and society in Northern Ireland",
+      "Sovereignty & the impact of partition",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Northern Ireland politics and society, 1949-1993, covering government responses to social/economic problems, the Sunningdale Agreement, Ian Paisley's role, and Seamus Heaney's cultural responses to the Troubles",
+    "year": "2020",
+    "level": "Higher",
+    "qlabel": "Ireland T5",
+    "paper": "lc-history-2020",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2020-ireland-t5.png"
+  },
+  {
+    "id": "lc-history-2020-ireland-t6",
+    "subject": "lc-history",
+    "topics": [
+      "Republic - government, society, economy",
+      "Dictatorship and democracy",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on government, economy and society in the Republic of Ireland, 1949-1989",
+    "year": "2020",
+    "level": "Higher",
+    "qlabel": "Ireland T6",
+    "paper": "lc-history-2020",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2020-ireland-t6.png"
+  },
+  {
+    "id": "lc-history-2020-s1",
+    "subject": "lc-history",
+    "topics": [
+      "Working with Evidence / Documents-Based Question",
+      "The US and the World",
+      "Documents question"
+    ],
+    "conf": 0.98,
+    "strand": "",
+    "stem": "Documents-based question on Lyndon Johnson and Vietnam, 1963-1968",
+    "year": "2020",
+    "level": "Higher",
+    "qlabel": "S1",
+    "paper": "lc-history-2020",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2020-s1.png"
+  },
+  {
+    "id": "lc-history-2022-europe-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Nationalism and State Formation",
+      "Nation states and international tensions",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on nationalism and state formation in Europe, 1815-1871, covering key figures and processes including Mazzini, Bismarck, French political instability, and the role of churches in social change",
+    "year": "2022",
+    "level": "Higher",
+    "qlabel": "Europe T1",
+    "paper": "lc-history-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2022-europe-t1.png"
+  },
+  {
+    "id": "lc-history-2022-europe-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Nation states and international tensions",
+      "Nationalism and State Formation",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European nation states and international tensions, 1871-1920, covering German tensions under Bismarck and Wilhelm II, anti-Semitism, World War I literature and women, and scientific/technological developments",
+    "year": "2022",
+    "level": "Higher",
+    "qlabel": "Europe T2",
+    "paper": "lc-history-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2022-europe-t2.png"
+  },
+  {
+    "id": "lc-history-2022-europe-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Dictatorship and democracy",
+      "Nation states and international tensions",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on dictatorship and democracy in Europe, 1920-1945, covering Italy and Germany, Britain, Stalin's USSR, and Anglo-American cultural influence",
+    "year": "2022",
+    "level": "Higher",
+    "qlabel": "Europe T3",
+    "paper": "lc-history-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2022-europe-t3.png"
+  },
+  {
+    "id": "lc-history-2022-europe-t4",
+    "subject": "lc-history",
+    "topics": [
+      "Division and realignment in Europe",
+      "Nation states and international tensions",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Cold War origins, EEC evolution, Margaret Thatcher's leadership, and youth culture in Europe 1945-1992",
+    "year": "2022",
+    "level": "Higher",
+    "qlabel": "Europe T4",
+    "paper": "lc-history-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2022-europe-t4.png"
+  },
+  {
+    "id": "lc-history-2022-europe-t5",
+    "subject": "lc-history",
+    "topics": [
+      "European retreat from Empire and the aftermath",
+      "Nationalism and State Formation",
+      "Nation states and international tensions"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European decolonization and post-imperial challenges, 1945-1990",
+    "year": "2022",
+    "level": "Higher",
+    "qlabel": "Europe T5",
+    "paper": "lc-history-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2022-europe-t5.png"
+  },
+  {
+    "id": "lc-history-2022-europe-t6",
+    "subject": "lc-history",
+    "topics": [
+      "The US and the World",
+      "Nation states and international tensions",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on US foreign policy 1945-1989: Cold War crises, race relations, economy, and cultural figures",
+    "year": "2022",
+    "level": "Higher",
+    "qlabel": "Europe T6",
+    "paper": "lc-history-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2022-europe-t6.png"
+  },
+  {
+    "id": "lc-history-2022-ireland-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Ireland & the Union",
+      "Movements for political and social reform",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Ireland and the Union 1815-1870: Famine responses, Belfast industrial development, Fenianism, and Catholic Church figures",
+    "year": "2022",
+    "level": "Higher",
+    "qlabel": "Ireland T1",
+    "paper": "lc-history-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2022-ireland-t1.png"
+  },
+  {
+    "id": "lc-history-2022-ireland-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Movements for political and social reform",
+      "Nationalism and State Formation",
+      "Working with Evidence / Documents-Based Question"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on movements for political and social reform in Ireland, 1870-1914",
+    "year": "2022",
+    "level": "Higher",
+    "qlabel": "Ireland T2",
+    "paper": "lc-history-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2022-ireland-t2.png"
+  },
+  {
+    "id": "lc-history-2022-ireland-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Sovereignty & the impact of partition",
+      "Nationalism and State Formation",
+      "Republic - government, society, economy"
+    ],
+    "conf": 0.96,
+    "strand": "",
+    "stem": "Essay questions on Irish sovereignty, partition, and economic development, 1912-1945",
+    "year": "2022",
+    "level": "Higher",
+    "qlabel": "Ireland T3",
+    "paper": "lc-history-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2022-ireland-t3.png"
+  },
+  {
+    "id": "lc-history-2022-ireland-t4",
+    "subject": "lc-history",
+    "topics": [
+      "The Irish diaspora",
+      "Movements for political and social reform",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on the Irish diaspora, 1840-1966: emigration experiences, cultural figures (Mac Amhlaigh, O'Hara), Kennedy influence, and diaspora religious leaders",
+    "year": "2022",
+    "level": "Higher",
+    "qlabel": "Ireland T4",
+    "paper": "lc-history-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2022-ireland-t4.png"
+  },
+  {
+    "id": "lc-history-2022-ireland-t6",
+    "subject": "lc-history",
+    "topics": [
+      "Republic - government, society, economy",
+      "Dictatorship and democracy",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on government, economy and society in the Republic of Ireland, 1949-1989",
+    "year": "2022",
+    "level": "Higher",
+    "qlabel": "Ireland T6",
+    "paper": "lc-history-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2022-ireland-t6.png"
+  },
+  {
+    "id": "lc-history-2022-s1",
+    "subject": "lc-history",
+    "topics": [
+      "Politics and society in Northern Ireland",
+      "Working with Evidence / Documents-Based Question",
+      "Documents question"
+    ],
+    "conf": 0.98,
+    "strand": "",
+    "stem": "Documents-based question on The Coleraine University controversy and its impact on tension in Derry, 1949-1993",
+    "year": "2022",
+    "level": "Higher",
+    "qlabel": "S1",
+    "paper": "lc-history-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2022-s1.png"
+  },
+  {
+    "id": "lc-history-2026-europe-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Nationalism and State Formation",
+      "Nation states and international tensions",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on nationalism and state formation in Europe, 1815-1871, covering revolutions of 1848, social reformers, city planning, and cultural nationalism",
+    "year": "2026",
+    "level": "Higher",
+    "qlabel": "Europe T1",
+    "paper": "lc-history-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2026-europe-t1.png"
+  },
+  {
+    "id": "lc-history-2026-europe-t2",
+    "subject": "lc-history",
+    "topics": [
+      "Nation states and international tensions",
+      "Nationalism and State Formation",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European nation states and international tensions, 1871-1920, including Bismarck vs Kaiser Wilhelm II foreign policy, anti-Semitism in France and Russia, and contributions of Douglas Haig and Woodrow Wilson to European war and peace",
+    "year": "2026",
+    "level": "Higher",
+    "qlabel": "Europe T2",
+    "paper": "lc-history-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2026-europe-t2.png"
+  },
+  {
+    "id": "lc-history-2026-europe-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Dictatorship and democracy",
+      "Nation states and international tensions",
+      "Division and realignment in Europe"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on dictatorship and democracy in Europe, 1920-1945, covering Britain, Mussolini, Hitler, Stalin, Lenin, and media influence",
+    "year": "2026",
+    "level": "Higher",
+    "qlabel": "Europe T3",
+    "paper": "lc-history-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2026-europe-t3.png"
+  },
+  {
+    "id": "lc-history-2026-europe-t4",
+    "subject": "lc-history",
+    "topics": [
+      "Division and realignment in Europe",
+      "Nation states and international tensions",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on division and realignment in Europe 1945-1992, covering Sovietisation, Marshall Aid, Margaret Thatcher, and cultural developments",
+    "year": "2026",
+    "level": "Higher",
+    "qlabel": "Europe T4",
+    "paper": "lc-history-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2026-europe-t4.png"
+  },
+  {
+    "id": "lc-history-2026-europe-t5",
+    "subject": "lc-history",
+    "topics": [
+      "European retreat from Empire and the aftermath",
+      "Nationalism and State Formation",
+      "Nation states and international tensions"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on European decolonisation and its aftermath, 1945-1990: Gandhi and Sukarno, Arab-Israeli conflict, French immigration policy, and social/economic consequences of decolonisation",
+    "year": "2026",
+    "level": "Higher",
+    "qlabel": "Europe T5",
+    "paper": "lc-history-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2026-europe-t5.png"
+  },
+  {
+    "id": "lc-history-2026-europe-t6",
+    "subject": "lc-history",
+    "topics": [
+      "The US and the World",
+      "Nation states and international tensions",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on US economy, Cold War impact, racial inequality, and cultural figures, 1945-1989",
+    "year": "2026",
+    "level": "Higher",
+    "qlabel": "Europe T6",
+    "paper": "lc-history-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2026-europe-t6.png"
+  },
+  {
+    "id": "lc-history-2026-ireland-t1",
+    "subject": "lc-history",
+    "topics": [
+      "Ireland & the Union",
+      "Movements for political and social reform",
+      "Nationalism and State Formation"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Ireland and the Union 1815-1870: Catholic Emancipation, the Famine, Fenianism, and cultural and religious identity",
+    "year": "2026",
+    "level": "Higher",
+    "qlabel": "Ireland T1",
+    "paper": "lc-history-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2026-ireland-t1.png"
+  },
+  {
+    "id": "lc-history-2026-ireland-t3",
+    "subject": "lc-history",
+    "topics": [
+      "Sovereignty & the impact of partition",
+      "Nationalism and State Formation",
+      "Dictatorship and democracy"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on Irish sovereignty, partition, and state consolidation, 1912-1949",
+    "year": "2026",
+    "level": "Higher",
+    "qlabel": "Ireland T3",
+    "paper": "lc-history-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2026-ireland-t3.png"
+  },
+  {
+    "id": "lc-history-2026-ireland-t4",
+    "subject": "lc-history",
+    "topics": [
+      "The Irish diaspora",
+      "European retreat from Empire and the aftermath",
+      "The US and the World"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on the Irish diaspora, 1840-1966: challenges in Britain, Protestant churches and Orange Order abroad, Irish-American political figures, and the Holy Ghost mission to Nigeria",
+    "year": "2026",
+    "level": "Higher",
+    "qlabel": "Ireland T4",
+    "paper": "lc-history-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2026-ireland-t4.png"
+  },
+  {
+    "id": "lc-history-2026-ireland-t5",
+    "subject": "lc-history",
+    "topics": [
+      "Politics and society in Northern Ireland",
+      "Sovereignty & the impact of partition",
+      "Movements for political and social reform"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on politics and society in Northern Ireland, 1949-1993, including cultural identity expression, the Sunningdale Agreement, the Troubles' impact, and Gerry Adams' influence",
+    "year": "2026",
+    "level": "Higher",
+    "qlabel": "Ireland T5",
+    "paper": "lc-history-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2026-ireland-t5.png"
+  },
+  {
+    "id": "lc-history-2026-ireland-t6",
+    "subject": "lc-history",
+    "topics": [
+      "Republic - government, society, economy",
+      "Dictatorship and democracy",
+      "European retreat from Empire and the aftermath"
+    ],
+    "conf": 0.92,
+    "strand": "",
+    "stem": "Essay questions on government, economy and society in the Republic of Ireland, 1949-1989",
+    "year": "2026",
+    "level": "Higher",
+    "qlabel": "Ireland T6",
+    "paper": "lc-history-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2026-ireland-t6.png"
+  },
+  {
+    "id": "lc-history-2026-s1",
+    "subject": "lc-history",
+    "topics": [
+      "Working with Evidence / Documents-Based Question",
+      "Movements for political and social reform",
+      "Documents question"
+    ],
+    "conf": 0.98,
+    "strand": "",
+    "stem": "Documents-based question on the GAA to 1891 examining accounts of GAA activities in Kilkenny and Charleville",
+    "year": "2026",
+    "level": "Higher",
+    "qlabel": "S1",
+    "paper": "lc-history-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2026-s1.png"
   }
 ]
