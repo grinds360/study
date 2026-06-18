@@ -51832,5 +51832,1750 @@
     "origin": "sec_official",
     "status": "review",
     "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/lc-history/lc-history-2026-s1.png"
+  },
+  {
+    "id": "jc-science-2019-q01",
+    "subject": "jc-science",
+    "topics": [
+      "Cells",
+      "Measurement"
+    ],
+    "conf": 0.92,
+    "strand": "Biological World",
+    "stem": "Label animal cell parts and identify control center; select appropriate microscope instrument.",
+    "year": "2019",
+    "level": "Common",
+    "qlabel": "Q01",
+    "paper": "jc-science-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2019-q01.png"
+  },
+  {
+    "id": "jc-science-2019-q02",
+    "subject": "jc-science",
+    "topics": [
+      "Density & pressure",
+      "Measurement",
+      "States of matter"
+    ],
+    "conf": 0.92,
+    "strand": "Physical World",
+    "stem": "Calculate block volume and density; identify egg with greatest density using water displacement.",
+    "year": "2019",
+    "level": "Common",
+    "qlabel": "Q02",
+    "paper": "jc-science-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2019-q02.png"
+  },
+  {
+    "id": "jc-science-2019-q03",
+    "subject": "jc-science",
+    "topics": [
+      "Cycles of matter",
+      "Heat",
+      "Sustainability"
+    ],
+    "conf": 0.92,
+    "strand": "Earth & Space",
+    "stem": "Identify water cycle stages and suggest ways to reduce household water usage",
+    "year": "2019",
+    "level": "Common",
+    "qlabel": "Q03",
+    "paper": "jc-science-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2019-q03.png"
+  },
+  {
+    "id": "jc-science-2019-q04",
+    "subject": "jc-science",
+    "topics": [
+      "Chemical reactions",
+      "Elements, compounds & mixtures",
+      "Atomic structure & the periodic table"
+    ],
+    "conf": 0.92,
+    "strand": "Chemical World",
+    "stem": "Analyze methane combustion reaction, count atoms, explain mass conservation and chemical changes.",
+    "year": "2019",
+    "level": "Common",
+    "qlabel": "Q04",
+    "paper": "jc-science-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2019-q04.png"
+  },
+  {
+    "id": "jc-science-2019-q05",
+    "subject": "jc-science",
+    "topics": [
+      "Genetics & heredity",
+      "Human biology",
+      "Cells"
+    ],
+    "conf": 0.95,
+    "strand": "Biological World",
+    "stem": "Analyze sickle cell anaemia inheritance pattern in family tree and answer genetics questions.",
+    "year": "2019",
+    "level": "Common",
+    "qlabel": "Q05",
+    "paper": "jc-science-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2019-q05.png"
+  },
+  {
+    "id": "jc-science-2019-q06",
+    "subject": "jc-science",
+    "topics": [
+      "Acids & bases",
+      "Chemical reactions",
+      "Energy"
+    ],
+    "conf": 0.92,
+    "strand": "Chemical World",
+    "stem": "Investigate acid-base reaction using pH indicator, temperature change, and energy diagram.",
+    "year": "2019",
+    "level": "Common",
+    "qlabel": "Q06",
+    "paper": "jc-science-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2019-q06.png"
+  },
+  {
+    "id": "jc-science-2019-q07",
+    "subject": "jc-science",
+    "topics": [
+      "Forces & motion",
+      "Interpreting data & graphs",
+      "Measurement"
+    ],
+    "conf": 0.92,
+    "strand": "Physical World",
+    "stem": "Analyze distance-time graph of cyclist journey; calculate speed and describe motion.",
+    "year": "2019",
+    "level": "Common",
+    "qlabel": "Q07",
+    "paper": "jc-science-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2019-q07.png"
+  },
+  {
+    "id": "jc-science-2019-q08",
+    "subject": "jc-science",
+    "topics": [
+      "Sustainability",
+      "Ecology & ecosystems",
+      "States of matter"
+    ],
+    "conf": 0.85,
+    "strand": "Earth & Space",
+    "stem": "Global warming, ice melting, sea level rise, polar bear habitat and phase changes.",
+    "year": "2019",
+    "level": "Common",
+    "qlabel": "Q08",
+    "paper": "jc-science-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2019-q08.png"
+  },
+  {
+    "id": "jc-science-2019-q09",
+    "subject": "jc-science",
+    "topics": [
+      "Human biology",
+      "Photosynthesis & respiration"
+    ],
+    "conf": 0.95,
+    "strand": "Biological World",
+    "stem": "Identify respiratory system parts and describe breathing process.",
+    "year": "2019",
+    "level": "Common",
+    "qlabel": "Q09",
+    "paper": "jc-science-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2019-q09.png"
+  },
+  {
+    "id": "jc-science-2019-q10",
+    "subject": "jc-science",
+    "topics": [
+      "The solar system",
+      "Interpreting data & graphs",
+      "Light & sound"
+    ],
+    "conf": 0.85,
+    "strand": "Earth & Space",
+    "stem": "Identify solar system structures and analyze planet transit light curves.",
+    "year": "2019",
+    "level": "Common",
+    "qlabel": "Q10",
+    "paper": "jc-science-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2019-q10.png"
+  },
+  {
+    "id": "jc-science-2019-q11",
+    "subject": "jc-science",
+    "topics": [
+      "States of matter",
+      "Heat",
+      "Investigation & experiment design"
+    ],
+    "conf": 0.85,
+    "strand": "Physical World",
+    "stem": "Investigate the effect of dissolved salt on the boiling point of water",
+    "year": "2019",
+    "level": "Common",
+    "qlabel": "Q11",
+    "paper": "jc-science-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2019-q11.png"
+  },
+  {
+    "id": "jc-science-2019-q12",
+    "subject": "jc-science",
+    "topics": [
+      "Light & sound",
+      "Electricity & magnetism",
+      "Investigation & experiment design"
+    ],
+    "conf": 0.85,
+    "strand": "Physical World",
+    "stem": "Investigate how red solution concentration affects green light transmission using LDR and LED.",
+    "year": "2019",
+    "level": "Common",
+    "qlabel": "Q12",
+    "paper": "jc-science-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2019-q12.png"
+  },
+  {
+    "id": "jc-science-2019-q13",
+    "subject": "jc-science",
+    "topics": [
+      "Electricity & magnetism",
+      "Energy",
+      "Sustainability"
+    ],
+    "conf": 0.92,
+    "strand": "Physical World",
+    "stem": "Analyze electrical appliances: power ratings, energy forms, voltage calculations, and renewable energy sources.",
+    "year": "2019",
+    "level": "Common",
+    "qlabel": "Q13",
+    "paper": "jc-science-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2019-q13.png"
+  },
+  {
+    "id": "jc-science-2019-q14",
+    "subject": "jc-science",
+    "topics": [
+      "Microorganisms",
+      "Human biology",
+      "Investigation & experiment design"
+    ],
+    "conf": 0.85,
+    "strand": "Biological World",
+    "stem": "Multi-part question on gut bacteria, stress, diet, and evolution using experimental design.",
+    "year": "2019",
+    "level": "Common",
+    "qlabel": "Q14",
+    "paper": "jc-science-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2019-q14.png"
+  },
+  {
+    "id": "jc-science-2019-q15",
+    "subject": "jc-science",
+    "topics": [
+      "Atomic structure & the periodic table",
+      "Elements, compounds & mixtures",
+      "States of matter"
+    ],
+    "conf": 0.92,
+    "strand": "Chemical World",
+    "stem": "Interpret periodic table data; identify gases, elements, properties, and chemical formulas.",
+    "year": "2019",
+    "level": "Common",
+    "qlabel": "Q15",
+    "paper": "jc-science-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2019-q15.png"
+  },
+  {
+    "id": "jc-science-2019-q16",
+    "subject": "jc-science",
+    "topics": [
+      "The solar system",
+      "Forces & motion",
+      "Heat"
+    ],
+    "conf": 0.85,
+    "strand": "Earth & Space",
+    "stem": "Describe Moon's phases, surface features, temperature patterns, and gravity effects.",
+    "year": "2019",
+    "level": "Common",
+    "qlabel": "Q16",
+    "paper": "jc-science-2019",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2019-q16.png"
+  },
+  {
+    "id": "jc-science-2022-q01",
+    "subject": "jc-science",
+    "topics": [
+      "Measurement",
+      "Investigation & experiment design"
+    ],
+    "conf": 0.95,
+    "strand": "Nature of Science",
+    "stem": "Match physical quantities to appropriate measuring instruments from given options.",
+    "year": "2022",
+    "level": "Common",
+    "qlabel": "Q01",
+    "paper": "jc-science-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2022-q01.png"
+  },
+  {
+    "id": "jc-science-2022-q02",
+    "subject": "jc-science",
+    "topics": [
+      "The solar system",
+      "Measurement"
+    ],
+    "conf": 0.92,
+    "strand": "Earth & Space",
+    "stem": "Identify celestial objects and diagram lunar eclipse positions.",
+    "year": "2022",
+    "level": "Common",
+    "qlabel": "Q02",
+    "paper": "jc-science-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2022-q02.png"
+  },
+  {
+    "id": "jc-science-2022-q03",
+    "subject": "jc-science",
+    "topics": [
+      "Atomic structure & the periodic table",
+      "Elements, compounds & mixtures"
+    ],
+    "conf": 0.92,
+    "strand": "Chemical World",
+    "stem": "Identify subatomic particles, electron charge, locate element on periodic table, determine compound formation.",
+    "year": "2022",
+    "level": "Common",
+    "qlabel": "Q03",
+    "paper": "jc-science-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2022-q03.png"
+  },
+  {
+    "id": "jc-science-2022-q04",
+    "subject": "jc-science",
+    "topics": [
+      "Genetics & heredity",
+      "Ecology & ecosystems"
+    ],
+    "conf": 0.92,
+    "strand": "Biological World",
+    "stem": "Evolution by natural selection: true/false statements and organism adaptations",
+    "year": "2022",
+    "level": "Common",
+    "qlabel": "Q04",
+    "paper": "jc-science-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2022-q04.png"
+  },
+  {
+    "id": "jc-science-2022-q05",
+    "subject": "jc-science",
+    "topics": [
+      "Elements, compounds & mixtures",
+      "Separation techniques",
+      "Measurement"
+    ],
+    "conf": 0.85,
+    "strand": "Chemical World",
+    "stem": "Identify atom in water molecule model; compare properties; calculate solubility; describe dissolution methods.",
+    "year": "2022",
+    "level": "Common",
+    "qlabel": "Q05",
+    "paper": "jc-science-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2022-q05.png"
+  },
+  {
+    "id": "jc-science-2022-q06",
+    "subject": "jc-science",
+    "topics": [
+      "The solar system",
+      "Light & sound",
+      "Forces & motion"
+    ],
+    "conf": 0.92,
+    "strand": "Earth & Space",
+    "stem": "Identify lunar phases from images and explain Moon visibility and gravity effects.",
+    "year": "2022",
+    "level": "Common",
+    "qlabel": "Q06",
+    "paper": "jc-science-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2022-q06.png"
+  },
+  {
+    "id": "jc-science-2022-q07",
+    "subject": "jc-science",
+    "topics": [
+      "Forces & motion",
+      "Investigation & experiment design",
+      "Fair tests"
+    ],
+    "conf": 0.92,
+    "strand": "Physical World",
+    "stem": "Calculate trolley speed, hypothesize about sloped track, design fair comparison, sketch expected graph.",
+    "year": "2022",
+    "level": "Common",
+    "qlabel": "Q07",
+    "paper": "jc-science-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2022-q07.png"
+  },
+  {
+    "id": "jc-science-2022-q08",
+    "subject": "jc-science",
+    "topics": [
+      "The solar system",
+      "Investigation & experiment design"
+    ],
+    "conf": 0.85,
+    "strand": "Earth & Space",
+    "stem": "Name model explaining universe origin; identify evidence and space exploration benefits/hazards.",
+    "year": "2022",
+    "level": "Common",
+    "qlabel": "Q08",
+    "paper": "jc-science-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2022-q08.png"
+  },
+  {
+    "id": "jc-science-2022-q09",
+    "subject": "jc-science",
+    "topics": [
+      "Acids & bases",
+      "Investigation & experiment design",
+      "Interpreting data & graphs"
+    ],
+    "conf": 0.92,
+    "strand": "Chemical World",
+    "stem": "Investigate how pH changes when base is added to two acids using burettes and pH meter.",
+    "year": "2022",
+    "level": "Common",
+    "qlabel": "Q09",
+    "paper": "jc-science-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2022-q09.png"
+  },
+  {
+    "id": "jc-science-2022-q10",
+    "subject": "jc-science",
+    "topics": [
+      "Human biology",
+      "Cells"
+    ],
+    "conf": 0.95,
+    "strand": "Biological World",
+    "stem": "Identify blood vessel and heart chamber properties in circulatory system diagram",
+    "year": "2022",
+    "level": "Common",
+    "qlabel": "Q10",
+    "paper": "jc-science-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2022-q10.png"
+  },
+  {
+    "id": "jc-science-2022-q11",
+    "subject": "jc-science",
+    "topics": [
+      "The solar system",
+      "Measurement",
+      "Investigation & experiment design"
+    ],
+    "conf": 0.85,
+    "strand": "Earth & Space",
+    "stem": "Earth's orbital positions, seasons, shadow length variations, and experimental investigation design.",
+    "year": "2022",
+    "level": "Common",
+    "qlabel": "Q11",
+    "paper": "jc-science-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2022-q11.png"
+  },
+  {
+    "id": "jc-science-2022-q12",
+    "subject": "jc-science",
+    "topics": [
+      "Genetics & heredity",
+      "Human biology",
+      "Cells"
+    ],
+    "conf": 0.92,
+    "strand": "Biological World",
+    "stem": "Label genetic structures, identify chromosomes in cells, and calculate inheritance probabilities.",
+    "year": "2022",
+    "level": "Common",
+    "qlabel": "Q12",
+    "paper": "jc-science-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2022-q12.png"
+  },
+  {
+    "id": "jc-science-2022-q13",
+    "subject": "jc-science",
+    "topics": [
+      "Heat",
+      "States of matter",
+      "Separation techniques"
+    ],
+    "conf": 0.85,
+    "strand": "Physical World",
+    "stem": "Investigate melting points of sucrose using metal cubes and heat conduction properties",
+    "year": "2022",
+    "level": "Common",
+    "qlabel": "Q13",
+    "paper": "jc-science-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2022-q13.png"
+  },
+  {
+    "id": "jc-science-2022-q14",
+    "subject": "jc-science",
+    "topics": [
+      "Nutrition",
+      "Human biology",
+      "Sustainability"
+    ],
+    "conf": 0.85,
+    "strand": "Biological World",
+    "stem": "Analyze European Green Deal food sustainability impacts on health and environment.",
+    "year": "2022",
+    "level": "Common",
+    "qlabel": "Q14",
+    "paper": "jc-science-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2022-q14.png"
+  },
+  {
+    "id": "jc-science-2022-q15",
+    "subject": "jc-science",
+    "topics": [
+      "Energy",
+      "Forces & motion",
+      "Investigation & experiment design"
+    ],
+    "conf": 0.85,
+    "strand": "Physical World",
+    "stem": "Analyze trampoline potential and kinetic energy; investigate spring force-extension relationships and elastic potential energy storage.",
+    "year": "2022",
+    "level": "Common",
+    "qlabel": "Q15",
+    "paper": "jc-science-2022",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2022-q15.png"
+  },
+  {
+    "id": "jc-science-2023-q01",
+    "subject": "jc-science",
+    "topics": [
+      "Cells",
+      "Human biology"
+    ],
+    "conf": 0.95,
+    "strand": "Biological World",
+    "stem": "Identify nucleus in plant and animal cells; name parts by description.",
+    "year": "2023",
+    "level": "Common",
+    "qlabel": "Q01",
+    "paper": "jc-science-2023",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2023-q01.png"
+  },
+  {
+    "id": "jc-science-2023-q02",
+    "subject": "jc-science",
+    "topics": [
+      "Human biology",
+      "Cells",
+      "Genetics & heredity"
+    ],
+    "conf": 0.95,
+    "strand": "Biological World",
+    "stem": "Label reproductive system structures and describe contraception methods.",
+    "year": "2023",
+    "level": "Common",
+    "qlabel": "Q02",
+    "paper": "jc-science-2023",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2023-q02.png"
+  },
+  {
+    "id": "jc-science-2023-q03",
+    "subject": "jc-science",
+    "topics": [
+      "Chemical reactions",
+      "Energy"
+    ],
+    "conf": 0.95,
+    "strand": "Chemical World",
+    "stem": "Label energy profile diagram for exothermic reaction and name endothermic reaction type.",
+    "year": "2023",
+    "level": "Common",
+    "qlabel": "Q03",
+    "paper": "jc-science-2023",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2023-q03.png"
+  },
+  {
+    "id": "jc-science-2023-q04",
+    "subject": "jc-science",
+    "topics": [
+      "States of matter",
+      "Chemical reactions",
+      "Heat"
+    ],
+    "conf": 0.95,
+    "strand": "Physical World",
+    "stem": "Fill in missing words about states of matter, physical and chemical changes, mass conservation.",
+    "year": "2023",
+    "level": "Common",
+    "qlabel": "Q04",
+    "paper": "jc-science-2023",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2023-q04.png"
+  },
+  {
+    "id": "jc-science-2023-q05",
+    "subject": "jc-science",
+    "topics": [
+      "Electricity & magnetism",
+      "Measurement",
+      "Interpreting data & graphs"
+    ],
+    "conf": 0.95,
+    "strand": "Physical World",
+    "stem": "Investigate current and voltage relationship; identify ammeter function; select proportional graph; calculate resistance.",
+    "year": "2023",
+    "level": "Common",
+    "qlabel": "Q05",
+    "paper": "jc-science-2023",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2023-q05.png"
+  },
+  {
+    "id": "jc-science-2023-q06",
+    "subject": "jc-science",
+    "topics": [
+      "Ecology & ecosystems",
+      "Investigation & experiment design",
+      "Sustainability"
+    ],
+    "conf": 0.92,
+    "strand": "Biological World",
+    "stem": "Habitat study equipment, resource competition in trees, and biodiversity conservation methods.",
+    "year": "2023",
+    "level": "Common",
+    "qlabel": "Q06",
+    "paper": "jc-science-2023",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2023-q06.png"
+  },
+  {
+    "id": "jc-science-2023-q07",
+    "subject": "jc-science",
+    "topics": [
+      "Forces & motion",
+      "Interpreting data & graphs",
+      "Measurement"
+    ],
+    "conf": 0.95,
+    "strand": "Physical World",
+    "stem": "Analyze speed-time graph to find maximum speed, acceleration, and describe motion.",
+    "year": "2023",
+    "level": "Common",
+    "qlabel": "Q07",
+    "paper": "jc-science-2023",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2023-q07.png"
+  },
+  {
+    "id": "jc-science-2023-q08",
+    "subject": "jc-science",
+    "topics": [
+      "Acids & bases",
+      "Investigation & experiment design",
+      "Measurement"
+    ],
+    "conf": 0.92,
+    "strand": "Chemical World",
+    "stem": "Investigate acid-base reaction using pH probe and identify indicators for neutralization.",
+    "year": "2023",
+    "level": "Common",
+    "qlabel": "Q08",
+    "paper": "jc-science-2023",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2023-q08.png"
+  },
+  {
+    "id": "jc-science-2023-q09",
+    "subject": "jc-science",
+    "topics": [
+      "Elements, compounds & mixtures",
+      "Atomic structure & the periodic table",
+      "Chemical reactions"
+    ],
+    "conf": 0.92,
+    "strand": "Chemical World",
+    "stem": "Complete table predicting atom ratios and chemical formulas using periodic table; compare metals and non-metals.",
+    "year": "2023",
+    "level": "Common",
+    "qlabel": "Q09",
+    "paper": "jc-science-2023",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2023-q09.png"
+  },
+  {
+    "id": "jc-science-2023-q10",
+    "subject": "jc-science",
+    "topics": [
+      "Atomic structure & the periodic table",
+      "Energy",
+      "Investigation & experiment design"
+    ],
+    "conf": 0.92,
+    "strand": "Physical World",
+    "stem": "Identify nuclear particles, compare charges, diagram lithium atom, state nuclear power advantage.",
+    "year": "2023",
+    "level": "Common",
+    "qlabel": "Q10",
+    "paper": "jc-science-2023",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2023-q10.png"
+  },
+  {
+    "id": "jc-science-2023-q11",
+    "subject": "jc-science",
+    "topics": [
+      "Cycles of matter",
+      "Photosynthesis & respiration",
+      "Ecology & ecosystems"
+    ],
+    "conf": 0.92,
+    "strand": "Biological World",
+    "stem": "Identify processes in the carbon cycle and explain environmental impacts of increased atmospheric CO2.",
+    "year": "2023",
+    "level": "Common",
+    "qlabel": "Q11",
+    "paper": "jc-science-2023",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2023-q11.png"
+  },
+  {
+    "id": "jc-science-2023-q12",
+    "subject": "jc-science",
+    "topics": [
+      "Forces & motion",
+      "Energy",
+      "Investigation & experiment design"
+    ],
+    "conf": 0.85,
+    "strand": "Physical World",
+    "stem": "Investigate relationship between ball drop height and bounce height; graph data and analyze energy conversion.",
+    "year": "2023",
+    "level": "Common",
+    "qlabel": "Q12",
+    "paper": "jc-science-2023",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2023-q12.png"
+  },
+  {
+    "id": "jc-science-2023-q13",
+    "subject": "jc-science",
+    "topics": [
+      "The solar system",
+      "Light & sound"
+    ],
+    "conf": 0.92,
+    "strand": "Earth & Space",
+    "stem": "Understand solar and lunar eclipses, planets, moons, and light protection during eclipses.",
+    "year": "2023",
+    "level": "Common",
+    "qlabel": "Q13",
+    "paper": "jc-science-2023",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2023-q13.png"
+  },
+  {
+    "id": "jc-science-2023-q14",
+    "subject": "jc-science",
+    "topics": [
+      "Forces & motion",
+      "Measurement",
+      "Fair tests"
+    ],
+    "conf": 0.85,
+    "strand": "Physical World",
+    "stem": "Investigate how bread hardness changes with age using compression force measurements.",
+    "year": "2023",
+    "level": "Common",
+    "qlabel": "Q14",
+    "paper": "jc-science-2023",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2023-q14.png"
+  },
+  {
+    "id": "jc-science-2023-q15",
+    "subject": "jc-science",
+    "topics": [
+      "Human biology",
+      "Cells",
+      "Photosynthesis & respiration"
+    ],
+    "conf": 0.85,
+    "strand": "Biological World",
+    "stem": "Label breathing system parts; explain diaphragm function and gas exchange processes.",
+    "year": "2023",
+    "level": "Common",
+    "qlabel": "Q15",
+    "paper": "jc-science-2023",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2023-q15.png"
+  },
+  {
+    "id": "jc-science-2024-q01",
+    "subject": "jc-science",
+    "topics": [
+      "Ecology & ecosystems",
+      "Energy",
+      "Photosynthesis & respiration"
+    ],
+    "conf": 0.92,
+    "strand": "Biological World",
+    "stem": "Analyze grassland food chain: identify producers, consumers, energy conversions, and trophic level limits.",
+    "year": "2024",
+    "level": "Common",
+    "qlabel": "Q01",
+    "paper": "jc-science-2024",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2024-q01.png"
+  },
+  {
+    "id": "jc-science-2024-q02",
+    "subject": "jc-science",
+    "topics": [
+      "Energy",
+      "Sustainability",
+      "Electricity & magnetism"
+    ],
+    "conf": 0.85,
+    "strand": "Physical World",
+    "stem": "Classify electricity sources as renewable or non-renewable; discuss ethical energy extraction issues",
+    "year": "2024",
+    "level": "Common",
+    "qlabel": "Q02",
+    "paper": "jc-science-2024",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2024-q02.png"
+  },
+  {
+    "id": "jc-science-2024-q03",
+    "subject": "jc-science",
+    "topics": [
+      "Density & pressure",
+      "Separation techniques",
+      "States of matter"
+    ],
+    "conf": 0.85,
+    "strand": "Physical World",
+    "stem": "Compare densities of oil and sand with water; identify evidence of immiscibility; design separation method.",
+    "year": "2024",
+    "level": "Common",
+    "qlabel": "Q03",
+    "paper": "jc-science-2024",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2024-q03.png"
+  },
+  {
+    "id": "jc-science-2024-q04",
+    "subject": "jc-science",
+    "topics": [
+      "Forces & motion",
+      "Interpreting data & graphs",
+      "Measurement"
+    ],
+    "conf": 0.95,
+    "strand": "Physical World",
+    "stem": "Match distance-time and speed-time graphs to descriptions of object motion.",
+    "year": "2024",
+    "level": "Common",
+    "qlabel": "Q04",
+    "paper": "jc-science-2024",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2024-q04.png"
+  },
+  {
+    "id": "jc-science-2024-q05",
+    "subject": "jc-science",
+    "topics": [
+      "Electricity & magnetism",
+      "Measurement",
+      "Fair tests"
+    ],
+    "conf": 0.92,
+    "strand": "Physical World",
+    "stem": "Compare series and parallel circuits with bulbs; predict brightness changes and voltage readings",
+    "year": "2024",
+    "level": "Common",
+    "qlabel": "Q05",
+    "paper": "jc-science-2024",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2024-q05.png"
+  },
+  {
+    "id": "jc-science-2024-q06",
+    "subject": "jc-science",
+    "topics": [
+      "Genetics & heredity",
+      "Investigation & experiment design"
+    ],
+    "conf": 0.95,
+    "strand": "Biological World",
+    "stem": "Analyze Mendelian genetics cross with pea plants to determine genotypes and phenotypic ratios.",
+    "year": "2024",
+    "level": "Common",
+    "qlabel": "Q06",
+    "paper": "jc-science-2024",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2024-q06.png"
+  },
+  {
+    "id": "jc-science-2024-q07",
+    "subject": "jc-science",
+    "topics": [
+      "The solar system",
+      "Cycles of matter"
+    ],
+    "conf": 0.95,
+    "strand": "Earth & Space",
+    "stem": "Classify properties of comets and asteroids in the solar system",
+    "year": "2024",
+    "level": "Common",
+    "qlabel": "Q07",
+    "paper": "jc-science-2024",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2024-q07.png"
+  },
+  {
+    "id": "jc-science-2024-q08",
+    "subject": "jc-science",
+    "topics": [
+      "Human biology",
+      "Cells"
+    ],
+    "conf": 0.95,
+    "strand": "Biological World",
+    "stem": "Match reproductive system parts to letters in female and male diagrams",
+    "year": "2024",
+    "level": "Common",
+    "qlabel": "Q08",
+    "paper": "jc-science-2024",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2024-q08.png"
+  },
+  {
+    "id": "jc-science-2024-q09",
+    "subject": "jc-science",
+    "topics": [
+      "Electricity & magnetism",
+      "Energy",
+      "Heat"
+    ],
+    "conf": 0.92,
+    "strand": "Physical World",
+    "stem": "Calculate electric kettle current, resistance, and energy conversion using power and voltage.",
+    "year": "2024",
+    "level": "Common",
+    "qlabel": "Q09",
+    "paper": "jc-science-2024",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2024-q09.png"
+  },
+  {
+    "id": "jc-science-2024-q10",
+    "subject": "jc-science",
+    "topics": [
+      "Sustainability",
+      "Interpreting data & graphs",
+      "Measurement"
+    ],
+    "conf": 0.85,
+    "strand": "Nature of Science",
+    "stem": "Analyze e-waste collection rates by region and suggest improvements.",
+    "year": "2024",
+    "level": "Common",
+    "qlabel": "Q10",
+    "paper": "jc-science-2024",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2024-q10.png"
+  },
+  {
+    "id": "jc-science-2024-q11",
+    "subject": "jc-science",
+    "topics": [
+      "Forces & motion",
+      "Energy",
+      "Measurement"
+    ],
+    "conf": 0.92,
+    "strand": "Physical World",
+    "stem": "Rollercoaster car acceleration, forces, potential energy, and friction effects analysis.",
+    "year": "2024",
+    "level": "Common",
+    "qlabel": "Q11",
+    "paper": "jc-science-2024",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2024-q11.png"
+  },
+  {
+    "id": "jc-science-2024-q12",
+    "subject": "jc-science",
+    "topics": [
+      "Chemical reactions",
+      "Measurement",
+      "Interpreting data & graphs"
+    ],
+    "conf": 0.85,
+    "strand": "Chemical World",
+    "stem": "Analyze experimental data on CO2 production from acid-carbonate reaction; evaluate precision and accuracy of measurements.",
+    "year": "2024",
+    "level": "Common",
+    "qlabel": "Q12",
+    "paper": "jc-science-2024",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2024-q12.png"
+  },
+  {
+    "id": "jc-science-2024-q13",
+    "subject": "jc-science",
+    "topics": [
+      "Investigation & experiment design",
+      "Fair tests",
+      "Photosynthesis & respiration"
+    ],
+    "conf": 0.85,
+    "strand": "Nature of Science",
+    "stem": "Design experiment comparing cress seed growth in lunar and Earth soil.",
+    "year": "2024",
+    "level": "Common",
+    "qlabel": "Q13",
+    "paper": "jc-science-2024",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2024-q13.png"
+  },
+  {
+    "id": "jc-science-2024-q14",
+    "subject": "jc-science",
+    "topics": [
+      "The solar system",
+      "Interpreting data & graphs",
+      "Measurement"
+    ],
+    "conf": 0.92,
+    "strand": "Earth & Space",
+    "stem": "Analyze Moon phases, eclipses, and orbital characteristics using graphs and tables.",
+    "year": "2024",
+    "level": "Common",
+    "qlabel": "Q14",
+    "paper": "jc-science-2024",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2024-q14.png"
+  },
+  {
+    "id": "jc-science-2024-q15",
+    "subject": "jc-science",
+    "topics": [
+      "Ecology & ecosystems",
+      "Investigation & experiment design",
+      "Interpreting data & graphs"
+    ],
+    "conf": 0.92,
+    "strand": "Biological World",
+    "stem": "Analyze quadrat survey data of field plants and calculate population estimates",
+    "year": "2024",
+    "level": "Common",
+    "qlabel": "Q15",
+    "paper": "jc-science-2024",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2024-q15.png"
+  },
+  {
+    "id": "jc-science-2024-q16",
+    "subject": "jc-science",
+    "topics": [
+      "States of matter",
+      "Heat",
+      "Energy"
+    ],
+    "conf": 0.92,
+    "strand": "Physical World",
+    "stem": "Analyze heating curve showing phase changes of substance X from solid to gas.",
+    "year": "2024",
+    "level": "Common",
+    "qlabel": "Q16",
+    "paper": "jc-science-2024",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2024-q16.png"
+  },
+  {
+    "id": "jc-science-2024-q17",
+    "subject": "jc-science",
+    "topics": [
+      "Cycles of matter",
+      "The Earth's structure",
+      "Chemical reactions"
+    ],
+    "conf": 0.92,
+    "strand": "Earth & Space",
+    "stem": "Explain carbon cycle processes, reservoirs, and atmospheric composition differences between Earth and Venus.",
+    "year": "2024",
+    "level": "Common",
+    "qlabel": "Q17",
+    "paper": "jc-science-2024",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2024-q17.png"
+  },
+  {
+    "id": "jc-science-2025-q01",
+    "subject": "jc-science",
+    "topics": [
+      "Sustainability",
+      "Cycles of matter",
+      "The Earth's structure"
+    ],
+    "conf": 0.85,
+    "strand": "Earth & Space",
+    "stem": "Classify climate factors as natural or caused by human activity.",
+    "year": "2025",
+    "level": "Common",
+    "qlabel": "Q01",
+    "paper": "jc-science-2025",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2025-q01.png"
+  },
+  {
+    "id": "jc-science-2025-q02",
+    "subject": "jc-science",
+    "topics": [
+      "States of matter",
+      "Heat",
+      "Chemical reactions"
+    ],
+    "conf": 0.92,
+    "strand": "Physical World",
+    "stem": "Label states of matter diagram and identify if phase changes are physical or chemical.",
+    "year": "2025",
+    "level": "Common",
+    "qlabel": "Q02",
+    "paper": "jc-science-2025",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2025-q02.png"
+  },
+  {
+    "id": "jc-science-2025-q03",
+    "subject": "jc-science",
+    "topics": [
+      "Human biology",
+      "Interpreting data & graphs",
+      "Investigation & experiment design"
+    ],
+    "conf": 0.85,
+    "strand": "Biological World",
+    "stem": "Analyze heart rate response to exercise in two students using graph data.",
+    "year": "2025",
+    "level": "Common",
+    "qlabel": "Q03",
+    "paper": "jc-science-2025",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2025-q03.png"
+  },
+  {
+    "id": "jc-science-2025-q04",
+    "subject": "jc-science",
+    "topics": [
+      "Forces & motion",
+      "Measurement"
+    ],
+    "conf": 0.95,
+    "strand": "Physical World",
+    "stem": "Identify forces on moving football and calculate weight from mass.",
+    "year": "2025",
+    "level": "Common",
+    "qlabel": "Q04",
+    "paper": "jc-science-2025",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2025-q04.png"
+  },
+  {
+    "id": "jc-science-2025-q05",
+    "subject": "jc-science",
+    "topics": [
+      "Atomic structure & the periodic table",
+      "Elements, compounds & mixtures",
+      "Chemical reactions"
+    ],
+    "conf": 0.92,
+    "strand": "Chemical World",
+    "stem": "Identify subatomic particles, explain Bohr's planetary model, identify element forming compound with hydrogen.",
+    "year": "2025",
+    "level": "Common",
+    "qlabel": "Q05",
+    "paper": "jc-science-2025",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2025-q05.png"
+  },
+  {
+    "id": "jc-science-2025-q06",
+    "subject": "jc-science",
+    "topics": [
+      "Acids & bases",
+      "Chemical reactions",
+      "Elements, compounds & mixtures"
+    ],
+    "conf": 0.92,
+    "strand": "Chemical World",
+    "stem": "Classify household substances by pH and identify acid-base reaction products.",
+    "year": "2025",
+    "level": "Common",
+    "qlabel": "Q06",
+    "paper": "jc-science-2025",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2025-q06.png"
+  },
+  {
+    "id": "jc-science-2025-q07",
+    "subject": "jc-science",
+    "topics": [
+      "Ecology & ecosystems",
+      "Sustainability",
+      "Interpreting data & graphs"
+    ],
+    "conf": 0.92,
+    "strand": "Biological World",
+    "stem": "Explain ecosystem benefits, temperature-biodiversity relationship, and conservation methods.",
+    "year": "2025",
+    "level": "Common",
+    "qlabel": "Q07",
+    "paper": "jc-science-2025",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2025-q07.png"
+  },
+  {
+    "id": "jc-science-2025-q08",
+    "subject": "jc-science",
+    "topics": [
+      "Human biology",
+      "Cells"
+    ],
+    "conf": 0.95,
+    "strand": "Biological World",
+    "stem": "Label parts of human breathing system diagram by matching anatomical structures.",
+    "year": "2025",
+    "level": "Common",
+    "qlabel": "Q08",
+    "paper": "jc-science-2025",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2025-q08.png"
+  },
+  {
+    "id": "jc-science-2025-q09",
+    "subject": "jc-science",
+    "topics": [
+      "Density & pressure",
+      "States of matter",
+      "Measurement"
+    ],
+    "conf": 0.85,
+    "strand": "Physical World",
+    "stem": "Fill in missing words defining mass, density, time, and temperature properties.",
+    "year": "2025",
+    "level": "Common",
+    "qlabel": "Q09",
+    "paper": "jc-science-2025",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2025-q09.png"
+  },
+  {
+    "id": "jc-science-2025-q10",
+    "subject": "jc-science",
+    "topics": [
+      "Energy",
+      "Chemical reactions",
+      "Heat"
+    ],
+    "conf": 0.95,
+    "strand": "Chemical World",
+    "stem": "Analyze energy profile diagrams to compare reactant energy, heat released, and activation energy.",
+    "year": "2025",
+    "level": "Common",
+    "qlabel": "Q10",
+    "paper": "jc-science-2025",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2025-q10.png"
+  },
+  {
+    "id": "jc-science-2025-q11",
+    "subject": "jc-science",
+    "topics": [
+      "Electricity & magnetism",
+      "Heat",
+      "Measurement"
+    ],
+    "conf": 0.85,
+    "strand": "Physical World",
+    "stem": "Investigate LED circuit operation and thermistor resistance variation with temperature.",
+    "year": "2025",
+    "level": "Common",
+    "qlabel": "Q11",
+    "paper": "jc-science-2025",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2025-q11.png"
+  },
+  {
+    "id": "jc-science-2025-q12",
+    "subject": "jc-science",
+    "topics": [
+      "Investigation & experiment design",
+      "Fair tests",
+      "Chemical reactions"
+    ],
+    "conf": 0.85,
+    "strand": "Nature of Science",
+    "stem": "Identify variables to keep constant in marble chip and acid reaction experiment",
+    "year": "2025",
+    "level": "Common",
+    "qlabel": "Q12",
+    "paper": "jc-science-2025",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2025-q12.png"
+  },
+  {
+    "id": "jc-science-2025-q13",
+    "subject": "jc-science",
+    "topics": [
+      "The solar system",
+      "Interpreting data & graphs",
+      "Measurement"
+    ],
+    "conf": 0.92,
+    "strand": "Earth & Space",
+    "stem": "Analyze planetary data table to identify true/false statements about planets and moons.",
+    "year": "2025",
+    "level": "Common",
+    "qlabel": "Q13",
+    "paper": "jc-science-2025",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2025-q13.png"
+  },
+  {
+    "id": "jc-science-2025-q14",
+    "subject": "jc-science",
+    "topics": [
+      "Photosynthesis & respiration",
+      "Interpreting data & graphs",
+      "Investigation & experiment design"
+    ],
+    "conf": 0.92,
+    "strand": "Biological World",
+    "stem": "Analyze photosynthesis and respiration rates in plants using graphs and experimental data.",
+    "year": "2025",
+    "level": "Common",
+    "qlabel": "Q14",
+    "paper": "jc-science-2025",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2025-q14.png"
+  },
+  {
+    "id": "jc-science-2026-q01",
+    "subject": "jc-science",
+    "topics": [
+      "Human biology",
+      "Nutrition"
+    ],
+    "conf": 0.95,
+    "strand": "Biological World",
+    "stem": "Match labeled parts of digestive system diagram to their anatomical names.",
+    "year": "2026",
+    "level": "Common",
+    "qlabel": "Q01",
+    "paper": "jc-science-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2026-q01.png"
+  },
+  {
+    "id": "jc-science-2026-q02",
+    "subject": "jc-science",
+    "topics": [
+      "Cycles of matter",
+      "States of matter",
+      "Heat"
+    ],
+    "conf": 0.92,
+    "strand": "Earth & Space",
+    "stem": "Identify water cycle processes: evaporation, condensation, precipitation, transpiration.",
+    "year": "2026",
+    "level": "Common",
+    "qlabel": "Q02",
+    "paper": "jc-science-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2026-q02.png"
+  },
+  {
+    "id": "jc-science-2026-q03",
+    "subject": "jc-science",
+    "topics": [
+      "Forces & motion",
+      "Energy",
+      "Investigation & experiment design"
+    ],
+    "conf": 0.92,
+    "strand": "Physical World",
+    "stem": "Investigate spring extension relationship with applied force and calculate weight.",
+    "year": "2026",
+    "level": "Common",
+    "qlabel": "Q03",
+    "paper": "jc-science-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2026-q03.png"
+  },
+  {
+    "id": "jc-science-2026-q04",
+    "subject": "jc-science",
+    "topics": [
+      "The solar system",
+      "Energy",
+      "Heat"
+    ],
+    "conf": 0.72,
+    "strand": "Earth & Space",
+    "stem": "Identify spacesuit features and hazards of space exploration for Moon missions.",
+    "year": "2026",
+    "level": "Common",
+    "qlabel": "Q04",
+    "paper": "jc-science-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2026-q04.png"
+  },
+  {
+    "id": "jc-science-2026-q05",
+    "subject": "jc-science",
+    "topics": [
+      "Ecology & ecosystems",
+      "Investigation & experiment design"
+    ],
+    "conf": 0.92,
+    "strand": "Biological World",
+    "stem": "Analyze grassland food web, identify consumers, food chains, and sampling apparatus.",
+    "year": "2026",
+    "level": "Common",
+    "qlabel": "Q05",
+    "paper": "jc-science-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2026-q05.png"
+  },
+  {
+    "id": "jc-science-2026-q06",
+    "subject": "jc-science",
+    "topics": [
+      "Density & pressure",
+      "Measurement",
+      "Investigation & experiment design"
+    ],
+    "conf": 0.92,
+    "strand": "Physical World",
+    "stem": "Determine volume of iron sphere using displacement method and calculate density.",
+    "year": "2026",
+    "level": "Common",
+    "qlabel": "Q06",
+    "paper": "jc-science-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2026-q06.png"
+  },
+  {
+    "id": "jc-science-2026-q07",
+    "subject": "jc-science",
+    "topics": [
+      "The solar system",
+      "Energy"
+    ],
+    "conf": 0.92,
+    "strand": "Earth & Space",
+    "stem": "Fill missing terms about universe structure and state origin model with supporting evidence.",
+    "year": "2026",
+    "level": "Common",
+    "qlabel": "Q07",
+    "paper": "jc-science-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2026-q07.png"
+  },
+  {
+    "id": "jc-science-2026-q08",
+    "subject": "jc-science",
+    "topics": [
+      "Energy",
+      "Investigation & experiment design"
+    ],
+    "conf": 0.92,
+    "strand": "Physical World",
+    "stem": "Draw device diagram, identify energy conversion, define device efficiency.",
+    "year": "2026",
+    "level": "Common",
+    "qlabel": "Q08",
+    "paper": "jc-science-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2026-q08.png"
+  },
+  {
+    "id": "jc-science-2026-q09",
+    "subject": "jc-science",
+    "topics": [
+      "Separation techniques",
+      "States of matter",
+      "Investigation & experiment design"
+    ],
+    "conf": 0.92,
+    "strand": "Nature of Science",
+    "stem": "Match laboratory equipment diagrams to appropriate separation experiments",
+    "year": "2026",
+    "level": "Common",
+    "qlabel": "Q09",
+    "paper": "jc-science-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2026-q09.png"
+  },
+  {
+    "id": "jc-science-2026-q10",
+    "subject": "jc-science",
+    "topics": [
+      "The solar system",
+      "Light & sound"
+    ],
+    "conf": 0.95,
+    "strand": "Earth & Space",
+    "stem": "Identify Moon positions during lunar cycle and explain lunar phases and eclipses.",
+    "year": "2026",
+    "level": "Common",
+    "qlabel": "Q10",
+    "paper": "jc-science-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2026-q10.png"
+  },
+  {
+    "id": "jc-science-2026-q11",
+    "subject": "jc-science",
+    "topics": [
+      "Chemical reactions",
+      "Energy",
+      "Investigation & experiment design"
+    ],
+    "conf": 0.92,
+    "strand": "Chemical World",
+    "stem": "Investigate hydrogen peroxide decomposition rate using catalyst and analyze reaction kinetics",
+    "year": "2026",
+    "level": "Common",
+    "qlabel": "Q11",
+    "paper": "jc-science-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2026-q11.png"
+  },
+  {
+    "id": "jc-science-2026-q12",
+    "subject": "jc-science",
+    "topics": [
+      "Human biology",
+      "Cells",
+      "Genetics & heredity"
+    ],
+    "conf": 0.92,
+    "strand": "Biological World",
+    "stem": "Examine fertilisation, fetal development, and reproductive system structures and functions.",
+    "year": "2026",
+    "level": "Common",
+    "qlabel": "Q12",
+    "paper": "jc-science-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2026-q12.png"
+  },
+  {
+    "id": "jc-science-2026-q13",
+    "subject": "jc-science",
+    "topics": [
+      "The solar system",
+      "Light & sound",
+      "Forces & motion"
+    ],
+    "conf": 0.85,
+    "strand": "Earth & Space",
+    "stem": "Analyze Earth's rotation, daylight hours, sunlight angles, and planetary orbital mechanics.",
+    "year": "2026",
+    "level": "Common",
+    "qlabel": "Q13",
+    "paper": "jc-science-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2026-q13.png"
+  },
+  {
+    "id": "jc-science-2026-q14",
+    "subject": "jc-science",
+    "topics": [
+      "Genetics & heredity",
+      "Ecology & ecosystems"
+    ],
+    "conf": 0.92,
+    "strand": "Biological World",
+    "stem": "Analyze evolutionary relationships and natural selection using cladogram diagram.",
+    "year": "2026",
+    "level": "Common",
+    "qlabel": "Q14",
+    "paper": "jc-science-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2026-q14.png"
+  },
+  {
+    "id": "jc-science-2026-q15",
+    "subject": "jc-science",
+    "topics": [
+      "Forces & motion",
+      "Measurement",
+      "Interpreting data & graphs"
+    ],
+    "conf": 0.92,
+    "strand": "Physical World",
+    "stem": "Analyze toy car motion data: identify measurement tools, graph speed-time data, calculate constant speed distance, and interpret two-car journey graphs.",
+    "year": "2026",
+    "level": "Common",
+    "qlabel": "Q15",
+    "paper": "jc-science-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2026-q15.png"
+  },
+  {
+    "id": "jc-science-2026-q16",
+    "subject": "jc-science",
+    "topics": [
+      "Chemical reactions",
+      "Elements, compounds & mixtures",
+      "Acids & bases"
+    ],
+    "conf": 0.85,
+    "strand": "Chemical World",
+    "stem": "Magnesium combustion, oxide formation, and pH testing of magnesium hydroxide solution",
+    "year": "2026",
+    "level": "Common",
+    "qlabel": "Q16",
+    "paper": "jc-science-2026",
+    "origin": "sec_official",
+    "status": "review",
+    "image": "https://cdn.jsdelivr.net/gh/grinds360/study@main/crops/jc-science/jc-science-2026-q16.png"
   }
 ]
