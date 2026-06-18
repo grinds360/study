@@ -1390,5 +1390,60 @@
     "scheme": "",
     "report": "",
     "qcount": 26
+  },
+  {
+    "id": "jc-german-2022",
+    "subject": "jc-german",
+    "year": "2022",
+    "level": "Common",
+    "type": "Main",
+    "pdf": "https://cdn.jsdelivr.net/gh/grinds360/study@main/papers/jc-german/jc-german-2022.pdf",
+    "scheme": "",
+    "report": "",
+    "qcount": 10
+  },
+  {
+    "id": "jc-german-2023",
+    "subject": "jc-german",
+    "year": "2023",
+    "level": "Common",
+    "type": "Main",
+    "pdf": "https://cdn.jsdelivr.net/gh/grinds360/study@main/papers/jc-german/jc-german-2023.pdf",
+    "scheme": "",
+    "report": "",
+    "qcount": 10
+  },
+  {
+    "id": "jc-german-2024",
+    "subject": "jc-german",
+    "year": "2024",
+    "level": "Common",
+    "type": "Main",
+    "pdf": "https://cdn.jsdelivr.net/gh/grinds360/study@main/papers/jc-german/jc-german-2024.pdf",
+    "scheme": "",
+    "report": "",
+    "qcount": 11
+  },
+  {
+    "id": "jc-german-2025",
+    "subject": "jc-german",
+    "year": "2025",
+    "level": "Common",
+    "type": "Main",
+    "pdf": "https://cdn.jsdelivr.net/gh/grinds360/study@main/papers/jc-german/jc-german-2025.pdf",
+    "scheme": "",
+    "report": "",
+    "qcount": 11
+  },
+  {
+    "id": "jc-german-2026",
+    "subject": "jc-german",
+    "year": "2026",
+    "level": "Common",
+    "type": "Main",
+    "pdf": "https://cdn.jsdelivr.net/gh/grinds360/study@main/papers/jc-german/jc-german-2026.pdf",
+    "scheme": "",
+    "report": "",
+    "qcount": 11
   }
 ]
