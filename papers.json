@@ -1445,5 +1445,60 @@
     "scheme": "",
     "report": "",
     "qcount": 11
+  },
+  {
+    "id": "jc-maths-2022",
+    "subject": "jc-maths",
+    "year": "2022",
+    "level": "Common",
+    "type": "Main",
+    "pdf": "https://cdn.jsdelivr.net/gh/grinds360/study@main/papers/jc-maths/jc-maths-2022.pdf",
+    "scheme": "https://cdn.jsdelivr.net/gh/grinds360/study@main/papers/jc-maths/ms/jc-maths-2022-ms.pdf",
+    "report": "",
+    "qcount": 34
+  },
+  {
+    "id": "jc-maths-2023",
+    "subject": "jc-maths",
+    "year": "2023",
+    "level": "Common",
+    "type": "Main",
+    "pdf": "https://cdn.jsdelivr.net/gh/grinds360/study@main/papers/jc-maths/jc-maths-2023.pdf",
+    "scheme": "https://cdn.jsdelivr.net/gh/grinds360/study@main/papers/jc-maths/ms/jc-maths-2023-ms.pdf",
+    "report": "",
+    "qcount": 43
+  },
+  {
+    "id": "jc-maths-2024",
+    "subject": "jc-maths",
+    "year": "2024",
+    "level": "Common",
+    "type": "Main",
+    "pdf": "https://cdn.jsdelivr.net/gh/grinds360/study@main/papers/jc-maths/jc-maths-2024.pdf",
+    "scheme": "https://cdn.jsdelivr.net/gh/grinds360/study@main/papers/jc-maths/ms/jc-maths-2024-ms.pdf",
+    "report": "",
+    "qcount": 37
+  },
+  {
+    "id": "jc-maths-2025",
+    "subject": "jc-maths",
+    "year": "2025",
+    "level": "Common",
+    "type": "Main",
+    "pdf": "https://cdn.jsdelivr.net/gh/grinds360/study@main/papers/jc-maths/jc-maths-2025.pdf",
+    "scheme": "https://cdn.jsdelivr.net/gh/grinds360/study@main/papers/jc-maths/ms/jc-maths-2025-ms.pdf",
+    "report": "",
+    "qcount": 41
+  },
+  {
+    "id": "jc-maths-2026",
+    "subject": "jc-maths",
+    "year": "2026",
+    "level": "Common",
+    "type": "Main",
+    "pdf": "https://cdn.jsdelivr.net/gh/grinds360/study@main/papers/jc-maths/jc-maths-2026.pdf",
+    "scheme": "",
+    "report": "",
+    "qcount": 32
   }
 ]
