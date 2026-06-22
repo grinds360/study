@@ -36385,7 +36385,9 @@
   {
     "id": "jc-german-2022-q11",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2022_Q11",
     "year": "2022",
@@ -36399,7 +36401,9 @@
   {
     "id": "jc-german-2022-q12",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2022_Q12",
     "year": "2022",
@@ -36413,7 +36417,9 @@
   {
     "id": "jc-german-2022-q13",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2022_Q13",
     "year": "2022",
@@ -36427,7 +36433,9 @@
   {
     "id": "jc-german-2022-q14",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2022_Q14",
     "year": "2022",
@@ -36441,7 +36449,9 @@
   {
     "id": "jc-german-2022-q15",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2022_Q15",
     "year": "2022",
@@ -36455,7 +36465,9 @@
   {
     "id": "jc-german-2022-q16",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2022_Q16",
     "year": "2022",
@@ -36469,7 +36481,9 @@
   {
     "id": "jc-german-2022-q17",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2022_Q17",
     "year": "2022",
@@ -36483,7 +36497,9 @@
   {
     "id": "jc-german-2022-q18",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2022_Q18",
     "year": "2022",
@@ -36497,7 +36513,9 @@
   {
     "id": "jc-german-2022-q19",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc german 2022_Q19",
     "year": "2022",
@@ -36511,7 +36529,9 @@
   {
     "id": "jc-german-2022-q20",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc german 2022_Q20",
     "year": "2022",
@@ -36525,7 +36545,9 @@
   {
     "id": "jc-german-2023-q09",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2023_Q09",
     "year": "2023",
@@ -36539,7 +36561,9 @@
   {
     "id": "jc-german-2023-q10",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2023_Q10",
     "year": "2023",
@@ -36553,7 +36577,9 @@
   {
     "id": "jc-german-2023-q11",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2023_Q11",
     "year": "2023",
@@ -36567,7 +36593,9 @@
   {
     "id": "jc-german-2023-q12",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2023_Q12",
     "year": "2023",
@@ -36581,7 +36609,9 @@
   {
     "id": "jc-german-2023-q13",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2023_Q13",
     "year": "2023",
@@ -36595,7 +36625,9 @@
   {
     "id": "jc-german-2023-q14",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2023_Q14",
     "year": "2023",
@@ -36609,7 +36641,9 @@
   {
     "id": "jc-german-2023-q15",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2023_Q15",
     "year": "2023",
@@ -36623,7 +36657,9 @@
   {
     "id": "jc-german-2023-q16",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc german 2023_Q16",
     "year": "2023",
@@ -36637,7 +36673,9 @@
   {
     "id": "jc-german-2023-q17",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2023_Q17",
     "year": "2023",
@@ -36651,7 +36689,9 @@
   {
     "id": "jc-german-2023-q18",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc german 2023_Q18",
     "year": "2023",
@@ -36665,7 +36705,9 @@
   {
     "id": "jc-german-2024-q12",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2024_Q12",
     "year": "2024",
@@ -36679,7 +36721,9 @@
   {
     "id": "jc-german-2024-q13",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2024_Q13",
     "year": "2024",
@@ -36693,7 +36737,9 @@
   {
     "id": "jc-german-2024-q14",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2024_Q14",
     "year": "2024",
@@ -36707,7 +36753,9 @@
   {
     "id": "jc-german-2024-q15",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2024_Q15",
     "year": "2024",
@@ -36721,7 +36769,9 @@
   {
     "id": "jc-german-2024-q16",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2024_Q16",
     "year": "2024",
@@ -36735,7 +36785,9 @@
   {
     "id": "jc-german-2024-q17",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2024_Q17",
     "year": "2024",
@@ -36749,7 +36801,9 @@
   {
     "id": "jc-german-2024-q18",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2024_Q18",
     "year": "2024",
@@ -36763,7 +36817,9 @@
   {
     "id": "jc-german-2024-q19",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2024_Q19",
     "year": "2024",
@@ -36777,7 +36833,9 @@
   {
     "id": "jc-german-2024-q20",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc german 2024_Q20",
     "year": "2024",
@@ -36791,7 +36849,9 @@
   {
     "id": "jc-german-2024-q21",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc german 2024_Q21",
     "year": "2024",
@@ -36805,7 +36865,9 @@
   {
     "id": "jc-german-2024-q22",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc german 2024_Q22",
     "year": "2024",
@@ -36819,7 +36881,9 @@
   {
     "id": "jc-german-2025-q11",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2025_Q11",
     "year": "2025",
@@ -36833,7 +36897,9 @@
   {
     "id": "jc-german-2025-q12",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2025_Q12",
     "year": "2025",
@@ -36847,7 +36913,9 @@
   {
     "id": "jc-german-2025-q13",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2025_Q13",
     "year": "2025",
@@ -36861,7 +36929,9 @@
   {
     "id": "jc-german-2025-q14",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2025_Q14",
     "year": "2025",
@@ -36875,7 +36945,9 @@
   {
     "id": "jc-german-2025-q15",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2025_Q15",
     "year": "2025",
@@ -36889,7 +36961,9 @@
   {
     "id": "jc-german-2025-q16",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2025_Q16",
     "year": "2025",
@@ -36903,7 +36977,9 @@
   {
     "id": "jc-german-2025-q17",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2025_Q17",
     "year": "2025",
@@ -36917,7 +36993,9 @@
   {
     "id": "jc-german-2025-q18",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2025_Q18",
     "year": "2025",
@@ -36931,7 +37009,9 @@
   {
     "id": "jc-german-2025-q19",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2025_Q19",
     "year": "2025",
@@ -36945,7 +37025,9 @@
   {
     "id": "jc-german-2025-q20",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2025_Q20",
     "year": "2025",
@@ -36959,7 +37041,9 @@
   {
     "id": "jc-german-2025-q21",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc german 2025_Q21",
     "year": "2025",
@@ -36973,7 +37057,9 @@
   {
     "id": "jc-german-2026-q10",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2026_Q10",
     "year": "2026",
@@ -36987,7 +37073,9 @@
   {
     "id": "jc-german-2026-q11",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2026_Q11",
     "year": "2026",
@@ -37001,7 +37089,9 @@
   {
     "id": "jc-german-2026-q12",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2026_Q12",
     "year": "2026",
@@ -37015,7 +37105,9 @@
   {
     "id": "jc-german-2026-q13",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2026_Q13",
     "year": "2026",
@@ -37029,7 +37121,9 @@
   {
     "id": "jc-german-2026-q14",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2026_Q14",
     "year": "2026",
@@ -37043,7 +37137,9 @@
   {
     "id": "jc-german-2026-q15",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2026_Q15",
     "year": "2026",
@@ -37057,7 +37153,9 @@
   {
     "id": "jc-german-2026-q16",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2026_Q16",
     "year": "2026",
@@ -37071,7 +37169,9 @@
   {
     "id": "jc-german-2026-q17",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2026_Q17",
     "year": "2026",
@@ -37085,7 +37185,9 @@
   {
     "id": "jc-german-2026-q18",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc german 2026_Q18",
     "year": "2026",
@@ -37099,7 +37201,9 @@
   {
     "id": "jc-german-2026-q19",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc german 2026_Q19",
     "year": "2026",
@@ -37113,7 +37217,9 @@
   {
     "id": "jc-german-2026-q20",
     "subject": "jc-german",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc german 2026_Q20",
     "year": "2026",
@@ -37127,8 +37233,10 @@
   {
     "id": "jc-maths-2022-q01a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Arithmetic"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q01a",
     "year": "2022",
     "level": "Common",
@@ -37141,8 +37249,10 @@
   {
     "id": "jc-maths-2022-q01b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Arithmetic"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q01b",
     "year": "2022",
     "level": "Common",
@@ -37155,8 +37265,10 @@
   {
     "id": "jc-maths-2022-q02a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Probability & Counting"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q02a",
     "year": "2022",
     "level": "Common",
@@ -37169,8 +37281,10 @@
   {
     "id": "jc-maths-2022-q02b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Probability & Counting"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q02b",
     "year": "2022",
     "level": "Common",
@@ -37183,8 +37297,10 @@
   {
     "id": "jc-maths-2022-q02c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Probability & Counting"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q02c",
     "year": "2022",
     "level": "Common",
@@ -37197,8 +37313,10 @@
   {
     "id": "jc-maths-2022-q02d",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Statistics & Data"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q02d",
     "year": "2022",
     "level": "Common",
@@ -37211,8 +37329,10 @@
   {
     "id": "jc-maths-2022-q02e",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Statistics & Data"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q02e",
     "year": "2022",
     "level": "Common",
@@ -37225,8 +37345,10 @@
   {
     "id": "jc-maths-2022-q03a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Co-Ordinate Geometry & The Line"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q03a",
     "year": "2022",
     "level": "Common",
@@ -37239,8 +37361,10 @@
   {
     "id": "jc-maths-2022-q03b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Co-Ordinate Geometry & The Line"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q03b",
     "year": "2022",
     "level": "Common",
@@ -37253,8 +37377,10 @@
   {
     "id": "jc-maths-2022-q03c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Co-Ordinate Geometry & The Line"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q03c",
     "year": "2022",
     "level": "Common",
@@ -37267,8 +37393,10 @@
   {
     "id": "jc-maths-2022-q03d",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Co-Ordinate Geometry & The Line"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q03d",
     "year": "2022",
     "level": "Common",
@@ -37281,8 +37409,10 @@
   {
     "id": "jc-maths-2022-q04a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q04a",
     "year": "2022",
     "level": "Common",
@@ -37295,8 +37425,10 @@
   {
     "id": "jc-maths-2022-q04b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q04b",
     "year": "2022",
     "level": "Common",
@@ -37309,8 +37441,11 @@
   {
     "id": "jc-maths-2022-q04c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Patterns & Sequences",
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q04c",
     "year": "2022",
     "level": "Common",
@@ -37323,8 +37458,10 @@
   {
     "id": "jc-maths-2022-q05a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Measure"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q05a",
     "year": "2022",
     "level": "Common",
@@ -37337,8 +37474,10 @@
   {
     "id": "jc-maths-2022-q05b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Measure"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q05b",
     "year": "2022",
     "level": "Common",
@@ -37351,8 +37490,10 @@
   {
     "id": "jc-maths-2022-q05c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Measure"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q05c",
     "year": "2022",
     "level": "Common",
@@ -37365,8 +37506,10 @@
   {
     "id": "jc-maths-2022-q06",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Sets"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q06",
     "year": "2022",
     "level": "Common",
@@ -37379,8 +37522,10 @@
   {
     "id": "jc-maths-2022-q07a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Number Systems"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q07a",
     "year": "2022",
     "level": "Common",
@@ -37393,8 +37538,10 @@
   {
     "id": "jc-maths-2022-q07b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Number Systems"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q07b",
     "year": "2022",
     "level": "Common",
@@ -37407,8 +37554,10 @@
   {
     "id": "jc-maths-2022-q08a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Geometry"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q08a",
     "year": "2022",
     "level": "Common",
@@ -37421,8 +37570,10 @@
   {
     "id": "jc-maths-2022-q08b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Trigonometry"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q08b",
     "year": "2022",
     "level": "Common",
@@ -37435,8 +37586,10 @@
   {
     "id": "jc-maths-2022-q08c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Trigonometry"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q08c",
     "year": "2022",
     "level": "Common",
@@ -37449,8 +37602,10 @@
   {
     "id": "jc-maths-2022-q09a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q09a",
     "year": "2022",
     "level": "Common",
@@ -37463,8 +37618,10 @@
   {
     "id": "jc-maths-2022-q09b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q09b",
     "year": "2022",
     "level": "Common",
@@ -37477,8 +37634,10 @@
   {
     "id": "jc-maths-2022-q09c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q09c",
     "year": "2022",
     "level": "Common",
@@ -37491,8 +37650,10 @@
   {
     "id": "jc-maths-2022-q09d",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q09d",
     "year": "2022",
     "level": "Common",
@@ -37505,8 +37666,10 @@
   {
     "id": "jc-maths-2022-q10a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Functions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q10a",
     "year": "2022",
     "level": "Common",
@@ -37519,8 +37682,10 @@
   {
     "id": "jc-maths-2022-q10b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Functions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q10b",
     "year": "2022",
     "level": "Common",
@@ -37533,8 +37698,10 @@
   {
     "id": "jc-maths-2022-q10c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Functions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q10c",
     "year": "2022",
     "level": "Common",
@@ -37547,8 +37714,10 @@
   {
     "id": "jc-maths-2022-q10d",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Functions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q10d",
     "year": "2022",
     "level": "Common",
@@ -37561,8 +37730,10 @@
   {
     "id": "jc-maths-2022-q10e",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Arithmetic"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q10e",
     "year": "2022",
     "level": "Common",
@@ -37575,8 +37746,10 @@
   {
     "id": "jc-maths-2022-q11",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Co-Ordinate Geometry & The Line"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q11",
     "year": "2022",
     "level": "Common",
@@ -37589,8 +37762,11 @@
   {
     "id": "jc-maths-2022-q12",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Trigonometry",
+      "Geometry"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2022_Q12",
     "year": "2022",
     "level": "Common",
@@ -37603,8 +37779,10 @@
   {
     "id": "jc-maths-2023-q01a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Number Systems"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q01a",
     "year": "2023",
     "level": "Common",
@@ -37617,8 +37795,10 @@
   {
     "id": "jc-maths-2023-q01b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Number Systems"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q01b",
     "year": "2023",
     "level": "Common",
@@ -37631,8 +37811,10 @@
   {
     "id": "jc-maths-2023-q01c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Number Systems"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q01c",
     "year": "2023",
     "level": "Common",
@@ -37645,8 +37827,10 @@
   {
     "id": "jc-maths-2023-q02a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Statistics & Data"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q02a",
     "year": "2023",
     "level": "Common",
@@ -37659,8 +37843,10 @@
   {
     "id": "jc-maths-2023-q02b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Statistics & Data"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q02b",
     "year": "2023",
     "level": "Common",
@@ -37673,8 +37859,10 @@
   {
     "id": "jc-maths-2023-q02c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Statistics & Data"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q02c",
     "year": "2023",
     "level": "Common",
@@ -37687,8 +37875,10 @@
   {
     "id": "jc-maths-2023-q02d",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Statistics & Data"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q02d",
     "year": "2023",
     "level": "Common",
@@ -37701,8 +37891,10 @@
   {
     "id": "jc-maths-2023-q02e",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Statistics & Data"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q02e",
     "year": "2023",
     "level": "Common",
@@ -37715,8 +37907,10 @@
   {
     "id": "jc-maths-2023-q03a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Measure"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q03a",
     "year": "2023",
     "level": "Common",
@@ -37729,8 +37923,10 @@
   {
     "id": "jc-maths-2023-q03b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Measure"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q03b",
     "year": "2023",
     "level": "Common",
@@ -37743,8 +37939,10 @@
   {
     "id": "jc-maths-2023-q03c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Measure"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q03c",
     "year": "2023",
     "level": "Common",
@@ -37757,8 +37955,10 @@
   {
     "id": "jc-maths-2023-q04a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Statistics & Data"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q04a",
     "year": "2023",
     "level": "Common",
@@ -37771,8 +37971,10 @@
   {
     "id": "jc-maths-2023-q04b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Statistics & Data"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q04b",
     "year": "2023",
     "level": "Common",
@@ -37785,8 +37987,10 @@
   {
     "id": "jc-maths-2023-q04c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Statistics & Data"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q04c",
     "year": "2023",
     "level": "Common",
@@ -37799,8 +38003,10 @@
   {
     "id": "jc-maths-2023-q04d",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Statistics & Data"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q04d",
     "year": "2023",
     "level": "Common",
@@ -37813,8 +38019,10 @@
   {
     "id": "jc-maths-2023-q05a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Number Systems"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q05a",
     "year": "2023",
     "level": "Common",
@@ -37827,8 +38035,10 @@
   {
     "id": "jc-maths-2023-q05b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Probability & Counting"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q05b",
     "year": "2023",
     "level": "Common",
@@ -37841,8 +38051,10 @@
   {
     "id": "jc-maths-2023-q05c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Probability & Counting"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q05c",
     "year": "2023",
     "level": "Common",
@@ -37855,8 +38067,10 @@
   {
     "id": "jc-maths-2023-q06a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Sets"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q06a",
     "year": "2023",
     "level": "Common",
@@ -37869,8 +38083,10 @@
   {
     "id": "jc-maths-2023-q06b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Sets"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q06b",
     "year": "2023",
     "level": "Common",
@@ -37883,8 +38099,10 @@
   {
     "id": "jc-maths-2023-q07a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Co-Ordinate Geometry & The Line"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q07a",
     "year": "2023",
     "level": "Common",
@@ -37897,8 +38115,10 @@
   {
     "id": "jc-maths-2023-q07b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Co-Ordinate Geometry & The Line"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q07b",
     "year": "2023",
     "level": "Common",
@@ -37911,8 +38131,10 @@
   {
     "id": "jc-maths-2023-q07c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Geometry"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q07c",
     "year": "2023",
     "level": "Common",
@@ -37925,8 +38147,10 @@
   {
     "id": "jc-maths-2023-q08a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Arithmetic"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q08a",
     "year": "2023",
     "level": "Common",
@@ -37939,8 +38163,10 @@
   {
     "id": "jc-maths-2023-q08b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Trigonometry"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q08b",
     "year": "2023",
     "level": "Common",
@@ -37953,8 +38179,10 @@
   {
     "id": "jc-maths-2023-q08c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Arithmetic"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q08c",
     "year": "2023",
     "level": "Common",
@@ -37967,8 +38195,10 @@
   {
     "id": "jc-maths-2023-q08d",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Trigonometry"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q08d",
     "year": "2023",
     "level": "Common",
@@ -37981,8 +38211,10 @@
   {
     "id": "jc-maths-2023-q09a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q09a",
     "year": "2023",
     "level": "Common",
@@ -37995,8 +38227,10 @@
   {
     "id": "jc-maths-2023-q09b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q09b",
     "year": "2023",
     "level": "Common",
@@ -38009,8 +38243,10 @@
   {
     "id": "jc-maths-2023-q09c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Number Systems"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q09c",
     "year": "2023",
     "level": "Common",
@@ -38023,8 +38259,10 @@
   {
     "id": "jc-maths-2023-q10a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Arithmetic"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q10a",
     "year": "2023",
     "level": "Common",
@@ -38037,8 +38275,10 @@
   {
     "id": "jc-maths-2023-q10b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q10b",
     "year": "2023",
     "level": "Common",
@@ -38051,8 +38291,10 @@
   {
     "id": "jc-maths-2023-q10c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q10c",
     "year": "2023",
     "level": "Common",
@@ -38065,8 +38307,10 @@
   {
     "id": "jc-maths-2023-q11a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Functions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q11a",
     "year": "2023",
     "level": "Common",
@@ -38079,8 +38323,10 @@
   {
     "id": "jc-maths-2023-q11b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Functions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q11b",
     "year": "2023",
     "level": "Common",
@@ -38093,8 +38339,10 @@
   {
     "id": "jc-maths-2023-q11c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Functions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q11c",
     "year": "2023",
     "level": "Common",
@@ -38107,8 +38355,10 @@
   {
     "id": "jc-maths-2023-q12a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Geometry - Constructions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q12a",
     "year": "2023",
     "level": "Common",
@@ -38121,8 +38371,11 @@
   {
     "id": "jc-maths-2023-q12b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Measure",
+      "Geometry"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q12b",
     "year": "2023",
     "level": "Common",
@@ -38135,8 +38388,10 @@
   {
     "id": "jc-maths-2023-q13a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q13a",
     "year": "2023",
     "level": "Common",
@@ -38149,8 +38404,10 @@
   {
     "id": "jc-maths-2023-q13b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q13b",
     "year": "2023",
     "level": "Common",
@@ -38163,8 +38420,10 @@
   {
     "id": "jc-maths-2023-q13c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q13c",
     "year": "2023",
     "level": "Common",
@@ -38177,8 +38436,10 @@
   {
     "id": "jc-maths-2023-q14a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Geometry"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q14a",
     "year": "2023",
     "level": "Common",
@@ -38191,8 +38452,10 @@
   {
     "id": "jc-maths-2023-q14b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Geometry"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2023_Q14b",
     "year": "2023",
     "level": "Common",
@@ -38205,8 +38468,10 @@
   {
     "id": "jc-maths-2024-q01a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Probability & Counting"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q01a",
     "year": "2024",
     "level": "Common",
@@ -38219,8 +38484,10 @@
   {
     "id": "jc-maths-2024-q01b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Probability & Counting"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q01b",
     "year": "2024",
     "level": "Common",
@@ -38233,8 +38500,10 @@
   {
     "id": "jc-maths-2024-q01c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Number Systems"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q01c",
     "year": "2024",
     "level": "Common",
@@ -38247,8 +38516,10 @@
   {
     "id": "jc-maths-2024-q02a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Statistics & Data"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q02a",
     "year": "2024",
     "level": "Common",
@@ -38261,8 +38532,10 @@
   {
     "id": "jc-maths-2024-q02b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Statistics & Data"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q02b",
     "year": "2024",
     "level": "Common",
@@ -38275,8 +38548,10 @@
   {
     "id": "jc-maths-2024-q02c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Statistics & Data"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q02c",
     "year": "2024",
     "level": "Common",
@@ -38289,8 +38564,10 @@
   {
     "id": "jc-maths-2024-q02d",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Statistics & Data"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q02d",
     "year": "2024",
     "level": "Common",
@@ -38303,8 +38580,10 @@
   {
     "id": "jc-maths-2024-q02e",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Statistics & Data"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q02e",
     "year": "2024",
     "level": "Common",
@@ -38317,8 +38596,10 @@
   {
     "id": "jc-maths-2024-q03a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Measure"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q03a",
     "year": "2024",
     "level": "Common",
@@ -38331,8 +38612,10 @@
   {
     "id": "jc-maths-2024-q03b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Measure"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q03b",
     "year": "2024",
     "level": "Common",
@@ -38345,8 +38628,10 @@
   {
     "id": "jc-maths-2024-q03c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Measure"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q03c",
     "year": "2024",
     "level": "Common",
@@ -38359,8 +38644,10 @@
   {
     "id": "jc-maths-2024-q04a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Arithmetic"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q04a",
     "year": "2024",
     "level": "Common",
@@ -38373,8 +38660,10 @@
   {
     "id": "jc-maths-2024-q04b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Arithmetic"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q04b",
     "year": "2024",
     "level": "Common",
@@ -38387,8 +38676,10 @@
   {
     "id": "jc-maths-2024-q04c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Arithmetic"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q04c",
     "year": "2024",
     "level": "Common",
@@ -38401,8 +38692,10 @@
   {
     "id": "jc-maths-2024-q05a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q05a",
     "year": "2024",
     "level": "Common",
@@ -38415,8 +38708,10 @@
   {
     "id": "jc-maths-2024-q05b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q05b",
     "year": "2024",
     "level": "Common",
@@ -38429,8 +38724,10 @@
   {
     "id": "jc-maths-2024-q06",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Geometry"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q06",
     "year": "2024",
     "level": "Common",
@@ -38443,8 +38740,10 @@
   {
     "id": "jc-maths-2024-q07a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Measure"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q07a",
     "year": "2024",
     "level": "Common",
@@ -38457,8 +38756,10 @@
   {
     "id": "jc-maths-2024-q07b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Measure"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q07b",
     "year": "2024",
     "level": "Common",
@@ -38471,8 +38772,10 @@
   {
     "id": "jc-maths-2024-q07c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Measure"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q07c",
     "year": "2024",
     "level": "Common",
@@ -38485,8 +38788,10 @@
   {
     "id": "jc-maths-2024-q08a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Functions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q08a",
     "year": "2024",
     "level": "Common",
@@ -38499,8 +38804,10 @@
   {
     "id": "jc-maths-2024-q08b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Functions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q08b",
     "year": "2024",
     "level": "Common",
@@ -38513,8 +38820,10 @@
   {
     "id": "jc-maths-2024-q08c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Functions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q08c",
     "year": "2024",
     "level": "Common",
@@ -38527,8 +38836,10 @@
   {
     "id": "jc-maths-2024-q09a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Co-Ordinate Geometry & The Line"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q09a",
     "year": "2024",
     "level": "Common",
@@ -38541,8 +38852,10 @@
   {
     "id": "jc-maths-2024-q09b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Co-Ordinate Geometry & The Line"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q09b",
     "year": "2024",
     "level": "Common",
@@ -38555,8 +38868,10 @@
   {
     "id": "jc-maths-2024-q10a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Co-Ordinate Geometry & The Line"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q10a",
     "year": "2024",
     "level": "Common",
@@ -38569,8 +38884,10 @@
   {
     "id": "jc-maths-2024-q10b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Co-Ordinate Geometry & The Line"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q10b",
     "year": "2024",
     "level": "Common",
@@ -38583,8 +38900,10 @@
   {
     "id": "jc-maths-2024-q11a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q11a",
     "year": "2024",
     "level": "Common",
@@ -38597,8 +38916,10 @@
   {
     "id": "jc-maths-2024-q11b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q11b",
     "year": "2024",
     "level": "Common",
@@ -38611,8 +38932,10 @@
   {
     "id": "jc-maths-2024-q11c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q11c",
     "year": "2024",
     "level": "Common",
@@ -38625,8 +38948,10 @@
   {
     "id": "jc-maths-2024-q11d",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q11d",
     "year": "2024",
     "level": "Common",
@@ -38639,8 +38964,10 @@
   {
     "id": "jc-maths-2024-q12a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Patterns & Sequences"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q12a",
     "year": "2024",
     "level": "Common",
@@ -38653,8 +38980,10 @@
   {
     "id": "jc-maths-2024-q12b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Patterns & Sequences"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q12b",
     "year": "2024",
     "level": "Common",
@@ -38667,8 +38996,11 @@
   {
     "id": "jc-maths-2024-q12c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Patterns & Sequences",
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q12c",
     "year": "2024",
     "level": "Common",
@@ -38681,8 +39013,10 @@
   {
     "id": "jc-maths-2024-q13a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Geometry"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q13a",
     "year": "2024",
     "level": "Common",
@@ -38695,8 +39029,10 @@
   {
     "id": "jc-maths-2024-q13b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Trigonometry"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q13b",
     "year": "2024",
     "level": "Common",
@@ -38709,8 +39045,10 @@
   {
     "id": "jc-maths-2024-q13c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Geometry"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2024_Q13c",
     "year": "2024",
     "level": "Common",
@@ -38723,8 +39061,10 @@
   {
     "id": "jc-maths-2025-q01a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Probability & Counting"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q01a",
     "year": "2025",
     "level": "Common",
@@ -38737,8 +39077,10 @@
   {
     "id": "jc-maths-2025-q01b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Arithmetic"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q01b",
     "year": "2025",
     "level": "Common",
@@ -38751,8 +39093,10 @@
   {
     "id": "jc-maths-2025-q02a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Patterns & Sequences"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q02a",
     "year": "2025",
     "level": "Common",
@@ -38765,8 +39109,11 @@
   {
     "id": "jc-maths-2025-q02b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Patterns & Sequences",
+      "Probability & Counting"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q02b",
     "year": "2025",
     "level": "Common",
@@ -38779,8 +39126,10 @@
   {
     "id": "jc-maths-2025-q03a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Arithmetic"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q03a",
     "year": "2025",
     "level": "Common",
@@ -38793,8 +39142,10 @@
   {
     "id": "jc-maths-2025-q03b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Arithmetic"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q03b",
     "year": "2025",
     "level": "Common",
@@ -38807,8 +39158,10 @@
   {
     "id": "jc-maths-2025-q03c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Arithmetic"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q03c",
     "year": "2025",
     "level": "Common",
@@ -38821,8 +39174,10 @@
   {
     "id": "jc-maths-2025-q04a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Statistics & Data"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q04a",
     "year": "2025",
     "level": "Common",
@@ -38835,8 +39190,10 @@
   {
     "id": "jc-maths-2025-q04b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Statistics & Data"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q04b",
     "year": "2025",
     "level": "Common",
@@ -38849,8 +39206,10 @@
   {
     "id": "jc-maths-2025-q04c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Statistics & Data"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q04c",
     "year": "2025",
     "level": "Common",
@@ -38863,8 +39222,10 @@
   {
     "id": "jc-maths-2025-q04d",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Statistics & Data"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q04d",
     "year": "2025",
     "level": "Common",
@@ -38877,8 +39238,10 @@
   {
     "id": "jc-maths-2025-q04e",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Statistics & Data"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q04e",
     "year": "2025",
     "level": "Common",
@@ -38891,8 +39254,10 @@
   {
     "id": "jc-maths-2025-q05a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Co-Ordinate Geometry & The Line"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q05a",
     "year": "2025",
     "level": "Common",
@@ -38905,8 +39270,10 @@
   {
     "id": "jc-maths-2025-q05b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Co-Ordinate Geometry & The Line"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q05b",
     "year": "2025",
     "level": "Common",
@@ -38919,8 +39286,10 @@
   {
     "id": "jc-maths-2025-q05c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Co-Ordinate Geometry & The Line"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q05c",
     "year": "2025",
     "level": "Common",
@@ -38933,8 +39302,10 @@
   {
     "id": "jc-maths-2025-q05d",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Co-Ordinate Geometry & The Line"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q05d",
     "year": "2025",
     "level": "Common",
@@ -38947,8 +39318,10 @@
   {
     "id": "jc-maths-2025-q06a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Geometry - Constructions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q06a",
     "year": "2025",
     "level": "Common",
@@ -38961,8 +39334,10 @@
   {
     "id": "jc-maths-2025-q06b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Geometry"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q06b",
     "year": "2025",
     "level": "Common",
@@ -38975,8 +39350,10 @@
   {
     "id": "jc-maths-2025-q06c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Geometry"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q06c",
     "year": "2025",
     "level": "Common",
@@ -38989,8 +39366,10 @@
   {
     "id": "jc-maths-2025-q07a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Measure"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q07a",
     "year": "2025",
     "level": "Common",
@@ -39003,8 +39382,10 @@
   {
     "id": "jc-maths-2025-q07b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Arithmetic"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q07b",
     "year": "2025",
     "level": "Common",
@@ -39017,8 +39398,10 @@
   {
     "id": "jc-maths-2025-q07c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Arithmetic"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q07c",
     "year": "2025",
     "level": "Common",
@@ -39031,8 +39414,10 @@
   {
     "id": "jc-maths-2025-q07d",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Measure"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q07d",
     "year": "2025",
     "level": "Common",
@@ -39045,8 +39430,10 @@
   {
     "id": "jc-maths-2025-q07e",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Measure"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q07e",
     "year": "2025",
     "level": "Common",
@@ -39059,8 +39446,10 @@
   {
     "id": "jc-maths-2025-q08a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Trigonometry"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q08a",
     "year": "2025",
     "level": "Common",
@@ -39073,8 +39462,10 @@
   {
     "id": "jc-maths-2025-q08b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Trigonometry"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q08b",
     "year": "2025",
     "level": "Common",
@@ -39087,8 +39478,10 @@
   {
     "id": "jc-maths-2025-q09a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Functions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q09a",
     "year": "2025",
     "level": "Common",
@@ -39101,8 +39494,10 @@
   {
     "id": "jc-maths-2025-q09b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Functions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q09b",
     "year": "2025",
     "level": "Common",
@@ -39115,8 +39510,10 @@
   {
     "id": "jc-maths-2025-q09c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Functions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q09c",
     "year": "2025",
     "level": "Common",
@@ -39129,8 +39526,10 @@
   {
     "id": "jc-maths-2025-q09d",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Functions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q09d",
     "year": "2025",
     "level": "Common",
@@ -39143,8 +39542,10 @@
   {
     "id": "jc-maths-2025-q09e",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Functions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q09e",
     "year": "2025",
     "level": "Common",
@@ -39157,8 +39558,10 @@
   {
     "id": "jc-maths-2025-q09f",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Functions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q09f",
     "year": "2025",
     "level": "Common",
@@ -39171,8 +39574,10 @@
   {
     "id": "jc-maths-2025-q10a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Sets"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q10a",
     "year": "2025",
     "level": "Common",
@@ -39185,8 +39590,10 @@
   {
     "id": "jc-maths-2025-q10b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Sets"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q10b",
     "year": "2025",
     "level": "Common",
@@ -39199,8 +39606,10 @@
   {
     "id": "jc-maths-2025-q11a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q11a",
     "year": "2025",
     "level": "Common",
@@ -39213,8 +39622,10 @@
   {
     "id": "jc-maths-2025-q11b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q11b",
     "year": "2025",
     "level": "Common",
@@ -39227,8 +39638,10 @@
   {
     "id": "jc-maths-2025-q12a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Functions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q12a",
     "year": "2025",
     "level": "Common",
@@ -39241,8 +39654,10 @@
   {
     "id": "jc-maths-2025-q12b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q12b",
     "year": "2025",
     "level": "Common",
@@ -39255,8 +39670,10 @@
   {
     "id": "jc-maths-2025-q13a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q13a",
     "year": "2025",
     "level": "Common",
@@ -39269,8 +39686,10 @@
   {
     "id": "jc-maths-2025-q13b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q13b",
     "year": "2025",
     "level": "Common",
@@ -39283,8 +39702,10 @@
   {
     "id": "jc-maths-2025-q13c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2025_Q13c",
     "year": "2025",
     "level": "Common",
@@ -39297,8 +39718,10 @@
   {
     "id": "jc-maths-2026-q01a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Probability & Counting"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q01a",
     "year": "2026",
     "level": "Common",
@@ -39311,8 +39734,10 @@
   {
     "id": "jc-maths-2026-q01b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Probability & Counting"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q01b",
     "year": "2026",
     "level": "Common",
@@ -39325,8 +39750,10 @@
   {
     "id": "jc-maths-2026-q02a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Statistics & Data"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q02a",
     "year": "2026",
     "level": "Common",
@@ -39339,8 +39766,10 @@
   {
     "id": "jc-maths-2026-q02b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Statistics & Data"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q02b",
     "year": "2026",
     "level": "Common",
@@ -39353,8 +39782,10 @@
   {
     "id": "jc-maths-2026-q03a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Arithmetic"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q03a",
     "year": "2026",
     "level": "Common",
@@ -39367,8 +39798,10 @@
   {
     "id": "jc-maths-2026-q03b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Arithmetic"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q03b",
     "year": "2026",
     "level": "Common",
@@ -39381,8 +39814,10 @@
   {
     "id": "jc-maths-2026-q04a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Co-Ordinate Geometry & The Line"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q04a",
     "year": "2026",
     "level": "Common",
@@ -39395,8 +39830,10 @@
   {
     "id": "jc-maths-2026-q04b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Co-Ordinate Geometry & The Line"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q04b",
     "year": "2026",
     "level": "Common",
@@ -39409,8 +39846,10 @@
   {
     "id": "jc-maths-2026-q04c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Co-Ordinate Geometry & The Line"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q04c",
     "year": "2026",
     "level": "Common",
@@ -39423,8 +39862,10 @@
   {
     "id": "jc-maths-2026-q04d",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Co-Ordinate Geometry & The Line"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q04d",
     "year": "2026",
     "level": "Common",
@@ -39437,8 +39878,10 @@
   {
     "id": "jc-maths-2026-q05a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Arithmetic"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q05a",
     "year": "2026",
     "level": "Common",
@@ -39451,8 +39894,10 @@
   {
     "id": "jc-maths-2026-q05b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Arithmetic"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q05b",
     "year": "2026",
     "level": "Common",
@@ -39465,8 +39910,10 @@
   {
     "id": "jc-maths-2026-q06a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Functions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q06a",
     "year": "2026",
     "level": "Common",
@@ -39479,8 +39926,10 @@
   {
     "id": "jc-maths-2026-q06b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Functions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q06b",
     "year": "2026",
     "level": "Common",
@@ -39493,8 +39942,10 @@
   {
     "id": "jc-maths-2026-q07a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Sets"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q07a",
     "year": "2026",
     "level": "Common",
@@ -39507,8 +39958,10 @@
   {
     "id": "jc-maths-2026-q07b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Sets"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q07b",
     "year": "2026",
     "level": "Common",
@@ -39521,8 +39974,10 @@
   {
     "id": "jc-maths-2026-q08a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Functions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q08a",
     "year": "2026",
     "level": "Common",
@@ -39535,8 +39990,10 @@
   {
     "id": "jc-maths-2026-q08b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Functions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q08b",
     "year": "2026",
     "level": "Common",
@@ -39549,8 +40006,10 @@
   {
     "id": "jc-maths-2026-q08c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Functions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q08c",
     "year": "2026",
     "level": "Common",
@@ -39563,8 +40022,10 @@
   {
     "id": "jc-maths-2026-q08d",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Functions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q08d",
     "year": "2026",
     "level": "Common",
@@ -39577,8 +40038,10 @@
   {
     "id": "jc-maths-2026-q09a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q09a",
     "year": "2026",
     "level": "Common",
@@ -39591,8 +40054,10 @@
   {
     "id": "jc-maths-2026-q09b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q09b",
     "year": "2026",
     "level": "Common",
@@ -39605,8 +40070,10 @@
   {
     "id": "jc-maths-2026-q09c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Algebra"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q09c",
     "year": "2026",
     "level": "Common",
@@ -39619,8 +40086,10 @@
   {
     "id": "jc-maths-2026-q10a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Measure"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q10a",
     "year": "2026",
     "level": "Common",
@@ -39633,8 +40102,10 @@
   {
     "id": "jc-maths-2026-q10b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Measure"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q10b",
     "year": "2026",
     "level": "Common",
@@ -39647,8 +40118,10 @@
   {
     "id": "jc-maths-2026-q11a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Co-Ordinate Geometry & The Line"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q11a",
     "year": "2026",
     "level": "Common",
@@ -39661,8 +40134,10 @@
   {
     "id": "jc-maths-2026-q11b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Measure"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q11b",
     "year": "2026",
     "level": "Common",
@@ -39675,8 +40150,10 @@
   {
     "id": "jc-maths-2026-q11c",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Trigonometry"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q11c",
     "year": "2026",
     "level": "Common",
@@ -39689,8 +40166,10 @@
   {
     "id": "jc-maths-2026-q11d",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Trigonometry"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q11d",
     "year": "2026",
     "level": "Common",
@@ -39703,8 +40182,10 @@
   {
     "id": "jc-maths-2026-q12a",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Geometry"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q12a",
     "year": "2026",
     "level": "Common",
@@ -39717,8 +40198,10 @@
   {
     "id": "jc-maths-2026-q12b",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Geometry - Constructions"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q12b",
     "year": "2026",
     "level": "Common",
@@ -39731,8 +40214,10 @@
   {
     "id": "jc-maths-2026-q13",
     "subject": "jc-maths",
-    "topics": [],
-    "conf": 0,
+    "topics": [
+      "Applied Measure"
+    ],
+    "conf": 1.0,
     "stem": "jc maths 2026_Q13",
     "year": "2026",
     "level": "Common",
@@ -54421,7 +54906,9 @@
   {
     "id": "jc-english-2018-q01",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Comprehension"
+    ],
     "conf": 0,
     "stem": "jc-english-2018-q01",
     "year": "2018",
@@ -54435,7 +54922,9 @@
   {
     "id": "jc-english-2018-q02",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Comprehension"
+    ],
     "conf": 0,
     "stem": "jc-english-2018-q02",
     "year": "2018",
@@ -54449,7 +54938,9 @@
   {
     "id": "jc-english-2018-q03",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Comprehension"
+    ],
     "conf": 0,
     "stem": "jc-english-2018-q03",
     "year": "2018",
@@ -54463,7 +54954,9 @@
   {
     "id": "jc-english-2018-q04",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Writing Persuasion"
+    ],
     "conf": 0,
     "stem": "jc-english-2018-q04",
     "year": "2018",
@@ -54477,7 +54970,9 @@
   {
     "id": "jc-english-2018-q05",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Studied Fiction"
+    ],
     "conf": 0,
     "stem": "jc-english-2018-q05",
     "year": "2018",
@@ -54491,7 +54986,9 @@
   {
     "id": "jc-english-2018-q06",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Writing Descriptive"
+    ],
     "conf": 0,
     "stem": "jc-english-2018-q06",
     "year": "2018",
@@ -54505,7 +55002,9 @@
   {
     "id": "jc-english-2018-q07",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Unseen Grammar"
+    ],
     "conf": 0,
     "stem": "jc-english-2018-q07",
     "year": "2018",
@@ -54519,7 +55018,9 @@
   {
     "id": "jc-english-2018-q08",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Studied Play/Film"
+    ],
     "conf": 0,
     "stem": "jc-english-2018-q08",
     "year": "2018",
@@ -54533,7 +55034,9 @@
   {
     "id": "jc-english-2018-q09",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Unseen Poetry"
+    ],
     "conf": 0,
     "stem": "jc-english-2018-q09",
     "year": "2018",
@@ -54547,7 +55050,9 @@
   {
     "id": "jc-english-2019-q01",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Unseen Poetry"
+    ],
     "conf": 0,
     "stem": "jc-english-2019-q01",
     "year": "2019",
@@ -54561,7 +55066,9 @@
   {
     "id": "jc-english-2019-q02",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Unseen Poetry"
+    ],
     "conf": 0,
     "stem": "jc-english-2019-q02",
     "year": "2019",
@@ -54575,7 +55082,9 @@
   {
     "id": "jc-english-2019-q03",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Unseen Poetry"
+    ],
     "conf": 0,
     "stem": "jc-english-2019-q03",
     "year": "2019",
@@ -54589,7 +55098,9 @@
   {
     "id": "jc-english-2019-q04",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Studied Poetry"
+    ],
     "conf": 0,
     "stem": "jc-english-2019-q04",
     "year": "2019",
@@ -54603,7 +55114,9 @@
   {
     "id": "jc-english-2019-q05",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Unseen Visuals"
+    ],
     "conf": 0,
     "stem": "jc-english-2019-q05",
     "year": "2019",
@@ -54617,7 +55130,9 @@
   {
     "id": "jc-english-2019-q06",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Comprehension"
+    ],
     "conf": 0,
     "stem": "jc-english-2019-q06",
     "year": "2019",
@@ -54631,7 +55146,9 @@
   {
     "id": "jc-english-2019-q07",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Studied Fiction"
+    ],
     "conf": 0,
     "stem": "jc-english-2019-q07",
     "year": "2019",
@@ -54645,7 +55162,9 @@
   {
     "id": "jc-english-2019-q08",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Studied Play/Film"
+    ],
     "conf": 0,
     "stem": "jc-english-2019-q08",
     "year": "2019",
@@ -54659,7 +55178,9 @@
   {
     "id": "jc-english-2019-q09",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Comprehension"
+    ],
     "conf": 0,
     "stem": "jc-english-2019-q09",
     "year": "2019",
@@ -54673,7 +55194,9 @@
   {
     "id": "jc-english-2019-q10",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Writing Persuasion"
+    ],
     "conf": 0,
     "stem": "jc-english-2019-q10",
     "year": "2019",
@@ -54687,7 +55210,9 @@
   {
     "id": "jc-english-20217-q01",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Unseen Drama"
+    ],
     "conf": 0,
     "stem": "jc-english-20217-q01",
     "year": "0000",
@@ -54701,7 +55226,9 @@
   {
     "id": "jc-english-20217-q02",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Unseen Visuals"
+    ],
     "conf": 0,
     "stem": "jc-english-20217-q02",
     "year": "0000",
@@ -54715,7 +55242,9 @@
   {
     "id": "jc-english-20217-q03",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Studied Poetry"
+    ],
     "conf": 0,
     "stem": "jc-english-20217-q03",
     "year": "0000",
@@ -54729,7 +55258,9 @@
   {
     "id": "jc-english-20217-q04",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Unseen Grammar"
+    ],
     "conf": 0,
     "stem": "jc-english-20217-q04",
     "year": "0000",
@@ -54743,7 +55274,9 @@
   {
     "id": "jc-english-20217-q05",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Unseen Drama"
+    ],
     "conf": 0,
     "stem": "jc-english-20217-q05",
     "year": "0000",
@@ -54757,7 +55290,9 @@
   {
     "id": "jc-english-20217-q06",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Unseen Drama"
+    ],
     "conf": 0,
     "stem": "jc-english-20217-q06",
     "year": "0000",
@@ -54771,7 +55306,9 @@
   {
     "id": "jc-english-20217-q07",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Studied Play/Film"
+    ],
     "conf": 0,
     "stem": "jc-english-20217-q07",
     "year": "0000",
@@ -54785,7 +55322,9 @@
   {
     "id": "jc-english-20217-q08",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Studied Play/Film"
+    ],
     "conf": 0,
     "stem": "jc-english-20217-q08",
     "year": "0000",
@@ -54799,7 +55338,9 @@
   {
     "id": "jc-english-20217-q09",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Studied Play/Film"
+    ],
     "conf": 0,
     "stem": "jc-english-20217-q09",
     "year": "0000",
@@ -54813,7 +55354,9 @@
   {
     "id": "jc-english-20217-q10",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Unseen Drama"
+    ],
     "conf": 0,
     "stem": "jc-english-20217-q10",
     "year": "0000",
@@ -54827,7 +55370,9 @@
   {
     "id": "jc-english-2022-q01",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Comprehension"
+    ],
     "conf": 0,
     "stem": "jc-english-2022-q01",
     "year": "2022",
@@ -54841,7 +55386,9 @@
   {
     "id": "jc-english-2022-q02",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Writing Narrative (Stories)"
+    ],
     "conf": 0,
     "stem": "jc-english-2022-q02",
     "year": "2022",
@@ -54855,7 +55402,9 @@
   {
     "id": "jc-english-2022-q03",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Unseen Grammar"
+    ],
     "conf": 0,
     "stem": "jc-english-2022-q03",
     "year": "2022",
@@ -54869,7 +55418,9 @@
   {
     "id": "jc-english-2022-q04",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Unseen Poetry"
+    ],
     "conf": 0,
     "stem": "jc-english-2022-q04",
     "year": "2022",
@@ -54883,7 +55434,9 @@
   {
     "id": "jc-english-2022-q05",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Studied Poetry"
+    ],
     "conf": 0,
     "stem": "jc-english-2022-q05",
     "year": "2022",
@@ -54897,7 +55450,9 @@
   {
     "id": "jc-english-2022-q06",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Studied Poetry"
+    ],
     "conf": 0,
     "stem": "jc-english-2022-q06",
     "year": "2022",
@@ -54911,7 +55466,9 @@
   {
     "id": "jc-english-2022-q07",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Unseen Visuals"
+    ],
     "conf": 0,
     "stem": "jc-english-2022-q07",
     "year": "2022",
@@ -54925,7 +55482,9 @@
   {
     "id": "jc-english-2022-q08",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Studied Play/Film"
+    ],
     "conf": 0,
     "stem": "jc-english-2022-q08",
     "year": "2022",
@@ -54939,7 +55498,9 @@
   {
     "id": "jc-english-2022-q09",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Unseen Fiction"
+    ],
     "conf": 0,
     "stem": "jc-english-2022-q09",
     "year": "2022",
@@ -54953,7 +55514,10 @@
   {
     "id": "jc-english-2022-q10",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Studied Fiction",
+      "Studied Play/Film"
+    ],
     "conf": 0,
     "stem": "jc-english-2022-q10",
     "year": "2022",
@@ -54967,7 +55531,9 @@
   {
     "id": "jc-english-2023-q01",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Studied Play/Film"
+    ],
     "conf": 0,
     "stem": "jc-english-2023-q01",
     "year": "2023",
@@ -54981,7 +55547,9 @@
   {
     "id": "jc-english-2023-q02",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Studied Play/Film"
+    ],
     "conf": 0,
     "stem": "jc-english-2023-q02",
     "year": "2023",
@@ -54995,7 +55563,9 @@
   {
     "id": "jc-english-2023-q03",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Unseen Poetry"
+    ],
     "conf": 0,
     "stem": "jc-english-2023-q03",
     "year": "2023",
@@ -55009,7 +55579,9 @@
   {
     "id": "jc-english-2023-q04",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Unseen Poetry"
+    ],
     "conf": 0,
     "stem": "jc-english-2023-q04",
     "year": "2023",
@@ -55023,7 +55595,9 @@
   {
     "id": "jc-english-2023-q05",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Studied Poetry"
+    ],
     "conf": 0,
     "stem": "jc-english-2023-q05",
     "year": "2023",
@@ -55037,7 +55611,9 @@
   {
     "id": "jc-english-2023-q06",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Unseen Drama"
+    ],
     "conf": 0,
     "stem": "jc-english-2023-q06",
     "year": "2023",
@@ -55051,7 +55627,10 @@
   {
     "id": "jc-english-2023-q07",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Studied Play/Film",
+      "Studied Fiction"
+    ],
     "conf": 0,
     "stem": "jc-english-2023-q07",
     "year": "2023",
@@ -55065,7 +55644,9 @@
   {
     "id": "jc-english-2023-q08",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Unseen Visuals"
+    ],
     "conf": 0,
     "stem": "jc-english-2023-q08",
     "year": "2023",
@@ -55079,7 +55660,9 @@
   {
     "id": "jc-english-2023-q09",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Unseen Grammar"
+    ],
     "conf": 0,
     "stem": "jc-english-2023-q09",
     "year": "2023",
@@ -55093,7 +55676,9 @@
   {
     "id": "jc-english-2023-q10",
     "subject": "jc-english",
-    "topics": [],
+    "topics": [
+      "Writing Narrative (Stories)"
+    ],
     "conf": 0,
     "stem": "jc-english-2023-q10",
     "year": "2023",
@@ -55107,7 +55692,9 @@
   {
     "id": "jc-french-2022-q08",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2022-q08",
     "year": "2022",
@@ -55121,7 +55708,9 @@
   {
     "id": "jc-french-2022-q09",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2022-q09",
     "year": "2022",
@@ -55135,7 +55724,9 @@
   {
     "id": "jc-french-2022-q10",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2022-q10",
     "year": "2022",
@@ -55149,7 +55740,9 @@
   {
     "id": "jc-french-2022-q11",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2022-q11",
     "year": "2022",
@@ -55163,7 +55756,9 @@
   {
     "id": "jc-french-2022-q12",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2022-q12",
     "year": "2022",
@@ -55177,7 +55772,9 @@
   {
     "id": "jc-french-2022-q13",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2022-q13",
     "year": "2022",
@@ -55191,7 +55788,9 @@
   {
     "id": "jc-french-2022-q14",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2022-q14",
     "year": "2022",
@@ -55205,7 +55804,9 @@
   {
     "id": "jc-french-2022-q15",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc-french-2022-q15",
     "year": "2022",
@@ -55219,7 +55820,9 @@
   {
     "id": "jc-french-2022-q16",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc-french-2022-q16",
     "year": "2022",
@@ -55233,7 +55836,9 @@
   {
     "id": "jc-french-2023-q09",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2023-q09",
     "year": "2023",
@@ -55247,7 +55852,9 @@
   {
     "id": "jc-french-2023-q10",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2023-q10",
     "year": "2023",
@@ -55261,7 +55868,9 @@
   {
     "id": "jc-french-2023-q11",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2023-q11",
     "year": "2023",
@@ -55275,7 +55884,9 @@
   {
     "id": "jc-french-2023-q12",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2023-q12",
     "year": "2023",
@@ -55289,7 +55900,9 @@
   {
     "id": "jc-french-2023-q13",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2023-q13",
     "year": "2023",
@@ -55303,7 +55916,9 @@
   {
     "id": "jc-french-2023-q14",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2023-q14",
     "year": "2023",
@@ -55317,7 +55932,9 @@
   {
     "id": "jc-french-2023-q15",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2023-q15",
     "year": "2023",
@@ -55331,7 +55948,9 @@
   {
     "id": "jc-french-2023-q16",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2023-q16",
     "year": "2023",
@@ -55345,7 +55964,9 @@
   {
     "id": "jc-french-2023-q17",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc-french-2023-q17",
     "year": "2023",
@@ -55359,7 +55980,9 @@
   {
     "id": "jc-french-2023-q18",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc-french-2023-q18",
     "year": "2023",
@@ -55373,7 +55996,9 @@
   {
     "id": "jc-french-2024-q08",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2024-q08",
     "year": "2024",
@@ -55387,7 +56012,9 @@
   {
     "id": "jc-french-2024-q09",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2024-q09",
     "year": "2024",
@@ -55401,7 +56028,9 @@
   {
     "id": "jc-french-2024-q10",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2024-q10",
     "year": "2024",
@@ -55415,7 +56044,9 @@
   {
     "id": "jc-french-2024-q11",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2024-q11",
     "year": "2024",
@@ -55429,7 +56060,9 @@
   {
     "id": "jc-french-2024-q12",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2024-q12",
     "year": "2024",
@@ -55443,7 +56076,9 @@
   {
     "id": "jc-french-2024-q13",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2024-q13",
     "year": "2024",
@@ -55457,7 +56092,9 @@
   {
     "id": "jc-french-2024-q14",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2024-q14",
     "year": "2024",
@@ -55471,7 +56108,9 @@
   {
     "id": "jc-french-2024-q15",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2024-q15",
     "year": "2024",
@@ -55485,7 +56124,9 @@
   {
     "id": "jc-french-2024-q16",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc-french-2024-q16",
     "year": "2024",
@@ -55499,7 +56140,9 @@
   {
     "id": "jc-french-2024-q17",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc-french-2024-q17",
     "year": "2024",
@@ -55513,7 +56156,9 @@
   {
     "id": "jc-french-2025-q08",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2025-q08",
     "year": "2025",
@@ -55527,7 +56172,9 @@
   {
     "id": "jc-french-2025-q09",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2025-q09",
     "year": "2025",
@@ -55541,7 +56188,9 @@
   {
     "id": "jc-french-2025-q10",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2025-q10",
     "year": "2025",
@@ -55555,7 +56204,9 @@
   {
     "id": "jc-french-2025-q11",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2025-q11",
     "year": "2025",
@@ -55569,7 +56220,9 @@
   {
     "id": "jc-french-2025-q12",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2025-q12",
     "year": "2025",
@@ -55583,7 +56236,9 @@
   {
     "id": "jc-french-2025-q13",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2025-q13",
     "year": "2025",
@@ -55597,7 +56252,9 @@
   {
     "id": "jc-french-2025-q14",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2025-q14",
     "year": "2025",
@@ -55611,7 +56268,9 @@
   {
     "id": "jc-french-2025-q15",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2025-q15",
     "year": "2025",
@@ -55625,7 +56284,9 @@
   {
     "id": "jc-french-2025-q16",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc-french-2025-q16",
     "year": "2025",
@@ -55639,7 +56300,9 @@
   {
     "id": "jc-french-2025-q17",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc-french-2025-q17",
     "year": "2025",
@@ -55653,7 +56316,9 @@
   {
     "id": "jc-french-2026-q08",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2026-q08",
     "year": "2026",
@@ -55667,7 +56332,9 @@
   {
     "id": "jc-french-2026-q09",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2026-q09",
     "year": "2026",
@@ -55681,7 +56348,9 @@
   {
     "id": "jc-french-2026-q10",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2026-q10",
     "year": "2026",
@@ -55695,7 +56364,9 @@
   {
     "id": "jc-french-2026-q11",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2026-q11",
     "year": "2026",
@@ -55709,7 +56380,9 @@
   {
     "id": "jc-french-2026-q12",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2026-q12",
     "year": "2026",
@@ -55723,7 +56396,9 @@
   {
     "id": "jc-french-2026-q13",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2026-q13",
     "year": "2026",
@@ -55737,7 +56412,9 @@
   {
     "id": "jc-french-2026-q14",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2026-q14",
     "year": "2026",
@@ -55751,7 +56428,9 @@
   {
     "id": "jc-french-2026-q15",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-french-2026-q15",
     "year": "2026",
@@ -55765,7 +56444,9 @@
   {
     "id": "jc-french-2026-q16",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc-french-2026-q16",
     "year": "2026",
@@ -55779,7 +56460,9 @@
   {
     "id": "jc-french-2026-q17",
     "subject": "jc-french",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc-french-2026-q17",
     "year": "2026",
@@ -62205,7 +62888,9 @@
   {
     "id": "jc-spanish-2022-q09",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2022-q09",
     "year": "2022",
@@ -62219,7 +62904,9 @@
   {
     "id": "jc-spanish-2022-q10",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2022-q10",
     "year": "2022",
@@ -62233,7 +62920,9 @@
   {
     "id": "jc-spanish-2022-q11",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2022-q11",
     "year": "2022",
@@ -62247,7 +62936,9 @@
   {
     "id": "jc-spanish-2022-q12",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2022-q12",
     "year": "2022",
@@ -62261,7 +62952,9 @@
   {
     "id": "jc-spanish-2022-q13",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2022-q13",
     "year": "2022",
@@ -62275,7 +62968,9 @@
   {
     "id": "jc-spanish-2022-q14",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2022-q14",
     "year": "2022",
@@ -62289,7 +62984,9 @@
   {
     "id": "jc-spanish-2022-q15",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2022-q15",
     "year": "2022",
@@ -62303,7 +63000,9 @@
   {
     "id": "jc-spanish-2022-q16",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2022-q16",
     "year": "2022",
@@ -62317,7 +63016,9 @@
   {
     "id": "jc-spanish-2022-q17",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2022-q17",
     "year": "2022",
@@ -62331,7 +63032,9 @@
   {
     "id": "jc-spanish-2022-q18",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2022-q18",
     "year": "2022",
@@ -62345,7 +63048,9 @@
   {
     "id": "jc-spanish-2023-q09",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2023-q09",
     "year": "2023",
@@ -62359,7 +63064,9 @@
   {
     "id": "jc-spanish-2023-q10",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2023-q10",
     "year": "2023",
@@ -62373,7 +63080,9 @@
   {
     "id": "jc-spanish-2023-q11",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2023-q11",
     "year": "2023",
@@ -62387,7 +63096,9 @@
   {
     "id": "jc-spanish-2023-q12",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2023-q12",
     "year": "2023",
@@ -62401,7 +63112,9 @@
   {
     "id": "jc-spanish-2023-q13",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2023-q13",
     "year": "2023",
@@ -62415,7 +63128,9 @@
   {
     "id": "jc-spanish-2023-q14",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2023-q14",
     "year": "2023",
@@ -62429,7 +63144,9 @@
   {
     "id": "jc-spanish-2023-q15",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2023-q15",
     "year": "2023",
@@ -62443,7 +63160,9 @@
   {
     "id": "jc-spanish-2023-q16",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2023-q16",
     "year": "2023",
@@ -62457,7 +63176,9 @@
   {
     "id": "jc-spanish-2023-q17",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2023-q17",
     "year": "2023",
@@ -62471,7 +63192,9 @@
   {
     "id": "jc-spanish-2023-q18",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2023-q18",
     "year": "2023",
@@ -62485,7 +63208,9 @@
   {
     "id": "jc-spanish-2024-q09",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2024-q09",
     "year": "2024",
@@ -62499,7 +63224,9 @@
   {
     "id": "jc-spanish-2024-q10",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2024-q10",
     "year": "2024",
@@ -62513,7 +63240,9 @@
   {
     "id": "jc-spanish-2024-q11",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2024-q11",
     "year": "2024",
@@ -62527,7 +63256,9 @@
   {
     "id": "jc-spanish-2024-q12",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2024-q12",
     "year": "2024",
@@ -62541,7 +63272,9 @@
   {
     "id": "jc-spanish-2024-q13",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2024-q13",
     "year": "2024",
@@ -62555,7 +63288,9 @@
   {
     "id": "jc-spanish-2024-q14",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2024-q14",
     "year": "2024",
@@ -62569,7 +63304,9 @@
   {
     "id": "jc-spanish-2024-q15",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2024-q15",
     "year": "2024",
@@ -62583,7 +63320,9 @@
   {
     "id": "jc-spanish-2024-q16",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2024-q16",
     "year": "2024",
@@ -62597,7 +63336,9 @@
   {
     "id": "jc-spanish-2024-q17",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2024-q17",
     "year": "2024",
@@ -62611,7 +63352,9 @@
   {
     "id": "jc-spanish-2024-q18",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2024-q18",
     "year": "2024",
@@ -62625,7 +63368,9 @@
   {
     "id": "jc-spanish-2025-q09",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2025-q09",
     "year": "2025",
@@ -62639,7 +63384,9 @@
   {
     "id": "jc-spanish-2025-q10",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2025-q10",
     "year": "2025",
@@ -62653,7 +63400,9 @@
   {
     "id": "jc-spanish-2025-q11",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2025-q11",
     "year": "2025",
@@ -62667,7 +63416,9 @@
   {
     "id": "jc-spanish-2025-q12",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2025-q12",
     "year": "2025",
@@ -62681,7 +63432,9 @@
   {
     "id": "jc-spanish-2025-q13",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2025-q13",
     "year": "2025",
@@ -62695,7 +63448,9 @@
   {
     "id": "jc-spanish-2025-q14",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2025-q14",
     "year": "2025",
@@ -62709,7 +63464,9 @@
   {
     "id": "jc-spanish-2025-q15",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2025-q15",
     "year": "2025",
@@ -62723,7 +63480,9 @@
   {
     "id": "jc-spanish-2025-q16",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2025-q16",
     "year": "2025",
@@ -62737,7 +63496,9 @@
   {
     "id": "jc-spanish-2025-q17",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2025-q17",
     "year": "2025",
@@ -62751,7 +63512,9 @@
   {
     "id": "jc-spanish-2025-q18",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2025-q18",
     "year": "2025",
@@ -62765,7 +63528,9 @@
   {
     "id": "jc-spanish-2026-q09",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2026-q09",
     "year": "2026",
@@ -62779,7 +63544,9 @@
   {
     "id": "jc-spanish-2026-q10",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2026-q10",
     "year": "2026",
@@ -62793,7 +63560,9 @@
   {
     "id": "jc-spanish-2026-q11",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2026-q11",
     "year": "2026",
@@ -62807,7 +63576,9 @@
   {
     "id": "jc-spanish-2026-q12",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2026-q12",
     "year": "2026",
@@ -62821,7 +63592,9 @@
   {
     "id": "jc-spanish-2026-q13",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2026-q13",
     "year": "2026",
@@ -62835,7 +63608,9 @@
   {
     "id": "jc-spanish-2026-q14",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2026-q14",
     "year": "2026",
@@ -62849,7 +63624,9 @@
   {
     "id": "jc-spanish-2026-q15",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2026-q15",
     "year": "2026",
@@ -62863,7 +63640,9 @@
   {
     "id": "jc-spanish-2026-q16",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Reading"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2026-q16",
     "year": "2026",
@@ -62877,7 +63656,9 @@
   {
     "id": "jc-spanish-2026-q17",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2026-q17",
     "year": "2026",
@@ -62891,7 +63672,9 @@
   {
     "id": "jc-spanish-2026-q18",
     "subject": "jc-spanish",
-    "topics": [],
+    "topics": [
+      "Writing"
+    ],
     "conf": 0,
     "stem": "jc-spanish-2026-q18",
     "year": "2026",
