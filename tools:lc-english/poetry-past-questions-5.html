@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LC English — Prescribed Poetry Past Questions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#FF0000;
+    --ink:#111111;
+    --paper:#f6f4ef;
+    --card:#ffffff;
+    --line:#e4e0d8;
+    --muted:#6b6760;
+    --done:#1f9d55;
+    --shadow:0 1px 0 rgba(0,0,0,.04), 0 10px 30px -18px rgba(0,0,0,.35);
+    --font:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;font-family:var(--font);color:var(--ink);background:var(--paper);
+    background-image:linear-gradient(90deg, rgba(255,0,0,.02) 0 1px, transparent 1px);
+    background-size:34px 100%;line-height:1.5;
+  }
+  /* utility "mono-ish" label look, but still Poppins */
+  .u{font-weight:700;letter-spacing:.14em;text-transform:uppercase;}
+
+  /* ---------- Masthead ---------- */
+  .masthead{background:var(--ink);color:#fff;padding:28px 22px 0;position:relative;overflow:hidden;}
+  .masthead::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:var(--red);}
+  .mast-inner{max-width:1080px;margin:0 auto;padding-bottom:26px;}
+  .eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--red);font-weight:700;margin:0 0 10px;}
+  .masthead h1{margin:0;font-weight:800;letter-spacing:-.02em;font-size:clamp(26px,5vw,46px);line-height:1.04;}
+  .masthead h1 em{font-style:normal;color:var(--red);}
+  .sub{margin:12px 0 0;color:#bdbab4;max-width:60ch;font-size:15px;}
+  .counts{display:flex;flex-wrap:wrap;gap:24px;margin-top:22px;}
+  .counts .stat{display:flex;align-items:baseline;gap:8px;}
+  .counts .num{font-size:24px;font-weight:700;color:#fff;}
+  .counts .lab{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8d8a84;font-weight:600;}
+
+  /* ---------- Controls ---------- */
+  .controls{position:static;background:rgba(246,244,239,.94);border-bottom:1px solid var(--line);}
+  .controls-inner{max-width:1080px;margin:0 auto;padding:14px 22px;}
+  .searchrow{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+  .search{flex:1 1 260px;position:relative;min-width:0;}
+  .search input{width:100%;padding:12px 14px 12px 40px;border-radius:10px;border:1.5px solid var(--line);background:#fff;font:inherit;font-size:15px;transition:border-color .15s, box-shadow .15s;}
+  .search input:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(255,0,0,.12);}
+  .search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);opacity:.45;}
+
+  .seg{display:inline-flex;background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:3px;}
+  .seg button{appearance:none;border:0;background:transparent;font:inherit;font-weight:600;font-size:13px;padding:8px 14px;border-radius:7px;cursor:pointer;color:var(--muted);}
+  .seg button[aria-pressed="true"]{background:var(--ink);color:#fff;}
+
+  .poets{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;}
+  .poet-pill{appearance:none;border:1.5px solid var(--line);background:#fff;font:inherit;font-weight:600;font-size:13px;color:var(--ink);padding:7px 13px;border-radius:999px;cursor:pointer;display:inline-flex;gap:8px;align-items:center;transition:transform .08s, border-color .15s, background .15s, color .15s;}
+  .poet-pill:hover{border-color:#bcb8b0;transform:translateY(-1px);}
+  .poet-pill[aria-pressed="true"]{background:var(--red);border-color:var(--red);color:#fff;}
+  .poet-pill .tag{font-size:11px;font-weight:700;background:rgba(0,0,0,.06);border-radius:999px;padding:1px 7px;color:var(--muted);}
+  .poet-pill[aria-pressed="true"] .tag{background:rgba(255,255,255,.22);color:#fff;}
+
+  /* ---------- Toolbar ---------- */
+  .toolbar{max-width:1080px;margin:0 auto;padding:18px 22px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;}
+  .tools-left,.tools-right{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+  .ctl-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-right:2px;}
+  .btn{appearance:none;border:1.5px solid var(--ink);background:#fff;font:inherit;font-weight:600;font-size:13px;color:var(--ink);padding:9px 14px;border-radius:10px;cursor:pointer;display:inline-flex;gap:8px;align-items:center;transition:transform .08s, background .15s, color .15s;}
+  .btn:hover{transform:translateY(-1px);}
+  .btn.primary{background:var(--red);border-color:var(--red);color:#fff;}
+  .btn.ghost{border-color:var(--line);color:var(--muted);}
+
+  /* timer */
+  .timer{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--line);background:#fff;border-radius:10px;padding:5px 6px 5px 12px;}
+  .timer .clock{font-weight:700;font-variant-numeric:tabular-nums;font-size:15px;letter-spacing:.02em;min-width:54px;text-align:center;}
+  .timer.run .clock{color:var(--ink);}
+  .timer.low .clock{color:var(--red);}
+  .timer .mini{appearance:none;border:0;background:var(--ink);color:#fff;width:30px;height:30px;border-radius:7px;font:inherit;font-size:15px;cursor:pointer;display:grid;place-items:center;}
+  .timer .mini.alt{background:#fff;color:var(--ink);border:1.5px solid var(--line);}
+
+  /* progress bar */
+  .progress-wrap{max-width:1080px;margin:14px auto 0;padding:0 22px;}
+  .progress-meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted);font-weight:600;margin-bottom:6px;}
+  .progress-meta .resetlink{background:none;border:0;color:var(--red);font:inherit;font-weight:600;cursor:pointer;text-decoration:underline;text-underline-offset:2px;font-size:12px;}
+  .bar{height:8px;background:#e9e5dd;border-radius:999px;overflow:hidden;}
+  .bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--red),#ff5a3c);transition:width .35s ease;}
+
+  /* ---------- Results ---------- */
+  main{max-width:1080px;margin:0 auto;padding:18px 22px 80px;}
+  .resultline{font-size:12px;letter-spacing:.04em;color:var(--muted);text-transform:uppercase;margin:8px 2px 18px;font-weight:600;}
+  .resultline b{color:var(--ink);}
+
+  .poet-group{margin-bottom:40px;scroll-margin-top:170px;}
+  .group-head{display:flex;align-items:center;gap:14px;margin:0 0 16px;}
+  .group-head h2{margin:0;font-size:clamp(19px,3vw,24px);font-weight:700;letter-spacing:-.01em;white-space:nowrap;}
+  .group-head .rule{flex:1;height:2px;background:linear-gradient(90deg,var(--ink),transparent);}
+  .group-head .cnt{font-size:12px;font-weight:700;color:#fff;background:var(--ink);border-radius:999px;padding:3px 10px;}
+
+  .grid{display:grid;grid-template-columns:1fr;gap:16px;}
+
+  .qcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:0;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;transition:transform .1s ease, box-shadow .1s ease, border-color .1s;}
+  .qcard:hover{transform:translateY(-2px);box-shadow:0 1px 0 rgba(0,0,0,.04),0 18px 40px -20px rgba(0,0,0,.45);border-color:#d6d2c9;}
+  .qcard.is-done{border-color:#bfe3c9;}
+  .qcard.is-done .top{background:#f3fbf5;}
+  .qcard.flash{animation:flash 1.4s ease;}
+  @keyframes flash{0%{box-shadow:0 0 0 0 rgba(255,0,0,.55);}100%{box-shadow:0 0 0 14px rgba(255,0,0,0);}}
+
+  .qcard .top{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px dashed var(--line);}
+  .stamp{font-weight:700;font-size:14px;letter-spacing:.02em;font-variant-numeric:tabular-nums;}
+  .badge{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:999px;border:1.5px solid;}
+  .badge.exam{color:var(--red);border-color:var(--red);background:rgba(255,0,0,.06);}
+  .badge.mock{color:var(--ink);border-color:var(--ink);background:rgba(0,0,0,.04);}
+  .badge.other{color:#6a3fe0;border-color:#6a3fe0;background:rgba(106,63,224,.08);}
+  .toptags{display:inline-flex;gap:6px;align-items:center;}
+
+  /* Other-poets switch */
+  .switch{display:inline-flex;align-items:center;gap:10px;border:1.5px solid var(--line);background:#fff;border-radius:10px;padding:6px 12px;cursor:pointer;font:inherit;}
+  .switch .track{width:38px;height:22px;border-radius:999px;background:#d8d3ca;position:relative;transition:background .15s;flex:none;}
+  .switch .track::after{content:"";position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.3);transition:transform .15s;}
+  .switch[aria-pressed="true"] .track{background:var(--red);}
+  .switch[aria-pressed="true"] .track::after{transform:translateX(16px);}
+  .switch .swlabel{display:flex;flex-direction:column;line-height:1.15;text-align:left;}
+  .switch .lbl{font-size:13px;font-weight:600;color:var(--ink);}
+  .switch .hint{font-size:10.5px;color:var(--muted);font-weight:500;letter-spacing:.02em;}
+
+  /* off-list poet pill */
+  .poet-pill.other{border-style:dashed;color:#6a3fe0;}
+  .poet-pill.other .tag{color:#6a3fe0;}
+  .poet-pill.other[aria-pressed="true"]{background:#6a3fe0;border-color:#6a3fe0;color:#fff;}
+  .poet-pill.other[aria-pressed="true"] .tag{background:rgba(255,255,255,.22);color:#fff;}
+
+  /* themes bar */
+  .themes-wrap{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);position:relative;}
+  .themes-toggle{appearance:none;border:1.5px solid var(--line);background:#fff;font:inherit;font-size:12px;font-weight:600;color:var(--ink);padding:6px 12px;border-radius:8px;cursor:pointer;display:inline-flex;gap:8px;align-items:center;}
+  .themes-toggle:hover{border-color:#bcb8b0;}
+  .themes-toggle[aria-expanded="true"]{border-color:var(--ink);}
+  .themes-toggle .chev{transition:transform .15s;font-size:10px;}
+  .themes-toggle[aria-expanded="true"] .chev{transform:rotate(180deg);}
+  .themes-toggle .tcount{background:#ffe39b;color:#5c4a00;border-radius:999px;padding:0 7px;font-size:11px;font-weight:700;}
+  .themes{display:flex;gap:7px;flex-wrap:wrap;position:absolute;top:calc(100% + 6px);left:0;z-index:25;background:#fff;border:1.5px solid var(--line);border-radius:12px;box-shadow:0 14px 36px -16px rgba(0,0,0,.45);padding:12px;max-width:min(560px,92vw);}
+  .themes[hidden]{display:none;}
+  .themes{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px;}
+  .theme-chip{appearance:none;border:1.5px solid var(--line);background:#fff;font:inherit;font-size:12px;font-weight:600;color:var(--muted);padding:5px 11px;border-radius:8px;cursor:pointer;display:inline-flex;gap:6px;align-items:center;transition:transform .08s,border-color .15s,background .15s,color .15s;}
+  .theme-chip:hover{transform:translateY(-1px);border-color:#bcb8b0;color:var(--ink);}
+  .theme-chip[aria-pressed="true"]{background:#ffe39b;border-color:#e6b800;color:#5c4a00;}
+  .theme-chip .n{font-size:10.5px;font-weight:700;opacity:.7;}
+  .themes .tlabel{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;align-self:center;margin-right:2px;}
+
+  /* appearance tracker */
+  .tracker-panel{max-width:1080px;margin:16px auto 0;padding:0 22px;}
+  .tracker-inner{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 18px 10px;box-shadow:var(--shadow);}
+  .tracker-inner h3{margin:0 0 4px;font-size:16px;font-weight:700;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
+  .tracker-inner h3 .tnote{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;}
+  .tlegend{font-size:11.5px;color:var(--muted);margin:0 0 14px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;font-weight:500;}
+  .tlegend .key{width:12px;height:12px;border-radius:3px;display:inline-block;vertical-align:-1px;}
+  .tlegend .key.app{background:var(--red);}
+  .tlegend .key.pres{background:#d8d3ca;}
+  .tlegend .key.off{background:#fff;border:1px solid var(--line);}
+  .tgrid{overflow-x:auto;}
+  .trow{display:grid;grid-template-columns:130px 96px repeat(17,1fr);align-items:center;gap:3px;padding:5px 0;border-top:1px solid #f1eee8;min-width:680px;}
+  .trow.head{border-top:0;font-size:9.5px;letter-spacing:.02em;text-transform:uppercase;color:var(--muted);font-weight:700;}
+  .trow .pname{font-weight:600;font-size:13px;white-space:nowrap;}
+  .trow .pstat{font-size:11px;color:var(--muted);font-weight:600;white-space:nowrap;}
+  .trow .pstat b{color:var(--red);}
+  .trow .pstat.due b{color:#b8860b;}
+  .tcell{height:20px;border-radius:3px;background:#fff;}
+  .tcell.app{background:var(--red);}
+  .tcell.pres{background:#d8d3ca;}
+  .trow.head .tcell{background:none;height:auto;text-align:center;}
+
+  .qcard .body{padding:16px;display:flex;flex-direction:column;gap:12px;flex:1;}
+  .quote{font-style:italic;font-weight:500;color:var(--ink);border-left:3px solid var(--red);padding-left:12px;font-size:15px;line-height:1.45;}
+  .instr{font-size:14.5px;color:#33302b;line-height:1.55;}
+
+  .qcard .foot{margin-top:auto;padding:10px 12px 10px 16px;background:#fafafa;border-top:1px solid var(--line);display:flex;align-items:center;gap:10px;justify-content:space-between;}
+  .foot .who{font-size:11px;letter-spacing:.03em;color:var(--muted);font-weight:600;display:flex;align-items:center;gap:7px;min-width:0;}
+  .foot .who .dot{width:7px;height:7px;border-radius:50%;background:var(--red);flex:none;}
+  .foot .acts{display:flex;gap:6px;flex:none;}
+  .icbtn{appearance:none;border:1.5px solid var(--line);background:#fff;border-radius:8px;font:inherit;font-size:12px;font-weight:600;color:var(--muted);padding:6px 10px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:background .15s,color .15s,border-color .15s;}
+  .icbtn:hover{border-color:#c7c2b9;color:var(--ink);}
+  .icbtn.done{border-color:var(--done);color:#fff;background:var(--done);}
+  .icbtn.plan{border-color:var(--red);color:var(--red);font-weight:700;}
+  .icbtn.plan:hover{background:var(--red);color:#fff;border-color:var(--red);}
+  .icbtn svg{width:14px;height:14px;}
+
+  mark{background:#ffe39b;color:inherit;padding:0 1px;border-radius:2px;}
+
+  /* study help panel */
+  @keyframes slidein{from{opacity:0;transform:translateY(-4px);}to{opacity:1;transform:none;}}
+  .study{border-top:1px dashed var(--line);margin-top:2px;padding-top:12px;display:none;}
+  .study.open{display:block;animation:slidein .2s ease;}
+  .ssec{margin-bottom:13px;}
+  .ssec:last-child{margin-bottom:2px;}
+  .ssec h4{margin:0 0 7px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--red);font-weight:700;}
+  .sask{font-size:14px;line-height:1.55;color:#33302b;margin:0;}
+  .squotes,.spoems,.sscheme{margin:0;padding-left:18px;}
+  .squotes li,.spoems li,.sscheme li{font-size:13.5px;line-height:1.5;color:#33302b;margin-bottom:7px;}
+  .squotes li{font-style:italic;}
+  .squotes li::marker,.spoems li::marker,.sscheme li::marker{color:var(--red);}
+  .spoems a{color:var(--red);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,0,0,.3);}
+  .spoems a:hover{border-bottom-color:var(--red);}
+  .study textarea{width:100%;border:1.5px solid var(--line);border-radius:8px;font:inherit;font-size:13.5px;line-height:1.5;padding:9px 11px;resize:vertical;background:#fff;color:var(--ink);}
+  .study textarea:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(255,0,0,.1);}
+  .icbtn.study-toggle[aria-expanded="true"]{background:var(--ink);color:#fff;border-color:var(--ink);}
+
+  .empty{text-align:center;padding:60px 20px;color:var(--muted);}
+  .empty strong{display:block;color:var(--ink);font-size:18px;margin-bottom:6px;}
+
+  .toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:11px 18px;border-radius:10px;font-size:13px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .2s, transform .2s;z-index:50;box-shadow:0 12px 30px -10px rgba(0,0,0,.5);}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+  footer.site{border-top:1px solid var(--line);padding:24px 22px;text-align:center;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;}
+  footer.site b{color:var(--red);}
+
+  @media (max-width:560px){.grid{grid-template-columns:1fr;}.counts{gap:16px;}.toolbar{flex-direction:column;align-items:stretch;}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
+
+  @media print{
+    body{background:#fff;}
+    .masthead{background:#fff;color:#000;padding:0 0 8px;}
+    .masthead::after{display:none;}
+    .masthead h1{font-size:22px;}.masthead h1 em{color:#000;}
+    .eyebrow{color:#000;}.sub,.counts{display:none;}
+    .controls,.toolbar,.progress-wrap,.tracker-panel,footer.site,.qcard .foot .acts,.timer,.theme-chip,.study-toggle{display:none!important;}
+    .controls{position:static;}
+    main{padding:0;}
+    .resultline{color:#000;}
+    .poet-group{margin-bottom:14px;break-inside:avoid;}
+    .group-head h2{font-size:15px;}
+    .grid{display:block;}
+    .qcard{break-inside:avoid;border:1px solid #999;box-shadow:none;margin-bottom:8px;}
+    .qcard:hover{transform:none;}
+    .qcard .foot{background:#fff;}
+    .scheme{display:block!important;}
+    .study{display:block!important;}
+    .study textarea{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="mast-inner">
+    <p class="eyebrow">Leaving Certificate · Higher Level · Section 1</p>
+    <h1>Prescribed Poetry<br><em>Past Exam Questions</em></h1>
+    <p class="sub">Every State Examination essay question set on the prescribed poets, gathered from the course notes. Filter by poet, search a keyword, run a timed practice, and track what you’ve attempted.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="searchrow">
+      <label class="search">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="search" type="search" placeholder="Search questions — e.g. imagery, identity, emotional…" autocomplete="off" aria-label="Search questions">
+      </label>
+    </div>
+    <div class="poets" id="poets"></div>
+    <div class="themes-wrap">
+      <button class="themes-toggle" id="themesToggle" aria-expanded="false">Filter by theme<span class="chev">▾</span><span class="tcount" id="themeCount" hidden></span></button>
+      <div class="themes" id="themes" hidden></div>
+    </div>
+  </div>
+</div>
+
+<div class="toolbar">
+  <div class="tools-left">
+    <button class="switch" id="otherToggle" aria-pressed="false" title="Include past questions from poets not on your prescribed list">
+      <span class="track"></span>
+      <span class="swlabel"><span class="lbl">Other poets</span><span class="hint">off your list · adds practice</span></span>
+    </button>
+  </div>
+  <div class="tools-right">
+    <button class="btn primary" id="trackerBtn" aria-expanded="false" title="See when each prescribed poet last appeared on the exam">📊 Appearance tracker</button>
+    <button class="btn ghost" id="printBtn" title="Print or save the current list as PDF">🖨 Print</button>
+    <button class="btn ghost" id="copyAllBtn" title="Copy every question currently shown">⧉ Copy list</button>
+    <div class="timer" id="timer" aria-label="Practice timer">
+      <span class="clock" id="clock">50:00</span>
+      <button class="mini" id="tStart" title="Start / pause">▶</button>
+      <button class="mini alt" id="tReset" title="Reset to 50:00">↺</button>
+    </div>
+  </div>
+</div>
+
+<section class="tracker-panel" id="trackerPanel" hidden>
+  <div class="tracker-inner">
+    <h3>Exam appearance tracker <span class="tnote">your prescribed poets · 2010–2025</span></h3>
+    <p class="tlegend"><span class="key app"></span> appeared on the exam &nbsp; <span class="key pres"></span> prescribed, not examined &nbsp; <span class="key off"></span> not on the list</p>
+    <div id="trackerBody"></div>
+  </div>
+</section>
+
+<main>
+  <p class="resultline" id="resultline"></p>
+  <div id="results"></div>
+</main>
+
+<footer class="site">
+  Compiled for <b>Grinds360</b> · LC English Poetry · Questions reproduced from course notes
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* Data — taken verbatim from the prescribed-poet course notes.
+   poet, statement (quoted prompt, may be empty), instruction, year, type (Exam/Mock). */
+const QUESTIONS = [
+  {poet:"Derek Mahon", statement:"Mahon\u2019s evocative imagery conveys thematic concerns that are haunted by suggestions of darkness and anxiety.", instruction:"Discuss the extent to which you agree or disagree with the above statement, developing your response with reference to the poems by Derek Mahon on your Leaving Certificate English course.", year:"2023", type:"Exam"},
+  {poet:"Derek Mahon", statement:"", instruction:"To what extent do you think an audience\u2019s appreciation of both Mahon\u2019s language and thematic concerns would be enhanced if his poetry was read aloud? Develop your response with reference to the poetry of Derek Mahon on your Leaving Certificate English course.", year:"2025", type:"Exam", scheme:[
+    "Mahon\u2019s language and thematic concerns can be heightened by the control and modulation of tone \u2013 ironic / poignant / provocative / frustrated / accusatory / philosophical / nostalgic / ambivalent.",
+    "Thematic concerns can be amplified by an emphasis on the emotional intensity / impassioned nature of his poetry.",
+    "Dramatic / chilling / nightmarish imagery can be magnified through aural delivery to convey its thought-provoking / entrenched views of his central themes.",
+    "Emphasis on contrast / repetition when reading his poetry aloud exposes his clever use of language and thematic concerns.",
+    "Reading aloud does / does not enhance Mahon\u2019s use of personae / rhyme / rhythm / sibilance / onomatopoeia / mood / atmosphere, etc."
+  ]},
+
+  {poet:"Elizabeth Bishop", statement:"Bishop\u2019s carefully judged use of language aids the reader to uncover the intensity of feeling in her poetry.", instruction:"To what extent do you agree or disagree with the above statement? Support your answer with reference to the poetry of Elizabeth Bishop on your course.", year:"2013", type:"Exam"},
+  {poet:"Elizabeth Bishop", statement:"Bishop uses highly detailed observation, of people, places and events, to explore unique personal experiences in her poetry.", instruction:"Discuss this statement with reference to poems you have studied.", year:"2016", type:"Exam"},
+  {poet:"Elizabeth Bishop", statement:"From the poetry of Elizabeth Bishop that you have studied, select the poems that, in your opinion, best demonstrate her skilful use of language and imagery to confront life\u2019s harsh realities.", instruction:"Justify your selection showing how she uses language and imagery to confront harsh realities.", year:"2017", type:"Exam"},
+  {poet:"Elizabeth Bishop", statement:"Bishop makes skilful use of a variety of poetic techniques to produce poems that are often analytical but rarely emotional.", instruction:"Discuss the extent to which you agree or disagree with the above statement. Develop your response with reference to the poems by Elizabeth Bishop on your course.", year:"2019", type:"Exam"},
+
+  {poet:"Emily Dickinson", statement:"", instruction:"Discuss how Dickinson\u2019s unique approach to language, and the balance between beauty and horror in her imagery, help to relieve some of the darker aspects of her poetry. Develop your response with reference to the poems by Emily Dickinson on your course.", year:"2020", type:"Exam"},
+  {poet:"Emily Dickinson", statement:"Emily Dickinson\u2019s effective use of a vivid and energetic style helps to convey her fascination with life and its rich experiences.", instruction:"Discuss the extent to which you agree or disagree with the above statement, developing your response with reference to the poems by Emily Dickinson on your Leaving Certificate English course.", year:"2022", type:"Exam"},
+  {poet:"Emily Dickinson", statement:"Dickinson\u2019s style allows her to explore the complexity of a variety of abstract ideas in a concrete and accessible manner.", instruction:"Discuss this statement developing your response with reference to the poetry by Emily Dickinson on your Leaving Certificate English course.", year:"2024", type:"Exam"},
+
+  {poet:"John Donne", statement:"Donne makes effective use of inventive and paradoxical language to explore the human condition in his poetry.", instruction:"Discuss this statement with reference to the poetry by John Donne on your Leaving Certificate English course.", year:"2023", type:"Exam"},
+
+  {poet:"Patrick Kavanagh", statement:"", instruction:"How successfully, in your opinion, does Kavanagh employ both a lyrical style and a celebratory tone to elevate the mundane realism of life in his work? Develop your response with reference to the poetry by Patrick Kavanagh on your Leaving Certificate English course.", year:"2023", type:"Exam"},
+  {poet:"Patrick Kavanagh", statement:"Kavanagh\u2019s discerning use of simple language allows him to produce powerful insights into the world of nature and human nature, both drawn from a parochial perspective.", instruction:"Discuss this statement, developing your response with reference to the poetry of Patrick Kavanagh on your Leaving Certificate English course.", year:"2025", type:"Exam"},
+
+  {poet:"Paula Meehan", statement:"Meehan employs vibrant and forceful language skilfully to challenge the often-oppressive forces identified in her poetry.", instruction:"Discuss the extent to which you agree or disagree with the above statement, developing your response with reference to the poems by Paula Meehan on your Leaving Certificate English course.", year:"2023", type:"Exam"},
+
+  {poet:"W. B. Yeats", statement:"Yeats\u2019s poetry is both intellectually stimulating and emotionally charged.", instruction:"Discuss the extent to which you agree or disagree with the above statement. Develop your response with reference to the themes and language evident in the poems by W. B. Yeats on your course.", year:"2019", type:"Exam"},
+  {poet:"W. B. Yeats", statement:"Yeats makes masterful use of aesthetically pleasing language to communicate the insights he draws from history, myth and legend.", instruction:"To what extent do you agree or disagree with the above statement, developing your response with reference to the poems by W.B. Yeats on your Leaving Certificate English Course.", year:"2022", type:"Exam"},
+  {poet:"W. B. Yeats", statement:"Yeats utilises powerful imagery to explore fascinating contradictions that are central to his poetry.", instruction:"Discuss this statement developing your response with reference to the poetry by W.B. Yeats on your Leaving Certificate English course.", year:"2024", type:"Exam"},
+  {poet:"Eavan Boland", statement:"Boland’s skilful use of evocative imagery in her poetry allows her to explore the complex nature of powerlessness.", instruction:"Discuss this statement, developing your response with reference to the poetry of Eavan Boland on your Leaving Certificate English course.", year:"2025", type:"Exam", prescribed:false},
+  {poet:"T. S. Eliot", statement:"Eliot’s clever use of imagery is essential to his vivid portrayal of a morally bankrupt and futile world.", instruction:"Discuss this statement, developing your response with reference to the poetry of T.S. Eliot on your Leaving Certificate English course.", year:"2025", type:"Exam", prescribed:false},
+  {poet:"Tracy K. Smith", statement:"In her poetry Smith makes effective use of tone, to heighten a variety of thought-provoking questions about the nature of our lives.", instruction:"Discuss this statement, developing your response with reference to the poetry of Tracy K. Smith on your Leaving Certificate English course.", year:"2025", type:"Exam", prescribed:false},
+  {poet:"Eiléan Ní Chuilleanáin", statement:"Ní Chuilleanáin uses evocative imagery to produce poems that often reveal meaningful insights about the nature of life.", instruction:"Discuss this statement developing your response with reference to the poetry by Eiléan Ní Chuilleanáin on your Leaving Certificate English course.", year:"2024", type:"Exam", prescribed:false},
+  {poet:"Sylvia Plath", statement:"The dramatic imagery we encounter in Plath’s poetry reveals her to be an insightful social commentator.", instruction:"Discuss this statement developing your response with reference to the poetry by Sylvia Plath on your Leaving Certificate English course.", year:"2024", type:"Exam", prescribed:false},
+  {poet:"Seamus Heaney", statement:"Heaney uses a deceptively simple style to convey profound observations about people and places.", instruction:"Discuss this statement developing your response with reference to the poetry by Seamus Heaney on your Leaving Certificate English course.", year:"2024", type:"Exam", prescribed:false},
+  {poet:"Adrienne Rich", statement:"A powerful sense of sadness is conveyed in Rich’s poetry through her exposure of the flawed nature of our existence.", instruction:"To what extent do you agree or disagree with the above statement? You should refer to both the language and the themes in the poetry by Adrienne Rich on your Leaving Certificate English course.", year:"2023", type:"Exam", prescribed:true},
+  {poet:"Brendan Kennelly", statement:"Brendan Kennelly effectively employs an appealing descriptive style to reflect on the triumphs, trials and limitations of the human condition.", instruction:"To what extent do you agree or disagree with the above statement? Develop your response with reference to the poems by Brendan Kennelly on your Leaving Certificate English course.", year:"2022", type:"Exam", prescribed:false},
+  {poet:"Adrienne Rich", statement:"", instruction:"To what extent do you agree or disagree that Adrienne Rich makes effective use of a diverse range of imagery and an engaging style to explore structures and values in society which she considers to be negative or destructive? Develop your response with reference to the poems by Adrienne Rich on your Leaving Certificate English course.", year:"2022", type:"Exam", prescribed:true},
+  {poet:"William Wordsworth", statement:"William Wordsworth’s poetry does not have current appeal because his poetic style and use of language are dated and his themes are irrelevant in the twenty-first century.", instruction:"Discuss the extent to which you agree or disagree with the above statement, developing your response with reference to the poems by William Wordsworth on your Leaving Certificate English course.", year:"2022", type:"Exam", prescribed:false},
+  {poet:"Eavan Boland", statement:"", instruction:"Discuss how successfully, in your opinion, Eavan Boland employs a range of narrative elements in her poetry to communicate a variety of thematic concerns. Develop your response with reference to the poems by Eavan Boland on your Leaving Certificate English course.", year:"2021", type:"Exam", prescribed:false},
+  {poet:"John Keats", statement:"Our enjoyment of the sensuous beauty of the poetry of John Keats may be diminished by our awareness of the fear or melancholy often evident in his work.", instruction:"To what extent do you agree or disagree with the above statement? Develop your response with reference to the poems by John Keats on the Leaving Certificate English course.", year:"2021", type:"Exam", prescribed:false},
+  {poet:"Seamus Heaney", statement:"Seamus Heaney transforms the familiar and the mundane through his powerful use of language, thereby enabling us to learn a range of profound lessons from his poetry.", instruction:"Discuss the above statement, developing your response with reference to your experience of the poems by Seamus Heaney on your Leaving Certificate English course.", year:"2021", type:"Exam", prescribed:false},
+  {poet:"Sylvia Plath", statement:"", instruction:"Discuss how successfully, in your opinion, Sylvia Plath uses stylistic features in an innovative way to convey both overwhelming wonder and unsettling menace in her work. Develop your response with reference to the poems by Sylvia Plath on your Leaving Certificate English course.", year:"2021", type:"Exam", prescribed:false},
+  {poet:"Paul Durcan", statement:"Durcan makes effective use of tone or mood to express his emotions, thereby amplifying his various thematic concerns.", instruction:"Discuss the above statement, developing your response with reference to your experience of the poetry by Paul Durcan on your Leaving Certificate English course.", year:"2021", type:"Exam", prescribed:false},
+  {poet:"Eavan Boland", statement:"", instruction:"Based on your reading of Boland’s poetry, to what extent is your emotional response to her work heightened by her use of both provocative and evocative imagery? Develop your response with reference to the poems by Eavan Boland on your course.", year:"2020", type:"Exam", prescribed:false},
+  {poet:"Adrienne Rich", statement:"", instruction:"Discuss how Rich makes effective use of a variety of characters, often in dramatic settings, to probe both personal issues and wider social concerns in her poems. Develop your response with reference to the poems by Adrienne Rich on your course.", year:"2020", type:"Exam", prescribed:true},
+  {poet:"William Wordsworth", statement:"", instruction:"Discuss Wordsworth’s use of natural imagery, often in specific settings, to convey insights into the power of memory and the value of reflection. Develop your response with reference to the poetry by William Wordsworth on your course.", year:"2020", type:"Exam", prescribed:false},
+  {poet:"Brendan Kennelly", statement:"", instruction:"Discuss how Kennelly’s sensitive exploration of a range of emotions, and his imaginative use of a variety of characters, help to reveal the humanity intrinsic to his work. Develop your response with reference to the poems by Brendan Kennelly on your course.", year:"2019", type:"Exam", prescribed:false},
+  {poet:"Sylvia Plath", statement:"", instruction:"Discuss how effectively Plath uses a range of images to develop her themes and add drama to her poetry. Develop your response with reference to the poems by Sylvia Plath on your course.", year:"2019", type:"Exam", prescribed:false},
+  {poet:"Robert Frost", statement:"", instruction:"From your study of the poetry of Robert Frost on your course, select the poems that, in your opinion, best demonstrate how the poet helps us to understand the darker aspects of his poetic vision through his effective use of poetic narrative and dramatic scenes. Justify your selection by demonstrating how Robert Frost helps you to understand the darker aspects of his poetic vision through his effective use of poetic narrative and dramatic scenes in the poems you have selected.", year:"2018", type:"Exam", prescribed:false},
+  {poet:"Eiléan Ní Chuilleanáin", statement:"Eiléan Ní Chuilleanáin tells fascinating stories, often examining themes that are relevant to contemporary Ireland, in a style that is both beautiful and mysterious.", instruction:"To what extent do you agree or disagree with this statement? Support your answer with reference to the poetry of Eiléan Ní Chuilleanáin on your course.", year:"2018", type:"Exam", prescribed:false},
+  {poet:"John Montague", statement:"", instruction:"From your study of the poetry of John Montague on your course, select the poems that, in your opinion, best demonstrate his effective use of place, both literal and metaphorical, to explore elements of his personal and cultural identity. Justify your selection by demonstrating Montague’s effective use of place, both literal and metaphorical, to explore elements of his personal and cultural identity in the poems you have selected.", year:"2018", type:"Exam", prescribed:false},
+  {poet:"Philip Larkin", statement:"", instruction:"Philip Larkin wanted his poetry to appeal to “the common reader”, not just academics and professional literary critics. Based on your experience of his poetry, do you think Larkin’s poems hold appeal for “the common reader”? Justify your response by discussing Larkin’s thematic concerns and elements of his poetic style that you think make his work appealing or unappealing to “the common reader”. Support your answer with reference to the poetry by Philip Larkin on your course.", year:"2018", type:"Exam", prescribed:false},
+  {poet:"Eavan Boland", statement:"Boland makes effective use of symbols and metaphors to explore personal experiences and deliver penetrating truths about society.", instruction:"To what extent do you agree or disagree with this statement? Support your answer with reference to the poetry of Eavan Boland on your course.", year:"2017", type:"Exam", prescribed:false},
+  {poet:"John Donne", statement:"Donne’s poetry can be simultaneously playful and challenging both in style and content.", instruction:"To what extent do you agree or disagree with this statement? Support your answer with reference to the poetry of John Donne on your course.", year:"2017", type:"Exam", prescribed:true},
+  {poet:"John Keats", statement:"Keats uses sensuous language and vivid imagery to express a range of profound tensions.", instruction:"To what extent do you agree or disagree with this statement? Support your answer with reference to the poetry of John Keats on your course.", year:"2017", type:"Exam", prescribed:false},
+  {poet:"Emily Dickinson", statement:"Dickinson’s use of an innovative style to explore intense experiences can both intrigue and confuse.", instruction:"Discuss this statement, supporting your answer with reference to the poetry of Emily Dickinson on your course.", year:"2016", type:"Exam", prescribed:true},
+  {poet:"T. S. Eliot", statement:"Eliot frequently creates memorable characters and dramatic settings to convey both his search for meaning in life and his sense of disillusionment.", instruction:"Discuss this statement, supporting your answer with reference to the poetry of T. S. Eliot on your course.", year:"2016", type:"Exam", prescribed:false},
+  {poet:"Paul Durcan", statement:"Durcan takes a narrative approach to explore a variety of issues in poems of great emotional honesty.", instruction:"Discuss this statement, supporting your answer with reference to the poetry of Paul Durcan on your course.", year:"2016", type:"Exam", prescribed:false},
+  {poet:"John Montague", statement:"Montague makes effective use of evocative language to express a profound empathy with others.", instruction:"Discuss this statement, supporting your answer with reference to the poetry of John Montague on your course.", year:"2015", type:"Exam", prescribed:false},
+  {poet:"Robert Frost", statement:"Frost communicates rich insights into human experience using language that is both accessible and appealing.", instruction:"Discuss this statement, supporting your answer with reference to the poetry of Robert Frost on your course.", year:"2015", type:"Exam", prescribed:false},
+  {poet:"Eiléan Ní Chuilleanáin", statement:"Ní Chuilleanáin’s demanding subject matter and formidable style can prove challenging.", instruction:"Discuss this statement, supporting your answer with reference to the poetry of Eiléan Ní Chuilleanáin on your course.", year:"2015", type:"Exam", prescribed:false},
+  {poet:"Thomas Hardy", statement:"Hardy’s poetry is dominated by bleak imagery which overshadows the comforting reflections found in his work.", instruction:"Discuss this statement, supporting your answer with reference to the poetry of Thomas Hardy on your course.", year:"2015", type:"Exam", prescribed:false},
+  {poet:"W. B. Yeats", statement:"Yeats uses evocative language to create poetry that includes both personal reflection and public commentary.", instruction:"Discuss this statement, supporting your answer with reference to both the themes and language found in the poetry of W. B. Yeats on your course.", year:"2014", type:"Exam", prescribed:true},
+  {poet:"Emily Dickinson", statement:"The dramatic aspects of Dickinson’s poetry can both disturb and delight readers.", instruction:"To what extent do you agree or disagree with the above statement? Support your answer with reference to both the themes and language found in the poetry of Emily Dickinson on your course.", year:"2014", type:"Exam", prescribed:true},
+  {poet:"Philip Larkin", statement:"Larkin is a perceptive observer of the realities of ordinary life in poems that are sometimes illuminated by images of lyrical beauty.", instruction:"To what extent do you agree or disagree with the above statement? Support your answer with reference to both the themes and language found in the poetry of Philip Larkin on your course.", year:"2014", type:"Exam", prescribed:false},
+  {poet:"Sylvia Plath", statement:"Plath makes effective use of language to explore her personal experiences of suffering and to provide occasional glimpses of the redemptive power of love.", instruction:"Discuss this statement, supporting your answer with reference to both the themes and language found in the poetry of Sylvia Plath on your course.", year:"2014", type:"Exam", prescribed:false},
+  {poet:"Gerard Manley Hopkins", statement:"Hopkins’ innovative style displays his struggle with what he believes to be fundamental truths.", instruction:"In your opinion, is this a fair assessment of his poetry? Support your answer with suitable reference to the poetry of Gerard Manley Hopkins on your course.", year:"2013", type:"Exam", prescribed:false},
+  {poet:"Derek Mahon", statement:"Mahon uses language and imagery to transform personal observations into universal reflections.", instruction:"Write your response to this statement with reference to the poems by Derek Mahon on your course.", year:"2013", type:"Exam", prescribed:true},
+  {poet:"Sylvia Plath", statement:"Plath’s provocative imagery serves to highlight the intense emotions expressed in her poetry.", instruction:"To what extent do you agree or disagree with this assessment of her poetry? Support your answer with suitable reference to the poetry of Sylvia Plath on your course.", year:"2013", type:"Exam", prescribed:false},
+  {poet:"Thomas Kinsella", statement:"Kinsella’s poetic world is one of darkness and decay, relieved by glimpses of insight and acceptance.", instruction:"To what extent do you agree with this statement? Support your answer with suitable reference to the poetry of Thomas Kinsella on your course.", year:"2012", type:"Exam", prescribed:false},
+  {poet:"Adrienne Rich", statement:"Rich’s poetry communicates powerful feelings through thought-provoking images and symbols.", instruction:"Write your response to this statement with reference to the poems by Adrienne Rich on your course.", year:"2012", type:"Exam", prescribed:true},
+  {poet:"Philip Larkin", statement:"Larkin’s poems often reveal moments of sensitivity which lessen the disappointment and cynicism found in much of his work.", instruction:"To what extent do you agree with this statement? Support your answer with suitable reference to the poetry of Philip Larkin on your course.", year:"2012", type:"Exam", prescribed:false},
+  {poet:"Patrick Kavanagh", statement:"Aspects of Kavanagh’s poetry could be seen as dated and irrelevant, but his unique poetic language has enduring appeal.", instruction:"Do you agree with this assessment of his poetry? Support your points with suitable reference to the poetry of Patrick Kavanagh on your course.", year:"2012", type:"Exam", prescribed:true},
+  {poet:"Emily Dickinson", statement:"Emily Dickinson’s original approach to poetry results in startling and thought-provoking moments in her work.", instruction:"Give your response to the poetry of Emily Dickinson in the light of this statement. Support your points with suitable reference to the poems on your course.", year:"2011", type:"Exam", prescribed:true},
+  {poet:"W. B. Yeats", statement:"Yeats can be a challenging poet to read, both in terms of style and subject matter.", instruction:"To what extent do you agree with this statement? Support your answer with suitable reference to the poetry on your course.", year:"2011", type:"Exam", prescribed:true},
+  {poet:"Robert Frost", statement:"Frost’s simple style is deceptive and a thoughtful reader will see layers of meaning in his poetry.", instruction:"Do you agree with this assessment of his poetry? Write a response, supporting your points with the aid of suitable reference to the poems on your course.", year:"2011", type:"Exam", prescribed:false},
+  {poet:"Eavan Boland", statement:"Boland’s reflective insights are expressed through her precise use of language.", instruction:"Write your response to this statement, supporting your answer with suitable reference to the poetry on your course.", year:"2011", type:"Exam", prescribed:false},
+  {poet:"W. B. Yeats", statement:"Yeats's poetry is driven by a tension between the real world in which he lives and an ideal world that he imagines.", instruction:"Write a response to the poetry of W.B. Yeats in the light of this statement, supporting your points with suitable reference to the poems on your course.", year:"2010", type:"Exam", prescribed:true},
+  {poet:"Adrienne Rich", statement:"Adrienne Rich explores the twin themes of power and powerlessness in a variety of interesting ways.", instruction:"Write a response to the poetry of Adrienne Rich in the light of this statement, supporting your points with suitable reference to the poems on your course.", year:"2010", type:"Exam", prescribed:true},
+  {poet:"Patrick Kavanagh", statement:"", instruction:"In your opinion, is Kavanagh successful in achieving his desire to transform the ordinary world into something extraordinary? Support your answer with suitable reference to the poems on your course.", year:"2010", type:"Exam", prescribed:true},
+  {poet:"T. S. Eliot", statement:"The poetry of T.S. Eliot often presents us with troubled characters in a disturbing world.", instruction:"Write a response to this statement with reference to both the style and the subject matter of Eliot’s poetry. Support your points with suitable reference to the poems on your course.", year:"2010", type:"Exam", prescribed:false},
+  {poet:"Elizabeth Bishop", statement:"Bishop’s precise and measured style enables her to explore a mood that is often troubling and unsettling.", instruction:"Discuss this statement, developing your response with reference to the poetry of Elizabeth Bishop on your Leaving Certificate English course.", year:"2026", type:"Exam", prescribed:true},
+  {poet:"Eiléan Ní Chuilleanáin", statement:"Ní Chuilleanáin’s unique narrative style reveals multiple meanings and enigmatic perspectives.", instruction:"Discuss this statement, developing your response with reference to the poetry of Eiléan Ní Chuilleanáin on your Leaving Certificate English course.", year:"2026", type:"Exam", prescribed:false},
+  {poet:"W. B. Yeats", statement:"Yeats’s powerful language charts his frustrating pursuit of both personal and political ideals.", instruction:"Discuss this statement, developing your response with reference to the poetry of W.B. Yeats on your Leaving Certificate English course.", year:"2026", type:"Exam", prescribed:true},
+  {poet:"Paula Meehan", statement:"Meehan uses language skilfully, to modulate and control the harshness of her critical observations.", instruction:"Discuss this statement developing your response with reference to the poetry of Paula Meehan on your Leaving Certificate English course.", year:"2026", type:"Exam", prescribed:true},
+  {poet:"John Donne", statement:"Donne utilises language that is both cryptic and entertaining in order to explore the complexities of relationships.", instruction:"Discuss this statement, developing your response with reference to the poetry of John Donne on your Leaving Certificate English course.", year:"2026", type:"Exam", prescribed:true},
+];
+QUESTIONS.forEach((q,i)=>{q.id=i; if(q.prescribed===undefined) q.prescribed=true;});
+
+/* prescribed-poet line-up per exam year (from the SEC course lists) */
+const PRESCRIBED_BY_YEAR = {"2026":["bishop","dickinson","donne","kavanagh","mahon","meehan","ni chuilleanain","rich","yeats"],"2025":["boland","dickinson","eliot","hopkins","kavanagh","mahon","plath","smith"],"2024":["dickinson","donne","heaney","hopkins","meehan","ni chuilleanain","plath","yeats"],"2023":["bishop","dickinson","donne","kavanagh","mahon","meehan","rich","yeats"],"2022":["bishop","dickinson","keats","kennelly","lawrence","rich","wordsworth","yeats"],"2021":["bishop","boland","durcan","frost","heaney","hopkins","keats","plath"],"2020":["boland","dickinson","rich","wordsworth","bishop","kennelly","yeats","lawrence"],"2019":["bishop","heaney","hopkins","kennelly","lawrence","ni chuilleanain","plath","yeats"],"2018":["boland","durcan","frost","hopkins","keats","larkin","montague","ni chuilleanain"],"2017":["bishop","boland","donne","durcan","eliot","hopkins","keats","plath"],"2016":["bishop","dickinson","durcan","eliot","larkin","ni chuilleanain","plath","yeats"],"2015":["dickinson","donne","frost","hardy","montague","ni chuilleanain","plath","yeats"],"2014":["bishop","dickinson","heaney","kinsella","larkin","plath","mahon","yeats"],"2013":["bishop","hopkins","kinsella","mahon","plath","rich","shakespeare","wordsworth"],"2012":["boland","frost","heaney","kavanagh","kinsella","larkin","plath","rich"],"2011":["boland","dickinson","frost","hopkins","kavanagh","rich","wordsworth","yeats"],"2010":["boland","eliot","kavanagh","keats","longley","rich","walcott","yeats"]};
+const PRESCRIBED_KEY = {"Derek Mahon":"mahon","Elizabeth Bishop":"bishop","Emily Dickinson":"dickinson","John Donne":"donne","Patrick Kavanagh":"kavanagh","Paula Meehan":"meehan","W. B. Yeats":"yeats","Adrienne Rich":"rich"};
+
+/* theme index — stems matched (case-insensitive) against each question's text */
+const THEMES = [
+  {label:"Imagery", stems:["imag"]},
+  {label:"Language", stems:["language"]},
+  {label:"Style", stems:["style","stylistic"]},
+  {label:"Tone & mood", stems:["tone","mood","atmosphere"]},
+  {label:"Emotion", stems:["emotion","feeling","passion","impassioned"]},
+  {label:"Nature", stems:["nature","natural"]},
+  {label:"Place & identity", stems:["place","setting","landscape","parochial","identity","cultural"]},
+  {label:"Memory & past", stems:["memory","memories","past","reflect","nostalg"]},
+  {label:"Darkness", stems:["dark","death","bleak","menace","horror","melanchol","disturb","sad"]},
+  {label:"Society", stems:["society","social","political","power"]},
+  {label:"Narrative", stems:["narrative","story","stories","dramatic","character"]},
+  {label:"Insight & truth", stems:["insight","truth","profound","meaning","reveal"]},
+];
+function qText(q){return (q.statement+" "+q.instruction).toLowerCase();}
+function themeHit(q,t){const x=qText(q);return t.stems.some(s=>x.includes(s));}
+
+/* ---- Per-question study content (display-only; populated by the editor) ----
+   POEMS_BY_POET: poet name -> [{title, url}]  (url = video walkthrough)
+   NOTES: "Poet|Year" -> {asking:"...", quotes:["...", ...]}  (shown to everyone) */
+const POEMS_BY_POET = {
+  "Derek Mahon": [
+    {title:"Grandfather", url:"https://app.grinds360.ie/hub/skillsbase/learningmodule/67fd1dab0554b2440a7be3d6/Derek%2520Mahon%2520%257C%2520Grandfather%2520(Higher%2520%2526%2520Ordinary)"},
+    {title:"A Disused Shed in Co Wexford", url:"https://app.grinds360.ie/hub/skillsbase/learningmodule/67dbe7f1a7a7cfddd9a0656c/Derek%2520Mahon%253A%2520A%2520Disused%2520Shed%2520in%2520Co%2520Wexford"},
+    {title:"After the Titanic", url:"https://app.grinds360.ie/hub/skillsbase/learningmodule/66d1ad47c48cb70db72f15d0/Derek%2520Mahon%253A%2520After%2520the%2520Titanic%2520(Higher%2520%2526%2520Ordinary)"},
+    {title:"Antarctica", url:"https://app.grinds360.ie/hub/skillsbase/learningmodule/66d1ad52c48cb70db72f15f1/Derek%2520Mahon%253A%2520Antarctica%2520(Higher%2520%2526%2520Ordinary)"},
+    {title:"Ecclesiastes", url:"https://app.grinds360.ie/hub/skillsbase/learningmodule/66d1ad5ec48cb70db72f1618/Derek%2520Mahon%253A%2520Ecclesiastes"},
+    {title:"As It Should Be", url:"https://app.grinds360.ie/hub/skillsbase/learningmodule/66d1ad69c48cb70db72f163f/Derek%2520Mahon%253A%2520As%2520It%2520Should%2520Be"},
+    {title:"The Chinese Restaurant in Portrush", url:"https://app.grinds360.ie/hub/skillsbase/learningmodule/66d1ad74c48cb70db72f1660/Derek%2520Mahon%253A%2520The%2520Chinese%2520Restaurant%2520in%2520Portrush"},
+    {title:"Rathlin", url:"https://app.grinds360.ie/hub/skillsbase/learningmodule/66d1ad7fc48cb70db72f167d/Derek%2520Mahon%253A%2520Rathlin"},
+    {title:"Kinsale", url:"https://app.grinds360.ie/hub/skillsbase/learningmodule/67fd1c9aff064c446e42a44b/Derek%2520Mahon%2520%257C%2520Kinsale"}
+  ]
+};
+/* Essay planner / mind-map file — hosted alongside this page */
+const MINDMAP_URL = 'poetry-mind-map-v5.html';
+const NOTES = {};
+const qkey = q => q.poet+'|'+q.year;
+function noteFor(q){const b=NOTES[qkey(q)]||{};return {asking:b.asking||'', quotes:b.quotes||[]};}
+function hasStudy(q){const n=noteFor(q);const poems=POEMS_BY_POET[q.poet]||[];return !!(n.asking||(n.quotes&&n.quotes.length)||poems.length||q.scheme);}
+function studyPanel(q){
+  const n=noteFor(q), poems=POEMS_BY_POET[q.poet]||[];
+  let h='';
+  if(n.asking) h+=`<div class="ssec"><h4>What is this question asking?</h4><p class="sask">${esc(n.asking).replace(/\n/g,'<br>')}</p></div>`;
+  if(n.quotes&&n.quotes.length) h+=`<div class="ssec"><h4>Quotes you could use</h4><ul class="squotes">${n.quotes.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`;
+  if(poems.length) h+=`<div class="ssec"><h4>Poems &amp; video walkthroughs</h4><ul class="spoems">${poems.map(p=>p.url?`<li><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a></li>`:`<li>${esc(p.title)}</li>`).join('')}</ul></div>`;
+  if(q.scheme) h+=`<div class="ssec"><h4>Marking scheme &middot; ${q.year}</h4><ul class="sscheme">${q.scheme.map(s=>`<li>${esc(s)}</li>`).join('')}</ul></div>`;
+  return h;
+}
+
+/* recency rank: higher = newer. Exam (June) newer than Mock (Feb) of same year. */
+function rank(q){return parseInt(q.year,10)*10 + (q.type==='Exam'?1:0);}
+
+const state = { poets:new Set(), type:"all", prog:"all", sort:"newest", q:"", includeOther:false, themes:new Set() };
+
+/* progress store (best-effort localStorage) */
+const KEY='g360_poetry_done';
+let done = new Set();
+try{const raw=localStorage.getItem(KEY); if(raw) done=new Set(JSON.parse(raw));}catch(e){}
+function saveDone(){try{localStorage.setItem(KEY,JSON.stringify([...done]));}catch(e){}}
+
+const allPoetsOrder=[...new Set(QUESTIONS.map(q=>q.poet))];
+const isPrescribedPoet=p=>QUESTIONS.some(q=>q.poet===p&&q.prescribed);
+const prescribedPoets=()=>[...new Set(QUESTIONS.filter(q=>q.prescribed).map(q=>q.poet))];
+const activePoetsOrder=()=>state.includeOther?allPoetsOrder:prescribedPoets();
+function inPool(q){return state.includeOther||q.prescribed;}
+
+/* headline stats describe the prescribed course */
+const pres=QUESTIONS.filter(q=>q.prescribed);
+
+/* poet pills (rebuilt when the Other-poets toggle changes) */
+const poetsEl=document.getElementById('poets');
+function buildPoets(){
+  poetsEl.innerHTML='';
+  const poolTotal=QUESTIONS.filter(inPool).length;
+  poetsEl.appendChild(makePill('all','All poets',poolTotal,false));
+  activePoetsOrder().forEach(p=>{
+    const c=QUESTIONS.filter(q=>q.poet===p&&inPool(q)).length;
+    poetsEl.appendChild(makePill(p,p,c,!isPrescribedPoet(p)));
+  });
+}
+function refreshPoetPressed(){
+  [...poetsEl.children].forEach(c=>{
+    const v=c.dataset.poet;
+    c.setAttribute('aria-pressed', v==='all' ? (state.poets.size===0?'true':'false') : (state.poets.has(v)?'true':'false'));
+  });
+}
+function makePill(value,label,count,other){
+  const b=document.createElement('button');
+  b.className='poet-pill'+(other?' other':'');
+  b.dataset.poet=value;
+  b.setAttribute('aria-pressed', value==='all' ? (state.poets.size===0?'true':'false') : (state.poets.has(value)?'true':'false'));
+  b.innerHTML=`<span>${label}</span><span class="tag">${count}</span>`;
+  b.addEventListener('click',()=>{
+    if(value==='all'){ state.poets.clear(); }
+    else { state.poets.has(value)?state.poets.delete(value):state.poets.add(value); }
+    refreshPoetPressed();
+    buildThemes();
+    render();
+  });
+  return b;
+}
+buildPoets();
+
+/* Other-poets toggle */
+const otherToggle=document.getElementById('otherToggle');
+otherToggle.addEventListener('click',()=>{
+  state.includeOther=!state.includeOther;
+  otherToggle.setAttribute('aria-pressed',state.includeOther?'true':'false');
+  if(!state.includeOther){ [...state.poets].forEach(p=>{ if(!isPrescribedPoet(p)) state.poets.delete(p); }); }
+  buildPoets();
+  buildThemes();
+  render();
+});
+
+/* theme chips (collapsible, multi-select) */
+const themesEl=document.getElementById('themes');
+const themesToggle=document.getElementById('themesToggle');
+const themeCount=document.getElementById('themeCount');
+themesToggle.addEventListener('click',(e)=>{
+  e.stopPropagation();
+  const open=themesEl.hidden;
+  themesEl.hidden=!open;
+  themesToggle.setAttribute('aria-expanded',open?'true':'false');
+});
+themesEl.addEventListener('click',e=>e.stopPropagation());
+document.addEventListener('click',()=>{ if(!themesEl.hidden){themesEl.hidden=true;themesToggle.setAttribute('aria-expanded','false');} });
+function updateThemeCount(){
+  if(state.themes.size){themeCount.hidden=false;themeCount.textContent=state.themes.size;}
+  else themeCount.hidden=true;
+}
+function themeBasePool(){
+  return QUESTIONS.filter(q=>{
+    if(!inPool(q)) return false;
+    if(state.poets.size && !state.poets.has(q.poet)) return false;
+    if(state.q){const hay=(q.statement+' '+q.instruction+' '+q.poet+' '+q.year).toLowerCase();if(!state.q.toLowerCase().split(/\s+/).every(t=>hay.includes(t))) return false;}
+    return true;
+  });
+}
+function buildThemes(){
+  const pool=themeBasePool();
+  /* drop any selected theme that no longer has matches under the current selection */
+  [...state.themes].forEach(lbl=>{
+    const t=THEMES.find(x=>x.label===lbl);
+    if(!t || !pool.some(q=>themeHit(q,t))) state.themes.delete(lbl);
+  });
+  themesEl.innerHTML='';
+  let shown=0;
+  THEMES.forEach(t=>{
+    const c=pool.filter(q=>themeHit(q,t)).length;
+    if(!c) return;
+    shown++;
+    const b=document.createElement('button');
+    b.className='theme-chip';b.dataset.theme=t.label;
+    b.setAttribute('aria-pressed', state.themes.has(t.label)?'true':'false');
+    b.innerHTML=`${t.label}<span class="n">${c}</span>`;
+    b.addEventListener('click',()=>{
+      state.themes.has(t.label)?state.themes.delete(t.label):state.themes.add(t.label);
+      b.setAttribute('aria-pressed', state.themes.has(t.label)?'true':'false');
+      updateThemeCount();
+      render();
+    });
+    themesEl.appendChild(b);
+  });
+  if(!shown){ themesEl.innerHTML='<span class="tlabel" style="padding:2px 4px;">No themes for this selection</span>'; }
+  updateThemeCount();
+}
+buildThemes();
+
+/* appearance tracker */
+const trackerBtn=document.getElementById('trackerBtn');
+const trackerPanel=document.getElementById('trackerPanel');
+const YEARS=[];for(let y=2010;y<=2026;y++)YEARS.push(String(y));
+function buildTracker(){
+  const body=document.getElementById('trackerBody');
+  let html='<div class="tgrid"><div class="trow head"><div class="pname">Poet</div><div class="pstat">Last seen</div>'
+    + YEARS.map(y=>`<div class="tcell">'${y.slice(2)}</div>`).join('') + '</div>';
+  Object.keys(PRESCRIBED_KEY).forEach(poet=>{
+    const key=PRESCRIBED_KEY[poet];
+    const appeared=new Set(QUESTIONS.filter(q=>q.poet===poet&&q.type==='Exam').map(q=>q.year));
+    const last=Math.max(...[...appeared].map(Number),0);
+    const gap=2026-last;
+    const due=gap>=3;
+    const cells=YEARS.map(y=>{
+      const pres=(PRESCRIBED_BY_YEAR[y]||[]).includes(key);
+      const app=appeared.has(y);
+      return `<div class="tcell ${app?'app':(pres?'pres':'')}" title="${y}: ${app?'appeared':(pres?'prescribed, not examined':'not on list')}"></div>`;
+    }).join('');
+    const stat = last? `<b>${last}</b>${due?' · due':''}` : '—';
+    html+=`<div class="trow"><div class="pname">${poet}</div><div class="pstat${due?' due':''}">${stat}</div>${cells}</div>`;
+  });
+  html+='</div>';
+  body.innerHTML=html;
+}
+trackerBtn.addEventListener('click',()=>{
+  const open=trackerPanel.hidden;
+  if(open) buildTracker();
+  trackerPanel.hidden=!open;
+  trackerBtn.setAttribute('aria-expanded',open?'true':'false');
+  if(open) trackerPanel.scrollIntoView({behavior:'smooth',block:'nearest'});
+});
+
+/* print + copy list */
+document.getElementById('printBtn').addEventListener('click',()=>window.print());
+document.getElementById('copyAllBtn').addEventListener('click',()=>{
+  const vis=QUESTIONS.filter(matches).sort((a,b)=>rank(b)-rank(a));
+  if(!vis.length){toast('Nothing to copy');return;}
+  const text=vis.map(q=>(q.statement?`“${q.statement}” `:'')+q.instruction+` (${q.poet}, ${q.year} ${q.type})`).join('\n\n');
+  const fb=()=>{const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}ta.remove();toast(vis.length+' questions copied');};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(()=>toast(vis.length+' questions copied'),fb);}else fb();
+});
+
+/* seg controls */
+function bindSeg(sel,key){document.querySelectorAll(sel+' button').forEach(btn=>btn.addEventListener('click',()=>{state[key]=btn.dataset[key];document.querySelectorAll(sel+' button').forEach(b=>b.setAttribute('aria-pressed',b===btn?'true':'false'));render();}));}
+
+/* search */
+const searchEl=document.getElementById('search');
+searchEl.addEventListener('input',()=>{state.q=searchEl.value.trim();buildThemes();render();});
+
+/* helpers */
+function esc(s){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+function highlight(text){
+  const safe=esc(text);
+  if(!state.q) return safe;
+  const terms=state.q.split(/\s+/).filter(Boolean).map(t=>t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'));
+  if(!terms.length) return safe;
+  return safe.replace(new RegExp('('+terms.join('|')+')','gi'),'<mark>$1</mark>');
+}
+function matchesCore(q){
+  if(state.poets.size && !state.poets.has(q.poet)) return false;
+  if(state.type!=='all' && q.type!==state.type) return false;
+  if(state.prog==='done' && !done.has(q.id)) return false;
+  if(state.prog==='todo' && done.has(q.id)) return false;
+  if(state.themes.size){ const tlist=THEMES.filter(t=>state.themes.has(t.label)); if(!tlist.some(t=>themeHit(q,t))) return false; }
+  if(state.q){const hay=(q.statement+' '+q.instruction+' '+q.poet+' '+q.year).toLowerCase();return state.q.toLowerCase().split(/\s+/).every(t=>hay.includes(t));}
+  return true;
+}
+function matches(q){ if(!inPool(q)) return false; return matchesCore(q); }
+
+const resultsEl=document.getElementById('results');
+const resultline=document.getElementById('resultline');
+
+function render(){
+  const dir = state.sort==='newest' ? -1 : 1;
+  const filtered=QUESTIONS.filter(matches);
+  resultsEl.innerHTML='';
+
+  const poolTotal=QUESTIONS.filter(inPool).length;
+  resultline.innerHTML=`Showing <b>${filtered.length}</b> of ${poolTotal} questions`
+    +(state.poets.size?` &middot; <b>${[...state.poets].map(esc).join(', ')}</b>`:'')
+    +(state.type!=='all'?` &middot; ${state.type} papers`:'')
+    +(state.prog!=='all'?` &middot; ${state.prog==='done'?'attempted':'to do'}`:'')
+    +(state.themes.size?` &middot; themes: <b>${[...state.themes].map(esc).join(', ')}</b>`:'')
+    +(state.includeOther?` &middot; incl. other poets`:'')
+    +(state.q?` &middot; matching &ldquo;${esc(state.q)}&rdquo;`:'');
+
+  if(!filtered.length){
+    let hint='Try a different keyword or clear the filters.';
+    if(!state.includeOther){
+      const more=QUESTIONS.filter(q=>!q.prescribed && matchesCore(q)).length;
+      if(more) hint=`There ${more===1?'is':'are'} ${more} more from poets not on your list — switch on <b>Other poets</b> to include ${more===1?'it':'them'}.`;
+    }
+    resultsEl.innerHTML=`<div class="empty"><strong>No questions match.</strong>${hint}</div>`;
+    updateProgress();return;
+  }
+
+  /* group by poet; order groups by their representative (newest/oldest) question */
+  const present=activePoetsOrder().filter(p=>filtered.some(q=>q.poet===p));
+  present.sort((a,b)=>{
+    const ra=Math[dir<0?'max':'min'](...filtered.filter(q=>q.poet===a).map(rank));
+    const rb=Math[dir<0?'max':'min'](...filtered.filter(q=>q.poet===b).map(rank));
+    return (ra-rb)*dir;
+  });
+
+  present.forEach(p=>{
+    const items=filtered.filter(q=>q.poet===p).sort((x,y)=>(rank(x)-rank(y))*dir);
+    const sec=document.createElement('section');
+    sec.className='poet-group';
+    sec.innerHTML=`<div class="group-head"><h2>${esc(p)}</h2><span class="rule"></span><span class="cnt">${items.length}</span></div>`;
+    const grid=document.createElement('div');grid.className='grid';
+    items.forEach(q=>grid.appendChild(card(q)));
+    sec.appendChild(grid);resultsEl.appendChild(sec);
+  });
+  updateProgress();
+}
+
+function card(q){
+  const el=document.createElement('article');
+  el.className='qcard'+(done.has(q.id)?' is-done':'');
+  el.id='q'+q.id;
+  const badgeClass=q.type==='Exam'?'exam':'mock';
+  const quoteHTML=q.statement?`<p class="quote">&ldquo;${highlight(q.statement)}&rdquo;</p>`:'';
+  const isDone=done.has(q.id);
+  const showStudy = hasStudy(q);
+  const studyHTML = showStudy?`<div class="study" id="st${q.id}" hidden>${studyPanel(q)}</div>`:'';
+  const studyBtn = showStudy?`<button class="icbtn study-toggle" aria-expanded="false" aria-controls="st${q.id}" title="Quotes, what it's asking, poems & marking scheme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Study help</button>`:'';
+  el.innerHTML=`
+    <div class="top">
+      <span class="stamp">${q.year}</span>
+      <span class="toptags">${q.prescribed?'':'<span class="badge other">Other poet</span>'}<span class="badge ${badgeClass}">${q.type}</span></span>
+    </div>
+    <div class="body">
+      ${quoteHTML}
+      <p class="instr">${highlight(q.instruction)}</p>
+      ${studyHTML}
+    </div>
+    <div class="foot">
+      <span class="who"><span class="dot"></span>${esc(q.poet)} &middot; ${q.year} ${q.type}</span>
+      <span class="acts">
+        <button class="icbtn plan" data-id="${q.id}" title="Open the essay planner / mind map pre-loaded with this question">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="6" cy="19" r="2"/><path d="M9.5 10.5 6.8 7.4M14.5 10.5l2.7-3.1M10.5 14l-3 3.4"/></svg>Plan essay</button>
+        ${studyBtn}
+        <button class="icbtn copy" data-id="${q.id}" title="Copy question text">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>Copy</button>
+        <button class="icbtn done-toggle${isDone?' done':''}" data-id="${q.id}" title="Mark as attempted">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>${isDone?'Done':'Mark done'}</button>
+      </span>
+    </div>`;
+  el.querySelector('.plan').addEventListener('click',()=>planEssay(q));
+  el.querySelector('.copy').addEventListener('click',()=>copyQ(q));
+  el.querySelector('.done-toggle').addEventListener('click',(e)=>toggleDone(q.id,e.currentTarget,el));
+  const st=el.querySelector('.study-toggle');
+  if(st){st.addEventListener('click',()=>{const open=el.querySelector('.study').classList.toggle('open');st.setAttribute('aria-expanded',open?'true':'false');});}
+  return el;
+}
+
+function toggleDone(id,btn,cardEl){
+  const nowDone=!done.has(id);
+  nowDone?done.add(id):done.delete(id);
+  saveDone();
+  /* instant green feedback on the button itself */
+  btn.classList.toggle('done',nowDone);
+  btn.lastChild.textContent=nowDone?'Done':'Mark done';
+  cardEl.classList.toggle('is-done',nowDone);
+  updateProgress();
+  /* if a progress filter is active, re-render so the card lands in the right list */
+  if(state.prog!=='all') render();
+}
+
+function planEssay(q){
+  const text=(q.statement?'\u201c'+q.statement+'\u201d ':'')+q.instruction;
+  const full=q.year+' \u2014 '+text;
+  const url=MINDMAP_URL+'?poet='+encodeURIComponent(q.poet)+'&q='+encodeURIComponent(full);
+  window.open(url,'_blank','noopener');
+}
+
+function copyQ(q){
+  const text=(q.statement?`“${q.statement}”\n`:'')+q.instruction+`\n— ${q.poet}, ${q.year} ${q.type}`;
+  const fb=()=>{const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}ta.remove();toast('Question copied');};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(()=>toast('Question copied'),fb);}else fb();
+}
+
+/* progress UI */
+/* progress bar removed; keep a no-op so callers stay safe */
+function updateProgress(){}
+
+/* toast */
+let toastT;const toastEl=document.getElementById('toast');
+function toast(msg){toastEl.textContent=msg;toastEl.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>toastEl.classList.remove('show'),1600);}
+
+/* timer */
+let total=50*60,left=total,tick=null;
+const clock=document.getElementById('clock'),timerEl=document.getElementById('timer'),tStart=document.getElementById('tStart');
+function fmt(s){const m=Math.floor(s/60),x=s%60;return `${String(m).padStart(2,'0')}:${String(x).padStart(2,'0')}`;}
+function paint(){clock.textContent=fmt(left);timerEl.classList.toggle('low',left<=60);}
+function startPause(){
+  if(tick){clearInterval(tick);tick=null;tStart.textContent='▶';timerEl.classList.remove('run');return;}
+  tStart.textContent='❚❚';timerEl.classList.add('run');
+  tick=setInterval(()=>{left--;paint();if(left<=0){clearInterval(tick);tick=null;tStart.textContent='▶';timerEl.classList.remove('run');toast('Time! Pens down.');}},1000);
+}
+tStart.addEventListener('click',startPause);
+document.getElementById('tReset').addEventListener('click',()=>{if(tick){clearInterval(tick);tick=null;tStart.textContent='▶';timerEl.classList.remove('run');}left=total;paint();});
+paint();
+
+render();
+</script>
+</body>
+</html>

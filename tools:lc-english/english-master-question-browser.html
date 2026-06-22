@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LC English — Master Question Browser</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#FF0000;
+    --acc:#FF0000;
+    --ink:#111111;
+    --paper:#f6f4ef;
+    --card:#ffffff;
+    --line:#e4e0d8;
+    --muted:#6b6760;
+    --done:#1f9d55;
+    --shadow:0 1px 0 rgba(0,0,0,.04), 0 10px 30px -18px rgba(0,0,0,.35);
+    --font:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;font-family:var(--font);color:var(--ink);background:var(--paper);
+    background-image:linear-gradient(90deg, rgba(255,0,0,.02) 0 1px, transparent 1px);
+    background-size:34px 100%;line-height:1.5;
+  }
+
+  /* ---------- Masthead ---------- */
+  .masthead{background:var(--ink);color:#fff;padding:28px 22px 0;position:relative;overflow:hidden;}
+  .masthead::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:var(--acc);transition:background .25s;}
+  .mast-inner{max-width:1080px;margin:0 auto;padding-bottom:22px;}
+  .eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--acc);font-weight:700;margin:0 0 10px;transition:color .25s;}
+  .masthead h1{margin:0;font-weight:800;letter-spacing:-.02em;font-size:clamp(26px,5vw,46px);line-height:1.04;}
+  .masthead h1 em{font-style:normal;color:var(--acc);transition:color .25s;}
+  .sub{margin:12px 0 0;color:#bdbab4;max-width:64ch;font-size:15px;}
+  .counts{display:flex;flex-wrap:wrap;gap:26px;margin-top:20px;}
+  .counts .stat{display:flex;align-items:baseline;gap:8px;}
+  .counts .num{font-size:24px;font-weight:700;color:#fff;font-variant-numeric:tabular-nums;}
+  .counts .lab{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8d8a84;font-weight:600;}
+
+  /* ---------- Section switcher ---------- */
+  .sectionsw{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px;}
+  .sectionsw button{appearance:none;border:1.5px solid rgba(255,255,255,.18);background:rgba(255,255,255,.04);
+    color:#cdcac4;font:inherit;font-weight:600;font-size:13.5px;padding:9px 16px;border-radius:10px;cursor:pointer;
+    display:inline-flex;align-items:center;gap:9px;transition:transform .08s,border-color .15s,background .15s,color .15s;}
+  .sectionsw button:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.4);color:#fff;}
+  .sectionsw button .swdot{width:9px;height:9px;border-radius:50%;flex:none;background:#888;}
+  .sectionsw button .swtag{font-size:11px;font-weight:700;background:rgba(255,255,255,.12);border-radius:999px;padding:1px 8px;color:#e7e5e1;}
+  .sectionsw button[aria-pressed="true"]{background:#fff;border-color:#fff;color:var(--ink);}
+  .sectionsw button[aria-pressed="true"] .swtag{background:rgba(0,0,0,.08);color:var(--ink);}
+
+  /* ---------- Controls ---------- */
+  .controls{background:rgba(246,244,239,.94);border-bottom:1px solid var(--line);}
+  .controls-inner{max-width:1080px;margin:0 auto;padding:14px 22px;}
+  .searchrow{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+  .search{flex:1 1 260px;position:relative;min-width:0;}
+  .search input{width:100%;padding:12px 14px 12px 40px;border-radius:10px;border:1.5px solid var(--line);background:#fff;font:inherit;font-size:15px;transition:border-color .15s, box-shadow .15s;}
+  .search input:focus{outline:none;border-color:var(--acc);box-shadow:0 0 0 3px rgba(255,0,0,.12);}
+  .search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);opacity:.45;}
+
+  .poets{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;}
+  .poet-pill{appearance:none;border:1.5px solid var(--line);background:#fff;font:inherit;font-weight:600;font-size:13px;color:var(--ink);padding:7px 13px;border-radius:999px;cursor:pointer;display:inline-flex;gap:8px;align-items:center;transition:transform .08s, border-color .15s, background .15s, color .15s;}
+  .poet-pill:hover{border-color:#bcb8b0;transform:translateY(-1px);}
+  .poet-pill .gdot{width:9px;height:9px;border-radius:50%;flex:none;}
+  .poet-pill[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff;}
+  .poet-pill[aria-pressed="true"] .gdot{box-shadow:0 0 0 2px rgba(255,255,255,.5);}
+  .poet-pill .tag{font-size:11px;font-weight:700;background:rgba(0,0,0,.06);border-radius:999px;padding:1px 7px;color:var(--muted);}
+  .poet-pill[aria-pressed="true"] .tag{background:rgba(255,255,255,.22);color:#fff;}
+  .poet-pill.allpill[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);}
+  .poet-pill.other{border-style:dashed;}
+
+  /* group dropdown filter (within a section) */
+  .groupwrap{display:flex;align-items:center;gap:11px;margin-top:14px;flex-wrap:wrap;}
+  .groupwrap .glabel{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+  .gselect{position:relative;display:inline-flex;align-items:center;}
+  .gselect select{appearance:none;-webkit-appearance:none;font:inherit;font-weight:600;font-size:14px;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:10px 42px 10px 15px;cursor:pointer;min-width:248px;max-width:100%;transition:border-color .15s, box-shadow .15s, transform .08s;}
+  .gselect select:hover{border-color:#bcb8b0;transform:translateY(-1px);}
+  .gselect select:focus{outline:none;border-color:var(--acc);box-shadow:0 0 0 3px rgba(0,0,0,.07);}
+  .gselect[data-active="true"] select{border-color:var(--acc);color:var(--acc);}
+  .gselect::after{content:"";position:absolute;right:16px;top:50%;width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:translateY(-70%) rotate(45deg);pointer-events:none;}
+
+  /* extras row (poetry other-poets switch) */
+  .extras{margin-top:11px;}
+  .extras[hidden]{display:none;}
+  .switch{display:inline-flex;align-items:center;gap:10px;border:1.5px solid var(--line);background:#fff;border-radius:10px;padding:6px 12px;cursor:pointer;font:inherit;}
+  .switch .track{width:38px;height:22px;border-radius:999px;background:#d8d3ca;position:relative;transition:background .15s;flex:none;}
+  .switch .track::after{content:"";position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.3);transition:transform .15s;}
+  .switch[aria-pressed="true"] .track{background:var(--acc);}
+  .switch[aria-pressed="true"] .track::after{transform:translateX(16px);}
+  .switch .swlabel{display:flex;flex-direction:column;line-height:1.15;text-align:left;}
+  .switch .lbl{font-size:13px;font-weight:600;color:var(--ink);}
+  .switch .hint{font-size:10.5px;color:var(--muted);font-weight:500;letter-spacing:.02em;}
+
+  /* themes bar */
+  .themes-wrap{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);position:relative;}
+  .themes-wrap[hidden]{display:none;}
+  .themes-toggle{appearance:none;border:1.5px solid var(--line);background:#fff;font:inherit;font-size:12px;font-weight:600;color:var(--ink);padding:6px 12px;border-radius:8px;cursor:pointer;display:inline-flex;gap:8px;align-items:center;}
+  .themes-toggle:hover{border-color:#bcb8b0;}
+  .themes-toggle[aria-expanded="true"]{border-color:var(--ink);}
+  .themes-toggle .chev{transition:transform .15s;font-size:10px;}
+  .themes-toggle[aria-expanded="true"] .chev{transform:rotate(180deg);}
+  .themes-toggle .tcount{background:#ffe39b;color:#5c4a00;border-radius:999px;padding:0 7px;font-size:11px;font-weight:700;}
+  .themes{display:flex;gap:7px;flex-wrap:wrap;position:absolute;top:calc(100% + 6px);left:0;z-index:25;background:#fff;border:1.5px solid var(--line);border-radius:12px;box-shadow:0 14px 36px -16px rgba(0,0,0,.45);padding:12px;max-width:min(620px,92vw);}
+  .themes[hidden]{display:none;}
+  .theme-chip{appearance:none;border:1.5px solid var(--line);background:#fff;font:inherit;font-size:12px;font-weight:600;color:var(--muted);padding:5px 11px;border-radius:8px;cursor:pointer;display:inline-flex;gap:6px;align-items:center;transition:transform .08s,border-color .15s,background .15s,color .15s;}
+  .theme-chip:hover{transform:translateY(-1px);border-color:#bcb8b0;color:var(--ink);}
+  .theme-chip[aria-pressed="true"]{background:#ffe39b;border-color:#e6b800;color:#5c4a00;}
+  .theme-chip .n{font-size:10.5px;font-weight:700;opacity:.7;}
+
+  /* ---------- Toolbar ---------- */
+  .toolbar{max-width:1080px;margin:0 auto;padding:18px 22px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;}
+  .tools-left,.tools-right{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+  .btn{appearance:none;border:1.5px solid var(--ink);background:#fff;font:inherit;font-weight:600;font-size:13px;color:var(--ink);padding:9px 14px;border-radius:10px;cursor:pointer;display:inline-flex;gap:8px;align-items:center;transition:transform .08s, background .15s, color .15s;}
+  .btn:hover{transform:translateY(-1px);}
+  .btn[hidden]{display:none;}
+  .btn.primary{background:var(--acc);border-color:var(--acc);color:#fff;}
+  .btn.ghost{border-color:var(--line);color:var(--muted);}
+
+  .seg-sort{display:inline-flex;background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:3px;}
+  .seg-sort button{appearance:none;border:0;background:transparent;font:inherit;font-weight:600;font-size:12.5px;padding:7px 12px;border-radius:7px;cursor:pointer;color:var(--muted);}
+  .seg-sort button[aria-pressed="true"]{background:var(--ink);color:#fff;}
+
+  /* timer */
+  .timer{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--line);background:#fff;border-radius:10px;padding:5px 6px 5px 12px;}
+  .timer[hidden]{display:none;}
+  .timer .clock{font-weight:700;font-variant-numeric:tabular-nums;font-size:15px;letter-spacing:.02em;min-width:60px;text-align:center;}
+  .timer.low .clock{color:var(--red);}
+  .timer .mini{appearance:none;border:0;background:var(--ink);color:#fff;width:30px;height:30px;border-radius:7px;font:inherit;font-size:15px;cursor:pointer;display:grid;place-items:center;}
+  .timer .mini.alt{background:#fff;color:var(--ink);border:1.5px solid var(--line);}
+  .timerhint{font-size:10.5px;color:var(--muted);font-weight:600;letter-spacing:.04em;align-self:center;line-height:1.2;}
+
+  /* ---------- Trackers ---------- */
+  .tracker-panel{max-width:1080px;margin:16px auto 0;padding:0 22px;}
+  .tracker-panel[hidden]{display:none;}
+  .tracker-inner{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 18px 12px;box-shadow:var(--shadow);}
+  .tracker-inner h3{margin:0 0 4px;font-size:16px;font-weight:700;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
+  .tracker-inner h3 .tnote{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;}
+  .tlegend{font-size:11.5px;color:var(--muted);margin:0 0 14px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-weight:500;}
+  .tlegend .key{width:12px;height:12px;border-radius:3px;display:inline-block;vertical-align:-1px;margin-right:5px;}
+  .tlegend .key.app{background:var(--acc);}
+  .tlegend .key.pres{background:#d8d3ca;}
+  .tlegend .key.off{background:#fff;border:1px solid var(--line);}
+  .tinsight{font-size:12.5px;color:#33302b;background:#fff7e6;border:1px solid #f0dba8;border-radius:10px;padding:9px 12px;margin:0 0 14px;font-weight:500;}
+  .tinsight[hidden]{display:none;}
+  .tinsight b{color:var(--ink);}
+  .tgrid{overflow-x:auto;}
+  .trow{align-items:center;gap:3px;padding:4px 0;border-top:1px solid #f1eee8;}
+  .trow.head{border-top:0;font-size:9.5px;letter-spacing:.02em;text-transform:uppercase;color:var(--muted);font-weight:700;}
+  .trow .pname{font-weight:600;font-size:12.5px;white-space:nowrap;display:flex;align-items:center;gap:7px;}
+  .trow .pname .gdot{width:9px;height:9px;border-radius:50%;flex:none;}
+  .trow .pstat{font-size:11px;color:var(--muted);font-weight:700;white-space:nowrap;}
+  .trow .pstat b{color:var(--ink);}
+  .trow .pstat.every b,.trow .pstat.due b{color:var(--acc);}
+  .tcell{height:22px;border-radius:3px;background:#f3f1ec;display:grid;place-items:center;font-size:10.5px;font-weight:700;color:#fff;}
+  .tcell.app{background:var(--acc);}
+  .tcell.pres{background:#d8d3ca;}
+  .trow.head .tcell{background:none;height:auto;color:var(--muted);}
+
+  /* ---------- Overview decks (All mode) ---------- */
+  main{max-width:1080px;margin:0 auto;padding:18px 22px 80px;}
+  .deckrow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:6px 0 26px;}
+  .deckrow[hidden]{display:none;}
+  .deck{appearance:none;text-align:left;border:1px solid var(--line);background:var(--card);border-radius:16px;padding:18px 18px 16px;box-shadow:var(--shadow);cursor:pointer;display:flex;flex-direction:column;gap:8px;position:relative;overflow:hidden;transition:transform .1s,box-shadow .1s,border-color .1s;}
+  .deck::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--dc);}
+  .deck:hover{transform:translateY(-3px);box-shadow:0 1px 0 rgba(0,0,0,.04),0 20px 44px -22px rgba(0,0,0,.5);border-color:#d6d2c9;}
+  .deck .dpaper{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--dc);}
+  .deck .dtitle{font-size:19px;font-weight:700;letter-spacing:-.01em;margin:0;line-height:1.1;}
+  .deck .ddesc{font-size:12.5px;color:var(--muted);font-weight:500;line-height:1.5;flex:1;}
+  .deck .dfoot{display:flex;align-items:center;justify-content:space-between;margin-top:4px;}
+  .deck .dcount{font-size:12px;font-weight:700;color:var(--ink);}
+  .deck .dcount b{color:var(--dc);font-size:18px;}
+  .deck .dgo{font-size:12px;font-weight:700;color:var(--dc);display:inline-flex;align-items:center;gap:4px;}
+
+  /* ---------- Results ---------- */
+  .resultline{font-size:12px;letter-spacing:.04em;color:var(--muted);text-transform:uppercase;margin:8px 2px 18px;font-weight:600;}
+  .resultline b{color:var(--ink);}
+
+  .poet-group{margin-bottom:40px;scroll-margin-top:120px;}
+  .group-head{display:flex;align-items:center;gap:14px;margin:0 0 6px;}
+  .group-head h2{margin:0;font-size:clamp(19px,3vw,24px);font-weight:700;letter-spacing:-.01em;white-space:nowrap;}
+  .group-head .rule{flex:1;height:2px;background:linear-gradient(90deg,var(--gc,var(--ink)),transparent);}
+  .group-head .cnt{font-size:12px;font-weight:700;color:#fff;border-radius:999px;padding:3px 10px;background:var(--gc,var(--ink));}
+  .group-desc{font-size:12.5px;color:var(--muted);margin:0 0 16px;font-weight:500;letter-spacing:.01em;}
+
+  /* section band (All mode) */
+  .secband{display:flex;align-items:center;gap:14px;margin:0 0 16px;padding:14px 16px;border-radius:14px;background:var(--card);border:1px solid var(--line);border-left:6px solid var(--sc);box-shadow:var(--shadow);}
+  .secband h2{margin:0;font-size:20px;font-weight:800;letter-spacing:-.01em;}
+  .secband .meta{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;}
+  .secband .cnt{margin-left:auto;font-size:12px;font-weight:700;color:#fff;border-radius:999px;padding:4px 12px;background:var(--sc);}
+  .sec-group{margin-bottom:40px;scroll-margin-top:120px;}
+
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+
+  .qcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:0;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;transition:transform .1s ease, box-shadow .1s ease, border-color .1s;}
+  .qcard:hover{transform:translateY(-2px);box-shadow:0 1px 0 rgba(0,0,0,.04),0 18px 40px -20px rgba(0,0,0,.45);border-color:#d6d2c9;}
+  .qcard.is-done{border-color:#bfe3c9;}
+  .qcard.is-done .top{background:#f3fbf5;}
+
+  .qcard .top{display:flex;justify-content:space-between;align-items:center;padding:11px 16px;border-bottom:1px dashed var(--line);gap:8px;}
+  .stamp{font-weight:700;font-size:14px;letter-spacing:.02em;font-variant-numeric:tabular-nums;}
+  .toptags{display:inline-flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;}
+  .badge{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:999px;border:1.5px solid;white-space:nowrap;}
+  .badge.exam{color:#1f9d55;border-color:#bfe3c9;background:#f1faf4;}
+  .badge.mock{color:#b45309;border-color:#f0d9b5;background:#fdf6ec;}
+  .badge.other{color:var(--muted);border-color:var(--line);background:#fafafa;}
+
+  .qcard .body{padding:15px 16px;display:flex;flex-direction:column;gap:9px;flex:1;}
+  .ptitle{margin:0;font-weight:700;font-size:15px;line-height:1.35;color:var(--ink);}
+  .instr{font-size:13.5px;color:#4a4640;line-height:1.55;margin:0;}
+  .quote{font-style:italic;font-weight:500;color:var(--ink);border-left:3px solid var(--acc);padding-left:12px;font-size:14.5px;line-height:1.45;margin:0;}
+  mark{background:#ffe39b;color:inherit;padding:0 1px;border-radius:2px;}
+
+  .qcard .foot{margin-top:auto;padding:9px 12px 9px 16px;background:#fafafa;border-top:1px solid var(--line);display:flex;align-items:center;gap:10px;justify-content:space-between;}
+  .foot .who{font-size:11px;letter-spacing:.03em;color:var(--muted);font-weight:600;display:flex;align-items:center;gap:7px;min-width:0;}
+  .foot .who .dot{width:7px;height:7px;border-radius:50%;flex:none;}
+  .foot .acts{display:flex;gap:6px;flex:none;flex-wrap:wrap;}
+  .icbtn{appearance:none;border:1.5px solid var(--line);background:#fff;border-radius:8px;font:inherit;font-size:12px;font-weight:600;color:var(--muted);padding:6px 10px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:background .15s,color .15s,border-color .15s;}
+  .icbtn:hover{border-color:#c7c2b9;color:var(--ink);}
+  .icbtn.done{border-color:var(--done);color:#fff;background:var(--done);}
+  .icbtn.plan{border-color:var(--acc);color:var(--acc);font-weight:700;}
+  .icbtn.plan:hover{background:var(--acc);color:#fff;border-color:var(--acc);}
+  .icbtn svg{width:14px;height:14px;}
+  .icbtn.study-toggle[aria-expanded="true"]{background:var(--ink);color:#fff;border-color:var(--ink);}
+
+  /* study help */
+  @keyframes slidein{from{opacity:0;transform:translateY(-4px);}to{opacity:1;transform:none;}}
+  .study{border-top:1px dashed var(--line);margin-top:2px;padding-top:12px;display:none;}
+  .study.open{display:block;animation:slidein .2s ease;}
+  .ssec{margin-bottom:13px;}
+  .ssec:last-child{margin-bottom:2px;}
+  .ssec h4{margin:0 0 7px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);font-weight:700;}
+  .squotes,.sscheme,.spoems{margin:0;padding-left:18px;}
+  .squotes li,.sscheme li,.spoems li{font-size:13px;line-height:1.5;color:#33302b;margin-bottom:6px;}
+  .squotes li::marker,.sscheme li::marker,.spoems li::marker{color:var(--acc);}
+  .spoems a{color:var(--acc);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,0,0,.3);}
+  .spoems a:hover{border-bottom-color:var(--acc);}
+  .sask{font-size:13px;line-height:1.55;color:#33302b;margin:0;}
+  .pclm{display:flex;gap:6px;flex-wrap:wrap;margin-top:2px;}
+  .pclm .pc{font-size:11px;font-weight:700;border:1.5px solid var(--line);border-radius:8px;padding:5px 9px;color:#33302b;background:#fff;}
+  .pclm .pc b{color:var(--acc);}
+
+  .empty{text-align:center;padding:60px 20px;color:var(--muted);}
+  .empty strong{display:block;color:var(--ink);font-size:18px;margin-bottom:6px;}
+
+  .toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:11px 18px;border-radius:10px;font-size:13px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .2s, transform .2s;z-index:50;box-shadow:0 12px 30px -10px rgba(0,0,0,.5);}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+  footer.site{border-top:1px solid var(--line);padding:24px 22px;text-align:center;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;}
+  footer.site b{color:var(--red);}
+
+  @media (max-width:820px){.deckrow{grid-template-columns:1fr;}}
+  @media (max-width:760px){.grid{grid-template-columns:1fr;}}
+  @media (max-width:560px){.counts{gap:16px;}.toolbar{flex-direction:column;align-items:stretch;}.tools-right{justify-content:space-between;}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
+
+  @media print{
+    body{background:#fff;}
+    .masthead{background:#fff;color:#000;padding:0 0 8px;}
+    .masthead::after{display:none;}
+    .masthead h1{font-size:22px;}.masthead h1 em{color:#000;}
+    .eyebrow{color:#000;}.sub,.counts,.sectionsw{display:none;}
+    .controls,.toolbar,.tracker-panel,.deckrow,footer.site,.qcard .foot .acts,.timer,.study-toggle{display:none!important;}
+    main{padding:0;}
+    .resultline{color:#000;}
+    .grid{display:block;}
+    .poet-group,.sec-group{margin-bottom:14px;break-inside:avoid;}
+    .group-head h2{font-size:15px;}
+    .qcard{break-inside:avoid;border:1px solid #999;box-shadow:none;margin-bottom:8px;}
+    .qcard:hover{transform:none;}
+    .qcard .foot{background:#fff;}
+    .study{display:block!important;}
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="mast-inner">
+    <p class="eyebrow" id="eyebrow"></p>
+    <h1 id="mastTitle"></h1>
+    <p class="sub" id="mastSub"></p>
+    <div class="counts" id="counts"></div>
+    <nav class="sectionsw" id="sectionsw" aria-label="Exam section"></nav>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="searchrow">
+      <label class="search">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="search" type="search" placeholder="Search every question…" autocomplete="off" aria-label="Search questions">
+      </label>
+    </div>
+    <div class="poets" id="poets"></div>
+    <div class="extras" id="extras" hidden></div>
+    <div class="themes-wrap" id="themesWrap">
+      <button class="themes-toggle" id="themesToggle" aria-expanded="false">Filter by theme<span class="chev">▾</span><span class="tcount" id="themeCount" hidden></span></button>
+      <div class="themes" id="themes" hidden></div>
+    </div>
+  </div>
+</div>
+
+<div class="toolbar">
+  <div class="tools-left">
+    <div class="seg-sort" id="sortSeg" role="group" aria-label="Sort order">
+      <button data-sort="newest" aria-pressed="true">Newest first</button>
+      <button data-sort="oldest" aria-pressed="false">Oldest first</button>
+    </div>
+    <div class="seg-sort" id="progSeg" role="group" aria-label="Progress filter">
+      <button data-prog="all" aria-pressed="true">All</button>
+      <button data-prog="todo" aria-pressed="false">To do</button>
+      <button data-prog="done" aria-pressed="false">Done</button>
+    </div>
+  </div>
+  <div class="tools-right">
+    <button class="btn primary" id="trackerBtn" aria-expanded="false">📊 <span id="trackerLabel">Tracker</span></button>
+    <button class="btn ghost" id="printBtn" title="Print or save the current list as PDF">🖨 Print</button>
+    <button class="btn ghost" id="copyAllBtn" title="Copy every question currently shown">⧉ Copy list</button>
+    <div class="timer" id="timer" aria-label="Practice timer">
+      <span class="timerhint" id="timerhint"></span>
+      <span class="clock" id="clock">50:00</span>
+      <button class="mini" id="tStart" title="Start / pause">▶</button>
+      <button class="mini alt" id="tReset" title="Reset timer">↺</button>
+    </div>
+  </div>
+</div>
+
+<section class="tracker-panel" id="trackerPanel" hidden>
+  <div class="tracker-inner">
+    <h3 id="trackerHead"></h3>
+    <p class="tlegend" id="trackerLegend"></p>
+    <p class="tinsight" id="trackerInsight"></p>
+    <div id="trackerBody"></div>
+  </div>
+</section>
+
+<main>
+  <div class="deckrow" id="deckrow" hidden></div>
+  <p class="resultline" id="resultline"></p>
+  <div id="results"></div>
+</main>
+
+<footer class="site">
+  Compiled for <b>Grinds360</b> · Leaving Certificate English · Higher Level · Questions from State Examinations Commission papers
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================================================
+   MASTER BROWSER — Composing, Question B & Prescribed Poetry
+   Data blocks below are lifted verbatim from the three
+   single-section tools and unified under one shell.
+   ============================================================ */
+const COMPOSING_Q = [
+  {id:1, genre:"Discursive essay", title:"Consider the power and value of both printed and digital photographic…", statement:"", prompt:"Write a discursive essay in which you consider the power and value of both printed and digital photographic images today.", year:"2025", type:"Exam"},
+  {id:2, genre:"Speech", title:"Truth has become a valueless currency in today's world", statement:"Truth has become a valueless currency in today's world", prompt:"Write a speech for or against the motion that: \"Truth has become a valueless currency in today's world.\"", year:"2025", type:"Exam"},
+  {id:3, genre:"Short story", title:"A \"plucky chancer\" challenges a more privileged or established opponent", statement:"", prompt:"Write a short story in which a \"plucky chancer\" challenges a more privileged or established opponent", year:"2025", type:"Exam"},
+  {id:4, genre:"Personal essay", title:"Reflect on some of the disappointments you have experienced and the…", statement:"", prompt:"Write a personal essay in which you reflect on some of the disappointments you have experienced and the impact they have had on you.", year:"2025", type:"Exam"},
+  {id:5, genre:"Article", title:"A love letter to Ireland", statement:"A love letter to Ireland", prompt:"Write a feature article entitled, 'A love letter to Ireland' in which you explore some of the reasons why we should view contemporary Irish society through an optimistic lens.", year:"2025", type:"Exam"},
+  {id:6, genre:"Personal essay", title:"Reflect on some of the factors that would influence your voting…", statement:"", prompt:"Write a personal essay in which you reflect on some of the factors that would influence your voting intentions in future elections.", year:"2025", type:"Exam"},
+  {id:7, genre:"Short story", title:"An ambitious character whose reckless actions lead to disaster", statement:"", prompt:"Write a short story featuring an ambitious character whose reckless actions lead to disaster.", year:"2025", type:"Exam"},
+  {id:8, genre:"Short story", title:"Tensions either in a family or in a group of friends…", statement:"", prompt:"Write a short story focusing on tensions either in a family or in a group of friends in which a connection", year:"2024", type:"Exam"},
+  {id:9, genre:"Article", title:"Popular magazine in which you explore some of the connections that…", statement:"", prompt:"Write an article for a popular magazine in which you explore some of the connections that you believe enrich teenagers", year:"2024", type:"Exam"},
+  {id:10, genre:"Speech", title:"The accelerated pace of modern life detracts from our enjoyment of…", statement:"The accelerated pace of modern life detracts from our enjoyment of it", prompt:"Write a speech for or against the motion that: \"The accelerated pace of modern life detracts from our enjoyment of it.\"", year:"2024", type:"Exam"},
+  {id:11, genre:"Personal essay", title:"Reflect on some of the aspects of life you find puzzling", statement:"", prompt:"Write a personal essay in which you reflect on some of the aspects of life you find puzzling.", year:"2024", type:"Exam"},
+  {id:12, genre:"Discursive essay", title:"Consider whether or not it is possible, or even desirable, to…", statement:"", prompt:"Write a discursive essay in which you consider whether or not it is possible, or even desirable, to maintain privacy in today's world.", year:"2024", type:"Exam"},
+  {id:13, genre:"Short story", title:"Strangers on an eventful train journey", statement:"", prompt:"Write a short story set among strangers on an eventful train journey.", year:"2024", type:"Exam"},
+  {id:14, genre:"Personal essay", title:"Reflect on your relationship with the natural world", statement:"", prompt:"Write a personal essay in which you reflect on your relationship with the natural world.", year:"2024", type:"Exam"},
+  {id:15, genre:"Short story", title:"A confused character in a mysterious setting", statement:"", prompt:"Write a short story which features a confused character in a mysterious setting", year:"2023", type:"Exam"},
+  {id:16, genre:"Article", title:"Popular magazine, describing your hometown, city, village or area, in which…", statement:"", prompt:"Write a feature article, for a popular magazine, describing your hometown, city, village or area, in which you consider some of the following: the place, its people, values, atmosphere and general way of life.", year:"2023", type:"Exam"},
+  {id:17, genre:"Personal essay", title:"Reflect on an occasion or occasions when you made a resolution…", statement:"", prompt:"Write a personal essay in which you reflect on an occasion or occasions when you made a resolution and refused to be discouraged.", year:"2023", type:"Exam"},
+  {id:18, genre:"Speech", title:"Society today lacks ethics (morality), decency and respect for the law", statement:"Society today lacks ethics (morality), decency and respect for the law", prompt:"You are taking part in an international debating competition where the motion is: \"Society today lacks ethics (morality), decency and respect for the law.\" Write your speech for or against this motion", year:"2023", type:"Exam"},
+  {id:19, genre:"Short story", title:"A complex relationship between two characters, where one character disagrees completely…", statement:"", prompt:"Write a short story that features a complex relationship between two characters, where one character disagrees completely with the views", year:"2023", type:"Exam"},
+  {id:20, genre:"Personal essay", title:"Describe and reflect on some of the things that bring excitement…", statement:"", prompt:"Write a personal essay in which you describe and reflect on some of the things that bring excitement and wonder into your life.", year:"2023", type:"Exam"},
+  {id:21, genre:"Discursive essay", title:"The impact of influential individuals in today's world. Your chosen individuals…", statement:"", prompt:"Write a discursive essay about the impact of influential individuals in today's world. Your chosen individuals may have positive or negative impacts or a combination of both.", year:"2023", type:"Exam"},
+  {id:22, genre:"Personal essay", title:"Identify some of the items or objects that have become \"faithful…", statement:"", prompt:"Write a personal essay in which you identify some of the items or objects that have become \"faithful companions\" in your life and reflect on the importance of these items or objects to you.", year:"2022", type:"Exam"},
+  {id:23, genre:"Speech", title:"Delivered during the election campaign, in which you outline the social…", statement:"", prompt:"You are a candidate in the next election for the presidency of Ireland. Write a speech to be delivered during the election campaign, in which you outline the social and cultural values you would promote if elected and explain the perception of Ireland you would cultivate abroad, given the opportunity to do so.", year:"2022", type:"Exam"},
+  {id:24, genre:"Short story", title:"The student featured in TEXT 3, Dieter Knecht, has a life…", statement:"", prompt:"Write a short story in which the student featured in TEXT 3, Dieter Knecht, has a life changing experience as he attempts to rescue Joseph Roth's denounced novel, Rebellion, from the Nazi supporters who wish to see it destroyed.", year:"2022", type:"Exam"},
+  {id:25, genre:"Article", title:"The magazine section of a weekend newspaper, in which you reflect…", statement:"", prompt:"Write a feature article, for the magazine section of a weekend newspaper, in which you reflect on our fascination with all things fashionable and explore the stories we tell about ourselves, intentionally or unintentionally, through our fashion choices.", year:"2022", type:"Exam"},
+  {id:26, genre:"Discursive essay", title:"Identify some of the powerful voices in modern life and discuss…", statement:"", prompt:"Write a discursive essay in which you identify some of the powerful voices in modern life and discuss their influence on society.", year:"2022", type:"Exam"},
+  {id:27, genre:"Personal essay", title:"Reflect on the value of engaging in all kinds of learning…", statement:"", prompt:"Write a personal essay in which you reflect on the value of engaging in all kinds of learning and the pleasure, satisfaction and personal growth it brings.", year:"2022", type:"Exam"},
+  {id:28, genre:"Short story", title:"A piece of music or the lyrics of a song (or…", statement:"", prompt:"Write a short story in which a piece of music or the lyrics of a song (or songs) play(s) an important part in the narrative.", year:"2022", type:"Exam"},
+  {id:29, genre:"Personal essay", title:"Reflect on the significance of birthdays, your own and those of…", statement:"", prompt:"Write a personal essay in which you reflect on the significance of birthdays, your own and those of others, sharing your thoughts on this annual personal milestone.", year:"2021", type:"Exam"},
+  {id:30, genre:"Discursive essay", title:"Consider the meaning and importance of community", statement:"", prompt:"Write a discursive essay in which you consider the meaning and importance of community.", year:"2021", type:"Exam"},
+  {id:31, genre:"Short story", title:"A railway station, in which a passenger off the overnight ferry…", statement:"", prompt:"Write a short story, set in a railway station, in which a passenger off the overnight ferry from Fishguard in Wales plays an important role. Your short story may be amusing or menacing in tone.", year:"2021", type:"Exam"},
+  {id:32, genre:"Personal essay", title:"Reflect on the role of humour, fun and laughter in life", statement:"", prompt:"Write a personal essay in which you reflect on the role of humour, fun and laughter in life.", year:"2021", type:"Exam"},
+  {id:33, genre:"Short story", title:"Ancient Ireland, in which a bee or bees feature prominently", statement:"", prompt:"Write a fable or fairy-tale, set in ancient Ireland, in which a bee or bees feature prominently.", year:"2021", type:"Exam"},
+  {id:34, genre:"Article", title:"A popular magazine, about the many and varied colours and sounds…", statement:"", prompt:"Write an article, for publication in a popular magazine, about the many and varied colours and sounds that punctuate and surround our daily lives and the impact they have on us.", year:"2021", type:"Exam"},
+  {id:35, genre:"Speech", title:"You would deliver", statement:"", prompt:"You have been asked to speak, as a representative of a national youth organisation, at the launch of a major campaign against stereotyping. Write the speech you would deliver.", year:"2021", type:"Exam"},
+  {id:36, genre:"Personal essay", title:"Reflect on what you are proud of in your life", statement:"", prompt:"Write a personal essay in which you reflect on what you are proud of in your life.", year:"2020", type:"Exam"},
+  {id:37, genre:"Article", title:"Publication in a popular magazine, offering some ideas for new inventions…", statement:"", prompt:"Write a feature article, suitable for publication in a popular magazine, offering some ideas for new inventions and discoveries you think would improve your life or make the world a better place. Your article may be serious or humorous or both.", year:"2020", type:"Exam"},
+  {id:38, genre:"Short story", title:"A crime or mystery is solved, that begins with a dramatic…", statement:"", prompt:"Write a short story, in which a crime or mystery is solved, that begins with a dramatic arrival. You may set your short story in any era and may choose to include or not include the fictional detective Sherlock Holmes.", year:"2020", type:"Exam"},
+  {id:39, genre:"Discursive essay", title:"Our changing relationship with machines and the rise of artificial intelligence", statement:"", prompt:"Write a discursive essay about our changing relationship with machines and the rise of artificial intelligence.", year:"2020", type:"Exam"},
+  {id:40, genre:"Short story", title:"The three characters that appear on the magazine cover on Page…", statement:"", prompt:"Write a short story which features the three characters that appear on the magazine cover on Page 7 of this examination paper. You are free to write your story in any genre you choose", year:"2020", type:"Exam"},
+  {id:41, genre:"Speech", title:"Argue for or against the motion: Contemporary Irish society is both…", statement:"", prompt:"Write a speech in which you argue for or against the motion: Contemporary Irish society is both tolerant and progressive.", year:"2020", type:"Exam"},
+  {id:42, genre:"Personal essay", title:"Celebrate friendship, and reflect on how you have been influenced by…", statement:"", prompt:"Write a personal essay in which you celebrate friendship, and reflect on how you have been influenced by the unique and diverse personalities of your friends.", year:"2020", type:"Exam"},
+  {id:43, genre:"Descriptive essay", title:"A sense of the difference between dawn and dusk and celebrates…", statement:"", prompt:"Write a descriptive essay which captures a sense of the difference between dawn and dusk and celebrates both the beginning and the end of the day.", year:"2019", type:"Exam"},
+  {id:44, genre:"Short story", title:"Publication in a collection of spy stories, in which a librarian…", statement:"", prompt:"Write a short story, suitable for publication in a collection of spy stories, in which a librarian, a photograph and a chair are central to the narrative.", year:"2019", type:"Exam"},
+  {id:45, genre:"Personal essay", title:"Reflect on what feeds your imagination", statement:"", prompt:"Write a personal essay in which you reflect on what feeds your imagination.", year:"2019", type:"Exam"},
+  {id:46, genre:"Short story", title:"The evolving relationship between two characters – one young and one…", statement:"", prompt:"Write a short story which captures the evolving relationship between two characters – one young and one old – as they travel in a strange land.", year:"2019", type:"Exam"},
+  {id:47, genre:"Discursive essay", title:"Some of the items you think symbolise the values held by…", statement:"", prompt:"Write a discursive essay about some of the items you think symbolise the values held by people of your age in Ireland in 2019", year:"2019", type:"Exam"},
+  {id:48, genre:"Personal essay", title:"Reflect on some of the places that have helped to shape…", statement:"", prompt:"Write a personal essay in which you reflect on some of the places that have helped to shape and define you, and the significance of these places in your life.", year:"2019", type:"Exam"},
+  {id:49, genre:"Speech", title:"Broadcast online, for or against the motion: We are a self-obsessed…", statement:"", prompt:"Write a speech, to be broadcast online, for or against the motion: We are a self-obsessed generation.", year:"2019", type:"Exam"},
+  {id:50, genre:"Descriptive essay", title:"Capture how the landscape reflects the transition of the seasons. You…", statement:"", prompt:"Write a descriptive essay in which you capture how the landscape reflects the transition of the seasons. You may choose to include some or all of the seasons in your essay.", year:"2018", type:"Exam"},
+  {id:51, genre:"Short story", title:"The central character's status as an outsider has a direct influence…", statement:"", prompt:"Write a short story in which the central character's status as an outsider has a direct influence on the plot.", year:"2018", type:"Exam"},
+  {id:52, genre:"Personal essay", title:"What you perceive to be the pleasures particular to youth", statement:"", prompt:"Write a personal essay reflecting on what you perceive to be the pleasures particular to youth.", year:"2018", type:"Exam"},
+  {id:53, genre:"Discursive essay", title:"Consider the subject of leaders and leadership", statement:"", prompt:"Write a discursive essay in which you consider the subject of leaders and leadership.", year:"2018", type:"Exam"},
+  {id:54, genre:"Short story", title:"A collection of detective fiction, about a character who explores various…", statement:"", prompt:"Write a short story, for inclusion in a collection of detective fiction, about a character who explores various possibilities in order to solve a crime.", year:"2018", type:"Exam"},
+  {id:55, genre:"Personal essay", title:"Reflect on the value of personal space and quietness in the…", statement:"", prompt:"Write a personal essay in which you reflect on the value of personal space and quietness in the modern world.", year:"2018", type:"Exam"},
+  {id:56, genre:"Speech", title:"Language is a great weapon", statement:"Language is a great weapon", prompt:"You are competing in the final of a national public speaking competition. The topic to be addressed is: Language is a great weapon. You are free to agree or disagree. Write the speech you would deliver.", year:"2018", type:"Exam"},
+  {id:57, genre:"Discursive essay", title:"Explore the positive and negative aspects of different types of advertising", statement:"", prompt:"Write a discursive essay in which you explore the positive and negative aspects of different types of advertising.", year:"2017", type:"Exam"},
+  {id:58, genre:"Descriptive essay", title:"Night Scene", statement:"", prompt:"Write a descriptive essay entitled Night Scene.", year:"2017", type:"Exam"},
+  {id:59, genre:"Speech", title:"Delivered to a World Youth Conference, in which you give your…", statement:"", prompt:"Write a speech, to be delivered to a World Youth Conference, in which you give your views on how democracy can be supported in the world today.", year:"2017", type:"Exam"},
+  {id:60, genre:"Short story", title:"A tattoo plays an important part in the narrative", statement:"", prompt:"Write a short story in which a tattoo plays an important part in the narrative.", year:"2017", type:"Exam"},
+  {id:61, genre:"Drama / Dialogue", title:"Introduce and promote your new invention to your sceptical friends and…", statement:"", prompt:"Imagine it is the Stone Age and you have just invented the wheel. Write a dialogue in dramatic form, in which you introduce and promote your new invention to your sceptical friends and neighbours. Your drama may be humorous or serious or both.", year:"2017", type:"Exam"},
+  {id:62, genre:"Personal essay", title:"Reflect on moments of insight and revelation you have experienced", statement:"", prompt:"Write a personal essay in which you reflect on moments of insight and revelation you have experienced.", year:"2017", type:"Exam"},
+  {id:63, genre:"Article", title:"Serious publication in which you consider whether scientists or writers and…", statement:"", prompt:"Write an article for a serious publication in which you consider whether scientists or writers and artists have made, and continue to make, the greater contribution to society.", year:"2017", type:"Exam"},
+  {id:64, genre:"Persuasive essay", title:"The Three Greatest Achievements in Human History", statement:"The Three Greatest Achievements in Human History", prompt:"Write a persuasive essay entitled, \"The Three Greatest Achievements in Human History\".", year:"2016", type:"Exam"},
+  {id:65, genre:"Short story", title:"Mistaken identity is central to the plot", statement:"", prompt:"Write a short story in which mistaken identity is central to the plot", year:"2016", type:"Exam"},
+  {id:66, genre:"Descriptive essay", title:"Take your readers on an urban journey", statement:"", prompt:"Write a descriptive essay in which you take your readers on an urban journey.", year:"2016", type:"Exam"},
+  {id:67, genre:"Personal essay", title:"Reflect on the \"useless clutter\" that is a feature of many…", statement:"", prompt:"Write a personal essay in which you reflect on the \"useless clutter\" that is a feature of many aspects of our lives", year:"2016", type:"Exam"},
+  {id:68, genre:"Speech", title:"Young people should travel and see the world before joining the…", statement:"Young people should travel and see the world before joining the workforce or furthering their education", prompt:"Write a speech, for a class debate for or against the motion: \"Young people should travel and see the world before joining the workforce or furthering their education.\"", year:"2016", type:"Exam"},
+  {id:69, genre:"Short story", title:"Two characters and a car journey", statement:"", prompt:"Write a short story that centres on two characters and a car journey.", year:"2016", type:"Exam"},
+  {id:70, genre:"Speech", title:"Can be serious or amusing or both, in which you describe…", statement:"", prompt:"You are participating in a public speaking competition for second-level students. Write a speech, that can be serious or amusing or both, in which you describe what you see as the essential elements of the Irish character", year:"2016", type:"Exam"},
+  {id:71, genre:"Short story", title:"The main character is transformed when faced with a daunting challenge", statement:"", prompt:"Write a short story in which the main character is transformed when faced with a daunting challenge", year:"2015", type:"Exam"},
+  {id:72, genre:"Article", title:"Magazine, about the importance of romance in our lives. The article…", statement:"", prompt:"Write a feature article for a magazine, about the importance of romance in our lives. The article may be light-hearted or serious", year:"2015", type:"Exam"},
+  {id:73, genre:"Speech", title:"Delivered at a United Nations Youth Conference, in which you consider…", statement:"", prompt:"Write a thought-provoking speech, to be delivered at a United Nations Youth Conference, in which you consider some of the causes and possible solutions to what you see as the defining struggles of our age", year:"2015", type:"Exam"},
+  {id:74, genre:"Personal essay", title:"Your response to an ending, or endings, in your life that…", statement:"", prompt:"Write a personal essay about your response to an ending, or endings, in your life that you consider significant.", year:"2015", type:"Exam"},
+  {id:75, genre:"Descriptive essay", title:"Life in Ireland in 2015 from the point of view of…", statement:"", prompt:"Write a descriptive essay which captures life in Ireland in 2015 from the point of view of an observant time-traveller. The time-traveller may be from the past or from the future.", year:"2015", type:"Exam"},
+  {id:76, genre:"Short story", title:"A closely guarded secret is gradually revealed", statement:"", prompt:"Write a short story in which a closely guarded secret is gradually revealed.", year:"2015", type:"Exam"},
+  {id:77, genre:"Discursive essay", title:"Discuss the importance of privacy in people's lives and the challenges", statement:"", prompt:"Write a discursive essay, in which you discuss the importance of privacy in people's lives and the challenges", year:"2015", type:"Exam"},
+  {id:78, genre:"Short story", title:"A ghostly presence plays a significant part", statement:"", prompt:"Write a short story in which a ghostly presence plays a significant part.", year:"2014", type:"Exam"},
+  {id:79, genre:"Speech", title:"Young people should exert their influence by actively engaging with", statement:"Young people should exert their influence by actively engaging with", prompt:"You are representing Ireland in the final of the World Youth Public Speaking Championships. Write a passionate speech in favour of the motion: \"Young people should exert their influence by actively engaging with\"", year:"2014", type:"Exam"},
+  {id:80, genre:"Personal essay", title:"Your encounters with a variety of interesting or unusual people and…", statement:"", prompt:"Write a personal essay about your encounters with a variety of interesting or unusual people and the impact they made on you.", year:"2014", type:"Exam"},
+  {id:81, genre:"Descriptive essay", title:"What you find beautiful or exotic in everyday life", statement:"", prompt:"Write a descriptive essay about what you find beautiful or exotic in everyday life", year:"2014", type:"Exam"},
+  {id:82, genre:"Article", title:"Magazine, which may be light-hearted or serious, about Irish people's obsession…", statement:"", prompt:"Write a feature article for a magazine, which may be light-hearted or serious, about Irish people's obsession with the weather.", year:"2014", type:"Exam"},
+  {id:83, genre:"Personal essay", title:"One or more moments of uncertainty you have experienced", statement:"", prompt:"Write a personal essay about one or more moments of uncertainty you have experienced", year:"2014", type:"Exam"},
+  {id:84, genre:"Short story", title:"A collection of Science Fiction writing inspired by the following quotation…", statement:"", prompt:"Write a short story for inclusion in a collection of Science Fiction writing inspired by the following quotation from TEXT 2, \"…a new beast, slouching towards us... the beautiful mutant\".", year:"2014", type:"Exam"},
+  {id:85, genre:"Speech", title:"Argue for or against the motion, We live in an un-heroic…", statement:"", prompt:"Write a speech in which you argue for or against the motion, We live in an un-heroic age.", year:"2013", type:"Exam"},
+  {id:86, genre:"Personal essay", title:"Explore the storytelling evident in music and song and its impact…", statement:"", prompt:"Write a personal essay in which you explore the storytelling evident in music and song and its impact on you as a listener", year:"2013", type:"Exam"},
+  {id:87, genre:"Short story", title:"A central character is either manipulated or is manipulative", statement:"", prompt:"Write a short story in which a central character is either manipulated or is manipulative", year:"2013", type:"Exam"},
+  {id:88, genre:"Descriptive essay", title:"A variety of glimpsed moments", statement:"", prompt:"Write a descriptive essay based on a variety of glimpsed moments.", year:"2013", type:"Exam"},
+  {id:89, genre:"Personal essay", title:"The tension you find between the everyday treadmill and the gilded", statement:"", prompt:"Write a personal essay about the tension you find between the everyday treadmill and the gilded", year:"2013", type:"Exam"},
+  {id:90, genre:"Article", title:"Popular magazine in which you discuss the competing attractions of both…", statement:"", prompt:"Write a feature article for a popular magazine in which you discuss the competing attractions of both urban and rural", year:"2013", type:"Exam"},
+  {id:91, genre:"Short story", title:"A reunion", statement:"", prompt:"Write a short story about a reunion.", year:"2013", type:"Exam"},
+  {id:92, genre:"Personal essay", title:"You consider to be the marvels of today's world", statement:"", prompt:"Write a personal essay on what you consider to be the marvels of today's world", year:"2012", type:"Exam"},
+  {id:93, genre:"Article", title:"Newspaper or magazine on the role played by memory and the…", statement:"", prompt:"Write a feature article for a newspaper or magazine on the role played by memory and the past in our lives.", year:"2012", type:"Exam"},
+  {id:94, genre:"Short story", title:"The phrase, \"... an inferior rock band howling for fame", statement:"", prompt:"Write a short story inspired by the phrase, \"... an inferior rock band howling for fame\".", year:"2012", type:"Exam"},
+  {id:95, genre:"Speech", title:"The importance of literature in people's lives", statement:"", prompt:"Write a persuasive speech about the importance of literature in people's lives.", year:"2012", type:"Exam"},
+  {id:96, genre:"Article", title:"Intended for publication in a magazine aimed at young people", statement:"", prompt:"Write a light-hearted and entertaining article, intended for publication in a magazine aimed at young people", year:"2012", type:"Exam"},
+  {id:97, genre:"Speech", title:"Write the text of an address you could deliver to an…", statement:"", prompt:"Write the text of an address you could deliver to an international gathering of young people outlining what you believe helps to define Ireland's distinctive national identity.", year:"2012", type:"Exam"},
+  {id:98, genre:"Short story", title:"A young character is eager to leave home", statement:"", prompt:"Write a short story in which a young character is eager to leave home.", year:"2012", type:"Exam"},
+  {id:99, genre:"Speech", title:"Write the text of the talk you would give", statement:"", prompt:"You have been asked to speak to your class about what you think is indispensable in your life. Write the text of the talk you would give.", year:"2011", type:"Exam"},
+  {id:100, genre:"Article", title:"Serious newspaper or magazine on the twin issues of discrimination and…", statement:"", prompt:"Write an article for a serious newspaper or magazine on the twin issues of discrimination and tolerance", year:"2011", type:"Exam"},
+  {id:101, genre:"Short story", title:"Included in a collection of modern fairytales", statement:"", prompt:"Write a story to be included in a collection of modern fairytales.", year:"2011", type:"Exam"},
+  {id:102, genre:"Article", title:"Popular magazine in which you outline your views about the impact…", statement:"", prompt:"Write an article for a popular magazine in which you outline your views about the impact of technology on the lives of young people.", year:"2011", type:"Exam"},
+  {id:103, genre:"Personal essay", title:"Your clothes, what they mean to you and what they say…", statement:"", prompt:"Write a personal essay about your clothes, what they mean to you and what they say about you.", year:"2011", type:"Exam"},
+  {id:104, genre:"Descriptive essay", title:"Twenty-four hours in the life of a town or city", statement:"", prompt:"Write a descriptive essay about twenty-four hours in the life of a town or city.", year:"2011", type:"Exam"},
+  {id:105, genre:"Short story", title:"A mystery is solved", statement:"", prompt:"Write a short story in which a mystery is solved.", year:"2011", type:"Exam"},
+  {id:106, genre:"Personal essay", title:"Your experience (as performer and/or audience member) of the dramatic arts…", statement:"", prompt:"Write a personal essay about your experience (as performer and/or audience member) of the dramatic arts: plays, musicals, concerts, comedy, etc.", year:"2010", type:"Exam"},
+  {id:107, genre:"Article", title:"(serious and/or light-hearted) for a popular magazine on being a good…", statement:"", prompt:"Write an article (serious and/or light-hearted) for a popular magazine on being a good neighbour.", year:"2010", type:"Exam"},
+  {id:108, genre:"Short story", title:"The above quotation", statement:"", prompt:"Write a short story suggested by the above quotation.", year:"2010", type:"Exam"},
+  {id:109, genre:"Personal essay", title:"Your understanding of freedom and why you think it is important", statement:"", prompt:"Write a personal essay about your understanding of freedom and why you think it is important.", year:"2010", type:"Exam"},
+  {id:110, genre:"Speech", title:"You would give, encouraging your audience to be optimistic about the…", statement:"", prompt:"You have been elected by your classmates to deliver a speech at your school's graduation ceremony. Write the text of the speech you would give, encouraging your audience to be optimistic about the future.", year:"2010", type:"Exam"},
+  {id:111, genre:"Practical guide", title:"Young People containing helpful advice and useful information for life after…", statement:"", prompt:"Write a practical Guide for Young People containing helpful advice and useful information for life after school.", year:"2010", type:"Exam"},
+  {id:112, genre:"Short story", title:"Two unusual or eccentric characters meet for the first time", statement:"", prompt:"Write a short story in which two unusual or eccentric characters meet for the first time", year:"2010", type:"Exam"},
+  {id:113, genre:"Article", title:"(serious and/or light-hearted) for a school magazine about your experience of…", statement:"", prompt:"Write an article (serious and/or light-hearted) for a school magazine about your experience of education over the last", year:"2009", type:"Exam"},
+  {id:114, genre:"Article", title:"Indecision – my own and other people's", statement:"Indecision – my own and other people's", prompt:"Write an opinion piece for a popular magazine entitled \"Indecision – my own and other people's\".", year:"2009", type:"Exam"},
+  {id:115, genre:"Short story", title:"The central character is faced with making an important decision", statement:"", prompt:"Write a short story in which the central character is faced with making an important decision", year:"2009", type:"Exam"},
+  {id:116, genre:"Speech", title:"Science and technology", statement:"", prompt:"Write a persuasive speech in praise of science and technology.", year:"2009", type:"Exam"},
+  {id:117, genre:"Article", title:"Today's respected public figures, exploring the qualities that make them worthy…", statement:"", prompt:"Write a newspaper article on some of today's respected public figures, exploring the qualities that make them worthy of respect", year:"2009", type:"Exam"},
+  {id:118, genre:"Personal essay", title:"Daydreams", statement:"", prompt:"Write a personal essay on the topic of daydreams.", year:"2009", type:"Exam"},
+  {id:119, genre:"Short story", title:"A photograph, or a set of photographs, plays a part in…", statement:"", prompt:"Write a short story in which a photograph, or a set of photographs, plays a part in the plot. Your story may be prompted by one or more of the photographs in TEXT 3.", year:"2009", type:"Exam"}
+];
+
+const QB_Q = [
+  {id:1, genre:"Speech / Talk", marks:50, title:"Pre-match team-talk \u2014 captain of the underdog school team", statement:"", prompt:"You are the captain of a school's sports team, about to compete, as the underdogs, in the final of a national competition and you are required to give the pre-match team-talk. Write the text of the talk that you would deliver. In your talk you should: outline to your team mates aspects of the game plan you have decided to employ on the field, remind them of the strengths and weaknesses of your opponents, and motivate them to overcome the odds and to achieve victory.", year:"2025", type:"Exam"},
+  {id:2, genre:"Blog / Online", marks:50, title:"Hotel manager's online response to a critical review", statement:"", prompt:"You are a hotel manager. A recent, disgruntled guest has left a highly critical review of your hotel and its facilities on a travel-review website. You decide to challenge this person's views with an online response on the same website. In your response you should: outline the proud tradition and history of your establishment, challenge the specific criticisms of the guest reviewer, and encourage the reviewer to return by highlighting some of the exciting upcoming events in your hotel and its locality.", year:"2025", type:"Exam"},
+  {id:3, genre:"Radio / Podcast", marks:50, title:"Podcast reflection \u2014 Eyes Wide Open (a changed perspective)", statement:"Eyes Wide Open", prompt:"You are a contributor to a podcast entitled, Eyes Wide Open, where you reflect on how your perspective on a significant issue changed as a result of an experience or an encounter. Write your reflection for the podcast in which you: identify the issue and explain your previous attitude towards it, describe the experience or encounter that changed your perspective, and consider some of the life lessons that you and others can learn from this reflection.", year:"2025", type:"Exam"},
+  {id:4, genre:"Dialogue / Interview", marks:50, title:"Dialogue \u2014 an adult and a young person, opposing views", statement:"", prompt:"In TEXT 1 Fintan O'Toole refers to how different generations can have differing views on issues. Write the text of a dialogue between an adult and a young person who have opposing viewpoints about a contentious issue of your choice. In the dialogue you should: develop the arguments of both sides, and conclude the dialogue in a convincing manner, with one side conceding to the other in some way.", year:"2024", type:"Exam"},
+  {id:5, genre:"Proposal", marks:50, title:"Proposal to your local Tidy Towns Committee", statement:"", prompt:"Certain aspects of the area where you live have become run down and neglected. Write a proposal to your local Tidy Towns Committee in which you: outline your key concerns in relation to the problems you have identified, propose a project that you believe would improve the situation, and suggest how the committee could encourage more members of the local community to become active in improving the local area.", year:"2024", type:"Exam"},
+  {id:6, genre:"Diary / Reflection", marks:50, title:"Reflective diary entries \u2014 returning home after a year travelling", statement:"", prompt:"Write a series of reflective diary entries of a person returning to their homeplace after travelling for a whole year in different countries. In your diary you should: consider your feelings on returning home, recall and analyse some significant moments and events that stand out for you from your travels, and reflect on how the experience of travel has influenced your overall worldview now.", year:"2024", type:"Exam"},
+  {id:7, genre:"Letter", marks:50, title:"Personal letter \u2014 as Salim, a year in London, to your mother", statement:"", prompt:"Imagine you are Salim and you have been in London for over a year. Write a new personal letter to your mother in which you: describe a number of experiences you have had that you believe will fascinate your mother, reflect on both the positive and negative insights you have gained into human nature as an outsider in London, and consider some of the ways you believe your experience in this city has altered you as a person.", year:"2023", type:"Exam"},
+  {id:8, genre:"Diary / Reflection", marks:50, title:"Personal reflection (history magazine) \u2014 a place of historic interest", statement:"", prompt:"You have been asked to write a personal reflection for an educational history magazine. The reflection should recall an experience you had of visiting a place of historic interest. In the reflection you should: outline the expectations you had before your visit to the place of historic interest, describe some of the thoughts and feelings you had in response to this place during the visit, and argue the case for making trips to historic places compulsory for students in Irish schools today.", year:"2023", type:"Exam"},
+  {id:9, genre:"Article", marks:50, title:"School website article \u2014 the growing role of technology in schools", statement:"", prompt:"It is Science Week and you have been asked to write an article for your school's website about the increasing role played by technology in schools. In your article you should: describe some of the positive ways technology is utilised in schools today, discuss whether or not, in your view, technology can be a negative influence in schools, and speculate about the role you think technology will play in schools in the future. Your article may be serious or humorous or both.", year:"2023", type:"Exam"},
+  {id:10, genre:"Letter", marks:40, title:"Open letter \u2014 poetry: optional or compulsory in the LC?", statement:"", prompt:"Some students believe that the study of poetry should be an optional rather than a compulsory element of the Leaving Certificate English course. Write an open letter, to be published on a popular social media platform, to encourage discussion on this topic. In your open letter you should: explain what, if any, value you found in the study of poetry as part of your Leaving Certificate English course, explore the reasons why you think the study of poetry should be an optional or a compulsory element of Leaving Certificate English in the future, and seek to anticipate and refute views that might potentially be offered in opposition to your chosen stance.", year:"2022", type:"Exam"},
+  {id:11, genre:"Radio / Podcast", marks:40, title:"Podcast \u2014 The Music Playing in Me", statement:"The Music Playing in Me", prompt:"You have been invited to contribute to a podcast series entitled, The Music Playing in Me. The series will explore the importance of music in the lives of individuals. Write the text for the podcast in which you: reflect on the importance of music in your life, discuss some of the particular pieces of music (songs, albums, etc.) that make up the soundtrack to your own life, and share the thoughts and feelings this music evokes in you.", year:"2022", type:"Exam"},
+  {id:12, genre:"Article", marks:40, title:"Newspaper editorial \u2014 a book-burning in 2033", statement:"", prompt:"It is 2033 and you are the editor of an internationally distributed newspaper. A book burning event, similar to that described in TEXT 3, has occurred in a major American city. You believe that respect for books of all kinds is vital to democracy and are horrified by this assault on them. Write an editorial in which you: give your response to this incident, warn your readers of the dangers inherent in attacking books in this way, and urge them to engage in peaceful protest against this and any other form of censorship.", year:"2022", type:"Exam"},
+  {id:13, genre:"Article", marks:40, title:"Feature article \u2014 Monumental Matters: The Story of Statues", statement:"Monumental Matters \u2013 The Story of Statues", prompt:"You have been invited to write a feature article, entitled Monumental Matters \u2013 The Story of Statues, to appear in the magazine supplement of a weekend newspaper. In your article you should: reflect on the long-established tradition of erecting statues to celebrate or memorialise people, explore some of the reasons why commemorative statues may be controversial, and give your views on continuing this tradition into the future.", year:"2021", type:"Exam"},
+  {id:14, genre:"Letter", marks:40, title:"Open letter (social media) \u2014 animal rights", statement:"", prompt:"An assertion that other creatures' lives are somehow lesser than human life has prompted extensive debate on social media. In order to join in this online debate, write an open letter to be shared on social media, in which you: state your position in relation to animal rights, explore some of the issues associated with our current engagement with animals, and outline what you see as the major challenges we face as we share the planet with animals in the future.", year:"2021", type:"Exam"},
+  {id:15, genre:"Speech / Talk", marks:40, title:"Verbal pitch to the graduation committee \u2014 Yearbook editor", statement:"", prompt:"You have decided to apply for the position of editor of your school's Graduation Yearbook. Each year, the Yearbook has a different theme, chosen by the editor. An article by a celebrity contributor is also included annually. To be considered for the post, you must make a verbal pitch (a spoken promotional presentation) to the graduation committee members in which you: promote your preferred theme for the 2021 Graduation Yearbook, impress the committee with your ideas for its content, and nominate your ideal celebrity contributor, explaining your choice to the committee members. Write the text for the verbal pitch that you would make.", year:"2021", type:"Exam"},
+  {id:16, genre:"Article", marks:50, title:"Promotional article \u2014 Rentals for Writers (property magazine)", statement:"Rentals for Writers", prompt:"You have been asked to write the text for a promotional article by the editor of a property magazine called, Rentals for Writers. Your article will be illustrated by the cartoon that appears above. In your promotional article you should: advertise the properties featured in the cartoon as inspirational venues in which to finish novels in particular genres, draw attention to previous literary successes associated with some of these properties, and detail any unique terms and conditions which will apply to particular properties. The article may be humorous or serious or both.", year:"2020", type:"Exam"},
+  {id:17, genre:"Introduction", marks:50, title:"Introduction to a new collection of detective fiction", statement:"", prompt:"You have been asked to write the introduction to a new collection of contemporary detective fiction. In your introduction you should: outline the reasons why you think detective stories have enduring appeal, discuss some of the personal qualities you believe are essential in a memorable fictional detective, and explain why you recommend this particular collection of stories to readers.", year:"2020", type:"Exam"},
+  {id:18, genre:"Speech / Talk", marks:50, title:"Speech to the alien powers \u2014 a plea to save humanity", statement:"", prompt:"Enlightened aliens, horrified by the injustice and inequality evident in human society, have decided to eliminate all human beings and recolonise Earth with more deserving inhabitants. You have been chosen to represent humanity and deliver a speech to the alien powers in which you try to save us from our fate. In your speech you should: acknowledge some of humanity's failings in relation to justice and inequality, point to evidence of the many admirable qualities of the human race, and explain why the aliens should believe we can be trusted to work together for a better future.", year:"2020", type:"Exam"},
+  {id:19, genre:"Article", marks:50, title:"Opinion piece (broadsheet) \u2014 the varied virtues of sport", statement:"", prompt:"In TEXT 1, Jeanette Winterson extols the virtues of the arts, arguing that artistic activities are beneficial both for individuals and for society in general. She also gives her views on the relationship between art and money. Write an opinion piece, suitable for publication in a broadsheet newspaper, in which you: extol the varied virtues of sport, put forward a reasoned argument to persuade readers that sport benefits both individuals and society, and give your views on the appropriate relationship between sport and money.", year:"2019", type:"Exam"},
+  {id:20, genre:"Diary / Reflection", marks:50, title:"Reflective journal entry \u2014 fleeing an uninhabitable Earth", statement:"", prompt:"Look at the photograph on page 5 and imagine you are fleeing Earth on the last spaceship evacuating the planet after human actions have made our world uninhabitable. Write a reflective journal entry, which you hope will be preserved for future generations. In it you should: criticise humanity's folly which resulted in the loss of our earthly home, share your personal memories of the planet, and celebrate some of Earth's former glories.", year:"2019", type:"Exam"},
+  {id:21, genre:"Introduction", marks:50, title:"Introduction to a collection of essays in support of real shops", statement:"", prompt:"The expansion of online shopping has had a devastating effect on all types of real shops and department stores. Write an introduction to a collection of essays in support of real shops, in which you: celebrate the joys of 'real' shopping, explain what the presence of shops and shoppers brings to communities, and discuss some of the implications for us all of the ever-increasing popularity of online shopping.", year:"2019", type:"Exam"},
+  {id:22, genre:"Letter", marks:50, title:"Open letter \u2014 to all who have offered you unwanted advice", statement:"", prompt:"Young people are often the recipients of unwanted advice. Write an open letter (a letter intended for a wide audience, often published online or in print) to all those who have ever offered you unwanted advice. In your letter you should: identify some nuggets of unwanted advice you have received, describe your response to receiving such advice, and share your opinion on how and when advice could be appropriately offered. Your letter may be amusing or serious or both.", year:"2018", type:"Exam"},
+  {id:23, genre:"Article", marks:50, title:"Opinion piece (national newspaper) \u2014 your second-level education", statement:"", prompt:"The children in TEXT 2 experience an unconventional education. Based on your experience of second level education, write an opinion piece, suitable for publication in a national newspaper, in which you: acknowledge what you see as the strengths of the education you have received, criticise what you see as its weaknesses, and make suggestions for its improvement.", year:"2018", type:"Exam"},
+  {id:24, genre:"Article", marks:50, title:"School website article \u2014 reading a text vs watching its film", statement:"", prompt:"Write an article for your school website, in which you consider the experience of reading a text and watching a film adaptation of the same text. In your article you should: identify at least one written text which has been adapted as a film, consider the advantages and disadvantages of each of these formats, and explain which format you would recommend as the way in which to experience the text(s) for the first time. You may refer to any text(s) of your choice in your answer.", year:"2018", type:"Exam"},
+  {id:25, genre:"Article", marks:50, title:"School website article \u2014 displaying three course poems in your school", statement:"", prompt:"Your school Principal has agreed to your suggestion to display three poems, or extracts from three poems, on the 2017 Leaving Certificate Higher Level English poetry course, in your school. You have been asked to choose the poetry and decide how and where it will be displayed. Write an article for your school's website in which you: explain your choice of poetry, your ideas for its display, and the impact you hope this project will have on the school community.", year:"2017", type:"Exam"},
+  {id:26, genre:"Article", marks:50, title:"Opinion piece (national newspaper) \u2014 relying on the online world for news", statement:"", prompt:"The views people hold today are often influenced by the news and information they receive from the online world of the internet and social media. Write an opinion piece, for publication in a national newspaper, in which you give your views on: the extent to which people today rely on the online world as a source of news and information, the reliability of these sources, and the impact of this development on society.", year:"2017", type:"Exam"},
+  {id:27, genre:"Radio / Podcast", marks:50, title:"Radio programme \u2014 Reflections on the World of Childhood", statement:"Reflections on the World of Childhood", prompt:"You have been asked to participate in a radio programme entitled Reflections on the World of Childhood. Write the text to be broadcast on radio, in which you: reflect on the world of your childhood, discuss what captured your childish imagination, and recall a selection of the songs or sounds or stories that live on in your memory.", year:"2017", type:"Exam"},
+  {id:28, genre:"Speech / Talk", marks:50, title:"Adjudicator's speech \u2014 poster competition for The Comedy of Errors", statement:"", prompt:"Imagine that you are the adjudicator for a poster competition; entries must promote a production of Shakespeare's play, The Comedy of Errors, to a contemporary audience. The entries on Page 2 represent the finalists in the competition. Write a speech in which you announce the first and second prize winners. In your speech you should: explain your judgement, commenting on the visual appeal of the first and second prize winning entries and their effectiveness in promoting a production of this Shakespearean play to a contemporary audience.", year:"2016", type:"Exam"},
+  {id:29, genre:"Proposal", marks:50, title:"Film-making competition entry \u2014 adapting spill simmer falter wither", statement:"", prompt:"Your Transition Year class has decided to enter a film-making competition. Entries must be based on an extract from a novel and portray aspects of contemporary Irish life. Your class's entry is based on the above extract from Sara Baume's novel, spill simmer falter wither. Write the text for your class's competition entry in which you: identify the elements in the above extract that you think make it suitable for filming, and outline the aspects of contemporary Irish life the passage portrays that you would like to capture in your film.", year:"2016", type:"Exam"},
+  {id:30, genre:"Blog / Online", marks:50, title:"Blog post \u2014 campaigning against public spending on space exploration", statement:"", prompt:"Imagine that you are an American citizen and you have just listened to President Obama's speech above. You are opposed to the amount of public money committed by the President for space exploration and decide to mount an online campaign against this expenditure. Write a post for your blog in which you: give your reasons for opposing the spending of so much public money in this way, and propose how you think these public funds could be better spent.", year:"2016", type:"Exam"},
+  {id:31, genre:"Letter", marks:50, title:"Letter to the Principal \u2014 a case for a graduation ceremony", statement:"", prompt:"Your school Principal has decided not to hold any graduation ceremony for the Leaving Certificate Class of 2015. The school's Student Council disagrees with this decision. As Chairperson of the Student Council you have been asked to write a letter to the Principal, in which you: express the students' dissatisfaction with this decision and make a case for holding a graduation event. Write the letter you would submit to the Principal.", year:"2015", type:"Exam"},
+  {id:32, genre:"Article", marks:50, title:"Website article \u2014 the characteristics of a genre, advice for young writers", statement:"", prompt:"The writing group, to which you belong, has decided to develop a website, aimed at aspiring young writers. You have been asked to contribute an article on one of the following genres: detective fiction; travel writing; humour; romance; autobiography; the short story. Write the article you would contribute, discussing at least two important characteristics of your chosen genre and offering advice to young people wishing to engage in this type of writing.", year:"2015", type:"Exam"},
+  {id:33, genre:"Introduction", marks:50, title:"Introduction to a collection of young people's writing about older people", statement:"", prompt:"Write the introduction for a collection of writing (e.g. poems, stories and articles) by young people about older people. In it you should: discuss the importance of older people, such as grandparents, in the lives of young people today and the contribution made by older people to society in general.", year:"2015", type:"Exam"},
+  {id:34, genre:"Radio / Podcast", marks:50, title:"Radio news report \u2014 the disappearance of Dell Parsons", statement:"", prompt:"Imagine that the story of the disappearance of Dell Parsons, outlined in Text 1 above, has captured the public's imagination. You are a reporter with a national radio station. Write the text of a news report, on the Dell Parsons story, to be delivered on the station's main evening news bulletin. In your report you should: communicate the facts of the case as known (based on Text 1) and further speculate as to Dell's whereabouts and possible developments in the story.", year:"2014", type:"Exam"},
+  {id:35, genre:"Speech / Talk", marks:50, title:"Talk to your class \u2014 the influences on young people's lives", statement:"", prompt:"The above text is based on a series of public lectures delivered by various writers on the topic of influence. Young people today are subject to many influences. Write the text of a talk you would deliver to your class in which you consider: some of the positive and negative influences on young people's lives today and how they respond to these influences.", year:"2014", type:"Exam"},
+  {id:36, genre:"Letter", marks:50, title:"Letter inviting a well-known person to contribute a childhood object", statement:"", prompt:"Inspired by Seamus Heaney's essay about the importance of objects from the past, your class has decided to organise an exhibition celebrating the significance of objects from childhood in the lives of well-known people. Write the letter you would send to a well-known person, inviting him or her to contribute an object from his or her childhood and a written explanation regarding its personal significance. In your letter, you should: explain the inspiration for the project and include, as an example, a piece you have written about an object from your childhood that is of significance to you.", year:"2014", type:"Exam"},
+  {id:37, genre:"Speech / Talk", marks:50, title:"Talk to your class \u2014 Television and radio in the lives of young people", statement:"Television and radio in the lives of young people today", prompt:"You have been asked to give a talk to your class entitled: Television and radio in the lives of young people today. Write the text of the talk you would deliver, in which you consider the role of television and radio in the lives of young people today.", year:"2013", type:"Exam"},
+  {id:38, genre:"Introduction", marks:50, title:"Introduction to a book celebrating ordinary, 'un-heroic' people", statement:"", prompt:"Your class has decided to produce a book about 'un-heroic' or ordinary people as a fund-raiser for a local charity. Write the text for the introduction of this book, in which you: explain the purpose of the book and why your class thinks it is important to celebrate ordinary people.", year:"2013", type:"Exam"},
+  {id:39, genre:"Letter", marks:50, title:"Personal letter to Margaret Laurence \u2014 your home place", statement:"", prompt:"Write a letter to Margaret Laurence, in response to Text 1, commenting on: what you find interesting in the extract, and telling her about your home place and its impact on you.", year:"2012", type:"Exam"},
+  {id:40, genre:"Proposal", marks:50, title:"Proposal \u2014 a person or event that should be commemorated", statement:"", prompt:"Write a proposal, to be submitted to the relevant authority (e.g. local council or national body), suggesting one event or person you believe should be commemorated. In your proposal you should: explain why you feel this person or event should be commemorated and suggest what form this commemoration might take.", year:"2012", type:"Exam"},
+  {id:41, genre:"Article", marks:50, title:"Persuasive article (school website) \u2014 school outings and trips", statement:"", prompt:"Your school's Student Council is currently discussing the issue of school outings, educational trips, theatre visits, etc. Write a persuasive article for your school website supporting or opposing such events.", year:"2012", type:"Exam"},
+  {id:42, genre:"Article", marks:50, title:"Feature article (travel magazine) \u2014 a place you've never visited", statement:"", prompt:"Places one has never visited often hold a certain mystery or fascination. Write a feature article for a travel magazine about a place you have never been to but would like to visit. In your article: explain what you find fascinating about this place and why you would like to go there.", year:"2011", type:"Exam"},
+  {id:43, genre:"Speech / Talk", marks:50, title:"Talk to your School Book Club \u2014 the enduring appeal of the mysterious", statement:"", prompt:"Write a talk, to be delivered to your School Book Club, on the enduring appeal of the mysterious in books, films, etc. You might refer to some of the following aspects of the mystery genre in your answer: setting, tension, suspense, dialogue, characterisation, atmosphere, music, special effects, etc.", year:"2011", type:"Exam"},
+  {id:44, genre:"Diary / Reflection", marks:50, title:"Two diary entries \u2014 as Sarah, before and after the journey to Dublin", statement:"", prompt:"Imagine you are Sarah, the young girl in Text 3 above. Based on your reading of this extract, write two diary entries, one shortly before and one shortly after your journey to Dublin.", year:"2011", type:"Exam"},
+  {id:45, genre:"Dialogue / Interview", marks:50, title:"Interview (Q&A) \u2014 your youth and the road to future success", statement:"Early-in-life experience has been central to me", prompt:"\"Early-in-life experience has been central to me.\" Imagine yourself fifty years from now. You have achieved great success and public recognition in your chosen career. Write the text of an interview (questions and answers) about the experiences and influences in your youth that contributed to your later success.", year:"2010", type:"Exam"},
+  {id:46, genre:"Letter", marks:50, title:"Letter to future generations \u2014 your hopes for Earth in 2050", statement:"", prompt:"\"So I want to end as I began, with a vision of two futures \u2026\" Write a letter (dated June 2010), intended to be read by future generations, in which you express your hopes for planet Earth in the year 2050.", year:"2010", type:"Exam"},
+  {id:47, genre:"Radio / Podcast", marks:50, title:"Short radio talk \u2014 the importance of books in your life and the world", statement:"", prompt:"\"books are forbidden\u2026\" Write the text for a short radio talk where you explain the importance of books in your life and in today's world.", year:"2010", type:"Exam"}
+];
+
+const POETRY_Q = [
+  {poet:"Derek Mahon", statement:"Mahon\u2019s evocative imagery conveys thematic concerns that are haunted by suggestions of darkness and anxiety.", instruction:"Discuss the extent to which you agree or disagree with the above statement, developing your response with reference to the poems by Derek Mahon on your Leaving Certificate English course.", year:"2023", type:"Exam"},
+  {poet:"Derek Mahon", statement:"", instruction:"To what extent do you think an audience\u2019s appreciation of both Mahon\u2019s language and thematic concerns would be enhanced if his poetry was read aloud? Develop your response with reference to the poetry of Derek Mahon on your Leaving Certificate English course.", year:"2025", type:"Exam", scheme:[
+    "Mahon\u2019s language and thematic concerns can be heightened by the control and modulation of tone \u2013 ironic / poignant / provocative / frustrated / accusatory / philosophical / nostalgic / ambivalent.",
+    "Thematic concerns can be amplified by an emphasis on the emotional intensity / impassioned nature of his poetry.",
+    "Dramatic / chilling / nightmarish imagery can be magnified through aural delivery to convey its thought-provoking / entrenched views of his central themes.",
+    "Emphasis on contrast / repetition when reading his poetry aloud exposes his clever use of language and thematic concerns.",
+    "Reading aloud does / does not enhance Mahon\u2019s use of personae / rhyme / rhythm / sibilance / onomatopoeia / mood / atmosphere, etc."
+  ]},
+
+  {poet:"Elizabeth Bishop", statement:"Bishop\u2019s carefully judged use of language aids the reader to uncover the intensity of feeling in her poetry.", instruction:"To what extent do you agree or disagree with the above statement? Support your answer with reference to the poetry of Elizabeth Bishop on your course.", year:"2013", type:"Exam"},
+  {poet:"Elizabeth Bishop", statement:"Bishop uses highly detailed observation, of people, places and events, to explore unique personal experiences in her poetry.", instruction:"Discuss this statement with reference to poems you have studied.", year:"2016", type:"Exam"},
+  {poet:"Elizabeth Bishop", statement:"From the poetry of Elizabeth Bishop that you have studied, select the poems that, in your opinion, best demonstrate her skilful use of language and imagery to confront life\u2019s harsh realities.", instruction:"Justify your selection showing how she uses language and imagery to confront harsh realities.", year:"2017", type:"Exam"},
+  {poet:"Elizabeth Bishop", statement:"Bishop makes skilful use of a variety of poetic techniques to produce poems that are often analytical but rarely emotional.", instruction:"Discuss the extent to which you agree or disagree with the above statement. Develop your response with reference to the poems by Elizabeth Bishop on your course.", year:"2019", type:"Exam"},
+
+  {poet:"Emily Dickinson", statement:"", instruction:"Discuss how Dickinson\u2019s unique approach to language, and the balance between beauty and horror in her imagery, help to relieve some of the darker aspects of her poetry. Develop your response with reference to the poems by Emily Dickinson on your course.", year:"2020", type:"Exam"},
+  {poet:"Emily Dickinson", statement:"Emily Dickinson\u2019s effective use of a vivid and energetic style helps to convey her fascination with life and its rich experiences.", instruction:"Discuss the extent to which you agree or disagree with the above statement, developing your response with reference to the poems by Emily Dickinson on your Leaving Certificate English course.", year:"2022", type:"Exam"},
+  {poet:"Emily Dickinson", statement:"Dickinson\u2019s style allows her to explore the complexity of a variety of abstract ideas in a concrete and accessible manner.", instruction:"Discuss this statement developing your response with reference to the poetry by Emily Dickinson on your Leaving Certificate English course.", year:"2024", type:"Exam"},
+
+  {poet:"John Donne", statement:"Donne makes effective use of inventive and paradoxical language to explore the human condition in his poetry.", instruction:"Discuss this statement with reference to the poetry by John Donne on your Leaving Certificate English course.", year:"2023", type:"Exam"},
+
+  {poet:"Patrick Kavanagh", statement:"", instruction:"How successfully, in your opinion, does Kavanagh employ both a lyrical style and a celebratory tone to elevate the mundane realism of life in his work? Develop your response with reference to the poetry by Patrick Kavanagh on your Leaving Certificate English course.", year:"2023", type:"Exam"},
+  {poet:"Patrick Kavanagh", statement:"Kavanagh\u2019s discerning use of simple language allows him to produce powerful insights into the world of nature and human nature, both drawn from a parochial perspective.", instruction:"Discuss this statement, developing your response with reference to the poetry of Patrick Kavanagh on your Leaving Certificate English course.", year:"2025", type:"Exam"},
+
+  {poet:"Paula Meehan", statement:"Meehan employs vibrant and forceful language skilfully to challenge the often-oppressive forces identified in her poetry.", instruction:"Discuss the extent to which you agree or disagree with the above statement, developing your response with reference to the poems by Paula Meehan on your Leaving Certificate English course.", year:"2023", type:"Exam"},
+
+  {poet:"W. B. Yeats", statement:"Yeats\u2019s poetry is both intellectually stimulating and emotionally charged.", instruction:"Discuss the extent to which you agree or disagree with the above statement. Develop your response with reference to the themes and language evident in the poems by W. B. Yeats on your course.", year:"2019", type:"Exam"},
+  {poet:"W. B. Yeats", statement:"Yeats makes masterful use of aesthetically pleasing language to communicate the insights he draws from history, myth and legend.", instruction:"To what extent do you agree or disagree with the above statement, developing your response with reference to the poems by W.B. Yeats on your Leaving Certificate English Course.", year:"2022", type:"Exam"},
+  {poet:"W. B. Yeats", statement:"Yeats utilises powerful imagery to explore fascinating contradictions that are central to his poetry.", instruction:"Discuss this statement developing your response with reference to the poetry by W.B. Yeats on your Leaving Certificate English course.", year:"2024", type:"Exam"},
+  {poet:"Eavan Boland", statement:"Boland’s skilful use of evocative imagery in her poetry allows her to explore the complex nature of powerlessness.", instruction:"Discuss this statement, developing your response with reference to the poetry of Eavan Boland on your Leaving Certificate English course.", year:"2025", type:"Exam", prescribed:false},
+  {poet:"T. S. Eliot", statement:"Eliot’s clever use of imagery is essential to his vivid portrayal of a morally bankrupt and futile world.", instruction:"Discuss this statement, developing your response with reference to the poetry of T.S. Eliot on your Leaving Certificate English course.", year:"2025", type:"Exam", prescribed:false},
+  {poet:"Tracy K. Smith", statement:"In her poetry Smith makes effective use of tone, to heighten a variety of thought-provoking questions about the nature of our lives.", instruction:"Discuss this statement, developing your response with reference to the poetry of Tracy K. Smith on your Leaving Certificate English course.", year:"2025", type:"Exam", prescribed:false},
+  {poet:"Eiléan Ní Chuilleanáin", statement:"Ní Chuilleanáin uses evocative imagery to produce poems that often reveal meaningful insights about the nature of life.", instruction:"Discuss this statement developing your response with reference to the poetry by Eiléan Ní Chuilleanáin on your Leaving Certificate English course.", year:"2024", type:"Exam", prescribed:false},
+  {poet:"Sylvia Plath", statement:"The dramatic imagery we encounter in Plath’s poetry reveals her to be an insightful social commentator.", instruction:"Discuss this statement developing your response with reference to the poetry by Sylvia Plath on your Leaving Certificate English course.", year:"2024", type:"Exam", prescribed:false},
+  {poet:"Seamus Heaney", statement:"Heaney uses a deceptively simple style to convey profound observations about people and places.", instruction:"Discuss this statement developing your response with reference to the poetry by Seamus Heaney on your Leaving Certificate English course.", year:"2024", type:"Exam", prescribed:false},
+  {poet:"Adrienne Rich", statement:"A powerful sense of sadness is conveyed in Rich’s poetry through her exposure of the flawed nature of our existence.", instruction:"To what extent do you agree or disagree with the above statement? You should refer to both the language and the themes in the poetry by Adrienne Rich on your Leaving Certificate English course.", year:"2023", type:"Exam", prescribed:true},
+  {poet:"Brendan Kennelly", statement:"Brendan Kennelly effectively employs an appealing descriptive style to reflect on the triumphs, trials and limitations of the human condition.", instruction:"To what extent do you agree or disagree with the above statement? Develop your response with reference to the poems by Brendan Kennelly on your Leaving Certificate English course.", year:"2022", type:"Exam", prescribed:false},
+  {poet:"Adrienne Rich", statement:"", instruction:"To what extent do you agree or disagree that Adrienne Rich makes effective use of a diverse range of imagery and an engaging style to explore structures and values in society which she considers to be negative or destructive? Develop your response with reference to the poems by Adrienne Rich on your Leaving Certificate English course.", year:"2022", type:"Exam", prescribed:true},
+  {poet:"William Wordsworth", statement:"William Wordsworth’s poetry does not have current appeal because his poetic style and use of language are dated and his themes are irrelevant in the twenty-first century.", instruction:"Discuss the extent to which you agree or disagree with the above statement, developing your response with reference to the poems by William Wordsworth on your Leaving Certificate English course.", year:"2022", type:"Exam", prescribed:false},
+  {poet:"Eavan Boland", statement:"", instruction:"Discuss how successfully, in your opinion, Eavan Boland employs a range of narrative elements in her poetry to communicate a variety of thematic concerns. Develop your response with reference to the poems by Eavan Boland on your Leaving Certificate English course.", year:"2021", type:"Exam", prescribed:false},
+  {poet:"John Keats", statement:"Our enjoyment of the sensuous beauty of the poetry of John Keats may be diminished by our awareness of the fear or melancholy often evident in his work.", instruction:"To what extent do you agree or disagree with the above statement? Develop your response with reference to the poems by John Keats on the Leaving Certificate English course.", year:"2021", type:"Exam", prescribed:false},
+  {poet:"Seamus Heaney", statement:"Seamus Heaney transforms the familiar and the mundane through his powerful use of language, thereby enabling us to learn a range of profound lessons from his poetry.", instruction:"Discuss the above statement, developing your response with reference to your experience of the poems by Seamus Heaney on your Leaving Certificate English course.", year:"2021", type:"Exam", prescribed:false},
+  {poet:"Sylvia Plath", statement:"", instruction:"Discuss how successfully, in your opinion, Sylvia Plath uses stylistic features in an innovative way to convey both overwhelming wonder and unsettling menace in her work. Develop your response with reference to the poems by Sylvia Plath on your Leaving Certificate English course.", year:"2021", type:"Exam", prescribed:false},
+  {poet:"Paul Durcan", statement:"Durcan makes effective use of tone or mood to express his emotions, thereby amplifying his various thematic concerns.", instruction:"Discuss the above statement, developing your response with reference to your experience of the poetry by Paul Durcan on your Leaving Certificate English course.", year:"2021", type:"Exam", prescribed:false},
+  {poet:"Eavan Boland", statement:"", instruction:"Based on your reading of Boland’s poetry, to what extent is your emotional response to her work heightened by her use of both provocative and evocative imagery? Develop your response with reference to the poems by Eavan Boland on your course.", year:"2020", type:"Exam", prescribed:false},
+  {poet:"Adrienne Rich", statement:"", instruction:"Discuss how Rich makes effective use of a variety of characters, often in dramatic settings, to probe both personal issues and wider social concerns in her poems. Develop your response with reference to the poems by Adrienne Rich on your course.", year:"2020", type:"Exam", prescribed:true},
+  {poet:"William Wordsworth", statement:"", instruction:"Discuss Wordsworth’s use of natural imagery, often in specific settings, to convey insights into the power of memory and the value of reflection. Develop your response with reference to the poetry by William Wordsworth on your course.", year:"2020", type:"Exam", prescribed:false},
+  {poet:"Brendan Kennelly", statement:"", instruction:"Discuss how Kennelly’s sensitive exploration of a range of emotions, and his imaginative use of a variety of characters, help to reveal the humanity intrinsic to his work. Develop your response with reference to the poems by Brendan Kennelly on your course.", year:"2019", type:"Exam", prescribed:false},
+  {poet:"Sylvia Plath", statement:"", instruction:"Discuss how effectively Plath uses a range of images to develop her themes and add drama to her poetry. Develop your response with reference to the poems by Sylvia Plath on your course.", year:"2019", type:"Exam", prescribed:false},
+  {poet:"Robert Frost", statement:"", instruction:"From your study of the poetry of Robert Frost on your course, select the poems that, in your opinion, best demonstrate how the poet helps us to understand the darker aspects of his poetic vision through his effective use of poetic narrative and dramatic scenes. Justify your selection by demonstrating how Robert Frost helps you to understand the darker aspects of his poetic vision through his effective use of poetic narrative and dramatic scenes in the poems you have selected.", year:"2018", type:"Exam", prescribed:false},
+  {poet:"Eiléan Ní Chuilleanáin", statement:"Eiléan Ní Chuilleanáin tells fascinating stories, often examining themes that are relevant to contemporary Ireland, in a style that is both beautiful and mysterious.", instruction:"To what extent do you agree or disagree with this statement? Support your answer with reference to the poetry of Eiléan Ní Chuilleanáin on your course.", year:"2018", type:"Exam", prescribed:false},
+  {poet:"John Montague", statement:"", instruction:"From your study of the poetry of John Montague on your course, select the poems that, in your opinion, best demonstrate his effective use of place, both literal and metaphorical, to explore elements of his personal and cultural identity. Justify your selection by demonstrating Montague’s effective use of place, both literal and metaphorical, to explore elements of his personal and cultural identity in the poems you have selected.", year:"2018", type:"Exam", prescribed:false},
+  {poet:"Philip Larkin", statement:"", instruction:"Philip Larkin wanted his poetry to appeal to “the common reader”, not just academics and professional literary critics. Based on your experience of his poetry, do you think Larkin’s poems hold appeal for “the common reader”? Justify your response by discussing Larkin’s thematic concerns and elements of his poetic style that you think make his work appealing or unappealing to “the common reader”. Support your answer with reference to the poetry by Philip Larkin on your course.", year:"2018", type:"Exam", prescribed:false},
+  {poet:"Eavan Boland", statement:"Boland makes effective use of symbols and metaphors to explore personal experiences and deliver penetrating truths about society.", instruction:"To what extent do you agree or disagree with this statement? Support your answer with reference to the poetry of Eavan Boland on your course.", year:"2017", type:"Exam", prescribed:false},
+  {poet:"John Donne", statement:"Donne’s poetry can be simultaneously playful and challenging both in style and content.", instruction:"To what extent do you agree or disagree with this statement? Support your answer with reference to the poetry of John Donne on your course.", year:"2017", type:"Exam", prescribed:true},
+  {poet:"John Keats", statement:"Keats uses sensuous language and vivid imagery to express a range of profound tensions.", instruction:"To what extent do you agree or disagree with this statement? Support your answer with reference to the poetry of John Keats on your course.", year:"2017", type:"Exam", prescribed:false},
+  {poet:"Emily Dickinson", statement:"Dickinson’s use of an innovative style to explore intense experiences can both intrigue and confuse.", instruction:"Discuss this statement, supporting your answer with reference to the poetry of Emily Dickinson on your course.", year:"2016", type:"Exam", prescribed:true},
+  {poet:"T. S. Eliot", statement:"Eliot frequently creates memorable characters and dramatic settings to convey both his search for meaning in life and his sense of disillusionment.", instruction:"Discuss this statement, supporting your answer with reference to the poetry of T. S. Eliot on your course.", year:"2016", type:"Exam", prescribed:false},
+  {poet:"Paul Durcan", statement:"Durcan takes a narrative approach to explore a variety of issues in poems of great emotional honesty.", instruction:"Discuss this statement, supporting your answer with reference to the poetry of Paul Durcan on your course.", year:"2016", type:"Exam", prescribed:false},
+  {poet:"John Montague", statement:"Montague makes effective use of evocative language to express a profound empathy with others.", instruction:"Discuss this statement, supporting your answer with reference to the poetry of John Montague on your course.", year:"2015", type:"Exam", prescribed:false},
+  {poet:"Robert Frost", statement:"Frost communicates rich insights into human experience using language that is both accessible and appealing.", instruction:"Discuss this statement, supporting your answer with reference to the poetry of Robert Frost on your course.", year:"2015", type:"Exam", prescribed:false},
+  {poet:"Eiléan Ní Chuilleanáin", statement:"Ní Chuilleanáin’s demanding subject matter and formidable style can prove challenging.", instruction:"Discuss this statement, supporting your answer with reference to the poetry of Eiléan Ní Chuilleanáin on your course.", year:"2015", type:"Exam", prescribed:false},
+  {poet:"Thomas Hardy", statement:"Hardy’s poetry is dominated by bleak imagery which overshadows the comforting reflections found in his work.", instruction:"Discuss this statement, supporting your answer with reference to the poetry of Thomas Hardy on your course.", year:"2015", type:"Exam", prescribed:false},
+  {poet:"W. B. Yeats", statement:"Yeats uses evocative language to create poetry that includes both personal reflection and public commentary.", instruction:"Discuss this statement, supporting your answer with reference to both the themes and language found in the poetry of W. B. Yeats on your course.", year:"2014", type:"Exam", prescribed:true},
+  {poet:"Emily Dickinson", statement:"The dramatic aspects of Dickinson’s poetry can both disturb and delight readers.", instruction:"To what extent do you agree or disagree with the above statement? Support your answer with reference to both the themes and language found in the poetry of Emily Dickinson on your course.", year:"2014", type:"Exam", prescribed:true},
+  {poet:"Philip Larkin", statement:"Larkin is a perceptive observer of the realities of ordinary life in poems that are sometimes illuminated by images of lyrical beauty.", instruction:"To what extent do you agree or disagree with the above statement? Support your answer with reference to both the themes and language found in the poetry of Philip Larkin on your course.", year:"2014", type:"Exam", prescribed:false},
+  {poet:"Sylvia Plath", statement:"Plath makes effective use of language to explore her personal experiences of suffering and to provide occasional glimpses of the redemptive power of love.", instruction:"Discuss this statement, supporting your answer with reference to both the themes and language found in the poetry of Sylvia Plath on your course.", year:"2014", type:"Exam", prescribed:false},
+  {poet:"Gerard Manley Hopkins", statement:"Hopkins’ innovative style displays his struggle with what he believes to be fundamental truths.", instruction:"In your opinion, is this a fair assessment of his poetry? Support your answer with suitable reference to the poetry of Gerard Manley Hopkins on your course.", year:"2013", type:"Exam", prescribed:false},
+  {poet:"Derek Mahon", statement:"Mahon uses language and imagery to transform personal observations into universal reflections.", instruction:"Write your response to this statement with reference to the poems by Derek Mahon on your course.", year:"2013", type:"Exam", prescribed:true},
+  {poet:"Sylvia Plath", statement:"Plath’s provocative imagery serves to highlight the intense emotions expressed in her poetry.", instruction:"To what extent do you agree or disagree with this assessment of her poetry? Support your answer with suitable reference to the poetry of Sylvia Plath on your course.", year:"2013", type:"Exam", prescribed:false},
+  {poet:"Thomas Kinsella", statement:"Kinsella’s poetic world is one of darkness and decay, relieved by glimpses of insight and acceptance.", instruction:"To what extent do you agree with this statement? Support your answer with suitable reference to the poetry of Thomas Kinsella on your course.", year:"2012", type:"Exam", prescribed:false},
+  {poet:"Adrienne Rich", statement:"Rich’s poetry communicates powerful feelings through thought-provoking images and symbols.", instruction:"Write your response to this statement with reference to the poems by Adrienne Rich on your course.", year:"2012", type:"Exam", prescribed:true},
+  {poet:"Philip Larkin", statement:"Larkin’s poems often reveal moments of sensitivity which lessen the disappointment and cynicism found in much of his work.", instruction:"To what extent do you agree with this statement? Support your answer with suitable reference to the poetry of Philip Larkin on your course.", year:"2012", type:"Exam", prescribed:false},
+  {poet:"Patrick Kavanagh", statement:"Aspects of Kavanagh’s poetry could be seen as dated and irrelevant, but his unique poetic language has enduring appeal.", instruction:"Do you agree with this assessment of his poetry? Support your points with suitable reference to the poetry of Patrick Kavanagh on your course.", year:"2012", type:"Exam", prescribed:true},
+  {poet:"Emily Dickinson", statement:"Emily Dickinson’s original approach to poetry results in startling and thought-provoking moments in her work.", instruction:"Give your response to the poetry of Emily Dickinson in the light of this statement. Support your points with suitable reference to the poems on your course.", year:"2011", type:"Exam", prescribed:true},
+  {poet:"W. B. Yeats", statement:"Yeats can be a challenging poet to read, both in terms of style and subject matter.", instruction:"To what extent do you agree with this statement? Support your answer with suitable reference to the poetry on your course.", year:"2011", type:"Exam", prescribed:true},
+  {poet:"Robert Frost", statement:"Frost’s simple style is deceptive and a thoughtful reader will see layers of meaning in his poetry.", instruction:"Do you agree with this assessment of his poetry? Write a response, supporting your points with the aid of suitable reference to the poems on your course.", year:"2011", type:"Exam", prescribed:false},
+  {poet:"Eavan Boland", statement:"Boland’s reflective insights are expressed through her precise use of language.", instruction:"Write your response to this statement, supporting your answer with suitable reference to the poetry on your course.", year:"2011", type:"Exam", prescribed:false},
+  {poet:"W. B. Yeats", statement:"Yeats's poetry is driven by a tension between the real world in which he lives and an ideal world that he imagines.", instruction:"Write a response to the poetry of W.B. Yeats in the light of this statement, supporting your points with suitable reference to the poems on your course.", year:"2010", type:"Exam", prescribed:true},
+  {poet:"Adrienne Rich", statement:"Adrienne Rich explores the twin themes of power and powerlessness in a variety of interesting ways.", instruction:"Write a response to the poetry of Adrienne Rich in the light of this statement, supporting your points with suitable reference to the poems on your course.", year:"2010", type:"Exam", prescribed:true},
+  {poet:"Patrick Kavanagh", statement:"", instruction:"In your opinion, is Kavanagh successful in achieving his desire to transform the ordinary world into something extraordinary? Support your answer with suitable reference to the poems on your course.", year:"2010", type:"Exam", prescribed:true},
+  {poet:"T. S. Eliot", statement:"The poetry of T.S. Eliot often presents us with troubled characters in a disturbing world.", instruction:"Write a response to this statement with reference to both the style and the subject matter of Eliot’s poetry. Support your points with suitable reference to the poems on your course.", year:"2010", type:"Exam", prescribed:false},
+  {poet:"Elizabeth Bishop", statement:"Bishop’s precise and measured style enables her to explore a mood that is often troubling and unsettling.", instruction:"Discuss this statement, developing your response with reference to the poetry of Elizabeth Bishop on your Leaving Certificate English course.", year:"2026", type:"Exam", prescribed:true},
+  {poet:"Eiléan Ní Chuilleanáin", statement:"Ní Chuilleanáin’s unique narrative style reveals multiple meanings and enigmatic perspectives.", instruction:"Discuss this statement, developing your response with reference to the poetry of Eiléan Ní Chuilleanáin on your Leaving Certificate English course.", year:"2026", type:"Exam", prescribed:false},
+  {poet:"W. B. Yeats", statement:"Yeats’s powerful language charts his frustrating pursuit of both personal and political ideals.", instruction:"Discuss this statement, developing your response with reference to the poetry of W.B. Yeats on your Leaving Certificate English course.", year:"2026", type:"Exam", prescribed:true},
+  {poet:"Paula Meehan", statement:"Meehan uses language skilfully, to modulate and control the harshness of her critical observations.", instruction:"Discuss this statement developing your response with reference to the poetry of Paula Meehan on your Leaving Certificate English course.", year:"2026", type:"Exam", prescribed:true},
+  {poet:"John Donne", statement:"Donne utilises language that is both cryptic and entertaining in order to explore the complexities of relationships.", instruction:"Discuss this statement, developing your response with reference to the poetry of John Donne on your Leaving Certificate English course.", year:"2026", type:"Exam", prescribed:true},
+];
+
+const COMP_GENRE_META = {
+  "Short story":      {color:"#FF0000", desc:"The language of narration — craft one vivid, controlled incident."},
+  "Personal essay":   {color:"#1f9d55", desc:"Reflective writing — an authentic, individual voice exploring an idea."},
+  "Discursive essay": {color:"#2563eb", desc:"The language of argument — explore a topic, weigh views, stay balanced."},
+  "Descriptive essay":{color:"#b45309", desc:"Aesthetic writing — sustain one mood through precise, sensory language."},
+  "Speech":           {color:"#6a3fe0", desc:"The language of persuasion — address a live audience and move them."},
+  "Article":          {color:"#0891b2", desc:"Feature / opinion writing — pitched at a clear publication and reader."},
+  "Persuasive essay": {color:"#db2777", desc:"The language of persuasion — commit to a side and convince the reader."},
+  "Drama / Dialogue": {color:"#475569", desc:"Dramatic form — reveal character and tension through dialogue."},
+  "Practical guide":  {color:"#475569", desc:"Informative writing — genuinely useful, clearly organised, reader-focused."}
+};
+
+const COMP_GENRE_GUIDE = {
+  "Short story":{
+    rewards:["A clear narrative arc built on ONE central incident — not a sprawling plot.","A distinct, consistent narrative voice and a controlled point of view and tense.","Vivid, selective description — show through detail rather than telling.","A hook in the opening lines and a deliberate, often understated ending."],
+    approach:["Choose a single moment and a turn or revelation; imply the backstory, don’t dump it.","Land the ending on an image, not an explanation. Higher Level rewards craft over twist."]
+  },
+  "Personal essay":{
+    rewards:["An authentic, individual voice — the personality IS the content.","A reflective, exploratory register that moves between anecdote and idea.","A sense of a mind genuinely thinking on the page; honesty, humour, self-awareness.","Light structure that wanders with purpose rather than arguing a thesis."],
+    approach:["Treat the title as a springboard, not a question to answer.","Anchor with 3–4 concrete personal anecdotes and reflect outward from each. Aim for insight."]
+  },
+  "Discursive essay":{
+    rewards:["A balanced, exploratory examination — multiple viewpoints considered fairly.","Clear, logical paragraphing: one idea per paragraph, topic sentence first.","A measured, reasoned register with reference to the wider world.","A thoughtful conclusion that need not pick a single winner."],
+    approach:["Map 4–6 angles before writing; weigh competing views (‘On the one hand… equally…’).","Ground every point in real examples — history, current affairs, society."]
+  },
+  "Descriptive essay":{
+    rewards:["Precise, sensory, evocative language and strong imagery.","One controlling mood or impression sustained throughout.","Careful selection of detail over cataloguing; rhythm and varied sentence length.","Structure by movement — time, space or shifting perspective."],
+    approach:["Decide on ONE dominant impression and make every detail serve it.","No plot needed — the writing itself is the achievement. Frame it (dawn→dusk, a journey)."]
+  },
+  "Speech":{
+    rewards:["Direct address and constant awareness of a listening audience.","A clear stance, signposted argument, and rhetorical devices (questions, triads, repetition).","A strong opening hook and a rousing, memorable close.","Tone fitted to the occasion — debate, conference, campaign, ceremony."],
+    approach:["Open with a story, statistic or provocative question; state your position early.","Build three arguments, acknowledge then dismiss the other side, end on a call to action."]
+  },
+  "Article":{
+    rewards:["A clear sense of the named publication and its readership.","An engaging headline/lead — don’t bury the point in paragraph one.","A distinct voice: informative for features, opinionated for opinion pieces.","A neat structure — strong intro, developed body, deliberate sign-off."],
+    approach:["Decide your publication and write FOR it; match the register the prompt allows.","Blend fact, example and voice; vary paragraph length to keep the reader moving."]
+  },
+  "Persuasive essay":{
+    rewards:["A clear, sustained position committed to from the first line.","A confident, persuasive register with well-chosen evidence and examples.","Rhetorical technique plus anticipation and rebuttal of counter-arguments.","An emphatic, conviction-driven conclusion."],
+    approach:["Order your strongest 3–4 arguments for impact; pair evidence with emotive appeal.","Concede a point, then counter it — then end on certainty."]
+  },
+  "Drama / Dialogue":{
+    rewards:["Convincing, character-revealing dialogue and distinct voices.","A clear dramatic situation with tension, conflict or change.","Effective use of the form — names, stage directions, pacing."],
+    approach:["Set the scene briefly, then let characters reveal themselves through what they say.","Build a small conflict or turn; use the dramatic conventions confidently."]
+  },
+  "Practical guide":{
+    rewards:["A clear, useful, well-organised structure (sections / headings).","An accessible register and a consistent, direct address to the reader.","Genuinely helpful, specific content — not vague generalities.","Tone matched to the audience; information balanced with personality."],
+    approach:["Organise into logical sections and be specific and practical throughout.","Keep an encouraging ‘you’ voice; make it something a reader would actually use."]
+  }
+};
+
+const COMP_THEMES = [
+  {label:"Technology & AI", stems:["technolog","machine","artificial intelligence","digital","invention","online","photographic image","photograph"]},
+  {label:"Identity & self", stems:["identity","national identity","irish character","self-obsessed","outsider","who we are"]},
+  {label:"Society & values", stems:["society","social","values","ethics","moral","decency","community","tolerance","discrimination","stereotyp","progressive","privilege"]},
+  {label:"Ireland", stems:["ireland","irish"]},
+  {label:"Youth & school", stems:["youth","young people","teenager","teenagers","birthday","graduation","leave home","pleasures particular","education","class","second-level"]},
+  {label:"Nature & seasons", stems:["nature","natural world","landscape","season","weather","dawn","dusk","environment","bee"]},
+  {label:"Memory & the past", stems:["memory","memories","past","reflect","nostalg","reunion","ending","faithful companion"]},
+  {label:"Relationships", stems:["friend","family","relationship","neighbour","companion","romance","encounter","strangers","two characters"]},
+  {label:"Truth & influence", stems:["truth","advertising","influential","powerful voices","fashion","figures","democracy","love letter","voting","election"]},
+  {label:"Imagination & art", stems:["imagination","music","song","art","literature","storytelling","dramatic arts","invention","wonder","excitement"]},
+  {label:"Journeys", stems:["journey","travel","train","railway","arrival","strange land","car journey","time-traveller"]},
+  {label:"Crime & mystery", stems:["crime","mystery","detective","secret","ghost","spy","manipulat","confused","disappear"]},
+  {label:"Modern life & privacy", stems:["privacy","modern life","pace of modern","clutter","quietness","personal space","marvels"]},
+  {label:"Choice & adversity", stems:["disappointment","resolution","discouraged","challenge","daunting","struggle","disaster","reckless","decision","indecision","uncertain","freedom","puzzling"]},
+];
+
+const COMP_PCLM = [["P","Purpose","30"],["C","Coherence","30"],["L","Language","30"],["M","Mechanics","10"]];
+
+const QB_GENRE_META = {
+  "Article":             {color:"#0891b2", desc:"Feature / opinion / editorial — pitched at a named publication and its reader."},
+  "Letter":              {color:"#FF0000", desc:"Personal, formal or open — layout, greeting and register do half the work."},
+  "Speech / Talk":       {color:"#6a3fe0", desc:"A live address — direct address, a clear stance and a rousing close."},
+  "Radio / Podcast":     {color:"#b45309", desc:"Scripted for the ear — a warm, spoken voice with a clear listener in mind."},
+  "Diary / Reflection":  {color:"#1f9d55", desc:"A private, reflective voice — feeling first, shaped by honest hindsight."},
+  "Introduction":        {color:"#2563eb", desc:"Frame a collection — sell its value and guide the reader inside."},
+  "Proposal":            {color:"#db2777", desc:"Make a case to a body — concerns, a concrete plan, and persuasion."},
+  "Blog / Online":       {color:"#475569", desc:"An online voice — personal, direct, and alert to its readers."},
+  "Dialogue / Interview":{color:"#0d9488", desc:"Two voices on the page — distinct, character-revealing speech."}
+};
+
+const QB_GENRE_GUIDE = {
+  "Article":{
+    rewards:["A clear sense of the named publication and its readership.","An engaging title and lead — the point isn't buried in paragraph one.","A distinct voice: informative for features, opinionated for opinion pieces.","Every task bullet addressed within a neat intro–body–sign-off shape."],
+    approach:["Decide the publication and write FOR it; match the register the prompt allows.","Blend fact, example and voice; vary paragraph length to keep the reader moving."]
+  },
+  "Letter":{
+    rewards:["Correct layout and register for the type — personal warmth vs formal restraint.","Greeting, sign-off and tone all consistent with the relationship and purpose.","A clear sense of the named recipient shaping every line.","All three task bullets covered without losing the letter's natural voice."],
+    approach:["Name the type (personal / formal / open) and pitch the register to the reader.","Open with why you're writing; close with the right sign-off for that relationship."]
+  },
+  "Speech / Talk":{
+    rewards:["Constant, direct address — the listener is never forgotten ('you', 'we', 'imagine…').","A clear role and stance suited to the occasion (team-talk, pitch, ceremony, debate).","Rhetorical craft — triads, repetition, rhetorical questions, a strong hook and close.","All three task bullets covered, in balance, in a live spoken register."],
+    approach:["Fix the audience and occasion first; open on a hook and state your purpose early.","Build each bullet into a movement, then end on a rousing, memorable line."]
+  },
+  "Radio / Podcast":{
+    rewards:["A spoken-word register written for the ear — warm, clear, conversational.","Clear awareness of the programme or series and the listener tuning in.","Signposting and pacing that work when heard rather than read.","All three task bullets covered in a sustained broadcast voice."],
+    approach:["Greet the listener and name the show; keep your sentences speakable.","Move through the bullets like segments, then sign off to the mic."]
+  },
+  "Diary / Reflection":{
+    rewards:["A private, honest, first-person voice — feelings as well as events.","Genuine reflection: hindsight, second thoughts, a mind making sense of things.","A clear sense of the moment(s) in time the writing is set in.","All three task bullets covered while keeping the intimate, reflective register."],
+    approach:["Write to yourself, not an audience; let feeling and thought lead the events.","Anchor in a moment, recall it vividly, then reflect on what it means now."]
+  },
+  "Introduction":{
+    rewards:["A warm, curatorial voice that sells the collection and its value.","A clear sense of the collection's readers and what they will gain.","Each task bullet woven into an inviting overview, not a flat list.","A close that hands the reader confidently into the book."],
+    approach:["Open on why this collection matters; keep the tone inviting, not academic.","Cover the bullets, then end on a line that sends the reader inward."]
+  },
+  "Proposal":{
+    rewards:["A clear sense of the body or authority being addressed and your standing.","Concerns, a concrete plan and persuasion — practical and reasoned throughout.","A measured, confident register that makes the case without hectoring.","All three task bullets covered, ending on a clear ask or next step."],
+    approach:["Frame the problem, set out a specific plan, and show its benefit.","Stay practical and persuasive; finish with exactly what you want the body to do."]
+  },
+  "Blog / Online":{
+    rewards:["A personal, direct online voice that knows its platform and readers.","A punchy opening and a shape that suits quick online reading.","Opinion and personality balanced with real substance, not just venting.","All task bullets covered in a sustained, web-native register."],
+    approach:["Open with a hook, write in a first-person voice, and stay readable.","Cover the bullets, then close on a line that invites a response."]
+  },
+  "Dialogue / Interview":{
+    rewards:["Distinct, character-revealing voices — you can hear who is speaking.","A clear situation with development, tension or a genuine exchange of views.","Confident use of the form (names, Q&A or script layout, pacing).","All task bullets covered, with a convincing turn or conclusion."],
+    approach:["Give each voice its own register; let them reveal themselves as they speak.","Develop both sides, then land a concession, revelation or resolution."]
+  }
+};
+
+const QB_THEMES = [
+  {label:"Place & home", stems:["home","homeplace","hometown","place of historic","local area","tidy towns","neighbour","ireland","village","returning home","locality"]},
+  {label:"Technology & media", stems:["technology","online","internet","social media","website","blog","podcast","radio","film","news report","censorship","book burning","book-burning","press"]},
+  {label:"Youth & education", stems:["school","student","graduation","education","young people","young writers","advice","class","yearbook","principal","childhood"]},
+  {label:"Sport & competition", stems:["sport","team","match","competition","underdog","prize","pitch","championship","winner","contest"]},
+  {label:"Arts, books & music", stems:["poetry","poem","fiction","detective","book","reading","literature","music","romance","genre","collection","introduction","novel","writing","song","story","shakespeare"]},
+  {label:"Society & values", stems:["ethics","morality","animal rights","censorship","values","commemorat","statue","discrimination","justice","inequality","society","democracy","tradition"]},
+  {label:"Environment & future", stems:["earth","planet","future generations","2050","space exploration","uninhabitable","environment","worldview","future"]},
+  {label:"Memory & reflection", stems:["reflect","reflection","memory","childhood","influence","perspective","experience","diary","journal","insight","resolution"]},
+  {label:"Travel & journeys", stems:["travel","journey","london","dublin","ferry","fascination","visit","abroad","arrival","countries"]},
+  {label:"Persuasion & debate", stems:["motion","debate","opinion piece","open letter","persuasive","campaign","challenge","argument","criticism","review","proposal","viewpoint","contentious"]},
+];
+
+const QB_PCLM = [["P","Purpose","15"],["C","Coherence","15"],["L","Language","15"],["M","Mechanics","5"]];
+
+const QB_SCAFFOLDS = {
+  "Speech / Talk":"SPEECH / TALK — PLAN\n• Audience & occasion:\n• My role / stance:\n• Opening hook (story, question, direct address):\n• Task point 1 (from the bullets):\n• Task point 2:\n• Task point 3:\n• Rhetorical devices (triads, repetition, rhetorical Qs):\n• Rousing close / call to action:",
+  "Article":"ARTICLE — PLAN\n• Publication & reader:\n• Headline / title:\n• Lead (opening lines that hook):\n• Task point 1:\n• Task point 2:\n• Task point 3:\n• Register (serious / light / opinionated):\n• Deliberate sign-off:",
+  "Letter":"LETTER — PLAN\n• Type (personal / formal / open) & recipient:\n• Address & greeting (Dear …):\n• Opening — why I'm writing:\n• Task point 1:\n• Task point 2:\n• Task point 3:\n• Register & tone for this reader:\n• Sign-off (Yours sincerely / faithfully / warmly):",
+  "Diary / Reflection":"DIARY / REFLECTION — PLAN\n• Voice & moment(s) in time:\n• Feelings on the surface right now:\n• Task point 1 (recall / describe):\n• Task point 2 (analyse / reflect):\n• Task point 3 (lesson / changed view):\n• Honest, private register — show the thinking:\n• A closing reflection that lands:",
+  "Radio / Podcast":"RADIO / PODCAST — PLAN\n• Programme / series & listener:\n• Spoken-word intro (greet the listener):\n• Task point 1:\n• Task point 2:\n• Task point 3:\n• Conversational, 'for the ear' register:\n• Sign-off to the mic:",
+  "Introduction":"INTRODUCTION — PLAN\n• The collection & its readers:\n• Why this collection matters (the hook):\n• Task point 1:\n• Task point 2:\n• Task point 3:\n• Warm, inviting, curatorial voice:\n• A line that sends the reader in:",
+  "Proposal":"PROPOSAL — PLAN\n• Body addressed & my standing:\n• The problem / opportunity:\n• Task point 1 (concerns):\n• Task point 2 (the concrete plan):\n• Task point 3 (bringing others on board):\n• Measured, persuasive, practical register:\n• Clear ask / next step:",
+  "Blog / Online":"BLOG / ONLINE POST — PLAN\n• Platform & audience:\n• Punchy opening line:\n• Task point 1:\n• Task point 2:\n• Task point 3:\n• Personal, direct, online voice:\n• A close that invites a response:",
+  "Dialogue / Interview":"DIALOGUE / INTERVIEW — PLAN\n• The two voices & their positions:\n• Setting / framing line:\n• Exchange 1 (develop side A):\n• Exchange 2 (develop side B):\n• The turn (concession / revelation):\n• Distinct, character-revealing speech:\n• A convincing close:"
+};
+
+const PO_THEMES = [
+  {label:"Imagery", stems:["imag"]},
+  {label:"Language", stems:["language"]},
+  {label:"Style", stems:["style","stylistic"]},
+  {label:"Tone & mood", stems:["tone","mood","atmosphere"]},
+  {label:"Emotion", stems:["emotion","feeling","passion","impassioned"]},
+  {label:"Nature", stems:["nature","natural"]},
+  {label:"Place & identity", stems:["place","setting","landscape","parochial","identity","cultural"]},
+  {label:"Memory & past", stems:["memory","memories","past","reflect","nostalg"]},
+  {label:"Darkness", stems:["dark","death","bleak","menace","horror","melanchol","disturb","sad"]},
+  {label:"Society", stems:["society","social","political","power"]},
+  {label:"Narrative", stems:["narrative","story","stories","dramatic","character"]},
+  {label:"Insight & truth", stems:["insight","truth","profound","meaning","reveal"]},
+];
+
+const PO_PRESCRIBED_BY_YEAR = {"2026":["bishop","dickinson","donne","kavanagh","mahon","meehan","ni chuilleanain","rich","yeats"],"2025":["boland","dickinson","eliot","hopkins","kavanagh","mahon","plath","smith"],"2024":["dickinson","donne","heaney","hopkins","meehan","ni chuilleanain","plath","yeats"],"2023":["bishop","dickinson","donne","kavanagh","mahon","meehan","rich","yeats"],"2022":["bishop","dickinson","keats","kennelly","lawrence","rich","wordsworth","yeats"],"2021":["bishop","boland","durcan","frost","heaney","hopkins","keats","plath"],"2020":["boland","dickinson","rich","wordsworth","bishop","kennelly","yeats","lawrence"],"2019":["bishop","heaney","hopkins","kennelly","lawrence","ni chuilleanain","plath","yeats"],"2018":["boland","durcan","frost","hopkins","keats","larkin","montague","ni chuilleanain"],"2017":["bishop","boland","donne","durcan","eliot","hopkins","keats","plath"],"2016":["bishop","dickinson","durcan","eliot","larkin","ni chuilleanain","plath","yeats"],"2015":["dickinson","donne","frost","hardy","montague","ni chuilleanain","plath","yeats"],"2014":["bishop","dickinson","heaney","kinsella","larkin","plath","mahon","yeats"],"2013":["bishop","hopkins","kinsella","mahon","plath","rich","shakespeare","wordsworth"],"2012":["boland","frost","heaney","kavanagh","kinsella","larkin","plath","rich"],"2011":["boland","dickinson","frost","hopkins","kavanagh","rich","wordsworth","yeats"],"2010":["boland","eliot","kavanagh","keats","longley","rich","walcott","yeats"]};
+
+const PO_POEMS_BY_POET = {
+  "Derek Mahon": [
+    {title:"Grandfather", url:"https://app.grinds360.ie/hub/skillsbase/learningmodule/67fd1dab0554b2440a7be3d6/Derek%2520Mahon%2520%257C%2520Grandfather%2520(Higher%2520%2526%2520Ordinary)"},
+    {title:"A Disused Shed in Co Wexford", url:"https://app.grinds360.ie/hub/skillsbase/learningmodule/67dbe7f1a7a7cfddd9a0656c/Derek%2520Mahon%253A%2520A%2520Disused%2520Shed%2520in%2520Co%2520Wexford"},
+    {title:"After the Titanic", url:"https://app.grinds360.ie/hub/skillsbase/learningmodule/66d1ad47c48cb70db72f15d0/Derek%2520Mahon%253A%2520After%2520the%2520Titanic%2520(Higher%2520%2526%2520Ordinary)"},
+    {title:"Antarctica", url:"https://app.grinds360.ie/hub/skillsbase/learningmodule/66d1ad52c48cb70db72f15f1/Derek%2520Mahon%253A%2520Antarctica%2520(Higher%2520%2526%2520Ordinary)"},
+    {title:"Ecclesiastes", url:"https://app.grinds360.ie/hub/skillsbase/learningmodule/66d1ad5ec48cb70db72f1618/Derek%2520Mahon%253A%2520Ecclesiastes"},
+    {title:"As It Should Be", url:"https://app.grinds360.ie/hub/skillsbase/learningmodule/66d1ad69c48cb70db72f163f/Derek%2520Mahon%253A%2520As%2520It%2520Should%2520Be"},
+    {title:"The Chinese Restaurant in Portrush", url:"https://app.grinds360.ie/hub/skillsbase/learningmodule/66d1ad74c48cb70db72f1660/Derek%2520Mahon%253A%2520The%2520Chinese%2520Restaurant%2520in%2520Portrush"},
+    {title:"Rathlin", url:"https://app.grinds360.ie/hub/skillsbase/learningmodule/66d1ad7fc48cb70db72f167d/Derek%2520Mahon%253A%2520Rathlin"},
+    {title:"Kinsale", url:"https://app.grinds360.ie/hub/skillsbase/learningmodule/67fd1c9aff064c446e42a44b/Derek%2520Mahon%2520%257C%2520Kinsale"}
+  ]
+};
+
+POETRY_Q.forEach((q,i)=>{q.id=i; if(q.prescribed===undefined) q.prescribed=true;});
+
+const PO_PRESCRIBED_KEY = {"Derek Mahon":"mahon","Elizabeth Bishop":"bishop","Emily Dickinson":"dickinson","John Donne":"donne","Patrick Kavanagh":"kavanagh","Paula Meehan":"meehan","W. B. Yeats":"yeats","Adrienne Rich":"rich"};
+
+/* ---------- normalise to a common shape ---------- */
+function norm(sec,raw){
+  const group = (raw.genre!==undefined)?raw.genre:raw.poet;
+  return {
+    uid:sec+'-'+raw.id, rid:raw.id, sec, group,
+    year:String(raw.year), type:raw.type||'Exam',
+    statement:raw.statement||'', title:raw.title||'',
+    text:(raw.prompt!==undefined)?raw.prompt:(raw.instruction||''),
+    marks:(raw.marks!=null)?raw.marks:(sec==='composing'?100:sec==='questionb'?50:50),
+    prescribed:raw.prescribed, raw
+  };
+}
+const DATA = {
+  composing: COMPOSING_Q.map(r=>norm('composing',r)),
+  questionb: QB_Q.map(r=>norm('questionb',r)),
+  poetry:    POETRY_Q.map(r=>norm('poetry',r)),
+};
+
+/* ---------- per-section configuration ---------- */
+const SECTIONS = {
+  composing:{key:'composing', tab:'Composing', short:'Composing',
+    paper:'Paper 1 · Section II', marksLabel:'100 marks', accent:'#FF0000',
+    eyebrow:'Leaving Certificate · Higher Level · Paper 1 · Section II — Composing',
+    title:'The Composing Essay', titleEm:'Past Exam Questions',
+    blurb:'Every Section II composing task set by the State Examinations Commission, grouped by genre. One of these is worth 100 marks — a quarter of your whole Leaving Cert English grade. Pick a genre to drill, search a theme, or time a real 80-minute attempt.',
+    groupKind:'genre', meta:COMP_GENRE_META, order:Object.keys(COMP_GENRE_META),
+    guide:COMP_GENRE_GUIDE, themes:COMP_THEMES, pclm:COMP_PCLM, scaffolds:null,
+    timer:80, timerLabel:'Section II<br>≈ 80 min', doneKey:'g360_composing_done',
+    trackerKind:'form', trackerLabel:'Genre tracker', planKind:'scaffold',
+    deckPaper:'Paper 1 · Section II · 100 marks',
+    deckDesc:'The big essay — short story, personal &amp; discursive essays, speech, article and more.'},
+  questionb:{key:'questionb', tab:'Question B', short:'Question B',
+    paper:'Paper 1 · Section I', marksLabel:'50 marks', accent:'#6a3fe0',
+    eyebrow:'Leaving Certificate · Higher Level · Paper 1 · Section I — Question B',
+    title:'The Question B Task', titleEm:'Past Exam Questions',
+    blurb:'Every Question B functional-writing task from the Higher Level Paper 1 comprehension section, grouped by form. Worth 50 marks — and the most controllable mark on the paper, because the chosen form and the bullet-point tasks tell you exactly what the examiner wants.',
+    groupKind:'genre', meta:QB_GENRE_META, order:Object.keys(QB_GENRE_META),
+    guide:QB_GENRE_GUIDE, themes:QB_THEMES, pclm:QB_PCLM, scaffolds:QB_SCAFFOLDS,
+    timer:50, timerLabel:'Question B<br>≈ 50 min', doneKey:'g360_questionb_done',
+    trackerKind:'form', trackerLabel:'Form tracker', planKind:'scaffold',
+    deckPaper:'Paper 1 · Section I · 50 marks',
+    deckDesc:'Functional writing — letters, speeches, articles, diaries, proposals, blogs.'},
+  poetry:{key:'poetry', tab:'Prescribed Poetry', short:'Poetry',
+    paper:'Paper 2 · Section I', marksLabel:'50 marks', accent:'#1f9d55',
+    eyebrow:'Leaving Certificate · Higher Level · Paper 2 · Section I — Prescribed Poetry',
+    title:'Prescribed Poetry', titleEm:'Past Exam Questions',
+    blurb:'Every State Examination essay question set on the prescribed poets. Filter by poet, search a keyword, run a timed practice, and track what you’ve attempted. Switch on “Other poets” to see questions from poets beyond your current list.',
+    groupKind:'poet', meta:null, order:null,
+    guide:null, themes:PO_THEMES, pclm:null, scaffolds:null,
+    timer:50, timerLabel:'Poetry essay<br>≈ 50 min', doneKey:'g360_poetry_done',
+    trackerKind:'poet', trackerLabel:'Appearance tracker', planKind:'mindmap',
+    deckPaper:'Paper 2 · Section I · 50 marks',
+    deckDesc:'The prescribed-poetry essay across your eight examined poets.'},
+};
+const SECORDER = ['composing','questionb','poetry'];
+const ALL = {
+  eyebrow:'Leaving Certificate · Higher Level · English — Master question browser',
+  title:'Every English Question', titleEm:'In one place',
+  blurb:'Composing, Question B and Prescribed Poetry — every past task the State Examinations Commission has set, gathered into a single browser. Search across all three sections at once, or open a section to drill in with themes, a timer, study tips and an appearance tracker.'
+};
+
+/* ---------- progress (kept compatible with the standalone tools) ---------- */
+const done = {};
+SECORDER.forEach(sec=>{
+  let s=new Set();
+  try{const raw=localStorage.getItem(SECTIONS[sec].doneKey); if(raw) s=new Set(JSON.parse(raw));}catch(e){}
+  done[sec]=s;
+});
+function saveDone(sec){try{localStorage.setItem(SECTIONS[sec].doneKey,JSON.stringify([...done[sec]]));}catch(e){}}
+function isDone(q){return done[q.sec].has(q.rid);}
+
+/* ---------- state ---------- */
+const state = { sec:'all', groups:new Set(), prog:'all', sort:'newest', q:'', themes:new Set(), includeOther:false };
+const isAll = ()=>state.sec==='all';
+
+/* ---------- helpers ---------- */
+function esc(s){return (s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+function hexA(hex,a){const h=hex.replace('#','');const r=parseInt(h.slice(0,2),16),g=parseInt(h.slice(2,4),16),b=parseInt(h.slice(4,6),16);return `rgba(${r},${g},${b},${a})`;}
+function gcolor(sec,group){const m=SECTIONS[sec].meta;return (m&&m[group]&&m[group].color)||SECTIONS[sec].accent;}
+function gdesc(sec,group){const m=SECTIONS[sec].meta;return (m&&m[group]&&m[group].desc)||'';}
+function qText(q){
+  if(q.sec==='poetry') return (q.statement+' '+q.text+' '+q.group).toLowerCase();
+  return ((q.title||'')+' '+(q.statement||'')+' '+q.text).toLowerCase();
+}
+function themeHit(q,t){const x=qText(q);return t.stems.some(s=>x.includes(s));}
+function rank(q){return parseInt(q.year,10)*10+(q.type==='Exam'?1:0);}
+function yearSpan(list){const ys=[...new Set(list.map(q=>+q.year))].sort((a,b)=>a-b);return ys[0]+'–'+ys[ys.length-1];}
+
+function highlight(text){
+  const safe=esc(text);
+  if(!state.q)return safe;
+  const terms=state.q.split(/\s+/).filter(Boolean).map(t=>t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'));
+  if(!terms.length)return safe;
+  return safe.replace(new RegExp('('+terms.join('|')+')','gi'),'<mark>$1</mark>');
+}
+
+/* ---------- pools ---------- */
+function inPool(q){ if(q.sec==='poetry') return state.includeOther||q.prescribed; return true; }
+function curData(){return DATA[state.sec];}
+function activeGroups(){
+  const S=SECTIONS[state.sec];
+  if(S.groupKind==='genre') return S.order.filter(g=>curData().some(q=>q.group===g));
+  const pool=curData().filter(inPool);
+  return [...new Set(pool.map(q=>q.group))];
+}
+
+/* ---------- DOM refs ---------- */
+const eyebrowEl=document.getElementById('eyebrow');
+const mastTitle=document.getElementById('mastTitle');
+const mastSub=document.getElementById('mastSub');
+const countsEl=document.getElementById('counts');
+const swEl=document.getElementById('sectionsw');
+const poetsEl=document.getElementById('poets');
+const extrasEl=document.getElementById('extras');
+const themesWrap=document.getElementById('themesWrap');
+const themesEl=document.getElementById('themes');
+const themesToggle=document.getElementById('themesToggle');
+const themeCount=document.getElementById('themeCount');
+const trackerBtn=document.getElementById('trackerBtn');
+const trackerLabel=document.getElementById('trackerLabel');
+const trackerPanel=document.getElementById('trackerPanel');
+const timerEl=document.getElementById('timer');
+const timerhint=document.getElementById('timerhint');
+const deckrow=document.getElementById('deckrow');
+const resultsEl=document.getElementById('results');
+const resultline=document.getElementById('resultline');
+const searchEl=document.getElementById('search');
+
+/* ---------- section switcher ---------- */
+function buildSwitcher(){
+  const tabs=[{key:'all',label:'All sections',dot:'#cdcac4',tag:DATA.composing.length+DATA.questionb.length+DATA.poetry.filter(q=>q.prescribed).length}];
+  SECORDER.forEach(sec=>{
+    const S=SECTIONS[sec];
+    const tag = sec==='poetry'? DATA.poetry.filter(q=>q.prescribed).length : DATA[sec].length;
+    tabs.push({key:sec,label:S.tab,dot:S.accent,tag});
+  });
+  swEl.innerHTML='';
+  tabs.forEach(t=>{
+    const b=document.createElement('button');
+    b.dataset.sec=t.key;
+    b.setAttribute('aria-pressed', state.sec===t.key?'true':'false');
+    b.innerHTML=(t.key==='all'?'':`<span class="swdot" style="background:${t.dot}"></span>`)+`<span>${t.label}</span><span class="swtag">${t.tag}</span>`;
+    b.addEventListener('click',()=>setSection(t.key));
+    swEl.appendChild(b);
+  });
+}
+function refreshSwitcher(){[...swEl.children].forEach(b=>b.setAttribute('aria-pressed', b.dataset.sec===state.sec?'true':'false'));}
+
+/* ---------- masthead + counts ---------- */
+function updateMasthead(){
+  const accent = isAll()? '#FF0000' : SECTIONS[state.sec].accent;
+  document.documentElement.style.setProperty('--acc',accent);
+  if(isAll()){
+    eyebrowEl.textContent=ALL.eyebrow;
+    mastTitle.innerHTML=`${ALL.title}<br><em>${ALL.titleEm}</em>`;
+    mastSub.textContent=ALL.blurb;
+  }else{
+    const S=SECTIONS[state.sec];
+    eyebrowEl.textContent=S.eyebrow;
+    mastTitle.innerHTML=`${S.title}<br><em>${S.titleEm}</em>`;
+    mastSub.textContent=S.blurb;
+  }
+}
+function buildCounts(){
+  let data;
+  if(isAll()){
+    const total=DATA.composing.length+DATA.questionb.length+DATA.poetry.filter(q=>q.prescribed).length;
+    const allYears=[...DATA.composing,...DATA.questionb,...DATA.poetry];
+    data=[[total,'past questions'],['3','exam sections'],[yearSpan(allYears),'exam years']];
+  }else{
+    const S=SECTIONS[state.sec];
+    const list = state.sec==='poetry'? DATA.poetry.filter(q=>q.prescribed) : DATA[state.sec];
+    const groups = state.sec==='poetry'
+      ? [...new Set(list.map(q=>q.group))].length
+      : S.order.filter(g=>DATA[state.sec].some(q=>q.group===g)).length;
+    const glab = state.sec==='poetry'?'prescribed poets':(state.sec==='questionb'?'forms of writing':'genres');
+    data=[[list.length,'past questions'],[groups,glab],[yearSpan(DATA[state.sec]),'exam years']];
+  }
+  countsEl.innerHTML=data.map(d=>`<span class="stat"><span class="num">${d[0]}</span><span class="lab">${d[1]}</span></span>`).join('');
+}
+
+/* ---------- group / section pills ---------- */
+function buildPills(){
+  poetsEl.innerHTML='';
+  if(isAll()){ buildSectionPills(); return; }
+  buildGroupDropdown();
+}
+function buildGroupDropdown(){
+  poetsEl.innerHTML='';
+  const S=SECTIONS[state.sec];
+  const kindLabel = S.groupKind==='poet'?'Poet':(state.sec==='questionb'?'Form of writing':'Genre');
+  const allLabel  = S.groupKind==='poet'?'All poets':'All '+(state.sec==='questionb'?'forms':'genres');
+  const wrap=document.createElement('div');wrap.className='groupwrap';
+  const lab=document.createElement('span');lab.className='glabel';lab.textContent='Filter by '+kindLabel.toLowerCase();
+  const box=document.createElement('div');box.className='gselect';
+  const sel=document.createElement('select');sel.id='groupSelect';
+  sel.setAttribute('aria-label','Filter by '+kindLabel.toLowerCase());
+  const total=curData().filter(inPool).length;
+  const o0=document.createElement('option');o0.value='';o0.textContent=`${allLabel} (${total})`;sel.appendChild(o0);
+  activeGroups().forEach(g=>{
+    const c=curData().filter(q=>q.group===g&&inPool(q)).length; if(!c) return;
+    const other = state.sec==='poetry' && !DATA.poetry.some(q=>q.group===g&&q.prescribed);
+    const o=document.createElement('option');o.value=g;
+    o.textContent=`${g}${other?' · other':''} (${c})`;
+    sel.appendChild(o);
+  });
+  sel.value = state.groups.size ? [...state.groups][0] : '';
+  box.setAttribute('data-active', state.groups.size?'true':'false');
+  sel.addEventListener('change',()=>{
+    state.groups.clear();
+    if(sel.value) state.groups.add(sel.value);
+    box.setAttribute('data-active', state.groups.size?'true':'false');
+    buildThemes(); render();
+  });
+  box.appendChild(sel); wrap.appendChild(lab); wrap.appendChild(box); poetsEl.appendChild(wrap);
+}
+function buildSectionPills(){
+  const all=document.createElement('button');
+  all.className='poet-pill allpill';all.dataset.group='all';
+  all.setAttribute('aria-pressed', state.groups.size===0?'true':'false');
+  const total=DATA.composing.length+DATA.questionb.length+DATA.poetry.filter(q=>q.prescribed).length;
+  all.innerHTML=`<span>All sections</span><span class="tag">${total}</span>`;
+  all.addEventListener('click',()=>{state.groups.clear();refreshPills();render();});
+  poetsEl.appendChild(all);
+  SECORDER.forEach(sec=>{
+    const S=SECTIONS[sec];
+    const c = sec==='poetry'? DATA.poetry.filter(q=>q.prescribed).length : DATA[sec].length;
+    const b=document.createElement('button');b.className='poet-pill';b.dataset.group=sec;
+    b.setAttribute('aria-pressed', state.groups.has(sec)?'true':'false');
+    b.innerHTML=`<span class="gdot" style="background:${S.accent}"></span><span>${S.short}</span><span class="tag">${c}</span>`;
+    b.addEventListener('click',()=>{state.groups.has(sec)?state.groups.delete(sec):state.groups.add(sec);refreshPills();render();});
+    poetsEl.appendChild(b);
+  });
+}
+function refreshPills(){
+  const sel=document.getElementById('groupSelect');
+  if(sel){
+    sel.value = state.groups.size ? [...state.groups][0] : '';
+    const box=sel.closest('.gselect'); if(box) box.setAttribute('data-active', state.groups.size?'true':'false');
+  }
+  [...poetsEl.children].forEach(c=>{
+    const v=c.dataset.group; if(v===undefined) return;
+    c.setAttribute('aria-pressed', v==='all' ? (state.groups.size===0?'true':'false') : (state.groups.has(v)?'true':'false'));
+  });
+}
+
+/* ---------- extras (poetry other-poets switch) ---------- */
+function buildExtras(){
+  extrasEl.innerHTML='';
+  if(state.sec!=='poetry'){extrasEl.hidden=true;return;}
+  extrasEl.hidden=false;
+  const sw=document.createElement('button');
+  sw.className='switch';sw.id='otherToggle';
+  sw.setAttribute('aria-pressed',state.includeOther?'true':'false');
+  sw.innerHTML=`<span class="track"></span><span class="swlabel"><span class="lbl">Other poets</span><span class="hint">include poets not on your current list</span></span>`;
+  sw.addEventListener('click',()=>{
+    state.includeOther=!state.includeOther;
+    sw.setAttribute('aria-pressed',state.includeOther?'true':'false');
+    if(!state.includeOther){[...state.groups].forEach(g=>{ if(!DATA.poetry.some(q=>q.group===g&&q.prescribed)) state.groups.delete(g); });}
+    buildPills();buildThemes();render();
+  });
+  extrasEl.appendChild(sw);
+}
+
+/* ---------- theme chips ---------- */
+themesToggle.addEventListener('click',(e)=>{e.stopPropagation();const open=themesEl.hidden;themesEl.hidden=!open;themesToggle.setAttribute('aria-expanded',open?'true':'false');});
+themesEl.addEventListener('click',e=>e.stopPropagation());
+document.addEventListener('click',()=>{if(!themesEl.hidden){themesEl.hidden=true;themesToggle.setAttribute('aria-expanded','false');}});
+function updateThemeCount(){if(state.themes.size){themeCount.hidden=false;themeCount.textContent=state.themes.size;}else themeCount.hidden=true;}
+function themeBasePool(){
+  return curData().filter(q=>{
+    if(!inPool(q)) return false;
+    if(state.groups.size && !state.groups.has(q.group)) return false;
+    if(state.q){const hay=qText(q)+' '+q.year;if(!state.q.toLowerCase().split(/\s+/).every(t=>hay.includes(t))) return false;}
+    return true;
+  });
+}
+function buildThemes(){
+  if(isAll())return;
+  const THEMES=SECTIONS[state.sec].themes;
+  const pool=themeBasePool();
+  [...state.themes].forEach(lbl=>{const t=THEMES.find(x=>x.label===lbl);if(!t||!pool.some(q=>themeHit(q,t)))state.themes.delete(lbl);});
+  themesEl.innerHTML='';let shown=0;
+  THEMES.forEach(t=>{
+    const c=pool.filter(q=>themeHit(q,t)).length;if(!c)return;shown++;
+    const b=document.createElement('button');b.className='theme-chip';b.dataset.theme=t.label;
+    b.setAttribute('aria-pressed', state.themes.has(t.label)?'true':'false');
+    b.innerHTML=`${esc(t.label)}<span class="n">${c}</span>`;
+    b.addEventListener('click',()=>{state.themes.has(t.label)?state.themes.delete(t.label):state.themes.add(t.label);b.setAttribute('aria-pressed',state.themes.has(t.label)?'true':'false');updateThemeCount();render();});
+    themesEl.appendChild(b);
+  });
+  if(!shown)themesEl.innerHTML='<span style="font-size:12px;color:var(--muted);padding:2px 4px;">No themes for this selection</span>';
+  updateThemeCount();
+}
+
+/* ---------- control visibility per mode ---------- */
+function configureControls(){
+  if(isAll()){
+    themesWrap.hidden=true; extrasEl.hidden=true; trackerBtn.hidden=true; timerEl.hidden=true; deckrow.hidden=true;
+    searchEl.placeholder='Search all three sections — e.g. memory, technology, Ireland, identity…';
+  }else{
+    const S=SECTIONS[state.sec];
+    themesWrap.hidden=false; trackerBtn.hidden=false; timerEl.hidden=false; deckrow.hidden=true;
+    trackerLabel.textContent=S.trackerLabel;
+    searchEl.placeholder = S.groupKind==='poet'
+      ? 'Search by poet, statement or keyword — e.g. imagery, Heaney, nature…'
+      : 'Search every task — e.g. '+(state.sec==='questionb'?'letter, speech, technology, reflection…':'short story, personal essay, Ireland, memory…');
+  }
+}
+
+/* ---------- overview decks (All mode) ---------- */
+function buildDecks(){
+  deckrow.innerHTML='';
+  SECORDER.forEach(sec=>{
+    const S=SECTIONS[sec];
+    const c = sec==='poetry'? DATA.poetry.filter(q=>q.prescribed).length : DATA[sec].length;
+    const d=document.createElement('button');
+    d.className='deck';d.style.setProperty('--dc',S.accent);
+    d.innerHTML=`<span class="dpaper">${S.deckPaper}</span>
+      <p class="dtitle">${S.title}</p>
+      <p class="ddesc">${S.deckDesc}</p>
+      <div class="dfoot"><span class="dcount"><b>${c}</b> past questions</span><span class="dgo">Browse →</span></div>`;
+    d.addEventListener('click',()=>setSection(sec));
+    deckrow.appendChild(d);
+  });
+}
+
+/* ---------- sort + progress segments ---------- */
+function setSeg(id,key,val){document.querySelectorAll('#'+id+' button').forEach(b=>b.setAttribute('aria-pressed',b.dataset[key]===val?'true':'false'));}
+function bindSeg(id,key){document.querySelectorAll('#'+id+' button').forEach(btn=>btn.addEventListener('click',()=>{state[key]=btn.dataset[key];setSeg(id,key,state[key]);render();}));}
+bindSeg('sortSeg','sort');
+bindSeg('progSeg','prog');
+
+/* ---------- search ---------- */
+searchEl.addEventListener('input',()=>{state.q=searchEl.value.trim();if(!isAll())buildThemes();render();});
+
+/* ---------- matching ---------- */
+function matches(q){
+  if(!inPool(q)) return false;
+  if(state.groups.size && !state.groups.has(q.group)) return false;
+  if(state.prog==='done' && !isDone(q)) return false;
+  if(state.prog==='todo' && isDone(q)) return false;
+  if(state.themes.size){const ts=SECTIONS[state.sec].themes.filter(t=>state.themes.has(t.label));if(!ts.some(t=>themeHit(q,t)))return false;}
+  if(state.q){const hay=qText(q)+' '+q.year;return state.q.toLowerCase().split(/\s+/).every(t=>hay.includes(t));}
+  return true;
+}
+function matchesAll(q){
+  if(q.sec==='poetry' && !q.prescribed) return false;
+  if(state.groups.size && !state.groups.has(q.sec)) return false;
+  if(state.prog==='done' && !isDone(q)) return false;
+  if(state.prog==='todo' && isDone(q)) return false;
+  if(state.q){const hay=qText(q)+' '+q.year;return state.q.toLowerCase().split(/\s+/).every(t=>hay.includes(t));}
+  return true;
+}
+
+/* ---------- render ---------- */
+function render(){ isAll()?renderAll():renderSection(); }
+
+function renderSection(){
+  const S=SECTIONS[state.sec];
+  const dir = state.sort==='newest' ? -1 : 1;
+  const filtered=curData().filter(matches);
+  resultsEl.innerHTML='';
+  const totalPool=curData().filter(inPool).length;
+  resultline.innerHTML=`Showing <b>${filtered.length}</b> of ${totalPool} questions`
+    +(state.groups.size?` &middot; <b>${[...state.groups].map(esc).join(', ')}</b>`:'')
+    +(state.prog!=='all'?` &middot; ${state.prog==='done'?'done':'to do'}`:'')
+    +(state.themes.size?` &middot; themes: <b>${[...state.themes].map(esc).join(', ')}</b>`:'')
+    +(state.includeOther?` &middot; incl. other poets`:'')
+    +(state.q?` &middot; matching &ldquo;${esc(state.q)}&rdquo;`:'');
+  if(!filtered.length){
+    resultsEl.innerHTML='<div class="empty"><strong>No questions match.</strong>Try a different keyword or clear the filters.</div>';
+    return;
+  }
+  const groups = S.groupKind==='genre'
+    ? S.order.filter(g=>filtered.some(q=>q.group===g))
+    : activeGroups().filter(g=>filtered.some(q=>q.group===g));
+  groups.forEach(g=>{
+    const items=filtered.filter(q=>q.group===g).sort((x,y)=>(rank(x)-rank(y))*dir);
+    const gc=gcolor(state.sec,g);
+    const sec=document.createElement('section');
+    sec.className='poet-group';sec.style.setProperty('--gc',gc);
+    sec.innerHTML=`<div class="group-head"><h2>${esc(g)}</h2><span class="rule"></span><span class="cnt">${items.length}</span></div>`
+      + (gdesc(state.sec,g)?`<p class="group-desc">${esc(gdesc(state.sec,g))}</p>`:'');
+    const grid=document.createElement('div');grid.className='grid';
+    items.forEach(q=>grid.appendChild(card(q)));
+    sec.appendChild(grid);resultsEl.appendChild(sec);
+  });
+}
+
+function renderAll(){
+  const dir = state.sort==='newest' ? -1 : 1;
+  resultsEl.innerHTML='';
+  let shownSecs=SECORDER.filter(sec=>!state.groups.size||state.groups.has(sec));
+  let total=0;
+  const blocks=shownSecs.map(sec=>{
+    const items=DATA[sec].filter(matchesAll).filter(q=>q.sec===sec).sort((x,y)=>(rank(x)-rank(y))*dir);
+    total+=items.length;return {sec,items};
+  });
+  resultline.innerHTML=`Showing <b>${total}</b> questions across ${shownSecs.length===1?'1 section':shownSecs.length+' sections'}`
+    +(state.groups.size?` &middot; <b>${[...state.groups].map(s=>SECTIONS[s].short).join(', ')}</b>`:'')
+    +(state.prog!=='all'?` &middot; ${state.prog==='done'?'done':'to do'}`:'')
+    +(state.q?` &middot; matching &ldquo;${esc(state.q)}&rdquo;`:'');
+  if(!total){
+    resultsEl.innerHTML='<div class="empty"><strong>No questions match.</strong>Try a different keyword or clear the section filters.</div>';
+    return;
+  }
+  blocks.forEach(({sec,items})=>{
+    if(!items.length)return;
+    const S=SECTIONS[sec];
+    const wrap=document.createElement('section');wrap.className='sec-group';wrap.style.setProperty('--sc',S.accent);
+    wrap.innerHTML=`<div class="secband" style="--sc:${S.accent}"><div><div class="meta">${S.paper} · ${S.marksLabel}</div><h2>${S.tab}</h2></div><span class="cnt">${items.length}</span></div>`;
+    const grid=document.createElement('div');grid.className='grid';
+    items.forEach(q=>grid.appendChild(card(q)));
+    wrap.appendChild(grid);resultsEl.appendChild(wrap);
+  });
+}
+
+/* ---------- cards ---------- */
+function card(q){
+  return q.sec==='poetry'? poetryCard(q) : genreCard(q);
+}
+
+function genreCard(q){
+  const el=document.createElement('article');
+  el.className='qcard'+(isDone(q)?' is-done':'');el.id='c-'+q.uid;
+  const gc=gcolor(q.sec,q.group);
+  const dn=isDone(q);
+  el.innerHTML=`
+    <div class="top">
+      <span class="stamp">${q.year}</span>
+      <span class="toptags"><span class="badge" style="color:${gc};border-color:${gc};background:${hexA(gc,.07)}">${esc(q.group)}</span></span>
+    </div>
+    <div class="body">
+      <p class="ptitle">${highlight(q.title||q.text)}</p>
+      <p class="instr">${highlight(q.text)}</p>
+      <div class="study" id="st-${q.uid}"></div>
+    </div>
+    <div class="foot">
+      <span class="who"><span class="dot" style="background:${gc}"></span>${q.year} · ${q.marks} marks</span>
+      <span class="acts">
+        <button class="icbtn plan" title="Copy a planning scaffold for this form">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="6" cy="19" r="2"/><path d="M9.5 10.5 6.8 7.4M14.5 10.5l2.7-3.1M10.5 14l-3 3.4"/></svg>Plan</button>
+        <button class="icbtn study-toggle" aria-expanded="false" aria-controls="st-${q.uid}" title="What examiners reward for this form, and how to approach it">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Tips</button>
+        <button class="icbtn copy" title="Copy question text">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>Copy</button>
+        <button class="icbtn done-toggle${dn?' done':''}" title="Mark as written">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>${dn?'Written':'Mark written'}</button>
+      </span>
+    </div>`;
+  el.querySelector('.plan').addEventListener('click',()=>planPiece(q));
+  el.querySelector('.copy').addEventListener('click',()=>copyQ(q));
+  el.querySelector('.done-toggle').addEventListener('click',(e)=>toggleDone(q,e.currentTarget,el,'written'));
+  const st=el.querySelector('.study-toggle');
+  st.addEventListener('click',()=>{
+    const panel=el.querySelector('.study');
+    if(!panel.dataset.built){panel.innerHTML=genreStudy(q);panel.dataset.built='1';}
+    const open=panel.classList.toggle('open');
+    st.setAttribute('aria-expanded',open?'true':'false');
+  });
+  return el;
+}
+
+function poetryCard(q){
+  const el=document.createElement('article');
+  el.className='qcard'+(isDone(q)?' is-done':'');el.id='c-'+q.uid;
+  const dn=isDone(q);
+  const quoteHTML=q.statement?`<p class="quote">&ldquo;${highlight(q.statement)}&rdquo;</p>`:'';
+  const poems=PO_POEMS_BY_POET[q.group]||[];
+  const showStudy=poems.length>0;
+  const studyHTML=showStudy?`<div class="study" id="st-${q.uid}"></div>`:'';
+  const studyBtn=showStudy?`<button class="icbtn study-toggle" aria-expanded="false" aria-controls="st-${q.uid}" title="Poems &amp; video walkthroughs for this poet">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Poems</button>`:'';
+  el.innerHTML=`
+    <div class="top">
+      <span class="stamp">${q.year}</span>
+      <span class="toptags">${q.prescribed?'':'<span class="badge other">Other poet</span>'}<span class="badge ${q.type==='Exam'?'exam':'mock'}">${q.type}</span></span>
+    </div>
+    <div class="body">
+      ${quoteHTML}
+      <p class="instr">${highlight(q.text)}</p>
+      ${studyHTML}
+    </div>
+    <div class="foot">
+      <span class="who"><span class="dot"></span>${esc(q.group)} &middot; ${q.year} ${q.type}</span>
+      <span class="acts">
+        <button class="icbtn plan" title="Copy a poetry-essay planning scaffold">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="6" cy="19" r="2"/><path d="M9.5 10.5 6.8 7.4M14.5 10.5l2.7-3.1M10.5 14l-3 3.4"/></svg>Plan essay</button>
+        ${studyBtn}
+        <button class="icbtn copy" title="Copy question text">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>Copy</button>
+        <button class="icbtn done-toggle${dn?' done':''}" title="Mark as attempted">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>${dn?'Done':'Mark done'}</button>
+      </span>
+    </div>`;
+  el.querySelector('.plan').addEventListener('click',()=>planPiece(q));
+  el.querySelector('.copy').addEventListener('click',()=>copyQ(q));
+  el.querySelector('.done-toggle').addEventListener('click',(e)=>toggleDone(q,e.currentTarget,el,'done'));
+  const st=el.querySelector('.study-toggle');
+  if(st){st.addEventListener('click',()=>{
+    const panel=el.querySelector('.study');
+    if(!panel.dataset.built){panel.innerHTML=poetryStudy(q);panel.dataset.built='1';}
+    const open=panel.classList.toggle('open');
+    st.setAttribute('aria-expanded',open?'true':'false');
+  });}
+  return el;
+}
+
+/* ---------- study panels ---------- */
+function genreStudy(q){
+  const S=SECTIONS[q.sec];const g=S.guide[q.group];if(!g)return '';
+  let h='';
+  h+=`<div class="ssec"><h4>What examiners reward · ${esc(q.group)}</h4><ul class="squotes">${g.rewards.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`;
+  h+=`<div class="ssec"><h4>How to approach it</h4><ul class="sscheme">${g.approach.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`;
+  const tot=S.pclm.reduce((a,p)=>a+parseInt(p[2],10),0);
+  h+=`<div class="ssec"><h4>Marked out of ${tot} (PCLM)</h4><div class="pclm">${S.pclm.map(p=>`<span class="pc">${p[1]} <b>${p[2]}</b></span>`).join('')}</div></div>`;
+  return h;
+}
+function poetryStudy(q){
+  const poems=PO_POEMS_BY_POET[q.group]||[];
+  if(!poems.length)return '';
+  return `<div class="ssec"><h4>Poems &amp; video walkthroughs · ${esc(q.group)}</h4><ul class="spoems">${poems.map(p=>p.url?`<li><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a></li>`:`<li>${esc(p.title)}</li>`).join('')}</ul></div>`;
+}
+
+/* ---------- done toggle ---------- */
+function toggleDone(q,btn,cardEl,verb){
+  const set=done[q.sec];
+  const nowDone=!set.has(q.rid);
+  nowDone?set.add(q.rid):set.delete(q.rid);
+  saveDone(q.sec);
+  btn.classList.toggle('done',nowDone);
+  btn.lastChild.textContent=nowDone?(verb==='written'?'Written':'Done'):(verb==='written'?'Mark written':'Mark done');
+  cardEl.classList.toggle('is-done',nowDone);
+  if(state.prog!=='all')render();
+}
+
+/* ---------- plan scaffolds ---------- */
+function planPiece(q){
+  if(q.sec==='poetry'){
+    const stmt=q.statement?`STATEMENT: "${q.statement}"\n`:'';
+    const scaffold=`${q.group.toUpperCase()} — ${q.year} ${q.type}\n${stmt}TASK: ${q.text}\n\nPOETRY ESSAY — PLAN\n• Key terms in the question (underline them):\n• My overall line of argument (a clear stance):\n• Poem 1 — point + quote + analysis:\n• Poem 2 — point + quote + analysis:\n• Poem 3 — point + quote + analysis:\n• Poem 4 — point + quote + analysis:\n• Recurring style features (imagery, tone, language, form):\n• Conclusion — return to the question, sum up your response:`;
+    copyText(scaffold,'Poetry-essay plan copied — paste it into your notes');
+    return;
+  }
+  const S=SECTIONS[q.sec];
+  let body;
+  if(S.scaffolds && S.scaffolds[q.group]) body=S.scaffolds[q.group];
+  else {
+    const g=(S.guide||{})[q.group];
+    const steps=g?g.approach.map(x=>'• '+x).join('\n'):'• Plan your opening, three developed points, and a deliberate close.';
+    body=`${q.group.toUpperCase()} — PLAN\n${steps}`;
+  }
+  const scaffold=`${q.year} ${q.group.toUpperCase()} — ${q.text}\n\n${body}`;
+  copyText(scaffold,'Planning scaffold copied — paste it into your notes');
+}
+
+/* ---------- copy ---------- */
+function copyQ(q){
+  let text;
+  if(q.sec==='poetry'){
+    const stmt=q.statement?`"${q.statement}"\n`:'';
+    text=`${stmt}${q.text}\n— ${q.group} · ${q.year} ${q.type}`;
+  }else{
+    text=`${q.text}\n— ${q.year} State Exam · ${q.group} · ${q.marks} marks`;
+  }
+  copyText(text,'Question copied');
+}
+function copyText(text,msg){
+  const fb=()=>{const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}ta.remove();toast(msg);};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(()=>toast(msg),fb);}else fb();
+}
+
+/* ---------- print + copy list ---------- */
+document.getElementById('printBtn').addEventListener('click',()=>window.print());
+document.getElementById('copyAllBtn').addEventListener('click',()=>{
+  let vis;
+  if(isAll()) vis=SECORDER.flatMap(sec=>DATA[sec].filter(matchesAll).filter(q=>q.sec===sec));
+  else vis=curData().filter(matches);
+  vis=vis.sort((a,b)=>rank(b)-rank(a));
+  if(!vis.length){toast('Nothing to copy');return;}
+  const text=vis.map(q=>{
+    const head=`${q.year} · ${SECTIONS[q.sec].short} · ${q.group}`;
+    const stmt=q.statement?`"${q.statement}"\n`:'';
+    return `${head}\n${stmt}${q.text}`;
+  }).join('\n\n');
+  copyText(text, vis.length+' questions copied');
+});
+
+/* ---------- trackers ---------- */
+trackerBtn.addEventListener('click',()=>{
+  const open=trackerPanel.hidden;
+  if(open) buildTracker();
+  trackerPanel.hidden=!open;
+  trackerBtn.setAttribute('aria-expanded',open?'true':'false');
+  if(open)trackerPanel.scrollIntoView({behavior:'smooth',block:'nearest'});
+});
+function buildTracker(){
+  if(isAll())return;
+  SECTIONS[state.sec].trackerKind==='poet'?buildPoetTracker():buildFormTracker();
+}
+function buildFormTracker(){
+  const S=SECTIONS[state.sec];
+  const data=DATA[state.sec];
+  const years=[...new Set(data.map(q=>+q.year))].sort((a,b)=>a-b);
+  const YEARS=[];for(let y=years[0];y<=years[years.length-1];y++)YEARS.push(String(y));
+  const groups=S.order.filter(g=>data.some(q=>q.group===g));
+  const ncol=`130px 60px repeat(${YEARS.length},1fr)`;
+  document.getElementById('trackerHead').innerHTML=`${S.trackerLabel} <span class="tnote">how often each ${state.sec==='questionb'?'form':'genre'} has come up · ${YEARS[0]}–${YEARS[YEARS.length-1]}</span>`;
+  document.getElementById('trackerLegend').innerHTML=`<span><span class="key" style="background:#f3f1ec"></span>not set that year</span> <span><span class="key" style="background:var(--acc)"></span>appeared (number = how many)</span>`;
+  const ins=document.getElementById('trackerInsight');ins.hidden=false;
+  ins.innerHTML = state.sec==='questionb'
+    ? `<b>Article</b>, <b>Letter</b> and <b>Speech / Talk</b> dominate Question B — prepare those three rock-solid first, then bank a strong fourth and fifth form for real choice on the day. You write only <b>one</b> Question B, for 50 marks.`
+    : `<b>Short story</b>, <b>Personal essay</b>, <b>Discursive essay</b>, <b>Speech</b> and <b>Article</b> appear most years — these are your safest bets. You write only <b>one</b> composition, for 100 marks, so prepare two or three genres deeply rather than all seven thinly.`;
+  let html=`<div class="tgrid"><div class="trow head" style="grid-template-columns:${ncol}"><div class="pname">${state.sec==='questionb'?'Form':'Genre'}</div><div class="pstat">Years</div>`
+    + YEARS.map(y=>`<div class="tcell">'${y.slice(2)}</div>`).join('') + '</div>';
+  groups.forEach(g=>{
+    const byYear={};YEARS.forEach(y=>byYear[y]=data.filter(q=>q.group===g&&q.year===y).length);
+    const seen=YEARS.filter(y=>byYear[y]>0).length;
+    const every=seen===YEARS.length;
+    const gc=gcolor(state.sec,g);
+    const cells=YEARS.map(y=>{
+      const n=byYear[y];
+      const bg=n? hexA(gc, n>=2?1:0.78) : '#f3f1ec';
+      return `<div class="tcell" style="background:${bg};color:${n?'#fff':'transparent'}" title="${y}: ${n}">${n||''}</div>`;
+    }).join('');
+    html+=`<div class="trow" style="grid-template-columns:${ncol}"><div class="pname"><span class="gdot" style="background:${gc}"></span>${esc(g)}</div><div class="pstat${every?' every':''}"><b>${seen}</b>/${YEARS.length}${every?' ✓':''}</div>${cells}</div>`;
+  });
+  html+='</div>';
+  document.getElementById('trackerBody').innerHTML=html;
+}
+function buildPoetTracker(){
+  const YEARS=[];for(let y=2010;y<=2026;y++)YEARS.push(String(y));
+  const ncol=`130px 96px repeat(${YEARS.length},1fr)`;
+  document.getElementById('trackerHead').innerHTML=`Exam appearance tracker <span class="tnote">your prescribed poets · 2010–2026</span>`;
+  document.getElementById('trackerLegend').innerHTML=`<span><span class="key app"></span>appeared on the exam</span> <span><span class="key pres"></span>prescribed, not examined</span> <span><span class="key off"></span>not on the list</span>`;
+  const ins=document.getElementById('trackerInsight');ins.hidden=false;
+  ins.innerHTML=`Cells filled in <b>red</b> mark the years a poet was actually examined. A poet flagged <b>due</b> hasn’t appeared in three or more years — historically a signal worth weighing when you choose which poets to prepare in depth.`;
+  let html=`<div class="tgrid"><div class="trow head" style="grid-template-columns:${ncol}"><div class="pname">Poet</div><div class="pstat">Last seen</div>`
+    + YEARS.map(y=>`<div class="tcell">'${y.slice(2)}</div>`).join('') + '</div>';
+  Object.keys(PO_PRESCRIBED_KEY).forEach(poet=>{
+    const key=PO_PRESCRIBED_KEY[poet];
+    const appeared=new Set(DATA.poetry.filter(q=>q.group===poet&&q.type==='Exam').map(q=>q.year));
+    const last=Math.max(...[...appeared].map(Number),0);
+    const gap=2026-last;const due=gap>=3;
+    const cells=YEARS.map(y=>{
+      const pres=(PO_PRESCRIBED_BY_YEAR[y]||[]).includes(key);
+      const app=appeared.has(y);
+      return `<div class="tcell ${app?'app':(pres?'pres':'')}" title="${y}: ${app?'appeared':(pres?'prescribed, not examined':'not on list')}"></div>`;
+    }).join('');
+    const stat=last?`<b>${last}</b>${due?' · due':''}`:'—';
+    html+=`<div class="trow" style="grid-template-columns:${ncol}"><div class="pname">${esc(poet)}</div><div class="pstat${due?' due':''}">${stat}</div>${cells}</div>`;
+  });
+  html+='</div>';
+  document.getElementById('trackerBody').innerHTML=html;
+}
+
+/* ---------- toast ---------- */
+let toastT;const toastEl=document.getElementById('toast');
+function toast(msg){toastEl.textContent=msg;toastEl.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>toastEl.classList.remove('show'),1700);}
+
+/* ---------- timer ---------- */
+let total=50*60,left=total,tick=null;
+const clock=document.getElementById('clock'),tStart=document.getElementById('tStart');
+function fmt(s){const m=Math.floor(s/60),x=s%60;return `${String(m).padStart(2,'0')}:${String(x).padStart(2,'0')}`;}
+function paint(){clock.textContent=fmt(left);timerEl.classList.toggle('low',left<=120);}
+function resetTimer(){
+  if(isAll())return;
+  if(tick){clearInterval(tick);tick=null;tStart.textContent='▶';}
+  total=SECTIONS[state.sec].timer*60;left=total;
+  timerhint.innerHTML=SECTIONS[state.sec].timerLabel;
+  paint();
+}
+function startPause(){
+  if(tick){clearInterval(tick);tick=null;tStart.textContent='▶';return;}
+  tStart.textContent='❚❚';
+  tick=setInterval(()=>{left--;paint();if(left<=0){clearInterval(tick);tick=null;tStart.textContent='▶';toast('Time! Pens down.');}},1000);
+}
+tStart.addEventListener('click',startPause);
+document.getElementById('tReset').addEventListener('click',()=>{if(tick){clearInterval(tick);tick=null;tStart.textContent='▶';}left=total;paint();});
+
+/* ---------- section switch ---------- */
+function setSection(sec){
+  state.sec=sec; state.groups.clear(); state.themes.clear(); state.includeOther=false;
+  state.q=''; searchEl.value='';
+  state.prog='all'; setSeg('progSeg','prog','all');
+  refreshSwitcher();
+  updateMasthead();
+  buildCounts();
+  configureControls();
+  buildPills();
+  if(!isAll()){ buildThemes(); buildExtras(); resetTimer(); }
+  trackerPanel.hidden=true; trackerBtn.setAttribute('aria-expanded','false');
+  render();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* ---------- boot ---------- */
+buildSwitcher();
+setSection('all');
+</script>
+</body>
+</html>

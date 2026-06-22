@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poetry Mind Map · Grinds360 LC English</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<style>
+  :root{--ink:#0A0A0A;--paper:#FFFFFF;--red:#FF0000;--line:#E6E6E6;--muted:#6B6B6B;--soft:#F6F6F6;--shadow:0 6px 22px rgba(0,0,0,.10);}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{height:100%;}
+  body{font-family:'Poppins',system-ui,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;height:100vh;overflow:hidden;}
+
+  .topbar{background:var(--ink);color:#fff;padding:12px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;flex-shrink:0;z-index:20;}
+  .brand{display:flex;align-items:center;gap:10px;}
+  .brand .dot{width:13px;height:13px;background:var(--red);border-radius:50%;}
+  .brand h1{font-size:15px;font-weight:800;line-height:1.1;}
+  .brand span{display:block;font-size:9px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#9a9a9a;}
+  select.poet{background:#161616;color:#fff;border:1px solid #333;border-radius:9px;padding:9px 13px;font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;}
+  select.poet:focus{outline:none;border-color:var(--red);}
+  .tb-actions{display:flex;gap:8px;margin-left:auto;flex-wrap:wrap;}
+  .btn{font-family:inherit;font-weight:600;font-size:13px;border-radius:9px;padding:9px 15px;cursor:pointer;border:1px solid transparent;transition:.15s;display:inline-flex;align-items:center;gap:7px;}
+  .btn.red{background:var(--red);color:#fff;}
+  .btn.red:hover{filter:brightness(.92);}
+  .btn.line{background:transparent;color:#fff;border-color:#3a3a3a;}
+  .btn.line:hover{border-color:#666;}
+  .btn:disabled{opacity:.4;cursor:not-allowed;}
+
+  .body-wrap{flex:1;display:flex;min-height:0;min-width:0;overflow:hidden;}
+  .canvas-area{flex:1;position:relative;display:flex;min-height:0;min-width:0;overflow:hidden;}
+  .sidebar{width:240px;background:#fff;border-right:1px solid var(--line);padding:18px 16px;overflow-y:auto;overflow-x:hidden;flex-shrink:0;}
+  .sb-section{margin-bottom:22px;}
+  .sb-title{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
+  .sb-empty{font-size:12.5px;color:var(--muted);line-height:1.55;}
+  .q-select{width:100%;border:1px solid var(--line);border-radius:9px;padding:10px 11px;font-family:inherit;font-size:12.5px;font-weight:500;color:var(--ink);background:#fff;cursor:pointer;line-height:1.4;}
+  .q-select:focus{outline:none;border-color:var(--red);}
+  .poem-chip{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;background:#fff;border:1px solid var(--line);border-left:4px solid var(--red);border-radius:10px;padding:11px 13px;margin-bottom:9px;font-family:inherit;font-size:13.5px;font-weight:600;cursor:pointer;transition:.12s;text-align:left;color:var(--ink);}
+  .poem-chip:hover{background:var(--soft);transform:translateX(2px);}
+  .poem-chip .plus{width:20px;height:20px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:14px;line-height:1;flex-shrink:0;}
+  .sb-tip{font-size:11.5px;color:var(--muted);line-height:1.5;border-top:1px solid var(--line);padding-top:14px;}
+  .sb-tip b{color:var(--ink);}
+
+  .canvas-scroll{flex:1;overflow:scroll;position:relative;background:#fbfbfb;cursor:grab;min-width:0;min-height:0;scrollbar-width:auto;scrollbar-color:#b8b8b8 #eee;}
+  .canvas-scroll:active{cursor:grabbing;}
+  .canvas-scroll::-webkit-scrollbar{width:14px;height:14px;}
+  .canvas-scroll::-webkit-scrollbar-track{background:#eee;}
+  .canvas-scroll::-webkit-scrollbar-thumb{background:#b8b8b8;border-radius:8px;border:3px solid #eee;}
+  .canvas-scroll::-webkit-scrollbar-thumb:hover{background:#8f8f8f;}
+  .canvas-scroll::-webkit-scrollbar-corner{background:#eee;}
+  .workspace{position:relative;width:2600px;height:1700px;background-image:radial-gradient(#e7e7e7 1px,transparent 1px);background-size:24px 24px;}
+  .workspace.capturing{background-image:none;background:#fff;}
+  .workspace svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;}
+
+  .ws-empty{position:absolute;top:90px;left:50%;transform:translateX(-50%);text-align:center;color:#b5b5b5;pointer-events:none;}
+  .ws-empty strong{display:block;font-size:18px;font-weight:700;color:#9a9a9a;margin-bottom:6px;}
+  .ws-empty span{font-size:13px;}
+
+  .bubble{position:absolute;transform:translate(-50%,-50%);min-width:64px;max-width:230px;border-radius:16px;padding:11px 17px;box-shadow:var(--shadow);cursor:grab;border:2px solid transparent;touch-action:none;text-align:center;-webkit-user-select:none;user-select:none;}
+  .bubble:active{cursor:grabbing;}
+  .bubble.sel{outline:2px dashed var(--ink);outline-offset:3px;}
+  .bubble .lbl{font-size:14px;font-weight:600;line-height:1.35;outline:none;word-wrap:break-word;min-width:22px;-webkit-user-select:none;user-select:none;}
+  .bubble .lbl[contenteditable="true"]{-webkit-user-select:text;user-select:text;cursor:text;}
+  .bubble.size-s{padding:8px 13px;} .bubble.size-s .lbl{font-size:12.5px;}
+  .bubble.size-l{padding:15px 22px;} .bubble.size-l .lbl{font-size:18px;font-weight:700;}
+  .bubble .tagline{font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;opacity:.6;margin-bottom:3px;}
+
+  .bubble.poem{border-left:5px solid var(--red);border-radius:12px;}
+  .bubble.quote{max-width:215px;border-left:5px solid #E8A100;border-radius:10px;}
+  .bubble.quote .lbl{font-style:italic;font-weight:500;font-size:12.5px;}
+  .bubble.quote .lbl::before{content:'“';} .bubble.quote .lbl::after{content:'”';}
+
+  .bubble.poet{max-width:300px;}
+  .bubble.poet.has-q{max-width:340px;}
+  .bubble.has-att{max-width:262px;}
+  .bubble .extra:empty{display:none;}
+  .bubble .q-sub{margin-top:9px;padding-top:9px;border-top:1px solid rgba(255,255,255,.28);font-size:11.5px;font-weight:500;line-height:1.45;opacity:.95;}
+  .bubble .body-txt{display:none;margin-top:6px;font-size:12px;font-weight:400;line-height:1.4;opacity:.9;text-align:center;outline:none;white-space:pre-wrap;word-wrap:break-word;min-height:1em;}
+  .bubble .body-txt.show{display:block;}
+  .bubble .body-txt.empty::before{content:"Double-click to add notes…";opacity:.4;font-style:italic;}
+  .bubble .body-txt[contenteditable="true"]{-webkit-user-select:text;user-select:text;cursor:text;min-width:60px;opacity:1;text-align:left;}
+  .bubble .attach{margin-top:9px;padding-top:9px;border-top:1px solid rgba(10,10,10,.16);display:flex;flex-direction:column;gap:5px;text-align:left;}
+  .att{display:flex;align-items:center;gap:6px;font-size:11.5px;line-height:1.35;}
+  .att .dot{width:7px;height:7px;border-radius:50%;background:#FF0000;flex-shrink:0;}
+  .att .txt{flex:1;}
+  .att.poem-att{font-weight:700;}
+  .att.quote-att{font-weight:500;border-left:3px solid #E8A100;padding-left:8px;}
+  .att .qpoem{font-style:normal;font-weight:700;font-size:9px;letter-spacing:.4px;text-transform:uppercase;flex-shrink:0;opacity:.95;}
+  .att .qtext{flex:1;font-style:italic;}
+  .att .qm{color:#E8A100;font-weight:700;font-style:normal;}
+  .att .rm{background:transparent;border:none;color:inherit;opacity:.38;cursor:pointer;font-size:14px;line-height:1;padding:0 2px;font-family:inherit;flex-shrink:0;}
+  .att .rm:hover{opacity:1;color:#FF0000;}
+
+  .props{position:absolute;top:0;left:0;right:0;background:var(--ink);color:#fff;display:flex;align-items:center;gap:14px;padding:10px 16px;transform:translateY(-110%);transition:.2s;flex-wrap:wrap;z-index:15;}
+  .props.show{transform:translateY(0);}
+  .props .grp{display:flex;align-items:center;gap:8px;}
+  .props .glabel{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#9a9a9a;}
+  .swatches{display:flex;gap:6px;}
+  .sw{width:24px;height:24px;border-radius:7px;cursor:pointer;border:2px solid #2a2a2a;transition:.1s;}
+  .sw:hover{transform:scale(1.12);}
+  .sw.active{border-color:#fff;}
+  .sizes{display:flex;gap:4px;}
+  .sizebtn{width:30px;height:28px;border-radius:7px;background:#222;color:#fff;border:1px solid #333;font-family:inherit;font-weight:700;cursor:pointer;font-size:12px;}
+  .sizebtn.active{background:var(--red);border-color:var(--red);}
+  .props .spacer{margin-left:auto;}
+  .pbtn{background:#222;color:#fff;border:1px solid #333;border-radius:8px;padding:8px 12px;font-family:inherit;font-size:12.5px;font-weight:600;cursor:pointer;}
+  .pbtn:hover{border-color:#666;}
+  .pbtn.red{background:var(--red);border-color:var(--red);}
+  .pbtn.amber{background:#E8A100;border-color:#E8A100;color:#0A0A0A;}
+  .pbtn.del{border-color:var(--red);color:#ff6b6b;}
+  .pbtn.del:hover{background:var(--red);color:#fff;}
+  .pbtn.ghost{background:transparent;}
+
+  .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:12px 20px;border-radius:10px;font-size:13px;font-weight:600;opacity:0;transition:.25s;z-index:60;pointer-events:none;max-width:82vw;text-align:center;}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+  .modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;padding:20px;z-index:70;}
+  .modal-bg.show{display:flex;}
+  .modal{background:#fff;border-radius:16px;padding:24px;width:100%;max-width:440px;box-shadow:0 20px 60px rgba(0,0,0,.35);max-height:86vh;overflow:auto;}
+  .modal h4{font-size:16px;font-weight:700;margin-bottom:4px;}
+  .modal .msub{font-size:12px;color:var(--muted);margin-bottom:16px;}
+  .q-preset{display:flex;flex-direction:column;gap:8px;margin-bottom:16px;}
+  .q-opt{text-align:left;border:1px solid var(--line);border-left:4px solid #E8A100;border-radius:10px;padding:11px 13px;font-family:inherit;font-size:13px;font-weight:500;color:var(--ink);background:#fff;cursor:pointer;font-style:italic;transition:.12s;}
+  .q-opt:hover{background:var(--soft);border-left-color:var(--red);}
+  .q-or{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);text-align:center;margin:4px 0 12px;}
+  .modal textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:12px;font-family:inherit;font-size:14px;resize:vertical;min-height:64px;}
+  .modal textarea:focus{outline:none;border-color:var(--red);}
+  .modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:16px;}
+
+  @media (max-width:680px){.sidebar{width:170px;}.brand span{display:none;}}
+</style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand"><span class="dot"></span><div><h1>Poetry Mind Map</h1><span>Grinds360 · LC English</span></div></div>
+    <select class="poet" id="poet">
+      <option value="">Choose a poet…</option>
+      <option value="bishop">Elizabeth Bishop</option>
+      <option value="yeats">W.B. Yeats</option>
+      <option value="meehan">Paula Meehan</option>
+      <option value="dickinson">Emily Dickinson</option>
+      <option value="donne">John Donne</option>
+      <option value="kavanagh">Patrick Kavanagh</option>
+      <option value="mahon">Derek Mahon</option>
+    </select>
+    <div class="tb-actions">
+      <button class="btn line" id="add-bubble">＋ Add point</button>
+      <button class="btn line" id="center-btn">⌖ Centre</button>
+      <button class="btn line" id="clear-btn">Clear</button>
+      <button class="btn red" id="download-btn">⬇ Download PDF</button>
+    </div>
+  </header>
+
+  <div class="body-wrap">
+    <aside class="sidebar">
+      <div class="sb-section" id="q-section" style="display:none;">
+        <div class="sb-title">Exam question</div>
+        <select class="q-select" id="question-select"></select>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">Poems</div>
+        <div id="poems"><p class="sb-empty">Choose a poet above to load their poems. Click a poem to link it under whichever bubble you have selected (or to the centre).</p></div>
+      </div>
+      <div class="sb-tip" id="sb-tip" style="display:none;"><b>Add point</b> links to the centre, or to the bubble you have selected. Double-click a bubble to type. Select a bubble, then click a poem or <b>Add quote</b> to place it inside that bubble.</div>
+    </aside>
+
+    <div class="canvas-area">
+      <div class="props" id="props">
+        <div class="grp"><span class="glabel">Colour</span><div class="swatches" id="swatches"></div></div>
+        <div class="grp"><span class="glabel">Size</span><div class="sizes" id="sizes">
+          <button class="sizebtn" data-size="s">S</button>
+          <button class="sizebtn" data-size="m">M</button>
+          <button class="sizebtn" data-size="l">L</button>
+        </div></div>
+        <div class="spacer"></div>
+        <button class="pbtn" id="rename-bubble">✎ Title</button>
+        <button class="pbtn" id="note-btn" style="display:none;">✎ Note</button>
+        <button class="pbtn" id="sub-point">＋ Sub-point</button>
+        <button class="pbtn amber" id="add-quote" style="display:none;">❝ Add quote</button>
+        <button class="pbtn del" id="delete-bubble">Delete</button>
+      </div>
+
+      <div class="canvas-scroll" id="canvas-scroll">
+        <div class="workspace" id="workspace">
+          <svg id="links"></svg>
+          <div class="ws-empty" id="ws-empty"><strong>Blank canvas</strong><span>Choose a poet to set your centre, then build outward with points, poems and quotes.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <div class="modal-bg" id="quote-modal">
+    <div class="modal">
+      <h4>Add a quote</h4>
+      <div class="msub">Pick the poem, choose a preset, or write your own. The quote sits inside the selected bubble.</div>
+      <div class="field" style="margin-bottom:14px;">
+        <label style="font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px;">Poem</label>
+        <select class="q-select" id="q-poem-select"></select>
+      </div>
+      <div class="q-preset" id="q-preset"></div>
+      <div class="q-or">or type your own</div>
+      <textarea id="q-custom" placeholder="Type a quote from this poem…"></textarea>
+      <div class="modal-actions">
+        <button class="pbtn ghost" id="q-cancel" style="color:#0A0A0A;border-color:var(--line);">Cancel</button>
+        <button class="pbtn red" id="q-add">Add quote</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+(function(){
+  "use strict";
+
+  var POETS={
+    bishop:{name:"Elizabeth Bishop",poems:["The Fish","Filling Station","The Armadillo","Sestina"],
+      quotes:{"The Fish":["five old pieces of fish line","Or four and a wire leader","With the swivel still attached","With all their five big hooks","Like medals with their ribbons"],"Filling Station":["Oil-soaked monkey suit","That cuts him under the arms","And several quick and saucy sons","And greasy sons assist him","Behind the pumps, and on it"],"The Armadillo":["It splattered like an egg of fire","against the cliff behind the house","We saw the pair","of owls who nest there flying up","and up, their whirling black and white"],"Sestina":["Time to plant tears, says the almanac","The grandmother sings to the marvellous stove","And the child draws another inscrutable house","First Death in Nova Scotia","is watching the teakettle"]},
+      questions:[
+        "2013 Exam: “Bishop’s carefully judged use of language aids the reader to uncover the intensity of feeling in her poetry.” To what extent do you agree or disagree with the above statement? Support your answer with reference to the poetry of Elizabeth Bishop on your course",
+        "2016 Exam: “Bishop uses highly detailed observation, of people, places and events, to explore unique personal experiences in her poetry.” Discuss this statement with reference to poems you have studied",
+        "2017 Exam: “From the poetry of Elizabeth Bishop that you have studied, select the poems that, in your opinion, best demonstrate her skilful use of language and imagery to confront life’s harsh realities.” Justify your selection showing how she uses language and imagery to confront harsh realities",
+        "2019 Exam: “Bishop makes skilful use of a variety of poetic techniques to produce poems that are often analytical but rarely emotional.” Discuss the extent to which you agree or disagree with the above statement. Develop your response with reference to the poems by Elizabeth Bishop on your course",
+        "2023 Mock: Discuss the extent to which Elizabeth Bishop’s detached exploration of a range of emotional events, conveyed through interesting narratives, helps to reveal profound insights in her poetry. Develop your response with reference to the poems by Elizabeth Bishop on your Leaving Certificate English course"
+      ]},
+    yeats:{name:"W.B. Yeats",poems:["Easter 1916","The Stare’s Nest by my Window","The Second Coming","The Wild Swans at Coole"],
+      quotes:{"Easter 1916":["I have seen them at close of day","Coming with their vivid faces","From counter or desk among grey","Eighteenth century houses","I have passed with a nod of the head"],"The Stare’s Nest by my Window":["The bees build in the crevices","Of loosening masonry, and there","The mother birds bring grubs and flies","We are closed in and the key is turned","On our uncertainty"],"The Second Coming":["Turning and turning in the widening gyre","The falcon cannot hear the falconer","Things fall apart: The centre cannot hold","Mere anarchy is loosed upon the world","The best lack all conviction, while the worst"],"The Wild Swans at Coole":["all suddenly mount / and scatter wheeling in great broken rings / Upon their clamorous wings","and now my heart is sore","trod with a lighter tread","paddle in the cold, companiable streams or climb the air","when I awake some day ? To find they have flown away"]},
+      questions:[
+        "2019 Exam: “Yeats’s poetry is both intellectually stimulating and emotionally charged.” Discuss the extent to which you agree or disagree with the above statement. Develop your response with reference to the themes and language evident in the poems by W. B. Yeats on your course",
+        "2022 Exam: “Yeats makes masterful use of aesthetically pleasing language to communicate the insights he draws from history, myth and legend.” To what extent do you agree or disagree with the above statement, developing your response with reference to the poems by W.B. Yeats on your Leaving Certificate English Course",
+        "2024 Exam: “Yeats utilises powerful imagery to explore fascinating contradictions that are central to his poetry.” Discuss this statement developing your response with reference to the poetry by W.B. Yeats on your Leaving Certificate English course",
+        "2024 Mock: “W.B. Yeats’s use of rich imagery and a formal style is an effective way of exploring the turbulent nature of his own emotional landscape and the political landscape of Ireland in the early twentieth century.” To what extent do you agree or disagree with this statement? Develop your response with reference to the poetry by W.B. Yeats on your Leaving Certificate English course"
+      ]},
+    meehan:{name:"Paula Meehan",poems:["Buying Winkles","Prayer for the Children of Longing","Hearth Lesson","The Statue of the Virgin at Granard Speaks"],
+      quotes:{"Buying Winkles":["My mother would spare me sixpence and say","Hurry up now and don’t be talking to strange","men on the way.’ I’d dash from the ghosts","on the stairs where the bulb had blown","out into Gardiner Street, all relief"],"Prayer for the Children of Longing":["That promised them everything That delivered nothing","Under the starlight, under the moonlight In the light of this tree","Here at the heart of winter Here at the heart of the city","from the far northern forest / still rich with the sap of the forest","…at the heart of the winter…at the heart of the city…"],"Hearth Lesson":["money to burn, burning a hole in your pocket","The flames were blue and pink and green","a marvelous sight, and alchemical scene","The flames sheared from cinder to chimney breast","like trapped exotic birds"],"The Statue of the Virgin at Granard Speaks":["It can be bitter here at times like this, November wind sweeping across the border","garrison towns, walled cities, ghetto lanes","Where men hunt each other and invoke","The various names of God as blessing","On their death tactics, their night manoeuvres"]},
+      questions:[
+        "2023 Exam: “Meehan employs vibrant and forceful language skilfully to challenge the often-oppressive forces identified in her poetry.” Discuss the extent to which you agree or disagree with the above statement, developing your response with reference to the poems by Paula Meehan on your Leaving Certificate English course",
+        "2023 Mock: “Paula Meehan’s poetry is vividly authentic, immediately accessible and has a cinematic quality that captures the essence of life in twentieth and twenty-first century Ireland.” Discuss the above statement, developing your response with reference to your experience of the poetry by Paula Meehan on your Leaving Certificate English course",
+        "2024 Mock: “Paula Meehan’s poetry resonates with readers due to the way in which she uses everyday language and strikingly original imagery to commemorate both personal and historical events.” To what extent do you agree or disagree with this statement? Develop your response with reference to the poetry by Paula Meehan on your Leaving Certificate English course"
+      ]},
+    dickinson:{name:"Emily Dickinson",poems:["Hope is the thing with feathers","There's a certain slant of light","A bird came down the walk","After great pain, a formal feeling comes"],
+      quotes:{"Hope is the thing with feathers":["And sore must be the storm","That could abash the little bird","That kept so many warm","the thing with feathers","sings the tune without the words"],"There's a certain slant of light":["the Seal Despair","An imperial affliction","Sent us of the Air","When it comes, the Landscape listens","Shadows - hold their breath"],"A bird came down the walk":["A bird came down the Walk","He did not know I saw","He bit an Angleworm in halves","And ate the fellow, raw","And then he drank a Dew"],"After great pain, a formal feeling comes":["After great pain, a formal feeling comes - The nerves sit ceremonious, like Tombs","The stiff Heart questions was it He, that bore, And Yesterday, or Centuries before?","A Quartz contentment, like a stone","First -- Chill -- then Stupor -- then the letting go –","After great pain, a formal feeling comes"]},
+      questions:[
+        "2020 Exam: Discuss how Dickinson’s unique approach to language, and the balance between beauty and horror in her imagery, help to relieve some of the darker aspects of her poetry. Develop your response with reference to the poems by Emily Dickinson on your course",
+        "2020 Mock: “In her poetry, Dickinson reveals her strong personal feelings in a style that is eccentric and original.” To what extent do you agree or disagree with this statement? Develop your answer with reference to the themes and language evident in the poetry of Emily Dickinson on your course",
+        "2022 Exam: “Emily Dickinson’s effective use of a vivid and energetic style helps to convey her fascination with life and its rich experiences.” Discuss the extent to which you agree or disagree with the above statement, developing your response with reference to the poems by Emily Dickinson on your Leaving Certificate English course",
+        "2024 Exam: “Dickinson’s style allows her to explore the complexity of a variety of abstract ideas in a concrete and accessible manner.” Discuss this statement developing your response with reference to the poetry by Emily Dickinson on your Leaving Certificate English course"
+      ]},
+    donne:{name:"John Donne",poems:["The Sun Rising","The Anniversarie","Thou Hast Made Me, And Shall Thy Work Decay?","At the round earth’s imagined corners","Batter my heart, three personed God"],
+      quotes:{"The Sun Rising":["Busy old fool, unruly sun","Why dost thou thus","Through windows, and through curtains call on us?","Must to thy motion lovers’ seasons run?","Late school boys, and sour prentices"],"The Anniversarie":["All glory and honours, beauties, wits","The sun itself, which makes time","All other things, to their destruction draw","Only our love hath no decay","This no tomorrow hath, nor yesterday"],"Thou Hast Made Me, And Shall Thy Work Decay?":["Thou hast made me, and shall thy work decay?","Repair me now, for now mine end doth haste","And all my pleasures are like yesterday","I dare not move my dim eyes any way","Despair behind, and death before doth cast Such terror"],"At the round earth’s imagined corners":["At the round earth’s imagined corners, blow","Your trumpets, angels","All whom the flood did, and fire shall overthrow","All whom war, dearth, age, agues, tyrannies","Despair, law, chance, hath slain"],"Batter my heart, three personed God":["Batter my heart, three personed God; for, you","As yet but knock, breathe, shine, and seek to mend","I, like a usurped town, to another due","labour to admit you, but, oh, to no end","Reason your viceroy in me, me should defend"]},
+      questions:[
+        "2023 Exam: “Donne makes effective use of inventive and paradoxical language to explore the human condition in his poetry.” Discuss this statement with reference to the poetry by John Donne on your Leaving Certificate English course",
+        "2023 Mock: “John Donne’s poetry is witty, intellectually stimulating and emotionally charged.” Discuss the extent to which you agree or disagree with the above statement. Develop your response with reference to the themes and language evident in the poems by John Donne on your Leaving Certificate English course"
+      ]},
+    kavanagh:{name:"Patrick Kavanagh",poems:["Inishkeen Road: July Evening","Advent","Canal Bank Walk","On Raglan Road","The Hospital"],
+      quotes:{"Inishkeen Road: July Evening":["The bicycles go by in twos and threes","There’s a dance in Billy Brennan’s barn tonight","And there’s the half- talk code of mysteries","And the wink and elbow language of delight","I have what every poet hates in spite"],"Advent":["And the newness that was in every stale thing","When we looked at it as children: the spirit shocking","Wonder in a black slanting Ulster hill","Or the prophetic astonishment in the tedious talking","Of an old fool"],"Canal Bank Walk":["Pouring redemption for me, that I do","The will of God, wallow in the habitual, the banal","Grow with nature again as before I grew","O unworn world enrapture me, encapture me in a web","Of fabulous grass and eternal voices by a beech"],"On Raglan Road":["On raglan Road on an Autumn day, I met her first and knew","That her dark hair would weave a snare that I might One day rue","I saw the danger, yet I walked along the enchanted way","And I said let grief be a fallen leaf at the dawning of the day","On Grafton Street in November we tripped lightly along the ledge"],"The Hospital":["A year ago I fell in love with the functional ward","Of a chest hospital: square cubicles in a row","Plain concrete, wash basins – an art lover’s woe","Not counting how the fellow in the next bed snored","But nothing whatsoever is by love debarred"]},
+      questions:[
+        "2023 Exam: How successfully, in your opinion, does Kavanagh employ both a lyrical style and a celebratory tone to elevate the mundane realism of life in his work? Develop your response with reference to the poetry by Patrick Kavanagh on your Leaving Certificate English course",
+        "2023 Mock: “Patrick Kavanagh effectively uses place, both literal and metaphorical, to explore elements of his personal and cultural identity.” Discuss the above statement, developing your response with reference to your experience of the poetry by Patrick Kavanagh on your Leaving Certificate English course",
+        "2025 Exam: “Kavanagh’s discerning use of simple language allows him to produce powerful insights into the world of nature and human nature, both drawn from a parochial perspective.” Discuss this statement, developing your response with reference to the poetry of Patrick Kavanagh on your Leaving Certificate English course"
+      ]},
+    mahon:{name:"Derek Mahon",poems:["After the Titanic","Antarctica","As It Should Be","Ecclesiastes"],
+      quotes:{"After the Titanic":["As I sat shivering on the dark water","I turned to ice to hear my costly","Life go thundering down in a pandemonium of","Prams, pianos, sideboards, winches","Boilers bursting and shredded ragtime"],"Antarctica":["And frostbite is replaced by vertigo","I am just going outside and may be some time","The tent recedes beneath its crust of rime And frostbite is replaced by vertigo","stiff upper lip","At the heart of the ridiculous, the sublime"],"As It Should Be":["Of the moon in the Yellow River","The air blows softer since his departure","Since his tide-burial during school hours / Our children have known no bad dreams","As it should be","method in it"],"Ecclesiastes":["Wear black, drink water, nourish a fierce zeal","With locusts and wild honey, and not","God, you could grow to love it…","the / dank churches, the empty streets / the shipyard silence, the tied up swings","from the heat of the world"]},
+      questions:[
+        "2023 Exam: “Mahon’s evocative imagery conveys thematic concerns that are haunted by suggestions of darkness and anxiety.” Discuss the extent to which you agree or disagree with the above statement, developing your response with reference to the poems by Derek Mahon on your Leaving Certificate English course",
+        "2023 Mock: Discuss how successfully, in your opinion, Derek Mahon uses powerful imagery and memorable language to capture the true essence of people and places. Develop your response with reference to the poems by Derek Mahon on your Leaving Certificate English course",
+        "2025 Exam: To what extent do you think an audience’s appreciation of both Mahon’s language and thematic concerns would be enhanced if his poetry was read aloud? Develop your response with reference to the poetry of Derek Mahon on your Leaving Certificate English course"
+      ]},
+  };
+  // Real preset quotes can be added per poem, e.g. POETS.bishop.quotes["EB 1"]=["…","…"]; otherwise sample placeholders are shown.
+  function presetQuotes(title){
+    var c=(POETS[currentPoet].quotes||{})[title];
+    if(c&&c.length) return c;
+    return [title+" — sample quote one","sample quote two from "+title,title+" — sample quote three"];
+  }
+
+  var COLORS=["#FFFFFF","#0A0A0A","#FF0000","#1F7A6B","#2E5E8C","#E8A100","#7A3B6B","#3D8361","#E8505B","#8E7DBE"];
+  var POEM_PALETTE=["#FF0000","#1F7A6B","#2E5E8C","#E8A100","#7A3B6B","#3D8361","#E8505B","#8E7DBE","#0A7E8C","#B5651D"];
+  function hashStr(s){var h=0;for(var i=0;i<s.length;i++){h=(h*31+s.charCodeAt(i))|0;}return h;}
+  function poemColor(title){
+    var poems=(POETS[currentPoet]&&POETS[currentPoet].poems)||[];
+    var i=poems.indexOf(title);
+    if(i<0) i=Math.abs(hashStr(title||""))%POEM_PALETTE.length;
+    return POEM_PALETTE[i%POEM_PALETTE.length];
+  }
+
+  var nodes=[], selId=null, uid=0, currentPoet="", quoteForBubble=null;
+  var workspace=document.getElementById("workspace");
+  var svg=document.getElementById("links");
+  var scroll=document.getElementById("canvas-scroll");
+  var els={};
+
+  function nid(){return "n"+(++uid);}
+  function byId(id){for(var i=0;i<nodes.length;i++) if(nodes[i].id===id) return nodes[i];return null;}
+  function poetNode(){return nodes.filter(function(n){return n.type==="poet";})[0]||null;}
+  function childrenOf(id){return nodes.filter(function(n){return n.parent===id;});}
+  function contrast(hex){if(hex.toUpperCase()==="#FFFFFF")return "#0A0A0A";var c=hex.replace("#",""),r=parseInt(c.substr(0,2),16),g=parseInt(c.substr(2,2),16),b=parseInt(c.substr(4,2),16);return (0.299*r+0.587*g+0.114*b)>150?"#0A0A0A":"#FFFFFF";}
+  function centerSpot(){
+    var vw=Math.min(scroll.clientWidth,workspace.offsetWidth);
+    var vh=Math.min(scroll.clientHeight,workspace.offsetHeight);
+    return {x:scroll.scrollLeft+vw/2, y:Math.max(scroll.scrollTop+vh/2,300)};
+  }
+  function ensureWorkspaceSize(){
+    var w=Math.max(2600, Math.round((scroll.clientWidth||1000)*1.7));
+    var h=Math.max(1700, Math.round((scroll.clientHeight||700)*1.7));
+    workspace.style.width=w+"px"; workspace.style.height=h+"px";
+  }
+  function centerView(id){
+    var el=els[id]; if(!el) return;
+    var vw=scroll.clientWidth, vh=scroll.clientHeight;
+    var sl=Math.max(0,Math.min(workspace.offsetWidth-vw, el.offsetLeft-vw/2));
+    var st=Math.max(0,Math.min(workspace.offsetHeight-vh, el.offsetTop-vh/2));
+    scroll.scrollLeft=sl; scroll.scrollTop=st;
+  }
+  var SAFE_TOP=120, SAFE_SIDE=80;
+  function clampPos(p){return {x:Math.max(SAFE_SIDE,Math.min(workspace.offsetWidth-SAFE_SIDE,p.x)),y:Math.max(SAFE_TOP,Math.min(workspace.offsetHeight-SAFE_SIDE,p.y))};}
+  function ensureVisible(id){
+    var el=els[id]; if(!el) return;
+    var w=el.offsetWidth,h=el.offsetHeight;
+    var left=el.offsetLeft-w/2,right=el.offsetLeft+w/2,top=el.offsetTop-h/2,bottom=el.offsetTop+h/2;
+    var padX=70,padTop=80,padBot=60;
+    if(left<scroll.scrollLeft+padX) scroll.scrollLeft=left-padX;
+    else if(right>scroll.scrollLeft+scroll.clientWidth-padX) scroll.scrollLeft=right-scroll.clientWidth+padX;
+    if(top<scroll.scrollTop+padTop) scroll.scrollTop=top-padTop;
+    else if(bottom>scroll.scrollTop+scroll.clientHeight-padBot) scroll.scrollTop=bottom-scroll.clientHeight+padBot;
+  }
+
+  /* ---------- position a new child around its parent ---------- */
+  function childPosition(parent){
+    var idx=childrenOf(parent.id).length;
+    var ang,radius;
+    if(parent.type==="poet"){ ang=Math.PI/2 + idx*(Math.PI/3.2); radius=215; }
+    else{
+      var base;
+      if(parent.parent){var gp=byId(parent.parent);base=Math.atan2(parent.y-gp.y,parent.x-gp.x);}
+      else base=Math.PI/2;
+      var step=Math.PI/5;
+      var off=(idx===0)?0:(Math.ceil(idx/2)*step*((idx%2)?1:-1));
+      ang=base+off; radius=(parent.type==="poem")?135:160;
+    }
+    return {x:parent.x+radius*Math.cos(ang), y:parent.y+radius*Math.sin(ang)};
+  }
+
+  /* ---------- poet selection ---------- */
+  document.getElementById("poet").addEventListener("change",function(e){
+    currentPoet=e.target.value;
+    renderPoems(); renderQuestionOptions();
+    if(currentPoet){
+      var pn=poetNode();
+      if(pn){pn.label=POETS[currentPoet].name;pn.question="";renderNode(pn);}
+      else{
+        var px=Math.max(380, Math.min(820, (scroll.clientWidth||1000)*0.5));
+        var pn2=addNode({type:"poet",label:POETS[currentPoet].name,parent:null,color:"#0A0A0A",size:"l",x:px,y:440});
+        var snap=function(){scroll.scrollLeft=0;scroll.scrollTop=0;};
+        snap(); requestAnimationFrame(snap); setTimeout(snap,100);
+      }
+    }
+    updateEmpty(); drawLinks();
+  });
+
+  function renderQuestionOptions(){
+    var sec=document.getElementById("q-section"),sel=document.getElementById("question-select");
+    if(!currentPoet){sec.style.display="none";return;}
+    sec.style.display="block";
+    sel.innerHTML="<option value=''>— No question —</option>";
+    POETS[currentPoet].questions.forEach(function(q,i){var o=document.createElement("option");o.value=String(i);o.textContent=(q.length>72?q.slice(0,72)+"…":q);sel.appendChild(o);});
+    sel.value="";
+  }
+  document.getElementById("question-select").addEventListener("change",function(e){
+    var pn=poetNode();if(!pn)return;
+    pn.question=e.target.value===""?"":POETS[currentPoet].questions[parseInt(e.target.value,10)];
+    renderNode(pn); drawLinks();
+  });
+
+  function renderPoems(){
+    var wrap=document.getElementById("poems");
+    document.getElementById("sb-tip").style.display=currentPoet?"block":"none";
+    if(!currentPoet){wrap.innerHTML='<p class="sb-empty">Choose a poet above to load their poems. Select a bubble, then click a poem to drop it inside that bubble.</p>';return;}
+    wrap.innerHTML="";
+    POETS[currentPoet].poems.forEach(function(title){
+      var b=document.createElement("button");b.className="poem-chip";
+      b.innerHTML="<span>"+title+"</span><span class='plus'>+</span>";
+      b.onclick=function(){
+        if(!selId){toast("Select a bubble first — the poem goes inside it.");return;}
+        var n=byId(selId);
+        if(n.type==="poet"){toast("Add a point first, then attach the poem inside it.");return;}
+        n.poems=n.poems||[]; n.poems.push(title);
+        renderNode(n); drawLinks(); ensureVisible(n.id);
+      };
+      wrap.appendChild(b);
+    });
+  }
+
+  /* ---------- nodes ---------- */
+  function addNode(o){
+    var pos=clampPos({x:o.x,y:o.y});
+    var n={id:nid(),parent:o.parent,type:o.type||"branch",label:o.label||"New idea",question:"",body:"",
+      poems:[],quotes:[],color:o.color||"#FFFFFF",size:o.size||"m",x:pos.x,y:pos.y};
+    nodes.push(n); renderNode(n); updateEmpty(); drawLinks(); ensureVisible(n.id); return n;
+  }
+  function nodeSize(n){var el=els[n.id];return {w:el?el.offsetWidth:210,h:el?el.offsetHeight:90};}
+  function spotFree(x,y,w,h){
+    for(var i=0;i<nodes.length;i++){var m=nodes[i];var s=nodeSize(m);
+      if(Math.abs(x-m.x)<(w/2+s.w/2+26) && Math.abs(y-m.y)<(h/2+s.h/2+22)) return false;}
+    return true;
+  }
+  function findFreePosition(parent){
+    var base;
+    if(parent.parent){var gp=byId(parent.parent);base=Math.atan2(parent.y-gp.y,parent.x-gp.x);}
+    else base=Math.PI/2; // grow downward from the centre
+    var w=210,h=92, radii=[185,240,300,365,445,540];
+    for(var ri=0;ri<radii.length;ri++){
+      var r=radii[ri];
+      for(var k=0;k<=9;k++){
+        var off=(k===0)?0:(Math.ceil(k/2)*(Math.PI/5)*((k%2)?1:-1));
+        var a=base+off;
+        var c=clampPos({x:parent.x+r*Math.cos(a), y:parent.y+r*Math.sin(a)});
+        if(spotFree(c.x,c.y,w,h)) return c;
+      }
+    }
+    return clampPos({x:parent.x+200*Math.cos(base), y:parent.y+200*Math.sin(base)});
+  }
+  function addChildOf(parent,opts){
+    var p=findFreePosition(parent);
+    return addNode(Object.assign({parent:parent.id,x:p.x,y:p.y},opts||{}));
+  }
+
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c];});}
+  function renderNode(n){
+    var el=els[n.id];
+    if(!el){
+      el=document.createElement("div");el.dataset.id=n.id;
+      el.innerHTML='<div class="lbl"></div><div class="body-txt"></div><div class="extra"></div>';
+      workspace.appendChild(el); els[n.id]=el; attachNode(el,n);
+      var bt=el.querySelector(".body-txt");
+      bt.addEventListener("dblclick",function(ev){ev.stopPropagation();editBody(n.id);});
+      bt.addEventListener("pointerdown",function(ev){if(bt.isContentEditable)ev.stopPropagation();});
+    }
+    var hasAtt=(n.poems&&n.poems.length)||(n.quotes&&n.quotes.length);
+    el.className="bubble size-"+n.size+(n.type==="poet"?" poet":"")+(n.type==="poet"&&n.question?" has-q":"")+(hasAtt?" has-att":"")+(selId===n.id?" sel":"");
+    el.style.left=n.x+"px"; el.style.top=n.y+"px"; el.style.background=n.color;
+    var txt=contrast(n.color); el.style.color=txt;
+    el.style.borderColor=(n.color.toUpperCase()==="#FFFFFF")?"#E0E0E0":n.color;
+    el.querySelector(".lbl").textContent=n.label;
+
+    // body / note text (always shown under the headline for non-poet bubbles)
+    var bodyEl=el.querySelector(".body-txt");
+    if(bodyEl && !bodyEl.isContentEditable){
+      if(n.type!=="poet"){
+        bodyEl.textContent=n.body||"";
+        bodyEl.classList.add("show");
+        bodyEl.classList.toggle("empty", !n.body);
+      } else {
+        bodyEl.classList.remove("show","empty"); bodyEl.textContent="";
+      }
+    }
+
+    // inner content: poet question, or attached poems + quotes
+    var extra=el.querySelector(".extra"); var html="";
+    if(n.type==="poet"&&n.question){ html='<div class="q-sub">'+esc(n.question)+'</div>'; }
+    if(n.type!=="poet"&&hasAtt){
+      var items="";
+      (n.poems||[]).forEach(function(p,i){ var c=poemColor(p); items+='<div class="att poem-att"><span class="dot" style="background:'+c+'"></span><span class="txt">'+esc(p)+'</span><button class="rm" data-kind="poem" data-i="'+i+'">×</button></div>'; });
+      (n.quotes||[]).forEach(function(q,i){ var qo=(typeof q==="string")?{text:q,poem:""}:q; var c=qo.poem?poemColor(qo.poem):"#E8A100"; var tag=qo.poem?'<span class="qpoem" style="color:'+c+'">'+esc(qo.poem)+'</span>':''; items+='<div class="att quote-att" style="border-left-color:'+c+'">'+tag+'<span class="qtext"><span class="qm">“</span>'+esc(qo.text)+'<span class="qm">”</span></span><button class="rm" data-kind="quote" data-i="'+i+'">×</button></div>'; });
+      html+='<div class="attach">'+items+'</div>';
+    }
+    extra.innerHTML=html;
+
+    var divCol=(txt==="#FFFFFF")?"rgba(255,255,255,.28)":"rgba(10,10,10,.16)";
+    var qs=el.querySelector(".q-sub"); if(qs) qs.style.borderTopColor=divCol;
+    var at=el.querySelector(".attach"); if(at) at.style.borderTopColor=divCol;
+
+    [].forEach.call(el.querySelectorAll(".rm"),function(btn){
+      btn.addEventListener("pointerdown",function(ev){ev.stopPropagation();});
+      btn.addEventListener("click",function(ev){ev.stopPropagation();var kind=btn.dataset.kind,i=parseInt(btn.dataset.i,10);if(kind==="poem")n.poems.splice(i,1);else n.quotes.splice(i,1);renderNode(n);drawLinks();});
+    });
+  }
+
+  function attachNode(el,n){
+    var sx,sy,ox,oy,moved;
+    el.addEventListener("pointerdown",function(e){
+      if(el.querySelector(".lbl").isContentEditable) return;
+      var _bt=el.querySelector(".body-txt"); if(_bt&&_bt.isContentEditable) return;
+      moved=false;sx=e.clientX;sy=e.clientY;ox=n.x;oy=n.y;
+      el.setPointerCapture(e.pointerId);
+      function mv(ev){var dx=ev.clientX-sx,dy=ev.clientY-sy;if(Math.abs(dx)+Math.abs(dy)>3)moved=true;var c=clampPos({x:ox+dx,y:oy+dy});n.x=c.x;n.y=c.y;el.style.left=n.x+"px";el.style.top=n.y+"px";drawLinks();}
+      function up(){el.releasePointerCapture(e.pointerId);el.removeEventListener("pointermove",mv);el.removeEventListener("pointerup",up);if(!moved)select(n.id);}
+      el.addEventListener("pointermove",mv);el.addEventListener("pointerup",up);
+    });
+    el.addEventListener("dblclick",function(e){e.stopPropagation();edit(n.id);});
+  }
+
+  function edit(id){
+    var n=byId(id),el=els[id];if(!el)return;
+    var lbl=el.querySelector(".lbl");
+    lbl.contentEditable="true";lbl.focus();
+    var r=document.createRange();r.selectNodeContents(lbl);
+    var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);
+    function finish(){lbl.contentEditable="false";n.label=lbl.textContent.trim()||"Untitled";lbl.textContent=n.label;lbl.removeEventListener("blur",finish);lbl.removeEventListener("keydown",key);drawLinks();}
+    function key(ev){if(ev.key==="Enter"&&!ev.shiftKey){ev.preventDefault();lbl.blur();}ev.stopPropagation();}
+    lbl.addEventListener("blur",finish);lbl.addEventListener("keydown",key);
+  }
+
+  function editBody(id){
+    var n=byId(id),el=els[id];if(!el||n.type==="poet")return;
+    var b=el.querySelector(".body-txt");if(!b)return;
+    b.classList.add("show"); b.classList.remove("empty");
+    b.contentEditable="true";b.focus();
+    var r=document.createRange();r.selectNodeContents(b);r.collapse(false);
+    var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);
+    function finish(){
+      b.contentEditable="false";
+      n.body=(b.innerText||"").replace(/\u00a0/g," ").replace(/\n{3,}/g,"\n\n").replace(/[ \t]+\n/g,"\n").trim();
+      b.textContent=n.body; b.classList.add("show"); b.classList.toggle("empty", !n.body);
+      b.removeEventListener("blur",finish);b.removeEventListener("keydown",key);
+      drawLinks();
+    }
+    function key(ev){ if(ev.key==="Escape"){ev.preventDefault();b.blur();} ev.stopPropagation(); }
+    b.addEventListener("blur",finish);b.addEventListener("keydown",key);
+  }
+
+  function descendants(id){var out=[];childrenOf(id).forEach(function(c){out.push(c.id);out=out.concat(descendants(c.id));});return out;}
+  function removeNode(id){
+    var n=byId(id);if(!n)return;
+    if(n.type==="poet"){toast("The poet is your centre — change it from the dropdown.");return;}
+    var ids=[id].concat(descendants(id));
+    ids.forEach(function(x){if(els[x]){els[x].remove();delete els[x];}});
+    nodes=nodes.filter(function(m){return ids.indexOf(m.id)===-1;});
+    if(selId&&ids.indexOf(selId)>-1) deselect();
+    drawLinks();updateEmpty();
+  }
+
+  /* ---------- selection + props ---------- */
+  var props=document.getElementById("props");
+  function select(id){
+    selId=id;nodes.forEach(function(n){renderNode(n);});props.classList.add("show");
+    var n=byId(id);
+    [].forEach.call(document.querySelectorAll(".sw"),function(s){s.classList.toggle("active",s.dataset.color.toUpperCase()===n.color.toUpperCase());});
+    [].forEach.call(document.querySelectorAll(".sizebtn"),function(s){s.classList.toggle("active",s.dataset.size===n.size);});
+    document.getElementById("add-quote").style.display=(n.type!=="poet")?"inline-flex":"none";
+    document.getElementById("note-btn").style.display=(n.type!=="poet")?"inline-flex":"none";
+  }
+  function deselect(){selId=null;props.classList.remove("show");nodes.forEach(function(n){renderNode(n);});}
+
+  var swWrap=document.getElementById("swatches");
+  COLORS.forEach(function(col){var s=document.createElement("div");s.className="sw";s.dataset.color=col;s.style.background=col;if(col.toUpperCase()==="#FFFFFF")s.style.borderColor="#888";s.onclick=function(){if(!selId)return;var n=byId(selId);n.color=col;renderNode(n);select(selId);};swWrap.appendChild(s);});
+  [].forEach.call(document.querySelectorAll(".sizebtn"),function(btn){btn.onclick=function(){if(!selId)return;var n=byId(selId);n.size=btn.dataset.size;renderNode(n);select(selId);drawLinks();};});
+  document.getElementById("rename-bubble").onclick=function(){if(selId)edit(selId);};
+  document.getElementById("note-btn").onclick=function(){if(selId)editBody(selId);};
+  document.getElementById("delete-bubble").onclick=function(){if(selId)removeNode(selId);};
+  document.getElementById("sub-point").onclick=function(){if(!selId)return;var n=addChildOf(byId(selId),{type:"branch",label:"New idea"});select(n.id);setTimeout(function(){edit(n.id);},20);};
+  document.getElementById("add-quote").onclick=function(){if(selId){var n=byId(selId);if(n.type!=="poet")openQuoteModal(n);}};
+
+  workspace.addEventListener("pointerdown",function(e){
+    if(e.target!==workspace&&e.target!==svg) return;
+    var startX=e.clientX,startY=e.clientY,sl=scroll.scrollLeft,st=scroll.scrollTop,moved=false;
+    function mv(ev){var dx=ev.clientX-startX,dy=ev.clientY-startY;if(Math.abs(dx)+Math.abs(dy)>3)moved=true;scroll.scrollLeft=sl-dx;scroll.scrollTop=st-dy;}
+    function up(){document.removeEventListener("pointermove",mv);document.removeEventListener("pointerup",up);if(!moved)deselect();}
+    document.addEventListener("pointermove",mv);document.addEventListener("pointerup",up);
+  });
+  document.addEventListener("keydown",function(e){
+    if(document.getElementById("quote-modal").classList.contains("show"))return;
+    if(e.key==="Delete"&&selId){var el=els[selId];if(el&&el.querySelector(".lbl").isContentEditable)return;e.preventDefault();removeNode(selId);}
+    if(e.key==="Escape")deselect();
+  });
+
+  /* ---------- add point (centre or selected) ---------- */
+  document.getElementById("add-bubble").onclick=function(){
+    var parent=selId?byId(selId):poetNode();
+    if(!parent){toast("Choose a poet first to set your centre.");return;}
+    var n=addChildOf(parent,{type:"branch",label:"New idea"});
+    select(n.id);setTimeout(function(){edit(n.id);},20);
+  };
+  document.getElementById("clear-btn").onclick=function(){
+    if(!nodes.length)return;
+    if(confirm("Clear the whole map? This can’t be undone.")){
+      nodes.forEach(function(n){if(els[n.id])els[n.id].remove();});
+      nodes=[];els={};selId=null;deselect();drawLinks();updateEmpty();
+    }
+  };
+  function updateEmpty(){document.getElementById("ws-empty").style.display=nodes.length?"none":"block";}
+  document.getElementById("center-btn").onclick=function(){var p=poetNode()||nodes[0];if(p)centerView(p.id);else toast("Choose a poet to begin.");};
+
+  /* ---------- links from parent ---------- */
+  function centerOf(id){var el=els[id];if(!el)return null;return {x:el.offsetLeft,y:el.offsetTop};}
+  function drawLinks(){
+    var parts="";
+    nodes.forEach(function(n){
+      if(!n.parent)return;
+      var a=centerOf(n.id),b=centerOf(n.parent);if(!a||!b)return;
+      var parentIsPoet=(byId(n.parent)||{}).type==="poet";
+      var stroke=parentIsPoet?"rgba(255,0,0,.55)":"#c4c4c4";
+      var w=parentIsPoet?2.6:2;
+      parts+='<line x1="'+a.x+'" y1="'+a.y+'" x2="'+b.x+'" y2="'+b.y+'" stroke="'+stroke+'" stroke-width="'+w+'" stroke-linecap="round"/>';
+    });
+    svg.innerHTML=parts;
+  }
+
+  /* ---------- quote modal ---------- */
+  var qModal=document.getElementById("quote-modal");
+  function buildPresets(poemTitle){
+    var pre=document.getElementById("q-preset");pre.innerHTML="";
+    presetQuotes(poemTitle).forEach(function(qt){
+      var b=document.createElement("button");b.className="q-opt";b.textContent="“"+qt+"”";
+      b.onclick=function(){addQuoteToBubble(qt);};
+      pre.appendChild(b);
+    });
+  }
+  function openQuoteModal(bubble){
+    quoteForBubble=bubble.id;
+    var sel=document.getElementById("q-poem-select");sel.innerHTML="";
+    POETS[currentPoet].poems.forEach(function(t){var o=document.createElement("option");o.value=t;o.textContent=t;sel.appendChild(o);});
+    // default to a poem already attached to this bubble, if any
+    if(bubble.poems&&bubble.poems.length) sel.value=bubble.poems[bubble.poems.length-1];
+    buildPresets(sel.value);
+    sel.onchange=function(){buildPresets(sel.value);};
+    document.getElementById("q-custom").value="";
+    qModal.classList.add("show");
+    setTimeout(function(){document.getElementById("q-custom").focus();},60);
+  }
+  function addQuoteToBubble(text){
+    var n=byId(quoteForBubble);if(!n){closeQuote();return;}
+    var poem=document.getElementById("q-poem-select").value||"";
+    n.quotes=n.quotes||[]; n.quotes.push({text:text,poem:poem});
+    renderNode(n); drawLinks(); ensureVisible(n.id); closeQuote();
+  }
+  function closeQuote(){qModal.classList.remove("show");}
+  document.getElementById("q-add").onclick=function(){var t=document.getElementById("q-custom").value.trim();if(!t){document.getElementById("q-custom").focus();return;}addQuoteToBubble(t);};
+  document.getElementById("q-cancel").onclick=closeQuote;
+  qModal.addEventListener("click",function(e){if(e.target===qModal)closeQuote();});
+
+  /* ---------- toast ---------- */
+  var toastEl=document.getElementById("toast"),toastT;
+  function toast(m){toastEl.textContent=m;toastEl.classList.add("show");clearTimeout(toastT);toastT=setTimeout(function(){toastEl.classList.remove("show");},1900);}
+
+  /* ---------- download PDF ---------- */
+  document.getElementById("download-btn").onclick=function(){
+    if(!nodes.length){toast("Add some bubbles first.");return;}
+    if(typeof html2canvas==="undefined"||!window.jspdf){toast("Export libraries still loading — try again in a second.");return;}
+    var btn=this;btn.disabled=true;var old=btn.innerHTML;btn.innerHTML="Generating…";deselect();
+    var pad=60,minX=1e9,minY=1e9,maxX=-1e9,maxY=-1e9;
+    nodes.forEach(function(n){var el=els[n.id];minX=Math.min(minX,el.offsetLeft-el.offsetWidth/2);minY=Math.min(minY,el.offsetTop-el.offsetHeight/2);maxX=Math.max(maxX,el.offsetLeft+el.offsetWidth/2);maxY=Math.max(maxY,el.offsetTop+el.offsetHeight/2);});
+    minX=Math.max(0,minX-pad);minY=Math.max(0,minY-pad);maxX=Math.min(workspace.offsetWidth,maxX+pad);maxY=Math.min(workspace.offsetHeight,maxY+pad);
+    var w=maxX-minX,h=maxY-minY;
+    workspace.classList.add("capturing");
+    html2canvas(workspace,{backgroundColor:"#ffffff",scale:2,x:minX,y:minY,width:w,height:h,scrollX:0,scrollY:0,windowWidth:workspace.offsetWidth,windowHeight:workspace.offsetHeight,useCORS:true})
+    .then(function(cv){
+      workspace.classList.remove("capturing");
+      var jsPDF=window.jspdf.jsPDF;
+      var pdf=new jsPDF({orientation:"landscape",unit:"pt",format:"a4"});
+      var pw=pdf.internal.pageSize.getWidth(), ph=pdf.internal.pageSize.getHeight();
+
+      // ---- Grinds360 banner ----
+      var bh=56;
+      pdf.setFillColor(10,10,10); pdf.rect(0,0,pw,bh,"F");
+      pdf.setFillColor(255,0,0); pdf.rect(28,bh/2-9,18,18,"F");
+      pdf.setTextColor(255,255,255); pdf.setFont("helvetica","bold"); pdf.setFontSize(20);
+      pdf.text("Grinds360",56,bh/2-1);
+      pdf.setFont("helvetica","normal"); pdf.setFontSize(8.5); pdf.setTextColor(165,165,165);
+      pdf.text("LC ENGLISH  ·  POETRY MIND MAP",56,bh/2+12);
+      if(currentPoet){
+        pdf.setTextColor(255,255,255); pdf.setFont("helvetica","bold"); pdf.setFontSize(13);
+        pdf.text(POETS[currentPoet].name, pw-28, bh/2-1, {align:"right"});
+        var pn=poetNode();
+        if(pn&&pn.question){
+          pdf.setFont("helvetica","normal"); pdf.setFontSize(7.5); pdf.setTextColor(190,190,190);
+          var q=pn.question; if(q.length>96) q=q.slice(0,96)+"…";
+          pdf.text(q, pw-28, bh/2+12, {align:"right"});
+        }
+      }
+      pdf.setFillColor(255,0,0); pdf.rect(0,bh,pw,3,"F"); // red accent rule
+
+      // ---- fit the whole map below the banner ----
+      var m=22, top=bh+3+14;
+      var areaW=pw-2*m, areaH=ph-top-m;
+      var ratio=Math.min(areaW/cv.width, areaH/cv.height);
+      var iw=cv.width*ratio, ih=cv.height*ratio;
+      var ix=(pw-iw)/2, iy=top+(areaH-ih)/2;
+      pdf.addImage(cv.toDataURL("image/png"),"PNG",ix,iy,iw,ih);
+
+      pdf.save((currentPoet?POETS[currentPoet].name.replace(/\W+/g,"-").toLowerCase():"poetry")+"-mind-map.pdf");
+      btn.disabled=false;btn.innerHTML=old;toast("PDF downloaded.");
+    }).catch(function(err){workspace.classList.remove("capturing");console.error(err);btn.disabled=false;btn.innerHTML=old;toast("Couldn’t generate PDF — please try again.");});
+  };
+
+  updateEmpty();
+})();
+</script>
+</body>
+</html>
